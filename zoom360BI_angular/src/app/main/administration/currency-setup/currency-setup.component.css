@@ -1,0 +1,9 @@
+/* .e-radio:checked + label::after {
+    background-color:rgb(33,155,156);
+    color: #fff;
+} */
+.e-checkbox-wrapper .e-frame.e-check, .e-css.e-checkbox-wrappe.e-cr .e-frameheck {
+    background-color: #219b9c;
+    border-color: #ccc;
+    color: #fff;
+}

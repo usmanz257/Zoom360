@@ -1,0 +1,52 @@
+
+<div class="container-fluid" style="background-color: #f8f8f8;">
+   
+    <div class="row">
+        
+        <div class="col-sm-12 col-md-4 col-lg-2 col-xl-2 explore-sidebar" style="height: 100% !important; background-color: #efefef; padding: 10px 0px 0px 0px !important;">
+            <div style="width: 100%; height: 215px;text-align: center;">
+                <!-- <img src="../../../assets/images/profilelogo.png" style="height:100%; width:100%">  -->
+                <img src="../../../assets/images/Profileimages/ClientImages/UserImage/{{this.userProfileImage}}" title="" style="height:100%; width:100%">
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12" style="background-color: #fff;" *ngIf="this.timeline">
+                <div class="col-sm-12 col-md-6 col-lg-4" style="text-align: center;">
+                    <p class="notification-counter">{{timeline.followingCount}}</p>
+                    <span>Following</span>
+                </div> 
+                <div class="col-sm-12 col-md-6 col-lg-4" style="text-align: center;">
+                    <p class="notification-counter">{{timeline.streams}}</p>
+                    <p>Streams</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4" style="text-align: center;">
+                    <p class="notification-counter">{{timeline.favourite}}</p>
+                    <p>Favourite</p>
+                </div>
+            </div>
+        </div>
+        <div Class="col-sm-12 col-md-8 col-lg-10 col-xl-10">
+            <div class="row">
+   <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3" style="padding: 10px 5px 5px 5px;" *ngFor="let item of notification">
+    <app-report-widget [notification]="item" (gridData)="viewGrid($event)" *ngIf="item.widgetType=='graphNotificationWidget'"></app-report-widget>
+    <app-report-image *ngIf="item.widgetType=='ImageNotificationWidget'" [notification]="item"></app-report-image>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- <div id="footer" class="footer sidebar ">
+    <p class="footer__version">
+        ZOOM360 version 0.12.2 | <a target="_blank" href="#">Changelog</a>
+    </p>
+    <p class="footer__copyright">
+        © 2020
+        <a href="#" title="Adverity GmbH">ZOOM360 Inc</a>. All rights reserved.
+        <a href="#">Terms of Service.</a>
+    </p>
+</div> -->
+<div class="row fixed-top"  [ngClass]="gridDisplay" style="margin-left:0 !important; margin-right: 0!important;" >
+    <div class="col-sm-12 col-md-12" style="height: 100%; position: inherit;">
+        <app-ag-grid-data-viewer #agGridComponent (gridClose)="this.gridclose()"></app-ag-grid-data-viewer>
+    </div>
+    
+</div>

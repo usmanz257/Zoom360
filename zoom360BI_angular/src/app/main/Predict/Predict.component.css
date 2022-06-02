@@ -1,0 +1,8 @@
+.main-body-for-agGrid-expand {
+    height: 100%;
+    border-width: 0;
+    min-height: 640px;
+    padding-top: 0; 
+     padding-bottom: 0;
+   padding-left: 0;
+}

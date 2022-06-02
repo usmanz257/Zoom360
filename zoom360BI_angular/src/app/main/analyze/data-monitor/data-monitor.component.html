@@ -1,0 +1,124 @@
+<div class="col-sm-12 analyze-main-content" style="padding-top: 24px;">
+    <div>
+        <div role="tabpanel" class="tab-pane active">
+            <div>
+                <div class="css-1kl6qu0" grow="1" style="border: none;">
+                    <div class="css-1qzdmz1" style="position: relative; height: 600px;">
+
+                        <!--  Grid content here -->
+                        <table id="result_list" class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="action-checkbox-column">
+                                        <input type="checkbox" name="all" [checked]="allcheckbox" (change)="checkAll($event)" (click)="functionCount($event)" />
+                                    </th>
+
+                                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                        <div class="cell-wrapper" title="Toggle sorting">
+                                            <a class="toggle-link" (click)="applySort('connectorName')">
+                                                Type
+                                            <span class="sortoptions sortdirectionn">
+                                                    <span class="" [ngClass]="appearanceLogo_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="appearanceLogo_arrow"></span>
+                                            </span>
+                                            </a>
+                                            <div class="sortoptions remove">
+                                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                        <div class="cell-wrapper" title="Toggle sorting">
+                                            <a class="toggle-link" (click)="applySort('workspaceName')">
+                                                Workspace
+                                            <span class="sortoptions sortdirectionn">
+                                                    <span class="" [ngClass]="workspaceName_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="workspaceName_arrow"></span>
+                                            </span>
+                                            </a>
+                                            <div class="sortoptions remove">
+                                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                        <div class="cell-wrapper" title="Toggle sorting">
+                                            <a class="toggle-link" (click)="applySort('account_Display_Name')">
+                                                Name
+                                            <span class="sortoptions sortdirectionn">
+                                                    <span class="" [ngClass]="connectorName_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="connectorName_arrow"></span>
+                                            </span>
+                                            </a>
+                                            <div class="sortoptions remove">
+                                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                        <div class="cell-wrapper" title="Toggle sorting">
+                                            <a class="toggle-link" (click)="applySort('accessgranted')">
+                                                Access Granted
+                                            <span class="sortoptions sortdirectionn">
+                                                    <span class="" [ngClass]="bstatus_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="bstatus_arrow"></span>
+                                            </span>
+                                            </a>
+                                            <div class="sortoptions remove">
+                                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                        <div class="cell-wrapper" title="Toggle sorting">
+                                            <a class="toggle-link" (click)="applySort('accessgranted')">
+                                                Destination Enabled
+                                            <span class="sortoptions sortdirectionn">
+                                                    <span class="" [ngClass]="bstatus_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="bstatus_arrow"></span>
+                                            </span>
+                                            </a>
+                                            <div class="sortoptions remove">
+                                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                        <div class="cell-wrapper" title="Toggle sorting">
+                                            <a class="toggle-link" (click)="applySort('accessgranted')">
+                                                Video
+                                            <span class="sortoptions sortdirectionn">
+                                                    <span class="" [ngClass]="bstatus_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="bstatus_arrow"></span>
+                                            </span>
+                                            </a>
+                                            <div class="sortoptions remove">
+                                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let connection of allConService._connectionData;let i = index">
+                                    <td>
+                                        <input id="check{{i+1}}" type="checkbox" [(ngModel)]="connection.state" name="something" (change)="findCount(i,$event)" />
+                                    </td>
+                                    <td class="field-type_logo"><img src="assets\images\{{connection.appearanceLogo}}" class="type-logo" alt="{{connection.appearanceLogo}}"> - {{connection.connectorName}}</td>
+                                    <td class="field-stack nowrap">{{connection.workspaceName}}</td>
+                                    <td class="field-name" id="{{connection.sourceConnectionId}}"><a routerLink="/connect/connections" routerLinkActive="ActiveRoute">{{connection.account_Display_Name}}</a></td>
+                                    <td class="field-auth_status"><img src="assets\images\icon-{{connection.accessgranted}}.svg" alt="error" title="{{connection.accessgranted}}"></td>
+                                    <td class="field-auth_status">
+                                        <div class="switch">
+                                            <input type="checkbox" name="toggle{{i}}" [(ngModel)]="connection.destinationEnabled" [checked]="connection.destinationEnabled" (change)="ToggleDestination(i)">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="select-button-secondary" data-toggle="dropdown" style="min-width: 80px;" (click)="videoPlayerModel.show((i+1)*15)">
+                                            Show Video
+                                         </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-video-player #videoPlayerModel></app-video-player>

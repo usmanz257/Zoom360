@@ -1,0 +1,249 @@
+<div class="generic-django-admin-header">
+    <div class="main-section">
+        <h3>Numbering System Settings</h3>
+    </div>
+    <div class="tool-section">
+    </div>
+</div>
+<div id="content-main" class="contentMain">
+    <form [formGroup]="numeralsSetup" (ngSubmit)="SaveConfig(numeralsSetup.value)" autocomplete="off">
+        <fieldset class="module aligned ">
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Select numbering system format to use</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="numberingSystemFormat" value="Show American Format" style="margin-top: -1px;">Show American Format (1,000,000.00)
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="numberingSystemFormat" value="Show European Format" style="margin-top: -1px;">Show European Format (1.000.000,00)
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="numberingSystemFormat" value="Show Sub-continental Format" style="margin-top: -1px;">Show Sub-continental Format (10,00,000.00)
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="numberingSystemFormat" value="Show Without Format" style="margin-top: -1px;">Show Without Format (1000000.00)
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Display Setup (Sign)</h2>
+
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Select number sign type to use</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="numberSignType" value="Show Absolute/Un-Signed Number" style="margin-top: -1px;" (click)="showSignFormat(false,'')">Show Absolute/Un-Signed Number
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="numberSignType" value="Show Signed Number" style="margin-top: -1px;" (click)="showSignFormat(true,'Default sign: 100 / -100')">Show Signed Number
+                        </div>
+
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack" *ngIf="numberingSystemFormatToggle">
+                <div>
+                    <label class="required" for="id_auth">Select sign format to use</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="signFormat" value="Default sign: 100 / -100" style="margin-top: -1px;">Default sign: 100 / -100
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="signFormat" value="Accountant sign: 100 / (100)" style="margin-top: -1px;">Accountant sign: 100 / (100)
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="signFormat" value="Leading sign: +100 / -100" style="margin-top: -1px;">Leading sign: +100 / -100
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="signFormat" value="Trailing sign: 100+ / 100-" style="margin-top: -1px;">Trailing sign: 100+ / 100-
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="signFormat" value="Leading sign with short text: (+ve)100 / (-ve)100" style="margin-top: -1px;">Leading sign with short text: (+ve)100 / (-ve)100
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="signFormat" value="Trailing sign with short text: 100(+ve) / 100(-ve)" style="margin-top: -1px;">Trailing sign with short text: 100(+ve) / 100(-ve)
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="signFormat" value="Leading with full text: (positive)100 / (negative)100" style="margin-top: -1px;">Leading with full text: (positive)100 / (negative)100
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="signFormat" value="Trailing with full text: 100(positive) / 100(negative)" style="margin-top: -1px;">Trailing with full text: 100(positive) / 100(negative)
+                        </div>
+                    </div>
+                    <div class="help "></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Show positive number color code</label>
+                    <div class="related-widget-wrapper">
+                        <input type="color" formControlName="PositiveNumbeColorCode" id="favcolor" name="favcolor" style="height: 28px; padding: 2px;">
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Show negative number color code</label>
+                    <div class="related-widget-wrapper">
+                        <input type="color" formControlName="negitiveNumberColorCode" id="favcolor" name="favcolor" style="height: 28px; padding: 2px;">
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Show Number after Converting Values</h2>
+
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Number conversion required by default?</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="numberConversion" value="Do not convert, use actual values" style="margin-top: -1px;" (click)="shownumberValueConversion(false,'')">Do not convert, use actual values
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="numberConversion" value="Convert values before show" style="margin-top: -1px;" (click)="shownumberValueConversion(true,'Value in Thousand')">Convert values before show
+                        </div>
+
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack" *ngIf="numberValueConversionToggle">
+                <div>
+                    <label class="required" for="id_auth">Convert number values in one of below</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="numberValueConversion" value="Value in Thousand" style="margin-top: -1px;">Convert to Show (Value in Thousand)
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="numberValueConversion" value="Value in Million" style="margin-top: -1px;">Convert to Show (Value in Million)
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="numberValueConversion" value="Value in Billion" style="margin-top: -1px;">Convert to Show (Value in Billion)
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="numberValueConversion" value="Value in Trillion" style="margin-top: -1px;">Convert to Show (Value in Trillion)
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Use Number Values</h2>
+
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Numeric part to be used</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="numberValue" value="Use Actual number value" style="margin-top: -1px;">Use Actual number value
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="numberValue" value="Use Whole number only" style="margin-top: -1px;">Use Whole number only
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="numberValue" value="Use Decimal part only" style="margin-top: -1px;">Use Decimal part only
+                        </div>
+
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Select decimal places to show</label>
+                    <div class="related-widget-wrapper">
+                        <input type="number" formControlName="selectiveDecimalPlaces" name="retention_number" id="id_retention_number" class="numberinput form-control" min="0">
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check" style="padding-left: 0px;">
+                    <ejs-checkbox id=""   label="Always show full decimal places"   formControlName="fullDecimalPlaces"></ejs-checkbox>
+                    <!-- <input type="checkbox" formControlName="fullDecimalPlaces" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Always show full decimal places</label> -->
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Use Round off Numbers</h2>
+
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Default use round off on number values</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="roundOffNumbers" value="Do not round off values" style="margin-top: -1px;" (click)="showselectiveRoundOffPlace(false)">Do not round off values
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="roundOffNumbers" value="Apply default round off values" style="margin-top: -1px;" (click)="showselectiveRoundOffPlace(true)">Apply default round off values
+                        </div>
+
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+
+            <div class="form-row field-stack" *ngIf="selectiveRoundOffPlaceToggle">
+                <div>
+                    <label class="label-text" for="id_stack">Select round off places to use</label>
+                    <div class="related-widget-wrapper">
+                        <input type="number" formControlName="selectiveRoundOffPlace" name="retention_number" id="id_retention_number" class="numberinput form-control" min="0">
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Setup Enforcement</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Apply and enforce number setup </label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="numberApplyAndEnforce" value="All child workspaces" style="margin-top: -1px;">All child workspaces
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="numberApplyAndEnforce" value="Selective child workspaces" style="margin-top: -1px;">Selective child workspaces
+                        </div>
+
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+        </fieldset>
+        <div>
+            <div class="css-1qbrnrg ">
+                <hr class="css-1c3fhlt " mx="zero " role="separator " aria-orientation="horizontal ">
+                <div class="css-1x62jim ">
+                    <div class="css-p84alj ">
+                        <div class="css-rvqhyx "><a class="css-ebx8b0 " href="/instagram_business/instagrambusinessdatastream/27/delete/ ">Delete</a><a class="css-b2qa21 " href="/core/apidatastream/clone?pk=27 ">Clone</a></div>
+                    </div>
+                    <div class="css-1w7dt24 ">
+                        <ejs-toast #defaulttoast   [position]="position" >                
+                        </ejs-toast>
+                        <div class="css-rvqhyx "><button class="css-b2qa21 " type="button " name="_continue ">Save and continue editing</button>
+                            <button class="css-xpr64j .e-toast-container .e-toast " type="submit" name="_save">Save</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

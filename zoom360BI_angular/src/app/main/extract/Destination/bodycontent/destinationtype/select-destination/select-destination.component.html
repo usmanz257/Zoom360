@@ -1,0 +1,2749 @@
+
+   <div  style="min-height: 780px;">
+      <div class="row" >
+         <div class="col-md-12" >
+          <div class="main-section " >
+             <h3>STEP 1 :</h3>
+             <h3>Select Destination Connector</h3>
+         </div>
+         </div> 
+       </div>
+      <div id="category-filter">
+         <div class="row">
+<div class="col-md-12" style="padding: 0%;">
+            <div class="col-md-3" (click)="ResentShow()" >
+               <span  data-category="Recent">
+                  <div class="connect-type-box" [ngClass]="RecentDashBox" style="height: 160px;" >
+                     <h3>
+                        Recently used connectors
+                     </h3>
+                     <br>
+                     <p>
+                        Quikly configure new account,use an already used connector type,already used during recent configurations.
+                     </p>
+                  </div>
+               </span>
+            </div>
+            <div class="col-md-3" (click)="FilesShow()">
+               <span data-category="File Shared-Server Cloud-Storage Distributed-File-Sources">
+                  <div class="connect-type-box" [ngClass]="FileClasshightLight" style="height: 160px;">
+                     <h3>
+                        File Systems and storage service
+                     </h3>
+                     <br>
+                     <p>
+                        Access multiple types of files from local directory,shared locations, remote FTP connections or cloud based file sharing service.
+                     </p>
+                  </div>
+               </span>
+            </div>
+            <div class="col-md-3"  (click)="Databaseshow()">
+               <span data-category="Database Management Systems (DBMS) sources">
+                  <div class="connect-type-box" [ngClass]="DatabasefileBox" style="height: 160px;">
+                     <h3>
+                        Database Management System (DBMS)
+                     </h3>
+                      
+                     <p>
+                        Access multiple types of files from local directory,shared locations, remote FTP connections or cloud based file sharing service.
+                     </p>
+                  </div>
+               </span>
+            </div>
+            <div class="col-md-3" (click)="ShowBusinessPlateForm()">
+               <span data-category="Business Platforms">
+                  <div class="connect-type-box" [ngClass]="businessfileBox" style="height: 160px;">
+                     <h3>
+                        Business Platforms and API's
+                     </h3>
+                     <br>
+                     <p>
+                        Select connector available from a large list of business applications and platforms,connected through API authorization.
+                     </p>
+                  </div>
+               </span>
+            </div>
+          </div>
+         </div>
+      </div>
+      <div>
+         <hr>
+      </div>
+      <div id="content-show"  style="padding-top: 24px;" >
+         <div class="category" data-category="Recent" *ngIf="ResentUseDb">
+             <div class="row">
+                <div  class="col-md-12 col-sm-12 col-lg-12" style="padding: 0%;">
+               <div class="col-md-6 col-sm-6 col-lg-6"  *ngFor="let recent of ResentModules">
+                  <div class="connect-type-recent" style="height: 137px;">
+                     <div class="col-md-3" >
+                        <span class="add-box-recent">
+                        <img src="../../../assets/images/{{recent.appearanceLogo}}" height="60" width="90" title="Oracle DBMS" alt="{{recent.connectiontype}}">
+                        <span class="box-label-recent " style="white-space:pre-wrap; display: inline-block; ">{{recent.connectiontype}}</span>
+                        </span>
+                     </div>
+                     <div class="col-md-9">
+                        <div>
+                           <label>
+                           Connection Type:<span> {{recent.connectiontype}}</span>
+                           </label>
+                           <br>
+                           <label>
+                           Configured Account:<span> {{recent.configuredaccounts}}</span>
+                           </label>
+                           <br>
+                           <label>
+                           First Created On:<span> {{recent.firstcreated}}</span>
+                           </label>
+                           <br>
+                           <label>
+                           Last Accessed at:<span> {{recent.lastaccessed}}</span>
+                           </label>
+                           <br>
+                           <label>
+                           Total Extracts:<span> {{recent.totalextract}}</span>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- <div class="col-md-6 col-sm-6 col-lg-6">
+                  <div class="connect-type-recent">
+                     <div class="col-md-3">
+                        <span class="add-box-recent">
+                        <img src="../../../assets/images/add-stream-imgs/fbcore.svg" height="60" width="90" title="Facebook" alt="Oracle DBMS">
+                        <span class="box-label-recent truncate">Facebook</span>
+                        </span>
+                     </div>
+                     <div class="col-md-9"  style="padding-left: 0;">
+                        <div>
+                           <label>
+                           Connection Type:&nbsp<span>Facebook</span>
+                           </label>
+                           <br>
+                           <label>
+                           Configured Account:&nbsp<span>SourceA, SourceB, SourceC</span>
+                           </label>
+                           <br>
+                           <label>
+                           First Created On:&nbsp<span>02/Feb/2020</span>
+                           </label>
+                           <br>
+                           <label>
+                           Last Accessed at:&nbsp<span>18/Sep/2020</span>
+                           </label>
+                           <br>
+                           <label>
+                           Total Extracts:&nbsp<span>O14</span>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-6 col-lg-6">
+                  <div class="connect-type-recent">
+                     <div class="col-md-3" >
+                        <span class="add-box-recent">
+                        <img src="../../../assets/images/add-stream-imgs/ytanalytics.svg" height="60" width="90" title="YouTube " alt="Oracle DBMS">
+                        <span class="box-label-recent truncate">YouTube</span>
+                        </span>
+                     </div>
+                     <div class="col-md-9" style="padding-left: 0;">
+                        <div>
+                           <label>
+                           Connection Type:&nbsp<span>YouTube</span>
+                           </label>
+                           <br>
+                           <label>
+                           Configured Account:&nbsp<span>SourceA, SourceB, SourceC</span>
+                           </label>
+                           <br>
+                           <label>
+                           First Created On:&nbsp<span>02/Feb/2020</span>
+                           </label>
+                           <br>
+                           <label>
+                           Last Accessed at:&nbsp<span>18/Sep/2020</span>
+                           </label>
+                           <br>
+                           <label>
+                           Total Extracts:&nbsp<span>O14</span>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-6 col-lg-6">
+                  <div class="connect-type-recent">
+                     <div class="col-md-3">
+                        <span class="add-box-recent">
+                        <img src="../../../assets/images/add-stream-imgs/microsoft-sql-server.svg" height="60" width="90" title="Sql Server" alt="Oracle DBMS">
+                        <span class="box-label-recent truncate">Sql Server</span>
+                        </span>
+                     </div>
+                     <div class="col-md-9"  style="padding-left: 0;">
+                        <div>
+                           <label>
+                           Connection Type:&nbsp<span>Sql Server</span>
+                           </label>
+                           <br>
+                           <label>
+                           Configured Account:&nbsp<span>SourceA, SourceB, SourceC</span>
+                           </label>
+                           <br>
+                           <label>
+                           First Created On:&nbsp<span>02/Feb/2020</span>
+                           </label>
+                           <br>
+                           <label>
+                           Last Accessed at:&nbsp<span>18/Sep/2020</span>
+                           </label>
+                           <br>
+                           <label>
+                           Total Extracts:&nbsp<span>O14</span>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div> -->
+              </div>
+          </div>
+         </div>
+         <div class="category col-md-12" data-category="File Shared-Server Cloud-Storage Distributed-File-Sources" *ngIf="Files">
+            <div class="row category-header">
+               <div class="col-md-12">
+                  <h4>
+                     Flat File
+                  </h4>
+               </div>
+            </div>
+            <div class="row">
+               <div class="connect-grid-box" id="myCSVfile" (click)="Fileuploade('.csv','csv-file.svg','myCSVfile')">
+                  <a >
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/csv-file.svg"  height="80" width="130" title="CSV File"
+                     alt="CSV File" name="FileComponent" id=220>
+                  <span class="box-label-present truncate">CSV File</span>
+                  </span>
+                  </a>
+               </div>
+                
+            </div>
+            <div class="row category-header">
+               <div class="col-md-12">
+                  <h4>
+                     Specialzed
+                  </h4>
+               </div>
+            </div>
+            <div class="row">
+               <div class="connect-grid-box" id="myXMLfile" (click)="Fileuploade('.xml','xml-file.svg','myXMLfile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/xml-file.svg" height="80" width="130" title="XML File"
+                     alt="XML File" name="FileComponent" id=240>
+                  <span class="box-label-present truncate">XML File</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myJSONfile" (click)="Fileuploade('.json','json-file.svg','myJSONfile')" >
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/json-file.svg" height="80" width="130" title="JSON File"
+                     alt="JSON File" name="FileComponent" id=241>
+                  <span class="box-label-present truncate">JSON File</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myPDFfile" (click)="Fileuploade('.pdf','adobe-pdf.svg','myPDFfile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/adobe-pdf.svg" height="80" width="130" title="PDF File"
+                     alt="PDF File"  >
+                  <span class="box-label-present truncate">PDF File</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myZipfile" (click)="Fileuploade('.zip','zip-file.svg','myZipfile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/zip-file.svg" height="80" width="130" title="Zip Fil"
+                     alt="Zip Fil" name="FileComponent" id=243>
+                  <span class="box-label-present truncate">Zip File</span>
+                  </span>
+                  </a>
+               </div>
+            </div>
+            <div class="row category-header">
+               <div class="col-md-12">
+                  <h4>
+                     Spreadsheet
+                  </h4>
+               </div>
+            </div>
+            <div class="row">
+               <div class="connect-grid-box" id="myMicrosoftfile" (click)="Fileuploade('.xlsx','microsoft-excel.svg','myMicrosoftfile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/microsoft-excel.svg" height="80" width="130" title="Microsoft Excel"
+                     alt="Microsoft Excel" name="FileComponent" id=219 >
+                  <span class="box-label-present truncate">Microsoft Excel</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box"  id="myGoogleSheetfile" (click)="Fileuploade('.GSHEET','sheets.svg','myGoogleSheetfile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/sheets.svg" height="80" width="130" title="Google Sheet"
+                     alt="Google Sheet" name="FileComponent" id=244>
+                  <span class="box-label-present truncate">Google Sheet</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myOpenOfficefile" (click)="Fileuploade('.odt','openoffice-org.svg','myOpenOfficefile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/openoffice-org.svg" height="80" width="130" title="Open Office"
+                     alt="Open Office" name="FileComponent" id=245>
+                  <span class="box-label-present truncate">Open Office</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myODSfile" (click)="Fileuploade('.ods','ods-file.svg','myODSfile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/ods-file.svg" height="80" width="130" title="ODS File"
+                     alt="ODS File" name="FileComponent" id=246>
+                  <span class="box-label-present truncate">ODS File</span>
+                  </span>
+                  </a>
+               </div>
+            </div>
+            <div class="row category-header">
+               <div class="col-md-12">
+                  <h4>
+                     Shared Server
+                  </h4>
+               </div>
+            </div>
+            <div class="row">
+               <div class="connect-grid-box" id="myFTPserverfile" (click)="Fileuploade('*','ftp.svg','myFTPserverfile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/ftp.svg" height="80" width="130" title="FTP Server"
+                     alt="FTP Server" name="FileComponent" id=247>
+                  <span class="box-label-present truncate">FTP Server</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="mySFTPserverfile" (click)="Fileuploade('*','sftp-file.png','mySFTPserverfile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/sftp-file.png" height="80" width="130" title="SFTP Server"
+                     alt="SFTP Server" name="FileComponent" id=248>
+                  <span class="box-label-present truncate">SFTP Server</span>
+                  </span>
+                  </a>
+               </div>
+            </div>
+            <div class="row category-header">
+               <div class="col-md-12">
+                  <h4>
+                     File Sharing
+                  </h4>
+               </div>
+            </div>
+            <div class="row">
+               <div class="connect-grid-box" id="myDropboxfile" (click)="Fileuploade('*','dropbox.svg','myDropboxfile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/dropbox.svg" height="80" width="130" title="Dropbox"
+                     alt="Dropbox" name="FileComponent" id=249>
+                  <span class="box-label-present truncate">Dropbox</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myGoogleDrivefile" (click)="Fileuploade('*','drive.svg','myGoogleDrivefile')" >
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/drive.svg" height="80" width="130" title="Google Drive"
+                     alt="Google Drive" name="FileComponent" id=250>
+                  <span class="box-label-present truncate">Google Drive</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myMicrosoftOneDrivefile" (click)="Fileuploade('*','onedrive.svg','myMicrosoftOneDrivefile')" >
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/onedrive.svg" height="80" width="130" title="Microsoft OneDrive"
+                     alt="Microsoft OneDrive" name="FileComponent" id=251>
+                  <span class="box-label-present truncate">Microsoft OneDrive</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myOneHubfile" (click)="Fileuploade('*','onehub.png','myOneHubfile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/onehub.png" height="80" width="130" title="OneHub"
+                     alt="OneHub" name="FileComponent" id=252>
+                  <span class="box-label-present truncate">OneHub</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myBoxfile" (click)="Fileuploade('*','box.svg','myBoxfile')">
+                  <a >
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/box.svg" height="80" width="130" title="Box"
+                     alt="Box" name="FileComponent" id=253>
+                  <span class="box-label-present truncate">Box</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myEgnyteUSAfile" (click)="Fileuploade('*','egnyte-use.svg','myEgnyteUSAfile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/egnyte-use.svg" height="80" width="130" title="Egnyte USA"
+                     alt="Egnyte USA" name="FileComponent" id=254>
+                  <span class="box-label-present truncate">Egnyte USA</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myMASVfile" (click)="Fileuploade('*','masv.png','myMASVfile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/masv.png" height="80" width="130" title="MASV"
+                     alt="MASV" name="FileComponent" id=255>
+                  <span class="box-label-present truncate">MASV</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myeFileCabinetfile" (click)="Fileuploade('*','efilecabinet.png','myeFileCabinetfile')" >
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/efilecabinet.png" height="80" width="130" title="eFile Cabinet"
+                     alt="eFile Cabinet" name="FileComponent" id=256>
+                  <span class="box-label-present truncate">eFile Cabinet</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myiDrivefile" (click)="Fileuploade('*','idrive.png','myiDrivefile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/idrive.png" height="80" width="130" title="iDrive"
+                     alt="iDrive" name="FileComponent" id=257>
+                  <span class="box-label-present truncate">iDrive</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myWirefile" (click)="Fileuploade('*','wire.svg','myWirefile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/wire.svg" height="80" width="130" title="Wire"
+                     alt="Wire" name="FileComponent" id=258>
+                  <span class="box-label-present truncate">Wire</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myMEGAfile" (click)="Fileuploade('*','mega.png','myMEGAfile')">
+                  <a >
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/mega.png" height="80" width="130" title="MEGA"
+                     alt="MEGA" name="FileComponent" id=259>
+                  <span class="box-label-present truncate">MEGA</span>
+                  </span>
+                  </a>
+               </div>
+            </div>
+            <div class="row category-header">
+               <div class="col-md-12">
+                  <h4>
+                     Distributed
+                  </h4>
+               </div>
+            </div>
+            <div class="row">
+               <div class="connect-grid-box" id="myApacheHDFSfile" (click)="Fileuploade('*','hadoop.svg','myApacheHDFSfile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/hadoop.svg" height="80" width="130" title="Apache HDFS"
+                     alt="Apache HDFS" name="FileComponent" id=260>
+                  <span class="box-label-present truncate">Apache HDFS</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myAzurefile" (click)="Fileuploade('*','azure-file.svg','myAzurefile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/azure-file.svg" height="80" width="130" title="Azure file"
+                     alt="Azure file" name="FileComponent" id=261>
+                  <span class="box-label-present truncate">Azure file</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myAmazonS3file" (click)="Fileuploade('*','s3.svg','myAmazonS3file')" >
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/s3.svg" height="80" width="130" title="Amazon S3"
+                     alt="Amazon S3" name="FileComponent" id=262>
+                  <span class="box-label-present truncate">Amazon S3</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myGoogleCloudfile" (click)="Fileuploade('*','google-cloud.svg','myGoogleCloudfile')" >
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/google-cloud.svg" height="80" width="130" title="Google Cloud"
+                     alt="Google Cloud" name="FileComponent" id=263>
+                  <span class="box-label-present truncate">Google Cloud</span>
+                  </span>
+                  </a>
+               </div>
+            </div>
+            <div class="row category-header">
+               <div class="col-md-12">
+                  <h4>
+                     File Transfer
+                  </h4>
+               </div>
+            </div>
+            <div class="row">
+               <div class="connect-grid-box" id="myWeTransfefile" (click)="Fileuploade('*','wetransfer.svg','myWeTransfefile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/wetransfer.svg" height="80" width="130" title="We Transfe"
+                     alt="We Transfe" name="FileComponent" id=264>
+                  <span class="box-label-present truncate">We Transfer</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="mySendAnywherefile" (click)="Fileuploade('*','send-anywhere.png','mySendAnywherefile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/send-anywhere.png" height="80" width="130" title="Send Anywhere"
+                     alt="Send Anywhere" name="FileComponent" id=265>
+                  <span class="box-label-present truncate">Send Anywhere</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myEmailAttachmentfile" (click)="Fileuploade('*','email-attachment.svg','myEmailAttachmentfile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/email-attachment.svg" height="80" width="130" title="Email Attachment"
+                     alt="Email Attachment" name="FileComponent" id=266>
+                  <span class="box-label-present truncate">Email Attachment</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myHightailfile" (click)="Fileuploade('*','hightail.png','myHightailfile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/hightail.png" height="80" width="130" title="Hightail"
+                     alt="Hightail" name="FileComponent" id=267>
+                  <span class="box-label-present truncate">Hightail</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="mySlackfile" (click)="Fileuploade('*','slack.svg','mySlackfile')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/slack.svg" height="100" width="130" title="Slack"
+                     alt="Slack" name="FileComponent" id=268>
+                  <span class="box-label-present truncate">Slack</span>
+                  </span>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="category col-md-12" data-category="Database Management Systems (DBMS) sources"  *ngIf="RelationalDatabases">
+            <div class="row category-header">
+               <div class="col-md-12">
+                  <h4>
+                     Relational
+                  </h4>
+               </div>
+            </div>
+            <div class="row">
+               <div class="connect-grid-box" id="mySQLServerdb"  (click)="GetInfoDBConnector('mssql_shared.svg','mySQLServerdb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/mssql_shared.svg" height="80" width="130" title="Microsoft SQL Server"
+                     alt="MS SQL Server" name="DBConnectorCredentials" id="214">
+                  <span class="box-label-present truncate">MS SQL Server</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="mySQLdb"  (click)="GetInfoDBConnector('mysql.svg','mySQLdb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/mysql.svg" height="80" width="130" title="My SQL"
+                     alt="My SQL" name="DBConnectorCredentials" id="216">
+                  <span class="box-label-present truncate">My SQL</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myPostgredb"  (click)="GetInfoDBConnector('postgresql.svg','myPostgredb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/postgresql.svg" height="80" width="130" title="Postgre SQL"
+                     alt="Postgre SQL" name="DBConnectorCredentials" id="217">
+                  <span class="box-label-present truncate">Postgre SQL</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myOracledb"  (click)="GetInfoDBConnector('oracle-dbms.svg','myOracledb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/oracle-dbms.svg" height="80" width="130" title="Oracle DBMS"
+                     alt="Oracle DBMS" name="DBConnectorCredentials" id="215">
+                  <span class="box-label-present truncate">Oracle DBMS</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myMicrosoftAccessdb"  (click)="GetInfoDBConnector('microsoft-access.svg','myMicrosoftAccessdb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/microsoft-access.svg" height="80" width="130" title="Microsoft Access"
+                     alt="Microsoft Access" name="DBConnectorCredentials" id="223">
+                  <span class="box-label-present truncate">Microsoft Access</span>
+                  </span>
+                  </a>
+               </div>
+            </div>
+            <div class="row category-header">
+               <div class="col-md-12">
+                  <h4>
+                     NoSQL
+                  </h4>
+               </div>
+            </div>
+            <div class="row">
+               <div class="connect-grid-box"  id="mymongodb"  (click)="GetInfoDBConnector('mongo-db.svg','mymongodb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/mongo-db.svg" height="80" width="130" title="MongoDB"
+                  alt="MongoDB" name="DBConnectorCredentials" id="224" sizes="MongoDB">
+                  <span class="box-label-present truncate">Mongo DB</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myElasticdb"  (click)="GetInfoDBConnector('elastic-db.svg','myElasticdb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/elastic-db.svg" height="80" width="130" title="Elastic DB"
+                     alt="Elastic DB" name="DBConnectorCredentials" id="225">
+                  <span class="box-label-present truncate">Elastic DB</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myCassandradb"  (click)="GetInfoDBConnector('cassandra-db.svg','myCassandradb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/cassandra-db.svg" height="80" width="130" title="Cassandra DB"
+                     alt="Cassandra DB" name="DBConnectorCredentials" id="226">
+                  <span class="box-label-present truncate">Cassandra DB</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myCosmosdb"  (click)="GetInfoDBConnector('cosmos-db.png','myCosmosdb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/cosmos-db.png" height="80" width="130" title="Cosmos DB"
+                     alt="Cosmos DB" name="DBConnectorCredentials" id="227">
+                  <span class="box-label-present truncate">Cosmos DB</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myRedisdb"  (click)="GetInfoDBConnector('redis.svg','myRedisdb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/redis.svg" height="80" width="130" title="Redis"
+                     alt="Redis" name="DBConnectorCredentials" id="228">
+                  <span class="box-label-present truncate">Redis</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myAmazonDynamodb"  (click)="GetInfoDBConnector('aws-dynamodb.svg','myAmazonDynamodb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/aws-dynamodb.svg" height="80" width="130" title="Amazon DynamoDB"
+                     alt="Amazon DynamoDB" name="DBConnectorCredentials" id="229">
+                  <span class="box-label-present truncate">Amazon DynamoDB</span>
+                  </span>
+                  </a>
+               </div>
+            </div>
+            <div class="row category-header" >
+               <div class="col-md-12">
+                  <h4>
+                     Data Warehouse
+                  </h4>
+               </div>
+            </div>
+            <div class="row">
+               <div class="connect-grid-box" id="myAmazonRedshiftdb"  (click)="GetInfoDBConnector('aws-redshift.svg','myAmazonRedshiftdb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/aws-redshift.svg" height="80" width="130" title="Amazon Redshift"
+                     alt="Amazon Redshift" name="DBConnectorCredentials" id="230">
+                  <span class="box-label-present truncate">Amazon Redshift</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myMicrosoftAzuredb"  (click)="GetInfoDBConnector('microsoft-azure.svg','myMicrosoftAzuredb')" >
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/microsoft-azure.svg" height="80" width="130" title="Microsoft Azure"
+                     alt="Microsoft Azure" name="DBConnectorCredentials" id="231">
+                  <span class="box-label-present truncate">Microsoft Azure</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myGoogleBigQuerydb"  (click)="GetInfoDBConnector('bigquery.svg','myGoogleBigQuerydb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/bigquery.svg" height="80" width="130" title="Google BigQuery"
+                     alt="Google BigQuery"  name="DBConnectorCredentials" id="213">
+                  <span class="box-label-present truncate">Google BigQuery</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="mySnowflakedb"  (click)="GetInfoDBConnector('snowflake.svg','mySnowflakedb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/snowflake.svg" height="80" width="130" title="Snowflake"
+                     alt="Snowflake" name="DBConnectorCredentials" id="232">
+                  <span class="box-label-present truncate">Snowflake</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myMicroFocusVerticadb"  (click)="GetInfoDBConnector('micro-focus.svg','myMicroFocusVerticadb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/micro-focus.svg" height="80" width="130" title="MicroFocus Vertica"
+                     alt="MicroFocus Vertica" name="DBConnectorCredentials" id="233">
+                  <span class="box-label-present truncate">MicroFocus Vertica</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myAmazonRDSdb"  (click)="GetInfoDBConnector('aws-rds.svg','myAmazonRDSdb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/aws-rds.svg" height="80" width="130" title="Amazon RDS"
+                     alt="Amazon RDS" name="DBConnectorCredentials" id="234">
+                  <span class="box-label-present truncate">Amazon RDS</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myMariadb"  (click)="GetInfoDBConnector('maria-db.svg','myMariadb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/maria-db.svg" height="80" width="130" title="MariaDB"
+                     alt="MariaDB" name="DBConnectorCredentials" id="235">
+                  <span class="box-label-present truncate">MariaDB</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myIBMdb"  (click)="GetInfoDBConnector('ibm-db2.png','myIBMdb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/ibm-db2.png" height="80" width="130" title="IBM Db2"
+                     alt="IBM Db2" name="DBConnectorCredentials" id="236">
+                  <span class="box-label-present truncate">IBM Db2</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myOracleAutonomousdb"  (click)="GetInfoDBConnector('oracle-autonomous.png','myOracleAutonomousdb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/oracle-autonomous.png" height="80" width="130" title="Oracle Autonomous"
+                     alt="Oracle Autonomous" name="DBConnectorCredentials" id="237">
+                  <span class="box-label-present truncate">Oracle Autonomous</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" id="myMarkLogicdb"  (click)="GetInfoDBConnector('marklogic-logo.svg','myMarkLogicdb')">
+                  <a>
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/marklogic-logo.svg" height="80" width="130" title="MarkLogic"
+                     alt="MarkLogic" name="DBConnectorCredentials" id="238">
+                  <span class="box-label-present truncate">MarkLogic</span>
+                  </span>
+                  </a>
+               </div>
+            </div>
+         </div>
+          
+         <div class="category col-md-12" data-category="Business Platforms" *ngIf="FileDatalake">
+            <div class="row">
+               <div class="connect-grid-box">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/adform.svg" height="80" width="130" title="Adform (Buyer)"
+                     alt="Adform (Buyer)">
+                  <span class="box-label-present truncate">Adform (Buyer)</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Flashtalking Ad Server flashtalking ad server">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/flashtalking.svg" height="80" width="130" title="Flashtalking"
+                     alt="Flashtalking">
+                  <span class="box-label-present truncate">Flashtalking</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Gemius Direct Effect Ad Server ad gemius ocean server adocean">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/gemius.png" height="80" width="130" title="Gemius Direct Effect"
+                     alt="Gemius Direct Effect">
+                  <span class="box-label-present truncate">Gemius Direct Effect</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Google Campaign Manager Ad Server dcm dfa doubleclick campaign manager ad server google">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/sdfgfs.svg" height="80" width="130" title="Google Campaign Manager"
+                     alt="Google Campaign Manager">
+                  <span class="box-label-present truncate">Google Campaign Manager</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Sizmek Ad Server Adserver">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/sizmek.svg" height="80" width="130" title="Sizmek"
+                     alt="Sizmek">
+                  <span class="box-label-present truncate">Sizmek</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Sizmek SAS Ad Server sizmek">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/sizmek_sas.svg" height="80" width="130" title="Sizmek SAS"
+                     alt="Sizmek SAS">
+                  <span class="box-label-present truncate">Sizmek SAS</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Affilinet Publisher Affiliate Advertising affilinet affiliate publisher">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/affilinet.svg" height="80" width="130" title="Affilinet Publisher"
+                     alt="Affilinet Publisher">
+                  <span class="box-label-present truncate">Affilinet Publisher</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Awin Affiliate Advertising awin affiliate window">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/awin.svg" height="80" width="130" title="Awin"
+                     alt="Awin">
+                  <span class="box-label-present truncate">Awin</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Belboon Advertiser Affiliate Advertising belboon advertiser">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/belboon.svg" height="80" width="130" title="Belboon Advertiser"
+                     alt="Belboon Advertiser">
+                  <span class="box-label-present truncate">Belboon Advertiser</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Cj Affiliate Affiliate Advertising commission junction">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/cjaffiliate.svg" height="80" width="130" title="Cj Affiliate"
+                     alt="Cj Affiliate">
+                  <span class="box-label-present truncate">Cj Affiliate</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Daisycon Affiliate Advertising ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/qnvflpba.svg" height="80" width="130" title="Daisycon"
+                     alt="Daisycon">
+                  <span class="box-label-present truncate">Daisycon</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="ImpactRadius Affiliate Advertising ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/impactradius.svg" height="80" width="130" title="ImpactRadius"
+                     alt="ImpactRadius">
+                  <span class="box-label-present truncate">ImpactRadius</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Partnerize Affiliate Advertising performance horizon">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/partnerize.svg" height="80" width="130" title="Partnerize"
+                     alt="Partnerize">
+                  <span class="box-label-present truncate">Partnerize</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="TradeTracker Affiliate Advertising ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/genqrgenpxre.svg" height="80" width="130" title="TradeTracker"
+                     alt="TradeTracker">
+                  <span class="box-label-present truncate">TradeTracker</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Webgains Affiliate Advertising ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/jrotnvaf2.svg" height="80" width="130" title="Webgains"
+                     alt="Webgains">
+                  <span class="box-label-present truncate">Webgains</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Webgains (Legacy) Affiliate Advertising ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/webgains.svg" height="80" width="130" title="Webgains (Legacy)"
+                     alt="Webgains (Legacy)">
+                  <span class="box-label-present truncate">Webgains (Legacy)</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Webgains SOAP Affiliate Advertising ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/webgains_soap.svg" height="80" width="130" title="Webgains SOAP"
+                     alt="Webgains SOAP">
+                  <span class="box-label-present truncate">Webgains SOAP</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Zanox Advertiser Affiliate Advertising zanox affiliate marketing, advertiser api">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/zanox_advertiser.svg" height="80" width="130" title="Zanox Advertiser"
+                     alt="Zanox Advertiser">
+                  <span class="box-label-present truncate">Zanox Advertiser</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Zanox Publisher Affiliate Advertising zanox affiliate marketing, publisher api">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/zanox.svg" height="80" width="130" title="Zanox Publisher"
+                     alt="Zanox Publisher">
+                  <span class="box-label-present truncate">Zanox Publisher</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Placed Attribution ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/placed.svg" height="80" width="130" title="Placed"
+                     alt="Placed">
+                  <span class="box-label-present truncate">Placed</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="AudienceReport Audience Research ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/audiencereport.svg" height="80" width="130" title="AudienceReport"
+                     alt="AudienceReport">
+                  <span class="box-label-present truncate">AudienceReport</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Comscore Audience Research ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/pbzfpber.svg" height="80" width="130" title="Comscore"
+                     alt="Comscore">
+                  <span class="box-label-present truncate">Comscore</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Cxense Audience Research ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/pkrafr.svg" height="80" width="130" title="Cxense"
+                     alt="Cxense">
+                  <span class="box-label-present truncate">Cxense</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Nielsen Ad Intel Audience Research nielsen ad intel ebiquity">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/nielsen_dar.svg" height="80" width="130" title="Nielsen Ad Intel"
+                     alt="Nielsen Ad Intel">
+                  <span class="box-label-present truncate">Nielsen Ad Intel</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Nielsen DAR Audience Research ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/nielsen_dar.svg" height="80" width="130" title="Nielsen DAR"
+                     alt="Nielsen DAR">
+                  <span class="box-label-present truncate">Nielsen DAR</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Pi Datametrics Audience Research ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/cvqngn.svg" height="80" width="130" title="Pi Datametrics"
+                     alt="Pi Datametrics">
+                  <span class="box-label-present truncate">Pi Datametrics</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Reppublika Audience Research ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/reppublika.svg" height="80" width="130" title="Reppublika"
+                     alt="Reppublika">
+                  <span class="box-label-present truncate">Reppublika</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="YouGov BrandIndex Audience Research ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/yougovbrandindex.svg" height="80" width="130" title="YouGov BrandIndex"
+                     alt="YouGov BrandIndex">
+                  <span class="box-label-present truncate">YouGov BrandIndex</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Moat Brand Safety ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/moat.svg" height="80" width="130" title="Moat"
+                     alt="Moat">
+                  <span class="box-label-present truncate">Moat</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="ActiveCampaign CRM ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/activecampaign.svg" height="80" width="130" title="ActiveCampaign"
+                     alt="ActiveCampaign">
+                  <span class="box-label-present truncate">ActiveCampaign</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Audience Studio CRM krux, salesforce audience studio">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/audience_studio.svg" height="80" width="130" title="Audience Studio"
+                     alt="Audience Studio">
+                  <span class="box-label-present truncate">Audience Studio</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Campaign Monitor CRM campaignmonitor monitor">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/campaignmonitor.svg" height="80" width="130" title="Campaign Monitor"
+                     alt="Campaign Monitor">
+                  <span class="box-label-present truncate">Campaign Monitor</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Cordial CRM ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/cordial.svg" height="80" width="130" title="Cordial"
+                     alt="Cordial">
+                  <span class="box-label-present truncate">Cordial</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Emarsys CRM emarsys email marketing">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/emarsys.svg" height="80" width="130" title="Emarsys"
+                     alt="Emarsys">
+                  <span class="box-label-present truncate">Emarsys</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Emarsys Data Management CRM emarsys email marketing">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/emarsys.svg" height="80" width="130" title="Emarsys Data Management"
+                     alt="Emarsys Data Management">
+                  <span class="box-label-present truncate">Emarsys Data Management</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Evalanche CRM ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/rinynapur.svg" height="80" width="130" title="Evalanche"
+                     alt="Evalanche">
+                  <span class="box-label-present truncate">Evalanche</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Hubspot CRM hubspot crm marketing sales">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/hubspot.svg" height="80" width="130" title="Hubspot"
+                     alt="Hubspot">
+                  <span class="box-label-present truncate">Hubspot</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Iterable CRM ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/iterable.svg" height="80" width="130" title="Iterable"
+                     alt="Iterable">
+                  <span class="box-label-present truncate">Iterable</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Mailchimp CRM mailchimp email crm">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/mailchimp.svg" height="80" width="130" title="Mailchimp"
+                     alt="Mailchimp">
+                  <span class="box-label-present truncate">Mailchimp</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Mailing Work CRM mail work mailingwork">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/mailingwork.svg" height="80" width="130" title="Mailing Work"
+                     alt="Mailing Work">
+                  <span class="box-label-present truncate">Mailing Work</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Marketo CRM ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/marketo.svg" height="80" width="130" title="Marketo"
+                     alt="Marketo">
+                  <span class="box-label-present truncate">Marketo</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Microsoft Dynamics 365 CRM microsoft dynamics crm 365">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/microsoft_dynamics.svg" height="80" width="130" title="Microsoft Dynamics 365"
+                     alt="Microsoft Dynamics 365">
+                  <span class="box-label-present truncate">Microsoft Dynamics 365</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="ResponseTap CRM ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/responsetap.svg" height="80" width="130" title="ResponseTap"
+                     alt="ResponseTap">
+                  <span class="box-label-present truncate">ResponseTap</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Salesforce CRM salesforce crm">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/salesforce.svg" height="80" width="130" title="Salesforce"
+                     alt="Salesforce">
+                  <span class="box-label-present truncate">Salesforce</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Salesforce Marketing Cloud CRM marketing cloud salesforce exacttarget">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/sfxtarget.svg" height="80" width="130" title="Salesforce Marketing Cloud"
+                     alt="Salesforce Marketing Cloud">
+                  <span class="box-label-present truncate">Salesforce Marketing Cloud</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Salesforce Query CRM salesforce crm">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/salesforce.svg" height="80" width="130" title="Salesforce Query"
+                     alt="Salesforce Query">
+                  <span class="box-label-present truncate">Salesforce Query</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="SharpSpring CRM ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/SharpSpring.svg" height="80" width="130" title="SharpSpring"
+                     alt="SharpSpring">
+                  <span class="box-label-present truncate">SharpSpring</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Teamleader CRM ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/teamleader.svg" height="80" width="130" title="Teamleader"
+                     alt="Teamleader">
+                  <span class="box-label-present truncate">Teamleader</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Amazon Marketplace Commerce mws">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/mws.svg" height="80" width="130" title="Amazon Marketplace"
+                     alt="Amazon Marketplace">
+                  <span class="box-label-present truncate">Amazon Marketplace</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="ChannelPilot Commerce channel pilot product shopping">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/channelpilot.svg" height="80" width="130" title="ChannelPilot"
+                     alt="ChannelPilot">
+                  <span class="box-label-present truncate">ChannelPilot</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Digistore24 Commerce digistore 24">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/digistore.svg" height="80" width="130" title="Digistore24"
+                     alt="Digistore24">
+                  <span class="box-label-present truncate">Digistore24</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Feed-Dynamix Commerce feed dynamix product">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/feeddynamix.svg" height="80" width="130" title="Feed-Dynamix"
+                     alt="Feed-Dynamix">
+                  <span class="box-label-present truncate">Feed-Dynamix</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Google Content for Shopping Commerce google content shopping feed product">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/gshopping.svg" height="80" width="130" title="Google Content for Shopping"
+                     alt="Google Content for Shopping">
+                  <span class="box-label-present truncate">Google Content for Shopping</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Idealo Commerce price comparison commerce">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/idealo.svg" height="80" width="130" title="Idealo"
+                     alt="Idealo">
+                  <span class="box-label-present truncate">Idealo</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Ladenzeile Commerce ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/ladenzeile.svg" height="80" width="130" title="Ladenzeile"
+                     alt="Ladenzeile">
+                  <span class="box-label-present truncate">Ladenzeile</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Marktplaats Admarkt Commerce ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/marktplaatsadmarkt.svg" height="80" width="130" title="Marktplaats Admarkt"
+                     alt="Marktplaats Admarkt">
+                  <span class="box-label-present truncate">Marktplaats Admarkt</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Rakuten Advertiser Commerce rakuten, advertiser api">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/rakuten.svg" height="80" width="130" title="Rakuten Advertiser"
+                     alt="Rakuten Advertiser">
+                  <span class="box-label-present truncate">Rakuten Advertiser</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Rakuten Publisher Commerce rakuten, publisher api">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/rakuten_publisher.svg" height="80" width="130" title="Rakuten Publisher"
+                     alt="Rakuten Publisher">
+                  <span class="box-label-present truncate">Rakuten Publisher</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Shopify Commerce ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/shopify.svg" height="80" width="130" title="Shopify"
+                     alt="Shopify">
+                  <span class="box-label-present truncate">Shopify</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Uberall Commerce ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/uberall.svg" height="80" width="130" title="Uberall"
+                     alt="Uberall">
+                  <span class="box-label-present truncate">Uberall</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="AdRiver DSP ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/nqevire.svg" height="80" width="130" title="AdRiver"
+                     alt="AdRiver">
+                  <span class="box-label-present truncate">AdRiver</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="AdRoll DSP adroll retargeting ads">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/nqebyy.svg" height="80" width="130" title="AdRoll"
+                     alt="AdRoll">
+                  <span class="box-label-present truncate">AdRoll</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Adman DSP ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/nqzna.svg" height="80" width="130" title="Adman"
+                     alt="Adman">
+                  <span class="box-label-present truncate">Adman</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Adobe Advertising Cloud DSP tube mogul tubemogul video programmatic tv cross channel adobe">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/nqiregvfvatPybhq.svg" height="80" width="130" title="Adobe Advertising Cloud"
+                     alt="Adobe Advertising Cloud">
+                  <span class="box-label-present truncate">Adobe Advertising Cloud</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Avocet DSP ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/avocet.svg" height="80" width="130" title="Avocet"
+                     alt="Avocet">
+                  <span class="box-label-present truncate">Avocet</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Celtra DSP ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/celtra.svg" height="80" width="130" title="Celtra"
+                     alt="Celtra">
+                  <span class="box-label-present truncate">Celtra</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Criteo (Legacy) DSP criteo retargeting remarketing">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/pevgrb.svg" height="80" width="130" title="Criteo (Legacy)"
+                     alt="Criteo (Legacy)">
+                  <span class="box-label-present truncate">Criteo (Legacy)</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Criteo Marketing DSP ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/pevgrb.svg" height="80" width="130" title="Criteo Marketing"
+                     alt="Criteo Marketing">
+                  <span class="box-label-present truncate">Criteo Marketing</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Google Display &amp; Video 360 DSP dbm doubleclick bid manager dsp google programmatic display video 360 DV360">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/trjtyry.svg" height="80" width="130" title="Google Display &amp; Video 360"
+                     alt="Google Display &amp; Video 360">
+                  <span class="box-label-present truncate">Google Display &amp; Video 360</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Jivox DSP ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/wvibk.svg" height="80" width="130" title="Jivox"
+                     alt="Jivox">
+                  <span class="box-label-present truncate">Jivox</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Lotame DSP lotame">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/lotame.svg" height="80" width="130" title="Lotame"
+                     alt="Lotame">
+                  <span class="box-label-present truncate">Lotame</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="MediaMath DSP media math dmp dsp audience programmatic">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/mediamath.svg" height="80" width="130" title="MediaMath"
+                     alt="MediaMath">
+                  <span class="box-label-present truncate">MediaMath</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="RTB House DSP ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/rtbhouse.svg" height="80" width="130" title="RTB House"
+                     alt="RTB House">
+                  <span class="box-label-present truncate">RTB House</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Red Pineapple Media DSP red pineapple">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/rpm.svg" height="80" width="130" title="Red Pineapple Media"
+                     alt="Red Pineapple Media">
+                  <span class="box-label-present truncate">Red Pineapple Media</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Stackadapt DSP ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/stackadapt.svg" height="80" width="130" title="Stackadapt"
+                     alt="Stackadapt">
+                  <span class="box-label-present truncate">Stackadapt</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Teads Analytics DSP ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/grnqfnanylgvpf.svg" height="80" width="130" title="Teads Analytics"
+                     alt="Teads Analytics">
+                  <span class="box-label-present truncate">Teads Analytics</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Teads Connect DSP ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/teadsconnect.svg" height="80" width="130" title="Teads Connect"
+                     alt="Teads Connect">
+                  <span class="box-label-present truncate">Teads Connect</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Verizon Media DSP DSP oath">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/irevmbazrqvnqfc.svg" height="80" width="130" title="Verizon Media DSP"
+                     alt="Verizon Media DSP">
+                  <span class="box-label-present truncate">Verizon Media DSP</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Zeta DSP DSP dsp rocketfuel zeta">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/rocketfuel.svg" height="80" width="130" title="Zeta DSP"
+                     alt="Zeta DSP">
+                  <span class="box-label-present truncate">Zeta DSP</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="myTarget DSP ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/mytarget.svg" height="80" width="130" title="myTarget"
+                     alt="myTarget">
+                  <span class="box-label-present truncate">myTarget</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="theTradeDesk DSP thetradedesk">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/tradedesk.svg" height="80" width="130" title="theTradeDesk"
+                     alt="theTradeDesk">
+                  <span class="box-label-present truncate">theTradeDesk</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Database Database database sql mysql server postgres big query redshift oracle azure sap hana">
+                  <a href="add-new-datastream-database.html">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/database.svg" height="80" width="130" title="Database"
+                     alt="Database">
+                  <span class="box-label-present truncate">Database</span>
+                  </span>
+                  </a>
+               </div>
+               <!-- <div class="connect-grid-box" data-keywords="Google BigQuery Database big query google">
+                  <a href="#">
+                      <span class="add-box-present">
+                      <img src="../../../assets/images/add-stream-imgs/bigquery.svg" height="80" width="130" title="Google BigQuery"
+                      alt="Google BigQuery">
+                      <span class="box-label-present truncate">Google BigQuery</span>
+                      </span>
+                  </a>
+                  </div> -->
+               <!-- <div class="connect-grid-box" data-keywords="Microsoft SQL Server Database ">
+                  <a href="add-new-datastream-database.html">
+                      <span class="add-box-present">
+                      <img src="../../../assets/images/add-stream-imgs/mssql_shared.svg" height="80" width="130" title="Microsoft SQL Server"
+                      alt="Microsoft SQL Server">
+                      <span class="box-label-present truncate">Microsoft SQL Server</span>
+                      </span>
+                  </a>
+                  </div> -->
+               <!-- <div class="connect-grid-box" data-keywords="MongoDB Database ">
+                  <a href="add-new-datastream-database.html">
+                      <span class="add-box-present">
+                      <img src="../../../assets/images/add-stream-imgs/mongo-db.svg" height="80" width="130" title="MongoDB"
+                      alt="MongoDB">
+                      <span class="box-label-present truncate">MongoDB</span>
+                      </span>
+                  </a>
+                  </div> -->
+               <!-- <div class="connect-grid-box" data-keywords="Snowflake Database ">
+                  <a href="#">
+                      <span class="add-box-present">
+                      <img src="../../../assets/images/add-stream-imgs/snowflake.svg" height="80" width="130" title="Snowflake"
+                      alt="Snowflake">
+                      <span class="box-label-present truncate">Snowflake</span>
+                      </span>
+                  </a>
+                  </div> -->
+               <!-- <div class="connect-grid-box" data-keywords="Amazon S3 File/Datalake file sftp ftp ftps s3 smb blob egnyte dropbox google drive one drive azure csv json spss xlsx xml avro parquetgcs google cloud storage">
+                  <a href="#">
+                      <span class="add-box-present">
+                      <img src="../../../assets/images/add-stream-imgs/s3.svg" height="80" width="130" title="Amazon S3"
+                      alt="Amazon S3">
+                      <span class="box-label-present truncate">Amazon S3</span>
+                      </span>
+                  </a>
+                  </div> -->
+               <!-- <div class="connect-grid-box" data-keywords="Box File/Datalake file sftp ftp ftps s3 smb blob egnyte dropbox google drive one drive azure csv json spss xlsx xml avro parquetgcs google cloud storage">
+                  <a href="#">
+                      <span class="add-box-present">
+                      <img src="../../../assets/images/add-stream-imgs/box.svg" height="80" width="130" title="Box"
+                      alt="Box">
+                      <span class="box-label-present truncate">Box</span>
+                      </span>
+                  </a>
+                  </div> -->
+               <div class="connect-grid-box" data-keywords="File File/Datalake file sftp ftp ftps s3 smb blob egnyte dropbox google drive one drive azure csv json spss xlsx xml avro parquetgcs google cloud storage">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/ftp.svg" height="80" width="130" title="File"
+                     alt="File">
+                  <span class="box-label-present truncate">File</span>
+                  </span>
+                  </a>
+               </div>
+               <!-- <div class="connect-grid-box" data-keywords="Google Drive File/Datalake file sftp ftp ftps s3 smb blob egnyte dropbox google drive one drive azure csv json spss xlsx xml avro parquetgcs google cloud storage">
+                  <a href="#">
+                      <span class="add-box-present">
+                      <img src="../../../assets/images/add-stream-imgs/drive.svg" height="80" width="130" title="Google Drive"
+                      alt="Google Drive">
+                      <span class="box-label-present truncate">Google Drive</span>
+                      </span>
+                  </a>
+                  </div> -->
+               <!-- <div class="connect-grid-box" data-keywords="Google Sheets File/Datalake Generic Google Sheets">
+                  <a href="#">
+                      <span class="add-box-present">
+                      <img src="../../../assets/images/add-stream-imgs/sheets.svg" height="80" width="130" title="Google Sheets"
+                      alt="Google Sheets">
+                      <span class="box-label-present truncate">Google Sheets</span>
+                      </span>
+                  </a>
+                  </div> -->
+               <div class="connect-grid-box" data-keywords="SharePoint Online File/Datalake file sftp ftp ftps s3 smb blob egnyte dropbox google drive one drive azure csv json spss xlsx xml avro parquetgcs google cloud storage">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/sharepoint.svg" height="80" width="130" title="SharePoint Online"
+                     alt="SharePoint Online">
+                  <span class="box-label-present truncate">SharePoint Online</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Adjust Mobile adjust kpi">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/adjust.svg" height="80" width="130" title="Adjust"
+                     alt="Adjust">
+                  <span class="box-label-present truncate">Adjust</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="AppFollow Mobile ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/appfollow.svg" height="80" width="130" title="AppFollow"
+                     alt="AppFollow">
+                  <span class="box-label-present truncate">AppFollow</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="AppLovin Mobile ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/applovin.svg" height="80" width="130" title="AppLovin"
+                     alt="AppLovin">
+                  <span class="box-label-present truncate">AppLovin</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="AppTweak Mobile ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/apptweak.svg" height="80" width="130" title="AppTweak"
+                     alt="AppTweak">
+                  <span class="box-label-present truncate">AppTweak</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Appfigures Mobile ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/appfigures.svg" height="80" width="130" title="Appfigures"
+                     alt="Appfigures">
+                  <span class="box-label-present truncate">Appfigures</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Appsflyer Mobile ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/appsflyer.svg" height="80" width="130" title="Appsflyer"
+                     alt="Appsflyer">
+                  <span class="box-label-present truncate">Appsflyer</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Fyber Mobile fyber mobile ssp">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/fyber.svg" height="80" width="130" title="Fyber"
+                     alt="Fyber">
+                  <span class="box-label-present truncate">Fyber</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Kochava Mobile kochava mobile analytics app">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/kochava.svg" height="80" width="130" title="Kochava"
+                     alt="Kochava">
+                  <span class="box-label-present truncate">Kochava</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="NativeX Mobile nativex mobile games ads">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/nativex.svg" height="80" width="130" title="NativeX"
+                     alt="NativeX">
+                  <span class="box-label-present truncate">NativeX</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Splicky Mobile ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/splicky.svg" height="80" width="130" title="Splicky"
+                     alt="Splicky">
+                  <span class="box-label-present truncate">Splicky</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="ironSource Mobile iron source In-app video network">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/ironsource.svg" height="80" width="130" title="ironSource"
+                     alt="ironSource">
+                  <span class="box-label-present truncate">ironSource</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Affilinet Advertiser Native Advertising affilinet affiliate advertiser">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/affilinet.svg" height="80" width="130" title="Affilinet Advertiser"
+                     alt="Affilinet Advertiser">
+                  <span class="box-label-present truncate">Affilinet Advertiser</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Ligatus Native Advertising ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/ligatus.svg" height="80" width="130" title="Ligatus"
+                     alt="Ligatus">
+                  <span class="box-label-present truncate">Ligatus</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Outbrain Native Advertising outbrain content marketing native advertising">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/outbrain.svg" height="80" width="130" title="Outbrain"
+                     alt="Outbrain">
+                  <span class="box-label-present truncate">Outbrain</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Plista (GraphQL) Native Advertising plista native advertising">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/plista_graph.svg" height="80" width="130" title="Plista (GraphQL)"
+                     alt="Plista (GraphQL)">
+                  <span class="box-label-present truncate">Plista (GraphQL)</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Plista (deprecated) Native Advertising plista native advertising">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/plista.svg" height="80" width="130" title="Plista (deprecated)"
+                     alt="Plista (deprecated)">
+                  <span class="box-label-present truncate">Plista (deprecated)</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Taboola Native Advertising ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/taboola.svg" height="80" width="130" title="Taboola"
+                     alt="Taboola">
+                  <span class="box-label-present truncate">Taboola</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Verizon Media Native &amp; Search Native Advertising yahoo gemini search native advertising verizon">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/irevmbazrqvnqfc.svg" height="80" width="130" title="Verizon Media Native &amp; Search"
+                     alt="Verizon Media Native &amp; Search">
+                  <span class="box-label-present truncate">Verizon Media Native &amp; Search</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Zemanta Native Advertising ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/zemanta.svg" height="80" width="130" title="Zemanta"
+                     alt="Zemanta">
+                  <span class="box-label-present truncate">Zemanta</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="httpool Native Advertising httpool social">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/httpool.svg" height="80" width="130" title="httpool"
+                     alt="httpool">
+                  <span class="box-label-present truncate">httpool</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Amazon Athena Other ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/nguran.svg" height="80" width="130" title="Amazon Athena"
+                     alt="Amazon Athena">
+                  <span class="box-label-present truncate">Amazon Athena</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Bundle Other fork bundle collection join concatenate append csv json spss xlsx xml avro parquet">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/fork.svg" height="80" width="130" title="Bundle"
+                     alt="Bundle">
+                  <span class="box-label-present truncate">Bundle</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Bynder Other ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/bynder.svg" height="80" width="130" title="Bynder"
+                     alt="Bynder">
+                  <span class="box-label-present truncate">Bynder</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Drift Other ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/drift.svg" height="80" width="130" title="Drift"
+                     alt="Drift">
+                  <span class="box-label-present truncate">Drift</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="GoToWebinar Other ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/goto_webinar.svg" height="80" width="130" title="GoToWebinar"
+                     alt="GoToWebinar">
+                  <span class="box-label-present truncate">GoToWebinar</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Google Calendar Other ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/Tbbtyr-pnyraqne.svg" height="80" width="130" title="Google Calendar"
+                     alt="Google Calendar">
+                  <span class="box-label-present truncate">Google Calendar</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Google Trends Other web trends analytics">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/trends.svg" height="80" width="130" title="Google Trends"
+                     alt="Google Trends">
+                  <span class="box-label-present truncate">Google Trends</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Innovid Other video">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/innovid.svg" height="80" width="130" title="Innovid"
+                     alt="Innovid">
+                  <span class="box-label-present truncate">Innovid</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Invoca Other ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/vaibpn.svg" height="80" width="130" title="Invoca"
+                     alt="Invoca">
+                  <span class="box-label-present truncate">Invoca</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Kenshoo Other kenshoo bid management sea">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/kenshoo.svg" height="80" width="130" title="Kenshoo"
+                     alt="Kenshoo">
+                  <span class="box-label-present truncate">Kenshoo</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Mailgun Other mailgun file email">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/mailgun.svg" height="80" width="130" title="Mailgun"
+                     alt="Mailgun">
+                  <span class="box-label-present truncate">Mailgun</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Mailworx Other ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/znvyjbek.svg" height="80" width="130" title="Mailworx"
+                     alt="Mailworx">
+                  <span class="box-label-present truncate">Mailworx</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Media Wizard Other media wizard tv plan">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/mediawizard.svg" height="80" width="130" title="Media Wizard"
+                     alt="Media Wizard">
+                  <span class="box-label-present truncate">Media Wizard</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Spotwatch Other spot watch tv tracking audience">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/spotwatch.svg" height="80" width="130" title="Spotwatch"
+                     alt="Spotwatch">
+                  <span class="box-label-present truncate">Spotwatch</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="TXGB Other ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/txgb.svg" height="80" width="130" title="TXGB"
+                     alt="TXGB">
+                  <span class="box-label-present truncate">TXGB</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Web Connect Other Web Connect">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/web.svg" height="80" width="130" title="Web Connect"
+                     alt="Web Connect">
+                  <span class="box-label-present truncate">Web Connect</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Wikipedia Other ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/jvxvcrqvn_ybtb.svg" height="80" width="130" title="Wikipedia"
+                     alt="Wikipedia">
+                  <span class="box-label-present truncate">Wikipedia</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Zendesk Other zendesk zen ticket">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/zendesk.svg" height="80" width="130" title="Zendesk"
+                     alt="Zendesk">
+                  <span class="box-label-present truncate">Zendesk</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Advanced Web Ranking SEO advanced web ranking awr seo">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/webranking.svg" height="80" width="130" title="Advanced Web Ranking"
+                     alt="Advanced Web Ranking">
+                  <span class="box-label-present truncate">Advanced Web Ranking</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Bing Webmaster SEO bing webmaster microsoft">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/bing_webmaster.svg" height="80" width="130" title="Bing Webmaster"
+                     alt="Bing Webmaster">
+                  <span class="box-label-present truncate">Bing Webmaster</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Google PageSpeed Insights SEO google pagespeed">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/cntrfcrrq.svg" height="80" width="130" title="Google PageSpeed Insights"
+                     alt="Google PageSpeed Insights">
+                  <span class="box-label-present truncate">Google PageSpeed Insights</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Google Search Console SEO google search console webmaster tools gsc seo">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/gsc.svg" height="80" width="130" title="Google Search Console"
+                     alt="Google Search Console">
+                  <span class="box-label-present truncate">Google Search Console</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="KeywordTool SEO ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/keywordtool.svg" height="80" width="130" title="KeywordTool"
+                     alt="KeywordTool">
+                  <span class="box-label-present truncate">KeywordTool</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Link SEO link market research audience">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/link.svg" height="80" width="130" title="Link"
+                     alt="Link">
+                  <span class="box-label-present truncate">Link</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Moz SEO moz seo">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/moz.svg" height="80" width="130" title="Moz"
+                     alt="Moz">
+                  <span class="box-label-present truncate">Moz</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Powerlinks SEO ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/powerlinks.svg" height="80" width="130" title="Powerlinks"
+                     alt="Powerlinks">
+                  <span class="box-label-present truncate">Powerlinks</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Rank Ranger SEO ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/enaxenatre.svg" height="80" width="130" title="Rank Ranger"
+                     alt="Rank Ranger">
+                  <span class="box-label-present truncate">Rank Ranger</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="SEMRush SEO ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/semrush.svg" height="80" width="130" title="SEMRush"
+                     alt="SEMRush">
+                  <span class="box-label-present truncate">SEMRush</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Searchmetrics SEO search metrics seo">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/searchmetrics.svg" height="80" width="130" title="Searchmetrics"
+                     alt="Searchmetrics">
+                  <span class="box-label-present truncate">Searchmetrics</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="SimilarWeb SEO ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/similarweb.svg" height="80" width="130" title="SimilarWeb"
+                     alt="SimilarWeb">
+                  <span class="box-label-present truncate">SimilarWeb</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Sistrix SEO sistrix seo">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/sistrix.svg" height="80" width="130" title="Sistrix"
+                     alt="Sistrix">
+                  <span class="box-label-present truncate">Sistrix</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Stat SEO seo stat search">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/stat.svg" height="80" width="130" title="Stat"
+                     alt="Stat">
+                  <span class="box-label-present truncate">Stat</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Web CEO SEO seo web ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/webceo.svg" height="80" width="130" title="Web CEO"
+                     alt="Web CEO">
+                  <span class="box-label-present truncate">Web CEO</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Adform (Seller) SSP adform ad server ssp programmatic">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/adform.svg" height="80" width="130" title="Adform (Seller)"
+                     alt="Adform (Seller)">
+                  <span class="box-label-present truncate">Adform (Seller)</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="AppNexus SSP app nexus dmp ssp dsp programmatic">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/appnexus.svg" height="80" width="130" title="AppNexus"
+                     alt="AppNexus">
+                  <span class="box-label-present truncate">AppNexus</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Google Ad Manager SSP dfp doubleclick for publishers ad server google manager">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/hljkhjkl.svg" height="80" width="130" title="Google Ad Manager"
+                     alt="Google Ad Manager">
+                  <span class="box-label-present truncate">Google Ad Manager</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Media.net SSP ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/medianet.svg" height="80" width="130" title="Media.net"
+                     alt="Media.net">
+                  <span class="box-label-present truncate">Media.net</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="PubMatic SSP ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/pubmatic.svg" height="80" width="130" title="PubMatic"
+                     alt="PubMatic">
+                  <span class="box-label-present truncate">PubMatic</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Sovrn SSP viglink">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/sovrn.svg" height="80" width="130" title="Sovrn"
+                     alt="Sovrn">
+                  <span class="box-label-present truncate">Sovrn</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Verizon Media Video SSP SSP  aol one video 1 verizon">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/irevmbazrqvnqfc.svg" height="80" width="130" title="Verizon Media Video SSP"
+                     alt="Verizon Media Video SSP">
+                  <span class="box-label-present truncate">Verizon Media Video SSP</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="360.cn Search Advertising ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/360pa.svg" height="80" width="130" title="360.cn"
+                     alt="360.cn">
+                  <span class="box-label-present truncate">360.cn</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Amazon Advertising Search Advertising amazon advertising ams headline product search ads">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/ams.svg" height="80" width="130" title="Amazon Advertising"
+                     alt="Amazon Advertising">
+                  <span class="box-label-present truncate">Amazon Advertising</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Apple Search Ads Search Advertising ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/applesa.svg" height="80" width="130" title="Apple Search Ads"
+                     alt="Apple Search Ads">
+                  <span class="box-label-present truncate">Apple Search Ads</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Baidu Search Advertising baidu search ads advertisement">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/baidu.svg" height="80" width="130" title="Baidu"
+                     alt="Baidu">
+                  <span class="box-label-present truncate">Baidu</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Baidu Bulk Data Search Advertising baidu search ads advertisement">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/baidu.svg" height="80" width="130" title="Baidu Bulk Data"
+                     alt="Baidu Bulk Data">
+                  <span class="box-label-present truncate">Baidu Bulk Data</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Google Ads Search Advertising google adwords search ads sea tes traffic estimation">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/jfghjf.svg" height="80" width="130" title="Google Ads"
+                     alt="Google Ads">
+                  <span class="box-label-present truncate">Google Ads</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Google Ads (New) Search Advertising google adwords search ads sea tes traffic estimation">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/tbbtyr_nqf.svg" height="80" width="130" title="Google Ads (New)"
+                     alt="Google Ads (New)">
+                  <span class="box-label-present truncate">Google Ads (New)</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Google Ads Keyword Planner Search Advertising google adwords search ads sea tes traffic estimation">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/jfghjf.svg" height="80" width="130" title="Google Ads Keyword Planner"
+                     alt="Google Ads Keyword Planner">
+                  <span class="box-label-present truncate">Google Ads Keyword Planner</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Google Search Ads 360 Search Advertising ds doubleclick search sea dc3 google ds3 ads 360 sa360">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/wretwert.svg" height="80" width="130" title="Google Search Ads 360"
+                     alt="Google Search Ads 360">
+                  <span class="box-label-present truncate">Google Search Ads 360</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Microsoft Ads Search Advertising microsoft bing search ads sea">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/Zvpebfbsg_ybtb.svg" height="80" width="130" title="Microsoft Ads"
+                     alt="Microsoft Ads">
+                  <span class="box-label-present truncate">Microsoft Ads</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Sklik Search Advertising ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/sklik.svg" height="80" width="130" title="Sklik"
+                     alt="Sklik">
+                  <span class="box-label-present truncate">Sklik</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Yandex Search Advertising yandex search search ads sea">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/yandex.svg" height="80" width="130" title="Yandex"
+                     alt="Yandex">
+                  <span class="box-label-present truncate">Yandex</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Facebook Ads Social Advertising Social fb">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/ads_insights.svg" height="80" width="130" title="Facebook Ads"
+                     alt="Facebook Ads">
+                  <span class="box-label-present truncate">Facebook Ads</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Facebook Ads Pixel Stats Social Advertising ads stats fb">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/fbcore.svg" height="80" width="130" title="Facebook Ads Pixel Stats"
+                     alt="Facebook Ads Pixel Stats">
+                  <span class="box-label-present truncate">Facebook Ads Pixel Stats</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Facebook Attribution Social Advertising fb attributions">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/fbcore.svg" height="80" width="130" title="Facebook Attribution"
+                     alt="Facebook Attribution">
+                  <span class="box-label-present truncate">Facebook Attribution</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Facebook Audiences Social Advertising Audiences fb">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/fbcore.svg" height="80" width="130" title="Facebook Audiences"
+                     alt="Facebook Audiences">
+                  <span class="box-label-present truncate">Facebook Audiences</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Facebook Boosted Social Advertising objects ads fb">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/fbcore.svg" height="80" width="130" title="Facebook Boosted"
+                     alt="Facebook Boosted">
+                  <span class="box-label-present truncate">Facebook Boosted</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Facebook Business Invoice Social Advertising Social fb">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/ads_insights.svg" height="80" width="130" title="Facebook Business Invoice"
+                     alt="Facebook Business Invoice">
+                  <span class="box-label-present truncate">Facebook Business Invoice</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Facebook Lead Ads Social Advertising ads leads fb">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/fbcore.svg" height="80" width="130" title="Facebook Lead Ads"
+                     alt="Facebook Lead Ads">
+                  <span class="box-label-present truncate">Facebook Lead Ads</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="LinkedIn Ads Social Advertising linkedin social">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/linkedin.svg" height="80" width="130" title="LinkedIn Ads"
+                     alt="LinkedIn Ads">
+                  <span class="box-label-present truncate">LinkedIn Ads</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="LinkedIn Profiles Social Advertising linkedin social">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/linkedin.svg" height="80" width="130" title="LinkedIn Profiles"
+                     alt="LinkedIn Profiles">
+                  <span class="box-label-present truncate">LinkedIn Profiles</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="MakeMeReach Social Advertising ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/makemereach.svg" height="80" width="130" title="MakeMeReach"
+                     alt="MakeMeReach">
+                  <span class="box-label-present truncate">MakeMeReach</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Reddit Ads Social Advertising ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/reddit.svg" height="80" width="130" title="Reddit Ads"
+                     alt="Reddit Ads">
+                  <span class="box-label-present truncate">Reddit Ads</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Snapchat Social Advertising ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/snapchat.svg" height="80" width="130" title="Snapchat"
+                     alt="Snapchat">
+                  <span class="box-label-present truncate">Snapchat</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="TikTok Ads Social Advertising ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/tiktok.svg" height="80" width="130" title="TikTok Ads"
+                     alt="TikTok Ads">
+                  <span class="box-label-present truncate">TikTok Ads</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Twitter Ads Social Advertising twitter ads tweet">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/twitter_ads.svg" height="80" width="130" title="Twitter Ads"
+                     alt="Twitter Ads">
+                  <span class="box-label-present truncate">Twitter Ads</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="VK Ads Social Advertising vk ads vkontakte kontakte">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/vk_ads.svg" height="80" width="130" title="VK Ads"
+                     alt="VK Ads">
+                  <span class="box-label-present truncate">VK Ads</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Brandwatch Social Analytics brand watch social">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/brandwatch.svg" height="80" width="130" title="Brandwatch"
+                     alt="Brandwatch">
+                  <span class="box-label-present truncate">Brandwatch</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Facebook Comments Social Analytics Social fb">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/page_insights.svg" height="80" width="130" title="Facebook Comments"
+                     alt="Facebook Comments">
+                  <span class="box-label-present truncate">Facebook Comments</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Facebook Page Insights Social Analytics Social fb">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/page_insights.svg" height="80" width="130" title="Facebook Page Insights"
+                     alt="Facebook Page Insights">
+                  <span class="box-label-present truncate">Facebook Page Insights</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Facebook Page Mentions Social Analytics Social fb">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/page_insights.svg" height="80" width="130" title="Facebook Page Mentions"
+                     alt="Facebook Page Mentions">
+                  <span class="box-label-present truncate">Facebook Page Mentions</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Facebook Public Page Social Analytics fb" id="FacebookPublicPage" (click)="GoSocialMedia('fbcore.svg','FacebookPublicPage')">
+                  <a >
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/fbcore.svg" sizes="FacebookPublicPage" height="80" width="130" title="Facebook Public Page"
+                  alt="Facebook Public Page"  alt="FacebookPublicPage"  id="171" name="Socialmedia">
+                  <span class="box-label-present truncate">Facebook Public Page</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Google My Business Social Analytics google my business plus maps company">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/mybusiness.svg" height="80" width="130" title="Google My Business"
+                     alt="Google My Business">
+                  <span class="box-label-present truncate">Google My Business</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Instagram Basic Display Social Analytics ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/instagram_basic_display.svg" height="80" width="130" title="Instagram Basic Display"
+                     alt="Instagram Basic Display">
+                  <span class="box-label-present truncate">Instagram Basic Display</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Instagram Business Social Analytics instagram business social facebook graph">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/instagram_business.svg" height="80" width="130" title="Instagram Business"
+                     alt="Instagram Business">
+                  <span class="box-label-present truncate">Instagram Business</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Instagram Discovery Social Analytics instagram discovery business fb">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/instagram_business.svg" height="80" width="130" title="Instagram Discovery"
+                     alt="Instagram Discovery">
+                  <span class="box-label-present truncate">Instagram Discovery</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Keyhole Social Analytics ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/keyhole.svg" height="80" width="130" title="Keyhole"
+                     alt="Keyhole">
+                  <span class="box-label-present truncate">Keyhole</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Linkfluence Radarly Social Analytics linkshare">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/linkfluence_radarly.svg" height="80" width="130" title="Linkfluence Radarly"
+                     alt="Linkfluence Radarly">
+                  <span class="box-label-present truncate">Linkfluence Radarly</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Netbase Social Analytics ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/netbase.svg" height="80" width="130" title="Netbase"
+                     alt="Netbase">
+                  <span class="box-label-present truncate">Netbase</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Organizations &amp; Brands Social Analytics linkedin">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/linkedin.svg" height="80" width="130" title="Organizations &amp; Brands"
+                     alt="Organizations &amp; Brands">
+                  <span class="box-label-present truncate">Organizations &amp; Brands</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Pinterest Social Analytics pinterest social">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/pinterest.svg" height="80" width="130" title="Pinterest"
+                     alt="Pinterest">
+                  <span class="box-label-present truncate">Pinterest</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Socialbakers Social Analytics ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/socialbakers.svg" height="80" width="130" title="Socialbakers"
+                     alt="Socialbakers">
+                  <span class="box-label-present truncate">Socialbakers</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Sprinklr Social Analytics sprinklr social media">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/sprinklr.svg" height="80" width="130" title="Sprinklr"
+                     alt="Sprinklr">
+                  <span class="box-label-present truncate">Sprinklr</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Sprinklr (Legacy) Social Analytics sprinklr social media">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/sprinklr.svg" height="80" width="130" title="Sprinklr (Legacy)"
+                     alt="Sprinklr (Legacy)">
+                  <span class="box-label-present truncate">Sprinklr (Legacy)</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Synthesio Social Analytics synthesio">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/synthesio.svg" height="80" width="130" title="Synthesio"
+                     alt="Synthesio">
+                  <span class="box-label-present truncate">Synthesio</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Twitch Social Analytics ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/Pbzob_Checyr_ETO.svg" height="80" width="130" title="Twitch"
+                     alt="Twitch">
+                  <span class="box-label-present truncate">Twitch</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Twitter Public Social Analytics Social">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/gjvggrechoyvpnanylgvpf.svg" height="80" width="130" title="Twitter Public"
+                     alt="Twitter Public">
+                  <span class="box-label-present truncate">Twitter Public</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Unmetric Social Analytics ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/unmetric.svg" height="80" width="130" title="Unmetric"
+                     alt="Unmetric">
+                  <span class="box-label-present truncate">Unmetric</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="YouTube Analytics Social Analytics youtube analytics channel video">
+                  <a href="datastream-yt-analytics.html">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/ytanalytics.svg" height="80" width="130" title="YouTube Analytics"
+                     alt="YouTube Analytics">
+                  <span class="box-label-present truncate">YouTube Analytics</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="YouTube Public Social Analytics youtube video">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/youtube.svg" height="80" width="130" title="YouTube Public"
+                     alt="YouTube Public">
+                  <span class="box-label-present truncate">YouTube Public</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Harvest Time Tracking ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/harvest.svg" height="80" width="130" title="Harvest"
+                     alt="Harvest">
+                  <span class="box-label-present truncate">Harvest</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Yanomo Time Tracking ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/yanomo.svg" height="80" width="130" title="Yanomo"
+                     alt="Yanomo">
+                  <span class="box-label-present truncate">Yanomo</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="OpenWeatherMap Weather open weather map forecast local">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/openweather.svg" height="80" width="130" title="OpenWeatherMap"
+                     alt="OpenWeatherMap">
+                  <span class="box-label-present truncate">OpenWeatherMap</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Weatherstack Weather ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/weatherstack.svg" height="80" width="130" title="Weatherstack"
+                     alt="Weatherstack">
+                  <span class="box-label-present truncate">Weatherstack</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Adobe Analytics 1.4 (Reports) Web Analytics adobe analytics omniture sitecatalyst marketing cloud">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/adobe_analytics.svg" height="80" width="130" title="Adobe Analytics 1.4 (Reports)"
+                     alt="Adobe Analytics 1.4 (Reports)">
+                  <span class="box-label-present truncate">Adobe Analytics 1.4 (Reports)</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Adobe Analytics 2.0 (Workspace) Web Analytics adobe analytics 2.0">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/adobe_analytics2.svg" height="80" width="130" title="Adobe Analytics 2.0 (Workspace)"
+                     alt="Adobe Analytics 2.0 (Workspace)">
+                  <span class="box-label-present truncate">Adobe Analytics 2.0 (Workspace)</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Convert Web Analytics ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/convert.svg" height="80" width="130" title="Convert"
+                     alt="Convert">
+                  <span class="box-label-present truncate">Convert</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Exactag Web Analytics exactag tag attribution">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/exactag.svg" height="80" width="130" title="Exactag"
+                     alt="Exactag">
+                  <span class="box-label-present truncate">Exactag</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Google Analytics Web Analytics google analytics measure multi channel product">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/cvnbvnv.svg" height="80" width="130" title="Google Analytics"
+                     alt="Google Analytics">
+                  <span class="box-label-present truncate">Google Analytics</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="IBM Analytics Web Analytics coremetrics ibm analytics">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/coremetrics.svg" height="80" width="130" title="IBM Analytics"
+                     alt="IBM Analytics">
+                  <span class="box-label-present truncate">IBM Analytics</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Mixpanel Web Analytics mix panel app tracking measure">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/zvkcnary.svg" height="80" width="130" title="Mixpanel"
+                     alt="Mixpanel">
+                  <span class="box-label-present truncate">Mixpanel</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Optimizely Web Analytics ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/bcgvzvmryl.svg" height="80" width="130" title="Optimizely"
+                     alt="Optimizely">
+                  <span class="box-label-present truncate">Optimizely</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Trendkite Web Analytics ">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/trendkite.svg" height="80" width="130" title="Trendkite"
+                     alt="Trendkite">
+                  <span class="box-label-present truncate">Trendkite</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Webtrekk Web Analytics web trekk analytics">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/webtrekk.svg" height="80" width="130" title="Webtrekk"
+                     alt="Webtrekk">
+                  <span class="box-label-present truncate">Webtrekk</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="Webtrends Web Analytics web trends analytics">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/webtrends.svg" height="80" width="130" title="Webtrends"
+                     alt="Webtrends">
+                  <span class="box-label-present truncate">Webtrends</span>
+                  </span>
+                  </a>
+               </div>
+               <div class="connect-grid-box" data-keywords="eTracker Web Analytics etracker analytics">
+                  <a href="#">
+                  <span class="add-box-present">
+                  <img src="../../../assets/images/add-stream-imgs/rgenpxre.svg" height="80" width="130" title="eTracker"
+                     alt="eTracker">
+                  <span class="box-label-present truncate">eTracker</span>
+                  </span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+ 
+
+
+
+
+
+ 

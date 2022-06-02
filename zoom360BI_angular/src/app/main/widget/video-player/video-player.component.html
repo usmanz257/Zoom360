@@ -1,0 +1,28 @@
+<!-- Modal -->
+<div class="modal fade" #videoPlayerModal id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="hide()">
+          <span aria-hidden="true" >X</span>
+        </button>
+            </div>
+            <div class="modal-body mt-5">
+                <div id="" class="text-center">
+                    <video id="my_video_1" class="" width="100%" controls preload="none" data-setup='{"playbackRates": [1, 1.5, 2] }'>
+                        <source src="../../../assets/Video/videoplayback.mp4" type='video/mp4' />
+                    </video>
+                </div>
+                <div style="display: flex;padding: 10px;justify-content: space-between;">
+                    <div>
+                        <img alt="Insights" class="css-1uqv71b css-176l2l7" src="assets/images/logo.svg"><span _ngcontent-dke-c130="" style="padding: 0 6px 0 12px; font-family: Open Sans; font-size: 16px; cursor: pointer;color: #515961">Zoom360 Monitor</span>
+                    </div>
+                    <div> <button type="button" style="margin-right: 5px;" class="btn btn-secondary" data-dismiss="modal" (click)="hide()">Close</button>
+                        <!-- <button type="button" class="btn btn-primary" (click)="setTime(30)">Start from 30sec</button> -->
+                        <button type="button" style="min-width: 60px;" class="btn btn-primary" (click)="playPause()">{{isPlay}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

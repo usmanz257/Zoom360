@@ -1,0 +1,13 @@
+.notification-counter{
+    color:#808080;
+    font-size: 30px;
+    margin-bottom: 0px !important;
+}
+.display-none {
+    display: none;
+  }
+  .display-show {
+    /* display: block;
+    z-index: 10; */
+  }
+  

@@ -1,0 +1,182 @@
+<div style="min-height: 600px;">
+    <form #Myform="ngForm">
+    <div>
+        <div class="main-section ">
+           <div   class="header" style="cursor:pointer;" (click)="ReversClass()" > 
+              <img src='../../../../assets/arrow-left-64.png'   >
+           </div>
+           <div>
+            <h3>STEP 4:</h3> 
+            <h3>Source Configuration</h3>
+           </div>
+        </div>
+         <div class="tool-section">
+        </div>
+         
+        </div>
+      <!-- <div *ngIf="EmailAuthorizationStaus">
+          <div class="main-section">
+           <h3>Account authorization</h3>
+        </div>
+        <div class="tool-section">
+        </div>
+       <div class="row">
+        <div class="col-md-12">
+           <fieldset class="module aligned" >
+              <div class="row" style="padding: 0px 11px 14px 19px;">
+                <div class="col-md-5">
+                 <div class="form-row field-stack">
+                    <label  class="label-text" for="id_stack"></label>
+                     <div class="related-widget-wrapper">
+                      <div>
+                         <input type="radio" class="form-check-input" name="AccountAuthurization" id="Firsttimeforconnection" (click)="ShowEmailAuthorization()"  [(ngModel)]="SourceAccountModel.AccountAuthurization"  #AccountAuthurization="ngModel" name="AccountAuthurization" value="Firsttimeforconnection" checked><label for="Firsttimeforconnection">First time for connection</label>  
+                     </div>
+                     <div>
+                      <input class="form-check-input" type="radio" name="AccountAuthurization" [(ngModel)]="SourceAccountModel.AccountAuthurization"  #AccountAuthurization="ngModel"  (click)="ShowEmailAuthorization()" id="Eachtimeforconnectionestablishing" value="Eachtimeforconnectionestablishing"><label  for="Eachtimeforconnectionestablishing">Each time for connection establishing</label>
+                     </div>
+                     <div>
+                      <input class="form-check-input" type="radio" name="AccountAuthurization" (click)="ShowSettupNewConButton()" [(ngModel)]="SourceAccountModel.AccountAuthurization"  #AccountAuthurization="ngModel"  id="Donotrequired"  value="Donotrequired"><label for="Donotrequired">Do not required</label>
+                     </div>
+                      </div>
+                      <div id="hint_id_email" class="help-block">
+                      </div>
+               </div>
+                </div>
+              </div>
+              <div class="row" *ngIf="EmailAuthurizationArea">
+                <div class="col-md-5">
+                 <div class="form-row field-stack" >
+                  
+                    <label class="label-text" for="id_stack">Enter the email address*</label>
+                    <div class="related-widget-wrapper">
+                      <div >
+                         <input type="text" name="Email"   id="Email" [(ngModel)]="SourceAccountModel.Email"  #Email="ngModel"  class="form-control"   maxlength="200" required email>
+                     </div>
+                    </div>
+                    <div id="hint_id_email" class="help-block">
+                      <span class="text-danger"
+                      *ngIf="(Email.touched || Myform.submitted) && Email.errors?.required">
+                      Email is required
+                  </span>
+                  <span class="text-danger"  *ngIf="Email.touched && Email.errors?.email">
+                      Enter a valid email address
+                  </span>
+                   </div>
+                </div>
+                </div>
+                <div class="col-md-2">
+                 <div class="form-row field-stack" >
+                  
+                    <label class="label-text" for="id_stack"></label>
+                    <div class="related-widget-wrapper">
+                      <div >
+                          <button class="css-xpr64j" type="submit" style="padding: 13px;" >Send Access Request now</button>
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                 </div>
+                </div>
+              </div>
+              <div class="row" *ngIf="SettupNewConnection">
+                <div class="col-md-2">
+                 <div class="form-row field-stack" style="padding-top: 0px;">
+                  
+                    <label class="label-text" for="id_stack"></label>
+                    <div class="related-widget-wrapper">
+                      <div >
+                          <button class="css-xpr64j" type="button" style="padding: 13px;" >Settup New Connection</button>
+     
+                       </div>
+                    </div>
+                    <div class="help"></div>
+                 </div>
+                </div>
+              </div>
+                <div class="row">
+                   <div class="col-md-5">
+                    <div id="div_id_message" class="form-group" *ngIf="EmailAuthurizationtextarea">
+                       <label for="id_message" class="control-label ">
+                       Message
+                       </label> 
+                       <div class="controls ">
+                          <textarea  readonly="" style="background-color: white;"   rows="10" class="textarea form-control" cols="20">
+                        {{EmailAuthurizationTextAreaMsg}}
+              
+                        </textarea>
+                        </div>
+                    </div>
+                   </div>
+     
+                </div>  
+             <div class="row">
+                <div class="col-md-2">
+                 <div class="form-row field-stack" >
+              
+                    <label class="label-text" for="id_stack"></label>
+                    <div class="related-widget-wrapper">
+                      <div class="controls " style="display: inline-flex;" >
+                         <input type="checkbox"  name="grantstatus"  id="grantstatus"  >
+                         <label style="padding:0 0 0 10px;" class="" for="grantstatus">Authorization grant status</label>
+                          
+     
+                       </div>                     
+                    </div>
+                    <div id="hint_id_email" class="help-block">
+                   </div>
+     
+            </div> 
+                </div>
+                <div class="col-md-2">
+                 <div class="form-row field-stack" >
+              
+                    <label class="label-text" for="id_stack"></label>
+                    <div class="related-widget-wrapper">
+                      <div class="controls " style="display: inline-flex;" >
+                          
+                          <button class="css-xpr64j" type="button" style="padding: 13px;">Refresh</button>
+     
+                       </div>                     
+                    </div>
+                    <div class="help"></div>
+     
+            </div> 
+                </div>
+             </div>
+             </fieldset> 
+        </div>
+       </div>
+     
+     <div class="row">
+        <div class="col-md-12">
+           <hr>
+        </div>
+     </div>
+    </div> -->
+      
+        <div class="row">
+           <div class="col-md-12">
+             <ng-template appConnectionPages></ng-template>
+         </div>
+         <!-- <div class="col-md-3 col-md-offset-1">
+          <div class="form-row field-stack image-padding">
+                      
+              <label class="label-text" for="id_stack"></label>
+              <div class="related-widget-wrapper">
+                  <img  src="../../../assets/images/{{imgname}}" height="100" width="100" >
+               </div>
+               
+             </div>
+         </div> -->
+       </div>
+       <!-- <div class="row">
+          <div class="col-md-12">
+             <hr>
+          </div>
+       </div> -->
+        <div class="form-group pull-right" style="padding: 0px;" *ngIf="!savebtn" >
+        <div class="input-bar-item">
+        <button class="css-xpr64j" type="submit" (click)="SaveCredential()" >Save</button>
+        </div>
+     </div>
+    </form>
+    </div>

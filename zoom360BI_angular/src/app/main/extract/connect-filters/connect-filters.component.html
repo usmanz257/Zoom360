@@ -1,0 +1,118 @@
+<!--<div style="margin-top:27px" *ngIf='datastreamfilterStatus'>
+    <select name="cars" id="dropdownColor" class="dropdown-design">
+        <option selected value="All" >Showing All</option>
+        <option value="5" >Showing 0 - 5</option>
+        <option value="10">Showing 0 - 10 </option>
+        <option value="15">Showing 0 - 15 </option>
+        <option  *ngFor="let item of _sourceTypeFilter" value="" (click)="getFilterStreamData(item)">{{item}}</option>
+    </select>
+</div>-->
+<!-- End DataStream Filters -->
+
+<div class="main-section">
+    <div id="toolbar" class="filter-toolbar" role="toolbar">
+        <form method="get">
+        </form>
+        <div class=" btn-group btn-group-sm" style="display: flex;flex-direction: column; margin-left:0px; width: 100%;">
+            <div style="display: flex;">
+                <ng-select style="width:310px;" [items]="_connectortype" bindLabel="dropdownText" placeholder="Connector Type:All" bindValue="dropdownValue" [(ngModel)]="connectionName">
+                </ng-select>
+                <ng-select style="width:310px; margin-left: 10px;" [items]="_workspace" bindLabel="dropdownText" placeholder="Workspace:All" bindValue="dropdownValue" [(ngModel)]="workspaceName">
+                </ng-select>
+                <ng-select style="width:310px;  margin-left: 10px;" [items]="_DataSources" bindLabel="dropdownText" placeholder="Datasources:All" bindValue="dropdownValue" [(ngModel)]="sourceName">
+                </ng-select>
+                <ng-select style="width:170px;  margin-left: 10px;" [items]="_AccessGranted" bindLabel="dropdownText" placeholder="Access Granted:All" bindValue="dropdownValue" [(ngModel)]="accessGranted">
+                </ng-select>
+            </div>
+            <div style="display: flex; margin-top: 20px;">
+                <ng-select style="width:127px;" [items]="_Enabled" bindLabel="dropdownText" placeholder="Enabled:All" bindValue="dropdownValue" [(ngModel)]="isActive">
+                </ng-select>
+                <ng-select style="width:195px; margin-left: 10px;" [items]="_destinationEnabled" bindLabel="dropdownText" placeholder="Destination Enabled:All" bindValue="dropdownValue" [(ngModel)]="destinationEnabled">
+                </ng-select>
+                <ng-select style="width:210px; margin-left: 10px;" [items]="_lastAccessed" bindLabel="dropdownText" placeholder="last Accessed:All" bindValue="dropdownValue" [(ngModel)]="lastAccessed">
+                </ng-select>
+                <ng-select style="width:260px; margin-left: 10px;" [items]="_CreatedBy" bindLabel="dropdownText" placeholder="Created By:All" bindValue="dropdownValue" [(ngModel)]="createdBy">
+                </ng-select>
+                <form method="get">
+                    <div class="searchbar" id="changelist-search">
+                        <input id="SearchConnection" style="min-width:270px;margin-left: 10px;height: 25px; " type="text" name="q" value="" class="search-input" autofocus="" placeholder="Search for...">
+                        <button style="height: 25px;" class="search-button button-secondary" type="button" (click)="SearchConnection()">Go</button>
+                    </div>
+                </form>
+                <button class="search-button button-secondary " type="button" style="height: 25px;" *ngIf="false">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                <!-- <button type="button" class="select-button-secondary" style="min-width: 80px;text-align:center;padding:4px 24px;height:25px; margin-left: 140px;" (click)="applyFilter()">
+                        Find
+                        </button> -->
+                <button class="search-button button-secondary" type="submit" style="width: 86px; margin-left: 140px; font:bold" (click)="applyFilter()">Find</button>
+            </div>
+            <!--<div style="display: flex;">
+                    <select name="cars" class="dropdown-design" [(ngModel)]="connectionName" (change)="resetButton()">
+                        <option value="all" selected>Connector Type:All</option>
+                        <option id="Connections" *ngFor="let item of _connectortype" value="{{item}}">{{item}}</option>
+                    </select>
+                    <select name="cars" class="dropdown-design" [(ngModel)]="workspaceName" (change)="resetButton()">
+                        <option  value="all" selected>Workspace:All</option>
+                        <option id="Connections" *ngFor="let item of _workspace" value="{{item}}" >{{item}}</option>
+                    </select>
+                    <select name="cars" class="dropdown-design" [(ngModel)]="sourceName" (change)="resetButton()">
+                        <option  value="all" selected>Datasources:All</option>
+                        <option id="Connections" *ngFor="let item of _DataSources" value="{{item}}">{{item}}</option>
+                    </select>
+                    <select name="cars" class="dropdown-design" [(ngModel)]="accessGranted" (change)="resetButton()">
+                        <option  value="all" selected>Access Granted:All</option>
+                        <option id="Connections" *ngFor="let item of _AccessGranted" value="{{item}}" >{{item}}</option>
+                    </select>
+                </div>
+                <div style="margin-top: 20px; display: flex;">
+                    <select name="cars" class="dropdown-design" [(ngModel)]="isActive" (change)="resetButton()">
+                        <option selected value="all">Enabled:All</option>
+                        <option id="Connections" *ngFor="let item of _Enabled" value="{{item}}" >{{item}}</option>
+                    </select>
+                    <select name="cars" class="dropdown-design" [(ngModel)]="destinationEnabled" (change)="resetButton()">
+                        <option  value="all" selected>Destination Enabled:All</option>
+                        <option id="Connections" *ngFor="let item of _destinationEnabled" value="{{item}}">{{item}}</option>
+                    </select>
+                    <select name="cars" class="dropdown-design" [(ngModel)]="lastAccessed" (change)="resetButton()">
+                        <option selected value="all">last Accessed:All</option>
+                        <option id="Connections" *ngFor="let item of _lastAccessed" value="{{item}}" >{{item}}</option>
+                    </select>
+                    <select name="cars" class="dropdown-design" [(ngModel)]="createdBy" (change)="resetButton()">
+                        <option selected value="all">Created By:All</option>
+                        <option id="Connections" *ngFor="let item of _CreatedBy" value="{{item}}" >{{item}}</option>
+                    </select>
+                    <button class="search-button button-secondary" type="button" style="height: 25px; margin-left: 1px;" *ngIf="btnCancel" (click)="reloadWindow()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>-->
+        </div>
+        <!-- <div class="tool-section" style="float: right!important;margin-left:10px;">
+                <div class="object-tools">
+                    <button class="btn btn-tool btn-sm" style="color: white; height: 25px;" (click)="applyFilter()">
+                     Filter
+                    </button>
+                  
+                    <button class="css-19vyr89" style="height:25px;" *ngIf="false">
+                        <span _ngcontent-axf-c60="" class="css-12idpux" style="color: white;" >Filter</span></button>
+                    <button class="search-button button-secondary" type="submit" style="width: 86px; margin-left: 10px; font:bold" (click)="applyFilter()">Filter</button>
+
+                </div>
+            </div> -->
+    </div>
+    <div class="generic-django-admin-header" style="padding-top: 20px;" *ngIf="false">
+        <div class="main-section">
+            <div id="toolbar" class="filter-toolbar" role="toolbar">
+                <div class="actions btn-group btn-group-sm">
+                    <button type="button" class="select-button-secondary" data-toggle="dropdown" style="min-width: 80px;">
+                    {{_Filter._tablecounter}} of {{_Filter._recordLength}}
+           
+                </button>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- <div *ngIf="allconnectionfilterStatus " style="margin-top:27px "></div> -->

@@ -1,0 +1,225 @@
+<div style="height:600px;">
+   <form>
+      <div class="fieldSection">
+       <div class="main-section " >
+           <div  class="header" (click)="ReversClass()"> 
+              <img src='../../../../assets/arrow-left-64.png' >
+           </div>
+            <h3>STEP 6 :</h3>
+            <h3>Select Fields for Dimensions and Metrics</h3>
+        </div>
+        <div class="row" style="padding: 12px 0 0 0;">
+           <div class="col-md-12">
+            <fieldset class="module aligned ">
+               <div class="row">
+                 <div class="col-md-5">
+                  <div class="form-row field-stack">
+                      
+                        <label class="label-text" for="id_stack">Entity Name*</label>
+                        <div class="related-widget-wrapper">
+                             <select type="text"  required name="WorkspaceName" style="height: 31px;width: -webkit-fill-available;" [(ngModel)]="EntitynameValue" (change)="GetSelectedEntityObj($event.target.value)"  required="required" class="textinput textInput form-control" maxlength="200"> 
+                              <option *ngFor="let EntityDropdown of EntityDropdownData" value="{{EntityDropdown.objecT_NAME}}">{{EntityDropdown.objecT_NAME}}</option>  
+                            
+                           </select>
+                          </div>
+                        
+                    
+                       </div>
+                 </div>
+               </div>
+               
+               </fieldset>
+           </div>
+        </div>
+       
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <hr>
+           </div>
+         </div>
+      
+       <div class="col-md-12" style="padding: 0px;">
+        <div class="main-section">
+         <h3>Select fields and mark them Dimensions and Metrics</h3>
+        </div>
+        <div class="tool-section">
+        </div>
+        <fieldset class="module aligned ">
+            <div class="row" style=" padding: 28px 0 0 0;">
+             <div class="col-md-12  col-sm-12 ">
+               <div class="css-gpglrx">
+                  <div class="css-rvqhyx">
+                     <button _ngcontent-dem-c65="" type="button" data-toggle="dropdown" class="select-button-secondary">
+                        <span _ngcontent-dem-c65="" data-actions-icnt="13" class="action-counter"> {{countervalue}} of {{Length}} selected</span><span _ngcontent-dem-c65="" class="all" style="display: none;">All 13 selected</span>
+                        <span _ngcontent-dem-c65="" class="marginLeft desing-chevron-down"></span></button>
+                     <div class="css-ha9xgj" role="group">
+                  <button class="css-xpr64j ads_GROUP_ITEM" type="button" value="all">All</button>
+                  <button class="css-b2qa21 ads_GROUP_ITEM" type="button" value="used">Mapped</button>
+                  <button class="css-b2qa21 ads_GROUP_ITEM" type="button" value="unused">Unmapped</button>
+               </div>
+            </div>
+               <div class="css-rvqhyx">
+                   
+               <a class="css-fw9vt9" (click)="UpdateFields()" style="color: white;">Update Fields</a>
+            </div>
+         </div>
+                <div id="changelist">
+                   <form id="changelist-form" method="post" novalidate="">
+                      <input type="hidden" name="csrfmiddlewaretoken" value="BzJ7MpE5jnM2lyqnbJrbEVtNiZc8GLk8udbCXR4ixTJfrCjd1V5zy452hpZwSEiq">
+                      <input type="hidden" name="action" value="">
+                      <input name="index" value="0" type="hidden">
+                      <input class="select-across" name="select_across" value="0" type="hidden">
+                      <div class="results">
+                         <table id="result_list" class="table table-hover">
+                            <thead>
+                               <tr>
+                                  <th scope="col" class="action-checkbox-column">
+                                     <div class="cell-wrapper" title="Select all rows">
+                                        <div class="text">
+                                           <div data-id="action-toggle" toggle="adverity-checkbox[name=&quot;_selected_action&quot;]">
+                                              <div><span class="css-kpk1s7"><input class="css-10d97nj" type="checkbox" [checked]="allcheckbox"   (click)="checkAll($event)" (change)="functionCount($event)"><span class="css-jlzago"></span></span></div>
+                                              <input hidden="" id="action-toggle" class="" data-type="checkbox" style="display: block;">
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </th>
+                                  <th scope="col" class="sortable column-type_logo">
+                                     <div class="cell-wrapper" title="Toggle sorting">
+                                        <div class="text">
+                                           <a>Sr#</a>
+                                        </div>
+                                     </div>
+                                  </th>
+                                  <th scope="col" class="sortable column-stack">
+                                     <div class="cell-wrapper" title="Toggle sorting">
+                                        <div class="text">
+                                           <a>Field Name</a>
+                                        </div>
+                                     </div>
+                                  </th>
+                                  <th scope="col" class="sortable column-name sorted ascending">
+                                     <div class="cell-wrapper" title="Toggle sorting">
+                                        <a   class="toggle-link"> 
+                                        Field Type
+                                        <span class="sortoptions sortdirectionn">
+                                        <span class="toggle ascending"></span>
+                                        </span>
+                                        </a>
+                                        <div class="sortoptions remove">
+                                           <a class="sortremove" href="# title = "Remove from sorting></a>
+                                        </div>
+                                     </div>
+                                  </th>
+                                  <th scope="col" class="column-auth_status">
+                                     <div class="cell-wrapper">
+                                        <div class="text">
+                                           <span>Display Name</span>
+                                        </div>
+                                     </div>
+                                  </th>
+                                  <th scope="col" class="column-auth_status">
+                                     <div class="cell-wrapper">
+                                        <div class="text">
+                                           <span>Aggregation</span>
+                                        </div>
+                                     </div>
+                                  </th>
+                                  <th scope="col" class="column-auth_status">
+                                     <div class="cell-wrapper">
+                                        <div class="text">
+                                           <span>Is Key</span>
+                                        </div>
+                                     </div>
+                                  </th>
+                                  <th scope="col" class="column-auth_status">
+                                    <div class="cell-wrapper">
+                                       <div class="text">
+                                          <span>Visible</span>
+                                       </div>
+                                    </div>
+                                 </th>
+                                 <th scope="col" class="column-auth_status">
+                                    <div class="cell-wrapper">
+                                       <div class="text">
+                                          <span>Image</span>
+                                       </div>
+                                    </div>
+                                 </th>
+                               </tr>
+                            </thead> 
+                             
+                             <tr class="row1" *ngFor="let objectfield of ObjcetFieldNameList">
+                                 <td class="action-checkbox">
+                                    <div name="_selected_action" value="26">
+                                       <div><span class="css-kpk1s7"><input class="css-10d97nj" type="checkbox" [(ngModel)]="objectfield.state" name="something" (change)="findCount($event,objectfield.objecT_FIELD_ID)" value="{{objectfield.objecT_FIELD_ID}}"><span class="css-jlzago"></span></span></div>
+                                       <input hidden="" name="_selected_action" class="action-select" data-type="checkbox" disabled="">
+                                    </div>
+                                 </td>
+                                 <td class="field-stack nowrap" id="1C{{objectfield.objecT_FIELD_ID}}">{{objectfield.objecT_FIELD_ID}}</td>
+                                 <td class="field-stack nowrap">
+                                    <div style="padding:5px;" id="2C{{objectfield.objecT_FIELD_ID}}" ngClass="css-bgColorNo">
+                                       {{objectfield.objecT_FIELD_NAME}}
+                                    </div>
+                                 </td>                                 
+                                 <td class="field-stack nowrap">  
+                                  <select class="dropdown-box" id="3C{{objectfield.objecT_FIELD_ID}}" >
+                                      <option value="{{objectfield.objecT_FIELD_TYPEE}}">{{objectfield.objecT_FIELD_TYPEE}}</option>
+                                      
+                                   </select> 
+                               </td> 
+                               <td class="field-stack nowrap EditableCell" contenteditable="true" id="4C{{objectfield.objecT_FIELD_ID}}">{{objectfield.displaY_NAME}}</td>
+                               <td class="field-stack nowrap">  
+                                 <select class="dropdown-box" id="5C{{objectfield.objecT_FIELD_ID}}" >
+                                     <option value="No">No</option>
+                                    <option value="yes">yes</option>
+                                    
+                                 </select> 
+                              </td> 
+                              <td class="field-stack nowrap">  
+                                 <select class="dropdown-box" id="6C{{objectfield.objecT_FIELD_ID}}">
+                                     <option value="No">No</option>
+                                    <option value="yes">yes</option>
+                                    
+                                 </select> 
+                              </td> 
+                              <td class="field-stack nowrap">  
+                                 <select class="dropdown-box" id="7C{{objectfield.objecT_FIELD_ID}}" (click)="ChangeColor($event.target.value,objectfield.objecT_FIELD_ID)">
+                                     <option value="No">No</option>
+                                    <option value="yes">yes</option>
+                                    
+                                 </select> 
+                              </td> 
+                               <td class="field-type_logo" id="8C{{objectfield.objecT_FIELD_ID}}">
+                                  <img src="../../../../assets/images/icon-ye.svg" alt="True">
+                               </td>
+ 
+                            </tr>
+                           
+                         </table>
+                      </div>
+                      <div class="pull-left changelist-botton-row changelist-pagination">
+                         &nbsp;
+                         <span class="pagination-element-counter">{{Length}} Connections</span>
+                      </div>
+                   </form>
+                </div>
+             </div>
+          </div>
+      </fieldset>
+   </div>
+   <div class="row">
+      <div class="col-md-12">
+         <hr>
+     </div>
+   </div>
+        <div class="form-group pull-right" >
+          <div class="input-bar-item">
+            <button class="btn btn-info" style="background-color: rgb(33, 155, 156);color: white;" (click)="MovetoExecutionPlan()">Save And Next</button>
+           </div>
+        </div>
+       
+   </form>
+   
+   </div>
+   

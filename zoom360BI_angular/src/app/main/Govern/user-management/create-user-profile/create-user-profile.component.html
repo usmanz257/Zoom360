@@ -1,0 +1,151 @@
+<!-- <div class="generic-django-admin-header">
+    <div class="main-section">
+        <h3>User Profile</h3>
+    </div>
+    <div class="tool-section">
+    </div>
+</div> -->
+<form [formGroup]="SaveUserProfile" (ngSubmit)="SaveConfig(SaveUserProfile.value)" autocomplete="off">
+<div class="row">
+    <div class="col-md-12" style="padding: 0px;" >
+        <div class="col-md-4"  >
+          <div class="main-section">
+              <h3 style="margin-bottom: 17.5px;">
+                User Profile
+              </h3>
+          </div>   
+      </div>
+      <div class="col-md-7 col-md-offset-1"  >
+          <div class="main-section  pull-right" >
+              <div class="input-bar-item">
+                  <input class="css-xpr64j" id="savebtn" type="button" style="margin-right: 5px;" value="+ Add new user" (click)="this.userAccessManagementService.newUser()">
+                  <input class="css-xpr64j" id="savebtn" type="button" style="margin-right: 5px;" value="Make a copy">
+                  <input class="css-xpr64j" id="savebtn" type="submit" style="margin-right: 5px;" value="Save changes">
+                  
+                  <input class="css-xpr64j" id="savebtn" type="button" style="margin-right: 5px;" value="Disable user">
+                  <input class="css-xpr64j" id="savebtn" type="button"  routerLink="/govern/accessmanagement/userslist" value="Goto list page"  (click)="this.userAccessManagementService.newUser()">
+                   
+                </div>
+          </div>   
+      </div>
+      
+    </div>
+    </div>
+<div id="content-main" class="contentMain">
+    
+        <fieldset class="module aligned ">
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Email Address</label>
+                    <div class="related-widget-wrapper">
+                        <input type="text" formControlName="EmailAddress" placeholder="Email" required="" class="vTextField" maxlength="60">
+                    </div>
+                    <!--  -->
+                    <div class="help">
+                        For login user name, email address is the default for application access
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">First Name</label>
+                    <div class="related-widget-wrapper">
+                        <input type="text" formControlName="FirstName" placeholder="First Name" class="vTextField" maxlength="60">
+                    </div>
+                    <!--  -->
+                    <div class="help">
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Last Name</label>
+                    <div class="related-widget-wrapper">
+                        <input type="text" formControlName="LastName" placeholder="Last Name" class="vTextField" maxlength="60">
+                    </div>
+                    <!--  -->
+                    <div class="help">
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Image</label>
+                    <div class="related-widget-wrapper">
+                        <input type="file" placeholder="" required="" class="vTextField" maxlength="60">
+                        
+                    </div>
+                    <!--  -->
+                    <div class="help">
+                        Select image file to show user picture on the application screens
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Phone number</label>
+                    <div class="related-widget-wrapper">
+                        <input type="text" formControlName="PhoneNo" placeholder="Phone number" class="vTextField" maxlength="60">
+                    </div>
+                    <!--  -->
+                    <div class="help">
+                        Text messages shall be used to communicate any risk based information or confirmation
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Time Zone</label>
+                    <div class="related-widget-wrapper">
+                        <!-- <input id="timeZone" #checkbox ej-dropdownlist [dataSource]="_timezone" [fields]="fieldsvalues" showCheckbox="true" watermarkText="Select a skill" width="100%" multiSelectMode="visualmode" width="480px" /> -->
+                        <ejs-dropdownlist id='displayMode' cssClass="edit-Dropdown" [dataSource]='_timezone' [(value)]='timeZoneValue' [fields]='fieldsvalues' placeholder='select time zone'></ejs-dropdownlist>
+                    </div>
+                    
+                    <!--  -->
+                    <div class="help">
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Password</label>
+                    <div class="related-widget-wrapper">
+                        <input type="password" formControlName="Flex1" placeholder="Enter Password" class="vTextField" maxlength="60">
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Confirm Password</label>
+                    <div class="related-widget-wrapper">
+                        <input type="password" formControlName="Flex1" placeholder="Enter Confirm Password" class="vTextField" maxlength="60">
+                    </div>
+                    
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+{{test |json}}
+        </fieldset>
+
+        <!-- <div>
+            <div class="css-1qbrnrg">
+                <hr class="css-1c3fhlt" mx="zero" role="separator" aria-orientation="horizontal">
+                <div class="css-1x62jim">
+                    <div class="css-p84alj">
+                        <div class="css-rvqhyx"><a class="css-ebx8b0" href="/instagram_business/instagrambusinessdatastream/27/delete/">Delete</a><a class="css-b2qa21" href="/core/apidatastream/clone?pk=27">Clone</a></div>
+                    </div>
+                    <div class="css-1w7dt24">
+                        <div class="css-rvqhyx"><button class="css-b2qa21" type="button" name="_continue">Save and continue editing</button><button class="css-xpr64j" type="submit" name="_save">Save</button><span></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    -->
+</div>
+</form>

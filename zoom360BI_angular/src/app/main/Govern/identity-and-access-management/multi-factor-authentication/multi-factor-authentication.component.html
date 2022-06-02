@@ -1,0 +1,273 @@
+<div class="generic-django-admin-header">
+    <div class="main-section">
+        <h3>Security Question</h3>
+    </div>
+    <div class="tool-section">
+    </div>
+</div>
+<div id="content-main" class="contentMain">
+    <form [formGroup]="accesslockingSetup" (ngSubmit)="SaveConfig(accesslockingSetup.value)" autocomplete="off">
+        <fieldset class="module aligned ">
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth"></label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="SecurityQuestion" value="1" style="margin-top: -1px;">Required always for login
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="SecurityQuestion" value="2" style="margin-top: -1px;">Not required
+                        </div>
+                    </div>
+                    <div class="help">Soft passwords do not requires any combination</div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="SqFirstTimeLogin" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Required for first time login</label>
+                </div>
+
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="SqPasswordUpdation" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Required during password update</label>
+                </div>
+
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Security question</label>
+                    <div class="related-widget-wrapper">
+                        <ejs-dropdownlist id='_securityQuestion' cssClass="edit-Dropdown"  [dataSource]="_securityQuestion" placeholder="Select Available Format " [(fields)]='field' formControlName="SecurityQuestionOptions" ></ejs-dropdownlist> 
+                        <!-- <select formControlName="SecurityQuestionOptions" class="selectpicker" style="width: 478px;">
+                            <option *ngFor="let item of _securityQuestion" value="{{item.dropdownValue}}">{{item.dropdownText}}</option>
+                      </select> -->
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Answer to secret question</label>
+                    <div class="related-widget-wrapper">
+                        <input type="text" formControlName="SecurityQuestionAnswer" value="Default" class="vTextField" maxlength="60">
+                    </div>
+                    <!--  -->
+                    <div class="help">
+
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>PassCode Authentication</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth"></label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="PasscodeAuthentication" value="1" style="margin-top: -1px;" checked>Required always for login
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="PasscodeAuthentication" value="2" style="margin-top: -1px;">Not required
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="PaFirstTimeLogin" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Required for first time login</label>
+                </div>
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="PaPasswordUpdation" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Required during password update</label>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="PasscodeEmail" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Send authorization code through Email</label>
+                </div>
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="PasscodeSms" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Send authorization code through SMS</label>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="PasscodeSinglepart" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Send authorization code in single part</label>
+                </div>
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="PasscodeTwopart" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Send authorization code in two (2) part</label>
+                </div>
+                <div class="help">
+                    Requires both Email & SMS recipient channels are selected
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Authorization code validity time (in seconds)</label>
+                    <div class="related-widget-wrapper">
+                        <input type="number" formControlName="PasscodeValidityTime" id="id_name" required="" class="vTextField" maxlength="60">
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Authorization code validity attempts (in number)</label>
+                    <div class="related-widget-wrapper">
+                        <input type="number" formControlName="PasscodeValidityAttempts" id="id_name" required="" class="vTextField" maxlength="60">
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Cryptographic Tokens</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth"></label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="CryptoGraphicToken" value="1" style="margin-top: -1px;" checked>Required always for login
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="CryptoGraphicToken" value="2" style="margin-top: -1px;">Not required
+                        </div>
+                    </div>
+                    <div class="help">Contact application support to activate this option</div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="CtFirsttimeLogin" class="form-check-input" id="exampleCheck1">
+
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Required for first time login</label>
+                </div>
+
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="CtPasswordUpdation" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Required during password update</label>
+                </div>
+
+            </div>
+
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>QR Code Authentication</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth"></label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="QrCode" value="1" style="margin-top: -1px;" checked>Required always for login
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="QrCode" value="2" style="margin-top: -1px;">Not required
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="QrFirsttimeLogin" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Required for first time login</label>
+                </div>
+
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="QrPasswordUpdation" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Required during password update</label>
+                </div>
+
+            </div>
+
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>FaceID Unlocking</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth"></label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="FaceId" value="1" style="margin-top: -1px;" checked>Required always for login
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="FaceId" value="2" style="margin-top: -1px;">Not required
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="FIFirsttimeLogin" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Required for first time login</label>
+                </div>
+
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="FiPasswordUpdation" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Required during password update</label>
+                </div>
+
+            </div>
+
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Supervisory Approval</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth"></label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="SupervisorApproval" value="1" style="margin-top: -1px;" checked>Required always for login
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="SupervisorApproval" value="2" style="margin-top: -1px;">Not required
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="SaFirsttimeLogin" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Required for first time login</label>
+                </div>
+
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="SAPasswordUpdation" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Required during password update</label>
+                </div>
+
+            </div>
+
+        </fieldset>
+        <div>
+            <div class="css-1qbrnrg">
+                <hr class="css-1c3fhlt" mx="zero" role="separator" aria-orientation="horizontal">
+                <div class="css-1x62jim">
+                    <div class="css-p84alj">
+                        <div class="css-rvqhyx"><a class="css-ebx8b0" href="/instagram_business/instagrambusinessdatastream/27/delete/">Delete</a><a class="css-b2qa21" href="/core/apidatastream/clone?pk=27">Clone</a></div>
+                    </div>
+                    <div class="css-1w7dt24">
+                        <div class="css-rvqhyx"><button class="css-b2qa21" type="button" name="_continue">Save and continue editing</button><button class="css-xpr64j" type="submit" name="_save">Save</button><span></span></div>
+                    </div>
+                </div>
+                <ejs-toast #defaulttoast [position]="position" >                
+                </ejs-toast>
+            </div>
+        </div>
+    </form>
+</div>

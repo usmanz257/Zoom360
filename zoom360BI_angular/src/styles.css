@@ -1,0 +1,1643 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import "~jsoneditor/dist/jsoneditor.min.css";
+@import "../node_modules/ag-grid-enterprise/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid-enterprise/dist/styles/ag-theme-alpine.css";
+
+/*Sync Dropdown*/
+
+@import "../node_modules/@syncfusion/ej2-base/styles/bootstrap.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/bootstrap.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/bootstrap.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/bootstrap.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/bootstrap.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap.css";
+@import "../node_modules/@syncfusion/ej2-querybuilder/styles/bootstrap.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/bootstrap.css";
+@import "../node_modules/@syncfusion/ej2-angular-dropdowns/styles/bootstrap.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/bootstrap.css";
+@import "../node_modules/@syncfusion/ej2-angular-grids/styles/bootstrap.css";
+@import "../node_modules/@syncfusion/ej2-angular-notifications/styles/bootstrap.css";
+
+a {
+  
+  text-decoration: none!important;
+}
+
+a:hover, a:active, a:focus {
+  color: none!important;
+  text-decoration: none!important;
+} 
+.e-fullrow-wrap .e-fullrow {
+  margin-top: 0px !important;
+}
+
+.e-vscroll:not(.e-scroll-device) {
+  padding: 0px !important;
+}
+
+/* @import url('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+=======
+/* @import url('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'); */
+.active-class {
+  margin-top: unset;
+  margin-right: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  font-family: inherit;
+  box-sizing: border-box;
+  padding-left: 7px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  display: block;
+  vertical-align: top;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 19px;
+  color: rgb(33, 155, 156);
+  background-color: rgb(244, 250, 250);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: rgb(33, 155, 156);
+  text-decoration: none !important;
+}
+textarea.jsoneditor-text {
+  min-height: 350px;
+}
+
+/*.css-g4ubxk {
+     position: absolute !important; 
+
+
+}*/
+
+.ng-select.ng-select-single .ng-select-container {
+  height: 25px;
+}
+
+.ng-select .ng-select-container {
+  color: #333;
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  min-height: 25px;
+  align-items: center;
+}
+
+.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
+  /* top: 8px;
+    top: 14px;*/
+  left: 0;
+  padding-left: 4px;
+  padding-right: 50px;
+}
+
+.ng-input input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 0px 6px;
+  margin-top: 0;
+}
+
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container {
+  padding: 0 0 0 10px;
+}
+
+.ng-select.ng-select-multiple
+  .ng-select-container
+  .ng-value-container
+  .ng-value
+  .ng-value-icon.left {
+  padding: 1px;
+  /* kborder-right: 1px solid #b8dbff; */
+}
+
+.ng-select.ng-select-multiple
+  .ng-select-container
+  .ng-value-container
+  .ng-value {
+  white-space: nowrap;
+  border-radius: 3px;
+  padding: 0px;
+}
+
+.ng-select.ng-select-multiple
+  .ng-select-container
+  .ng-value-container
+  .ng-value
+  .ng-value-label {
+  display: inline-block;
+  /* padding: 1px 5px; */
+}
+
+.ng-value {
+  font-size: 0.9em;
+  /* background-color: #ebf5ff; */
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.form-row p,
+form .button,
+input,
+select,
+textarea {
+  padding: 2px 15px;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+  background-color: rgb(226, 242, 242);
+  color: #333;
+}
+
+/* .accordion-toggle:after {
+    font-family: 'FontAwesome';
+    content: "\f078";
+    float: right;
+}
+
+.accordion-opened .accordion-toggle:after {
+    content: "\f054";
+} */
+
+.control-buttons {
+  margin-top: unset;
+  margin-right: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  padding-top: unset;
+  padding-bottom: unset;
+  padding-left: unset;
+  font-family: inherit;
+  padding-right: 2px;
+  display: inline-block;
+  width: 16px;
+  height: 24px;
+  vertical-align: top;
+  box-sizing: content-box;
+  transform: rotate(0deg);
+  overflow: visible;
+}
+
+.control-buttons-svg {
+  margin-top: unset;
+  margin-right: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  padding-top: unset;
+  padding-bottom: unset;
+  padding-left: unset;
+  font-family: inherit;
+  padding-right: 8px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: top;
+  box-sizing: content-box;
+  transform: rotate(0deg);
+}
+
+.control-buttons-font {
+  margin-top: unset;
+  margin-right: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  padding-top: unset;
+  padding-right: unset;
+  padding-bottom: unset;
+  padding-left: unset;
+  font-family: inherit;
+  box-sizing: border-box;
+  color: inherit;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.main-menu-active {
+  border-bottom: 1px solid rgb(33, 155, 156) !important;
+}
+
+.font-style {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+/* start labels tag */
+
+.red-label {
+  margin-top: unset;
+  margin-right: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  padding-top: unset;
+  padding-bottom: unset;
+  font-family: inherit;
+  box-sizing: border-box;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: rgb(252, 234, 232);
+  color: rgb(165, 51, 35);
+  display: inline-flex;
+  height: 16px;
+  vertical-align: top;
+  font-size: 10px;
+  line-height: 16px;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  justify-content: start;
+  white-space: nowrap;
+  border-width: 1px;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 8px;
+}
+
+.green-label {
+  margin-top: unset;
+  margin-right: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  padding-top: unset;
+  padding-bottom: unset;
+  font-family: inherit;
+  box-sizing: border-box;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: rgb(244, 250, 250);
+  color: rgb(33, 155, 156);
+  display: inline-flex;
+  height: 16px;
+  vertical-align: top;
+  font-size: 10px;
+  line-height: 16px;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  justify-content: start;
+  white-space: nowrap;
+  border-width: 1px;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 8px;
+}
+
+.btn-light-green {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  background-color: rgb(255, 255, 255);
+  color: rgb(33, 155, 156);
+  display: inline-flex;
+  width: auto;
+  height: 24px;
+  font-size: 12px;
+  line-height: 12px;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  white-space: nowrap;
+  cursor: pointer;
+  margin: 0px;
+  padding: 0px 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  border-color: rgb(203, 209, 214);
+  text-decoration: none;
+}
+
+.btn-light-green:focus:not(.focus-visible) {
+  outline: none;
+}
+
+.btn-light-green:hover:not([aria-disabled="true"]) {
+  background-color: rgb(226, 242, 242);
+  color: rgb(33, 155, 156);
+  border-color: rgb(33, 155, 156);
+}
+
+.btn-light-green:active:not([aria-disabled="true"]) {
+  background-color: rgb(199, 230, 230);
+  color: rgb(33, 155, 156);
+  border-color: rgb(33, 155, 156);
+}
+
+.dropdown-nav-btn {
+  margin-top: unset;
+  margin-right: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  padding-top: unset;
+  padding-bottom: unset;
+  font-family: inherit;
+  box-sizing: border-box;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: transparent;
+  color: rgb(52, 59, 64);
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 16px;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  white-space: nowrap;
+  cursor: pointer;
+  border-width: 1px;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.dropdown-nav-btn:active:not([aria-disabled="true"]) {
+  background-color: rgb(209, 226, 250);
+  color: rgb(52, 59, 64);
+}
+
+.dropdown-nav-btn:hover:not([aria-disabled="true"]) {
+  background-color: rgb(231, 240, 253);
+  color: rgb(52, 59, 64);
+}
+
+.dropdown-nav-btn:focus:not(.focus-visible) {
+  outline: none;
+}
+
+.dropdown-nav-btn:focus {
+  background-color: transparent;
+  color: rgb(52, 59, 64);
+  text-decoration: none;
+}
+
+.dropdown-nav-btn:hover {
+  text-decoration: none;
+}
+
+/* end labels tag */
+
+/* start Graph page (Reaveal) */
+
+.side-menu-right-g {
+  padding: 15px;
+}
+
+/*end Graph page (Reaveal) */
+
+/* Clock */
+
+.label-successNew {
+  height: 20px;
+  background: #d9f9f3;
+  border: 1px solid #d9f9f3;
+  color: #35796c;
+  border-radius: 35px;
+  padding: 2px;
+  font-size: 10px;
+}
+
+.ag-header {
+  background-color: #f8f9f9 !important;
+  /* background-color: #f8f8f8; */
+  /* background-color: var(--ag-header-background-color, #f8f8f8); */
+  border-bottom: solid 1px;
+  border-bottom-color: #219b9c !important;
+  /* border-bottom-color: var(--ag-border-color, #babfc7); */
+}
+
+.ag-pivot-off .ag-header-cell-label {
+  color: #343b40;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.ag-pivot-on .ag-header-cell-label {
+  color: #343b40;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.ag-header-row {
+  background-color: #f8f9f9 !important;
+}
+
+.ag-theme-alpine .ag-column-drop-horizontal {
+  background-color: rgb(237, 245, 250);
+  /* background-color: #f8f8f8;
+    background-color: var(--ag-control-panel-background-color, #f8f8f8); */
+  color: #181d1f;
+  color: var(
+    --ag-secondary-foreground-color,
+    var(--ag-foreground-color, #181d1f)
+  );
+  height: 40px;
+  /* border-bottom: none; */
+  border-bottom: solid 1px;
+  border-bottom-color: #dde2eb;
+  /* border-bottom-color: var(--ag-border-color, #babfc7); */
+}
+
+.ag-theme-alpine .ag-root-wrapper {
+  border: none;
+  /* border-color: #babfc7;
+    border-color: var(--ag-border-color, #babfc7); */
+  border-bottom: 1px solid;
+  border-bottom-color: #dde2eb;
+}
+
+/* Grid FullScreen */
+
+.hideSide {
+  display: none;
+}
+
+/* Main Menu dropdown */
+
+.ActiveRoute {
+  margin-top: unset;
+  margin-right: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  font-family: inherit;
+  box-sizing: border-box;
+  padding-left: 7px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  display: block;
+  vertical-align: top;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 19px;
+  color: rgb(33, 155, 156);
+  background-color: rgb(244, 250, 250);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: rgb(33, 155, 156);
+  text-decoration: none !important;
+}
+
+.css-1wfdhj:hover {
+  color: #343b40 !important;
+  background-color: rgb(226, 242, 242);
+}
+
+/* Step 8 Wizrad Style Css */
+
+/* ConnectionTypeWizardTick */
+.ConnectorType {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(52, 59, 64);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.ConnectorType::before {
+  content: url(./assets/images/tick.svg);
+  height: 20px;
+  margin-right: 8px;
+  text-align: center;
+  width: 20px;
+}
+.ConnectorType:hover {
+  text-decoration: none;
+  color: rgb(33, 155, 156);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+}
+/* connectortype Wizard Active */
+.css-Connectorwizard {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  background-color: rgb(244, 250, 250);
+  color: rgb(33, 155, 156);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0px;
+  padding: 4px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  text-decoration: none;
+}
+.css-Connectorwizard::before {
+  content: "1";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+
+.css-Connectorwizard:hover {
+  text-decoration: none;
+  color: rgb(33, 155, 156);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+}
+
+/* SourceAccount Wizard Class Change in Templete Component When Click On Save AND Next Button in  Config component  */
+.css-skkt0a {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  background-color: rgb(244, 250, 250);
+  color: rgb(33, 155, 156);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0px;
+  padding: 4px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  text-decoration: none;
+}
+.css-skkt0a:focus:not(.focus-visible) {
+  outline: none;
+}
+.css-skkt0a:focus {
+  color: rgb(33, 155, 156);
+  text-decoration: none;
+}
+.css-skkt0a:hover {
+  color: rgb(33, 155, 156);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+  text-decoration: none;
+}
+.css-skkt0a:active {
+  background-color: rgb(199, 230, 230);
+}
+.css-skkt0a::before {
+  content: "2";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+
+.css-skkt0atick {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(52, 59, 64);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.css-skkt0atick::before {
+  content: url(./assets/images/tick.svg);
+  height: 20px;
+  margin-right: 8px;
+  text-align: center;
+  width: 20px;
+}
+.css-skkt0atick:hover {
+  color: rgb(52, 59, 64);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+  text-decoration: none;
+}
+/* template Wizard Colour Control In Templete Component on Click MicrosofSql Component */
+.css-Templatewizard {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  background-color: rgb(244, 250, 250);
+  color: rgb(33, 155, 156);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0px;
+  padding: 4px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  text-decoration: none;
+}
+.css-Templatewizard::before {
+  content: "3";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+
+.css-Templatewizard:hover {
+  text-decoration: none;
+  color: rgb(33, 155, 156);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+}
+.css-Templatewizardtick {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(52, 59, 64);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.css-Templatewizardtick::before {
+  content: url(./assets/images/tick.svg);
+  height: 20px;
+  margin-right: 8px;
+  text-align: center;
+  width: 20px;
+}
+.css-Templatewizardtick:hover {
+  color: rgb(52, 59, 64);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Source Object Wizard Show on Click Templete Save And Next button */
+.css-Sourcewizard {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  background-color: rgb(244, 250, 250);
+  color: rgb(33, 155, 156);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0px;
+  padding: 4px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  text-decoration: none;
+}
+.css-Sourcewizard::before {
+  content: "4";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+.css-Sourcewizard:hover {
+  text-decoration: none;
+  color: rgb(33, 155, 156);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+}
+.css-Sourcewizardtick {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(52, 59, 64);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.css-Sourcewizardtick::before {
+  content: url(./assets/images/tick.svg);
+  height: 20px;
+  margin-right: 8px;
+  text-align: center;
+  width: 20px;
+}
+.css-Sourcewizardtick:hover {
+  color: rgb(52, 59, 64);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Filter Page Wizzard Controls for disabled the link */
+.css-11p48i9filter {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: transparent;
+  color: rgb(178, 186, 194);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.css-11p48i9filter::before {
+  content: "5";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+/* ///tick When We Come on this Wizzard  filters*/
+.css-filterstick {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(52, 59, 64);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.css-filterstick::before {
+  content: url(./assets/images/tick.svg);
+  height: 20px;
+  margin-right: 8px;
+  text-align: center;
+  width: 20px;
+}
+.css-filterstick:hover {
+  color: rgb(52, 59, 64);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* filter wizzard active */
+.css-filterwizard {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  background-color: rgb(244, 250, 250);
+  color: rgb(33, 155, 156);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0px;
+  padding: 4px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  text-decoration: none;
+}
+.css-filterwizard::before {
+  content: "5";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+.css-filterwizard:hover {
+  text-decoration: none;
+  color: rgb(33, 155, 156);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+}
+
+/* FilterSelection Page Wizzard Controls for disabled the link */
+.css-FilterSelection {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: transparent;
+  color: rgb(178, 186, 194);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.css-FilterSelection::before {
+  content: "6";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+/* ///FilterSelection Wizard after Visit*/
+.css-FilterSelectiontick {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(52, 59, 64);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.css-FilterSelectiontick::before {
+  content: url(./assets/images/tick.svg);
+  height: 20px;
+  margin-right: 8px;
+  text-align: center;
+  width: 20px;
+}
+.css-FilterSelectiontick:hover {
+  color: rgb(52, 59, 64);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* FilterSelection wizzard active */
+.css-FilterSelectionwizard {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  background-color: rgb(244, 250, 250);
+  color: rgb(33, 155, 156);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0px;
+  padding: 4px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  text-decoration: none;
+}
+.css-FilterSelectionwizard::before {
+  content: "5";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+.css-FilterSelectionwizard:hover {
+  text-decoration: none;
+  color: rgb(33, 155, 156);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+}
+
+/* ExecutionPlanWizard */
+.css-ExecutionPlanWizard {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  background-color: rgb(244, 250, 250);
+  color: rgb(33, 155, 156);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0px;
+  padding: 4px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  text-decoration: none;
+}
+.css-ExecutionPlanWizard::before {
+  content: "7";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+
+.css-ExecutionPlanWizard:hover {
+  text-decoration: none;
+  color: rgb(33, 155, 156);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+}
+.css-ExecutionPlanWizardtick {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(52, 59, 64);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.css-ExecutionPlanWizardtick::before {
+  content: url(./assets/images/tick.svg);
+  height: 20px;
+  margin-right: 8px;
+  text-align: center;
+  width: 20px;
+}
+.css-ExecutionPlanWizardtick:hover {
+  color: rgb(52, 59, 64);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+  text-decoration: none;
+}
+.css-ExecutionPlanWizardDisabled {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: transparent;
+  color: rgb(178, 186, 194);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.css-ExecutionPlanWizardDisabled::before {
+  content: "7";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+/* ExractWizard */
+.css-ExractWizard {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  background-color: rgb(244, 250, 250);
+  color: rgb(33, 155, 156);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0px;
+  padding: 4px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  text-decoration: none;
+}
+.css-ExractWizard::before {
+  content: "8";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+
+.css-ExractWizard:hover {
+  text-decoration: none;
+  color: rgb(33, 155, 156);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+}
+.css-ExractWizardtick {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(52, 59, 64);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.css-ExractWizardtick::before {
+  content: url(./assets/images/tick.svg);
+  height: 20px;
+  margin-right: 8px;
+  text-align: center;
+  width: 20px;
+}
+.css-ExractWizardtick:hover {
+  color: rgb(52, 59, 64);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+  text-decoration: none;
+}
+.css-ExractWizardDisabled {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: transparent;
+  color: rgb(178, 186, 194);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.css-ExractWizardDisabled::before {
+  content: "8";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+.header img {
+  float: left;
+  width: 25px;
+  height: 25px;
+  margin-top: 3px;
+  cursor: pointer;
+  margin-right: 9px;
+}
+.header h3 {
+  position: relative;
+
+  left: 10px;
+}
+
+/* 4 step wizard style */
+
+/* Add New ConnectionType WizardTick */
+.AddNewConnectorType {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(52, 59, 64);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.AddNewConnectorType::before {
+  content: url(./assets/images/tick.svg);
+  height: 20px;
+  margin-right: 8px;
+  text-align: center;
+  width: 20px;
+}
+.AddNewConnectorType:hover {
+  text-decoration: none;
+  color: rgb(33, 155, 156);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+}
+/*Add New Connection Template Wizard For Step 2*/
+.AddNewConnectionTemplatewizard {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  background-color: rgb(244, 250, 250);
+  color: rgb(33, 155, 156);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0px;
+  padding: 4px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  text-decoration: none;
+}
+.AddNewConnectionTemplatewizard::before {
+  content: "2";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+
+.AddNewConnectionTemplatewizard:hover {
+  text-decoration: none;
+  color: rgb(33, 155, 156);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+}
+.AddNewConnectionTemplatewizardtick {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(52, 59, 64);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.AddNewConnectionTemplatewizardtick::before {
+  content: url(./assets/images/tick.svg);
+  height: 20px;
+  margin-right: 8px;
+  text-align: center;
+  width: 20px;
+}
+.AddNewConnectionTemplatewizardtick:hover {
+  color: rgb(52, 59, 64);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+  text-decoration: none;
+}
+.AddNewConnectionTemplatewizardDisabled {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: transparent;
+  color: rgb(178, 186, 194);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.AddNewConnectionTemplatewizardDisabled::before {
+  content: "2";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+
+/* AddNewConnection Source Account Wizard  */
+.AddNewConnectionSourcewizard {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  background-color: rgb(244, 250, 250);
+  color: rgb(33, 155, 156);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0px;
+  padding: 4px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  text-decoration: none;
+}
+.AddNewConnectionSourcewizard::before {
+  content: "3";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+.AddNewConnectionSourcewizard:hover {
+  text-decoration: none;
+  color: rgb(33, 155, 156);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+}
+.AddNewConnectionSourcewizardtick {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(52, 59, 64);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.AddNewConnectionSourcewizardtick::before {
+  content: url(./assets/images/tick.svg);
+  height: 20px;
+  margin-right: 8px;
+  text-align: center;
+  width: 20px;
+}
+.AddNewConnectionSourcewizardtick:hover {
+  color: rgb(52, 59, 64);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+  text-decoration: none;
+}
+.AddNewConnectionSourcewizardDisabled {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: transparent;
+  color: rgb(178, 186, 194);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.AddNewConnectionSourcewizardDisabled::before {
+  content: "3";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+
+/* AddNewConnectionConfigure Wizard  */
+.AddNewConnectionConfigure {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  background-color: rgb(244, 250, 250);
+  color: rgb(33, 155, 156);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0px;
+  padding: 4px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  text-decoration: none;
+}
+.AddNewConnectionConfigure::before {
+  content: "4";
+  height: 16px;
+  margin-right: 8px;
+  text-align: center;
+  width: 16px;
+}
+.AddNewConnectionConfigure:hover {
+  text-decoration: none;
+  color: rgb(33, 155, 156);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+}
+.AddNewConnectionConfiguretick {
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: inherit;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(52, 59, 64);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+.AddNewConnectionConfiguretick::before {
+  content: url(./assets/images/tick.svg);
+  height: 20px;
+  margin-right: 8px;
+  text-align: center;
+  width: 20px;
+}
+.AddNewConnectionConfiguretick:hover {
+  color: rgb(52, 59, 64);
+  background-color: rgb(226, 242, 242);
+  cursor: pointer;
+  text-decoration: none;
+}
+/* SyncFusion */
+/* .e-input-group.e-ddl {
+  height: 35px !important;
+} */
+.e-ddl.e-input-group .e-input-group-icon,
+.e-ddl.e-input-group .e-input-group-btn button {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px !important;
+  padding: 0px !important;
+}
+.e-treeview .e-node-hover,
+.e-treeview .e-node-focus,
+.e-fullrow-wrap .e-li-hover > .e-fullrow,
+.e-fullrow-wrap .e-li-focus > .e-fullrow {
+  color: #333;
+  border: none !important;
+}
+.e-treeview .e-node-hover,
+.e-treeview .e-node-focus,
+.e-fullrow-wrap .e-li-hover > .e-fullrow,
+.e-fullrow-wrap .e-li-focus > .e-fullrow {
+  background: none !important;
+  background: none !important;
+  filter: none !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+/* Message Text */
+.card-widget-plus {
+  color: #219b9c;
+}
+.card-widget-minus {
+  color: #f19941;
+}
+/* sync fusion */
+
+.e-input-group:not(.e-disabled):active:not(.e-success):not(.e-warning):not(.e-error),
+.e-input-group.e-control-wrapper:not(.e-disabled):active:not(.e-success):not(.e-warning):not(.e-error) {
+  border-color: #219b9c !important;
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(33 155 156 / 60%) !important;
+}
+.e-input-group:not(.e-disabled):active:not(.e-success):not(.e-warning):not(.e-error),
+.e-input-group.e-control-wrapper:not(.e-disabled):active:not(.e-success):not(.e-warning):not(.e-error) {
+  border-color: #219b9c !important;
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(33 155 156 / 60%) !important;
+}
+.e-dropdownbase .e-list-item.e-active {
+  background: #219b9c !important;
+  background: linear-gradient(to bottom, #219b9c, #219b9c) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#219b9c',endColorstr='#219b9c',GradientType=0) !;
+}
+/* .e-input-group .e-input-group-icon, .e-input-group.e-control-wrapper .e-input-group-icon {
+  align-items: center;
+  border: 0 solid;
+  border-width: 0;
+  box-sizing: content-box;
+  cursor: pointer;
+  flex-direction: column;
+  font-size: 12px;
+  justify-content: center;
+  line-height: 1;
+  min-height: 28px;
+  min-width: 32px;
+  padding: 0;
+  text-align: center;
+  border: 1px solid;
+  border-bottom: 0;
+  border-collapse: collapse;
+  border-top: 0;
+} */
+.roleDiv > a:before {
+  float: left !important;
+  font-family: FontAwesome;
+  content: "\f0d7";
+  padding-right: 12px;
+}
+.roleDiv > a.collapsed:before {
+  float: left !important;
+  font-family: FontAwesome;
+  content: "\f0da";
+  padding-right: 12px;
+}
+
+.roleDiv > a:hover,
+.roleDiv > a:active,
+.roleDiv > a:focus {
+  text-decoration: none;
+  color: #515961;
+}
+.subMenu-section-padding {
+  padding-left: 24px !important;
+  padding-right: 0px !important;
+}
+.submenu-item-padding {
+  padding: 5px 0px 5px 18px !important;
+}
+.main-body {
+  height: 100%;
+  border-width: 0px 0px 0px 1px;
+  border-color: rgb(221, 224, 228);
+  border-style: solid;
+  min-height: 640px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  /* padding-left: 4px; */
+}
+/* start class for ag-grid expand */
+.main-body-for-agGrid-expand {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  border-width: 0;
+  padding-top: 0; 
+   padding-bottom: 0;
+ padding-left: 0;
+ padding-right: 0;
+
+}
+/* end class for ag-grid expand */
+.bgColor-test {
+  background-color: tomato;
+}
+.e-toolbar .e-toolbar-items.e-tbar-pos .e-toolbar-left {
+  left: 0;
+  line-height: 28px;
+}
+.e-grid .e-headercelldiv {
+  font-family: "Open Sans";
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  display: block;
+  border: 0 none;
+  height: 29px;
+  line-height: 29px;
+  margin: -7px;
+  padding: 0 0.7em;
+  text-align: left;
+  white-space: wrap;
+  text-overflow: ellipsis;
+}
+.e-btn.e-flat.e-primary,
+.e-css.e-btn.e-flat.e-primary {
+  background-color: rgb(33, 155, 156) !important;
+  border-color: rgb(33, 155, 156) !important;
+  color: #fff !important;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+/* Query Builder */
+.e-input-group,
+.e-input-group.e-control-wrapper {
+  display: inline-flex;
+  vertical-align: -webkit-baseline-middle;
+}
+.e-query-builder .e-group-body .e-horizontal-mode .e-rule-filter,
+.e-query-builder .e-group-body .e-horizontal-mode .e-rule-sub-filter,
+.e-query-builder .e-group-body .e-horizontal-mode .e-rule-operator,
+.e-query-builder .e-group-body .e-horizontal-mode .e-rule-value,
+.e-query-builder .e-group-body .e-horizontal-mode .e-rule-value-delete {
+  display: inline-block;
+  vertical-align: -webkit-baseline-middle;
+}
+.ace_gutter {
+  position: absolute;
+  overflow: hidden;
+  width: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  cursor: default;
+  z-index: 0 !important;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  contain: style size layout;
+}
+/* End Query Builder */

@@ -1,0 +1,320 @@
+<!-- (ngSubmit)="Myform.form.valid && SaveallDataFroScreen1(Myform.value)"  novalidate -->
+<form   #Myform="ngForm" (ngSubmit)="Myform.form.valid && SaveallDataFroScreen1(Myform.value)"  novalidate>
+
+<div style="min-height:300px;">
+    <div>
+   <div class="main-section ">
+      <div   class="header" style="cursor:pointer;" (click)="ReversClass()" > 
+         <img src='../../../../assets/arrow-left-64.png'   >
+      </div>
+      <div>
+       <h3>STEP 2:</h3> 
+       <h3>Connect data source Account</h3>
+      </div>
+   </div>
+    <div class="tool-section">
+   </div>
+    <div class="row">
+       <div class="col-md-12"> 
+         <fieldset class="module aligned " >
+            <div class="row">
+               <div class="col-md-5">
+                  <div class="form-row field-stack" style="padding: 28px 47px 12px 5px;">
+                   
+                     <label class="label-text" for="id_stack">Account Display Name *</label>
+                     <div class="related-widget-wrapper">
+                          <input type="text"   name="AccountName" #AccountName="ngModel" [(ngModel)]="SourceAccountModel.AccountName"  class="form-control" maxlength="200"    required> 
+                          <!-- <span class="error" id="AccountName_span" style="margin-top:4px;padding:5px;" *ngIf="establishConnectorServic.AccountName_span">Account Display Name is Required</span> -->
+                      </div>
+                     <div class="help">
+                        <span class="text-danger"
+                        *ngIf="(AccountName.touched || Myform.submitted) && AccountName.errors?.required">
+                        Account Display Name is required
+                    </span>
+                  </div>
+                 </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-5">
+                  <div class="form-row field-stack">
+                   
+                     <label class="label-text" for="id_stack"></label>
+                     <div class="related-widget-wrapper">
+                       <div class="switch" style="display: flex;" >
+                          <input type="checkbox"  name="EnableConnectoins"  id="EnableConnectoins" [(ngModel)]="SourceAccountModel.EnableConnectoins" >
+                          <label style="padding:2px 0 0 12px;" class=" " for="EnableConnectoins">Enable connection</label>
+                      </div>                     
+                    </div>
+              </div>   
+                </div>
+            </div>
+             
+          </fieldset> 
+      </div>
+     </div>
+   </div>
+   <div class="row">
+      <div class="col-md-12">
+         <hr>
+     </div>
+   </div>
+     
+<div *ngIf="AuthorizationAreaHide">
+     <div class="main-section">
+      <h3>Account authorization</h3>
+   </div>
+   <div class="tool-section">
+   </div>
+  <div class="row">
+   <div class="col-md-12">
+      <fieldset class="module aligned" >
+         <div class="row" style="padding: 0px 11px 14px 19px;">
+           <div class="col-md-5">
+            <div class="form-row field-stack">
+               <label  class="label-text" for="id_stack"></label>
+                <div class="related-widget-wrapper">
+                 <div>
+                    <input type="radio" class="form-check-input" id="Firsttimeforconnection" [(ngModel)]="SourceAccountModel.AccountAuthurization" name="AccountAuthurization" value="Firsttimeforconnection" checked><label for="Firsttimeforconnection">First time for connection</label>  
+                </div>
+                <div>
+                 <input class="form-check-input" type="radio" name="AccountAuthurization" [(ngModel)]="SourceAccountModel.AccountAuthurization" id="Eachtimeforconnectionestablishing" value="Eachtimeforconnectionestablishing"><label  for="Eachtimeforconnectionestablishing">Each time for connection establishing</label>
+                </div>
+                <div>
+                 <input class="form-check-input" type="radio" name="AccountAuthurization" [(ngModel)]="SourceAccountModel.AccountAuthurization"  id="Donotrequired"  value="Donotrequired"><label for="Donotrequired">Do not required</label>
+                </div>
+                 </div>
+          </div>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-md-5">
+            <div class="form-row field-stack" >
+             
+               <label class="label-text" for="id_stack">Enter the email address*</label>
+               <div class="related-widget-wrapper">
+                 <div >
+                    <input type="text" name="Email" [(ngModel)]="SourceAccountModel.Email"  #Email="ngModel" id="Email"   class="form-control"   maxlength="200" required email>
+                   <!-- <span class="error" id="Email_span" style="margin-top:4px;padding:5px;margin-right: 211px;" *ngIf="establishConnectorServic.Email_span">Email is Required</span> -->
+               </div>
+               </div>
+               <div class="help">
+                  <span class="text-danger"
+                                *ngIf="(Email.touched || Myform.submitted) && Email.errors?.required">
+                                Email is required
+                            </span>
+                            <span class="text-danger"  *ngIf="Email.touched && Email.errors?.email">
+                                Enter a valid email address
+                            </span>
+               </div>
+           </div>
+           </div>
+           <div class="col-md-2">
+            <div class="form-row field-stack" >
+             
+               <label class="label-text" for="id_stack"></label>
+               <div class="related-widget-wrapper">
+                 <div >
+                     <button class="css-xpr64j" type="button" style="padding: 13px;" (click)="AddEmialForAuthorize()">Send Access Request now</button>
+
+                  </div>
+               </div>
+               <div class="help"></div>
+            </div>
+           </div>
+         </div>
+           <div class="row">
+              <div class="col-md-5">
+               <div id="div_id_message" class="form-group" *ngIf="EmailAuthurizationtextarea">
+                  <label for="id_message" class="control-label ">
+                  Message
+                  </label> 
+                  <div class="controls ">
+                     <textarea  readonly="" style="background-color: white;"   rows="10" class="textarea form-control" cols="20">
+                   {{EmailAuthurizationTextAreaMsg}}
+         
+                   </textarea>
+                   </div>
+               </div>
+              </div>
+
+           </div>  
+        <div class="row">
+           <div class="col-md-2">
+            <div class="form-row field-stack" >
+         
+               <label class="label-text" for="id_stack"></label>
+               <div class="related-widget-wrapper">
+                 <div class="controls " style="display: inline-flex;" >
+                    <input type="checkbox"  name="grantstatus"  id="grantstatus" [(ngModel)]="checked" >
+                    <label style="padding:0 0 0 10px;" class="" for="grantstatus">Authorization grant status</label>
+                     
+
+                  </div>                     
+               </div>
+               <div class="help"></div>
+
+       </div> 
+           </div>
+           <div class="col-md-2">
+            <div class="form-row field-stack" >
+               <label class="label-text" for="id_stack"></label>
+               <div class="related-widget-wrapper">
+                 <div class="controls " style="display: inline-flex;" >
+                     <button class="css-xpr64j" type="button" style="padding: 13px;">Refresh</button>
+                 </div>                     
+               </div>
+               <div class="help"></div>
+
+       </div> 
+           </div>
+        </div>
+        </fieldset> 
+   </div>
+  </div>
+
+<div class="row">
+   <div class="col-md-12">
+      <hr>
+   </div>
+</div>
+</div>
+<div>
+         <ng-template appConnectionPages>></ng-template>
+      </div> 
+      <div class="col-md-12" style="padding: 0px;">
+
+     
+   <div class="main-section">
+    <h3>Available connections</h3>
+   </div>
+   <div class="tool-section">
+   </div>
+   <fieldset class="module aligned ">
+      <div style="padding:28px 0 0 0">
+      <div>
+      <h5>Connected accounts available against the selected connector type</h5>
+      </div>
+      <div class="row">
+        <div class="col-md-12 ">
+           <div id="changelist">
+              <form id="changelist-form" method="post" novalidate="">
+                 <input type="hidden" name="csrfmiddlewaretoken" value="BzJ7MpE5jnM2lyqnbJrbEVtNiZc8GLk8udbCXR4ixTJfrCjd1V5zy452hpZwSEiq">
+                 <input type="hidden" name="action" value="">
+                 <input name="index" value="0" type="hidden">
+                 <input class="select-across" name="select_across" value="0" type="hidden">
+                 <div class="results">
+                    <table id="result_list" class="table table-hover">
+                       <thead>
+                          <tr>
+                             <th scope="col" class="action-checkbox-column">
+                                <div class="cell-wrapper" title="Select all rows">
+                                   <div class="text">
+                                      <div data-id="action-toggle" toggle="adverity-checkbox[name=&quot;_selected_action&quot;]">
+                                         <div><span class="css-kpk1s7"><input class="css-10d97nj" type="checkbox"><span class="css-jlzago"></span></span></div>
+                                         <input hidden="" id="action-toggle" class="" data-type="checkbox" style="display: block;">
+                                      </div>
+                                   </div>
+                                </div>
+                             </th>
+                             <th scope="col" class="sortable column-type_logo">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                   <div class="text">
+                                      <a>Type</a>
+                                   </div>
+                                </div>
+                             </th>
+                             <th scope="col" class="sortable column-stack">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                   <div class="text">
+                                      <a>Group Name</a>
+                                   </div>
+                                </div>
+                             </th>
+                             <th scope="col" class="sortable column-name sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                   <a href="#" class="toggle-link"> 
+                                   Connector Name
+                                   <span class="sortoptions sortdirectionn">
+                                   <span class="toggle ascending"></span>
+                                   </span>
+                                   </a>
+                                   <div class="sortoptions remove">
+                                      <a class="sortremove" href="# title = "Remove from sorting></a>
+                                   </div>
+                                </div>
+                             </th>
+                             <th scope="col" class="column-auth_status">
+                                <div class="cell-wrapper">
+                                   <div class="text">
+                                      <span>Account Name</span>
+                                   </div>
+                                </div>
+                             </th>
+                             <th scope="col" class="column-auth_status">
+                                <div class="cell-wrapper">
+                                   <div class="text">
+                                      <span>Date</span>
+                                   </div>
+                                </div>
+                             </th>
+                             <th scope="col" class="column-auth_status">
+                                <div class="cell-wrapper">
+                                   <div class="text">
+                                      <span>Status</span>
+                                   </div>
+                                </div>
+                             </th>
+                          </tr>
+                       </thead>
+                       <tbody>
+                          <tr class="row1" *ngFor="let connector of _SqlConnector.ConnectorTabledata">
+                             <td class="action-checkbox">
+                                <div name="_selected_action" value="26">
+                                   <div><span class="css-kpk1s7"><input class="css-10d97nj" type="checkbox"><span class="css-jlzago"></span></span></div>
+                                   <input hidden="" name="_selected_action" class="action-select" data-type="checkbox" disabled="">
+                                </div>
+                             </td>
+                             <td class="field-stack nowrap"><img src="../../../../assets/images/{{connector.appearancE_LOGO}}" style="height: 24px;"></td>
+                               <td class="field-stack nowrap">{{connector.grouP_NAME}}</td>
+                              <td class="field-stack nowrap">{{connector.connectoR_NAME}}</td>
+                              <td class="field-stack nowrap">{{connector.accounT_NAME}}</td>
+                              <td class="field-stack nowrap">{{connector.serveR_INSERT_DATE}}</td>
+                              <td class="field-auth_status"><img src="assets\images\icon-{{connector.bstatus}}.svg"></td>
+
+    
+                           </tr>
+                          
+                       </tbody>
+                    </table>
+                 </div>
+                 <div class="pull-left changelist-botton-row changelist-pagination">
+                    &nbsp;
+                    <span class="pagination-element-counter">{{_SqlConnector.RowLengthForSqlConnector}} Connections</span>
+                 </div>
+              </form>
+           </div>
+        </div>
+     </div>
+   </div>
+ </fieldset>
+</div>
+<div> 
+</div>
+<div class="row">
+   <div class="col-md-12">
+      <hr>
+  </div>
+  </div>
+ <div class="form-group pull-right">
+   <div class="input-bar-item">
+
+      <button class="css-xpr64j" type="submit" value=""   >{{AccountSourceButtom}}</button>
+
+      
+   </div>
+ </div>
+  
+</div>
+</form>
+<!-- END Content -->

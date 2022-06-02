@@ -1,0 +1,7402 @@
+[{
+    "Node_id": "1",
+    "Template": [
+{
+    "Properties": {
+      "Display_Name": "Extract",
+      "Control_Type": "checkbox",
+      "Control_Value": "Extract",
+      "Checkbox_Control_Value": true,
+      "ToolTip": "tooltip2",
+      "Help_Icon": true,
+      "Help_Text": "Extract",
+      "Visible": true,
+      "Background_Color": "green",
+      "Optional": "*"
+    },
+    "Data": {
+      "Input_Source": "",
+      "Source_Type": "System"
+    },
+    "Validation": {
+      "condition1": "required"
+    }
+  },
+  {
+    "Properties": {
+      "Display_Name": "Source Category",
+      "Control_Type": "textBox",
+      "Control_Value": "File",
+      "Checkbox_Control_Value": true,
+      "ToolTip": "tooltip1",
+      "Help_Icon": false,
+      "Help_Text": "",
+      "Visible": true,
+      "Background_Color": "red",
+      "Optional": "*"
+    },
+    "Data": {
+      "Input_Source": "",
+      "Source_Type": "Custom"
+    },
+    "Validation": {
+      "condition1": "required"
+    }
+  },
+  {
+    "Properties": {
+      "Display_Name": "File Type",
+      "Control_Type": "dropdown",
+      "Control_Value": "",
+      "Checkbox_Control_Value": true,
+      "ToolTip": "tooltip2",
+      "Help_Icon": true,
+      "Help_Text": "",
+      "Visible": true,
+      "Background_Color": "green",
+      "Optional": "*"
+    },
+    "Data": {
+      "Input_Source": "File Type",
+      "Source_Type": "System"
+    },
+    "Validation": {
+      "condition1": "required"
+    }
+  }
+]
+},
+{
+    "Node_id": "1.1",
+     "Template": [
+        {
+            "Properties": {
+              "Display_Name": "File Path",
+              "Control_Type": "textBox",
+              "Control_Value": "192.168.223.111",
+              "Checkbox_Control_Value": true,
+              "ToolTip": "tooltip1",
+              "Help_Icon": false,
+              "Help_Text": "",
+              "Visible": true,
+              "Background_Color": "red",
+              "Optional": "*"
+            },
+            "Data": {
+              "Input_Source": "",
+              "Source_Type": "Custom"
+            },
+            "Validation": {
+              "condition1": "required"
+            }
+          },
+          {
+            "Properties": {
+              "Display_Name": "File Name",
+              "Control_Type": "textBox",
+              "Control_Value": "",
+              "Checkbox_Control_Value": true,
+              "ToolTip": "test",
+              "Help_Icon": false,
+              "Help_Text": "",
+              "Visible": true,
+              "Background_Color": "red",
+              "Optional": "*"
+            },
+            "Data": {
+              "Input_Source": "",
+              "Source_Type": "Custom"
+            },
+            "Validation": {
+              "condition1": "required"
+            }
+          },
+          {
+            "Properties": {
+              "Display_Name": "Sheet Name",
+              "Control_Type": "textBox",
+              "Control_Value": "",
+              "Checkbox_Control_Value": true,
+              "ToolTip": "tooltip1",
+              "Help_Icon": false,
+              "Help_Text": "",
+              "Visible": true,
+              "Background_Color": "red",
+              "Optional": "*"
+            },
+            "Data": {
+              "Input_Source": "",
+              "Source_Type": "Custom"
+            },
+            "Validation": {
+              "condition1": "required"
+            }
+          },
+          {
+            "Properties": {
+              "Display_Name": "Sheet Index",
+              "Control_Type": "textBox",
+              "Control_Value": "zmdb",
+              "Checkbox_Control_Value": true,
+              "ToolTip": "test",
+              "Help_Icon": false,
+              "Help_Text": "",
+              "Visible": true,
+              "Background_Color": "red",
+              "Optional": "*"
+            },
+            "Data": {
+              "Input_Source": "",
+              "Source_Type": "Custom"
+            },
+            "Validation": {
+              "condition1": "required"
+            }
+          },
+          {
+            "Properties": {
+              "Display_Name": "CSV Saperator",
+              "Control_Type": "textBox",
+              "Control_Value": "|",
+              "Checkbox_Control_Value": true,
+              "ToolTip": "tooltip1",
+              "Help_Icon": false,
+              "Help_Text": "",
+              "Visible": true,
+              "Background_Color": "red",
+              "Optional": "*"
+            },
+            "Data": {
+              "Input_Source": "",
+              "Source_Type": "Custom"
+            },
+            "Validation": {
+              "condition1": "required"
+            }
+          },
+          {
+            "Properties": {
+              "Display_Name": "Table Name",
+              "Control_Type": "textBox",
+              "Control_Value": "CNSE@12345",
+              "Checkbox_Control_Value": true,
+              "ToolTip": "test",
+              "Help_Icon": false,
+              "Help_Text": "",
+              "Visible": true,
+              "Background_Color": "red",
+              "Optional": "*"
+            },
+            "Data": {
+              "Input_Source": "",
+              "Source_Type": "Custom"
+            },
+            "Validation": {
+              "condition1": "required"
+            }
+          }
+        ]
+},
+{
+
+      "Node_id": "1.1.1.1",
+     "Template": [
+      {
+        "Properties": {
+          "Display_Name": "Source Column Name",
+          "Control_Type": "textBox",
+          "Control_Value": "Created Date",
+          "Checkbox_Control_Value": true,
+          "ToolTip": "tooltip1",
+          "Help_Icon": false,
+          "Help_Text": "",
+          "Visible": true,
+          "Background_Color": "red",
+          "Optional": "*"
+        },
+        "Data": {
+          "Input_Source": "",
+          "Source_Type": "Custom"
+        },
+        "Validation": {
+          "condition1": "required"
+        }
+      },
+      {
+        "Properties": {
+          "Display_Name": "New Column Name",
+          "Control_Type": "textBox",
+          "Control_Value": "",
+          "Checkbox_Control_Value": true,
+          "ToolTip": "tooltip1",
+          "Help_Icon": false,
+          "Help_Text": "",
+          "Visible": true,
+          "Background_Color": "red",
+          "Optional": "*"
+        },
+        "Data": {
+          "Input_Source": "",
+          "Source_Type": "Custom"
+        },
+        "Validation": {
+          "condition1": "required"
+        }
+      }
+     ]
+},
+{
+
+      "Node_id": "1.1.1.2",
+      "Template": [
+       {
+         "Properties": {
+           "Display_Name": "Source Column Name",
+           "Control_Type": "textBox",
+           "Control_Value": "Billing Name",
+           "Checkbox_Control_Value": true,
+           "ToolTip": "tooltip1",
+           "Help_Icon": false,
+           "Help_Text": "",
+           "Visible": true,
+           "Background_Color": "red",
+           "Optional": "*"
+         },
+         "Data": {
+           "Input_Source": "",
+           "Source_Type": "Custom"
+         },
+         "Validation": {
+           "condition1": "required"
+         }
+       },
+       {
+         "Properties": {
+           "Display_Name": "New Column Name",
+           "Control_Type": "textBox",
+           "Control_Value": "",
+           "Checkbox_Control_Value": true,
+           "ToolTip": "tooltip1",
+           "Help_Icon": false,
+           "Help_Text": "",
+           "Visible": true,
+           "Background_Color": "red",
+           "Optional": "*"
+         },
+         "Data": {
+           "Input_Source": "",
+           "Source_Type": "Custom"
+         },
+         "Validation": {
+           "condition1": "required"
+         }
+       }
+      ]
+},
+{
+
+      "Node_id": "1.1.1.3",
+      "Template": [
+       {
+         "Properties": {
+           "Display_Name": "Source Column Name",
+           "Control_Type": "textBox",
+           "Control_Value": "Billing City",
+           "Checkbox_Control_Value": true,
+           "ToolTip": "tooltip1",
+           "Help_Icon": false,
+           "Help_Text": "",
+           "Visible": true,
+           "Background_Color": "red",
+           "Optional": "*"
+         },
+         "Data": {
+           "Input_Source": "",
+           "Source_Type": "Custom"
+         },
+         "Validation": {
+           "condition1": "required"
+         }
+       },
+       {
+         "Properties": {
+           "Display_Name": "New Column Name",
+           "Control_Type": "textBox",
+           "Control_Value": "",
+           "Checkbox_Control_Value": true,
+           "ToolTip": "tooltip1",
+           "Help_Icon": false,
+           "Help_Text": "",
+           "Visible": true,
+           "Background_Color": "red",
+           "Optional": "*"
+         },
+         "Data": {
+           "Input_Source": "",
+           "Source_Type": "Custom"
+         },
+         "Validation": {
+           "condition1": "required"
+         }
+       }
+      ]
+},
+{
+
+  "Node_id": "1.1.1.4",
+  "Template": [
+   {
+     "Properties": {
+       "Display_Name": "Source Column Name",
+       "Control_Type": "textBox",
+       "Control_Value": "Shipping Email",
+       "Checkbox_Control_Value": true,
+       "ToolTip": "tooltip1",
+       "Help_Icon": false,
+       "Help_Text": "",
+       "Visible": true,
+       "Background_Color": "red",
+       "Optional": "*"
+     },
+     "Data": {
+       "Input_Source": "",
+       "Source_Type": "Custom"
+     },
+     "Validation": {
+       "condition1": "required"
+     }
+   },
+   {
+     "Properties": {
+       "Display_Name": "New Column Name",
+       "Control_Type": "textBox",
+       "Control_Value": "",
+       "Checkbox_Control_Value": true,
+       "ToolTip": "tooltip1",
+       "Help_Icon": false,
+       "Help_Text": "",
+       "Visible": true,
+       "Background_Color": "red",
+       "Optional": "*"
+     },
+     "Data": {
+       "Input_Source": "",
+       "Source_Type": "Custom"
+     },
+     "Validation": {
+       "condition1": "required"
+     }
+   }
+  ]
+},
+{
+      "Node_id": "1.2",
+      "Template": [
+       {
+         "Properties": {
+           "Display_Name": "Db Source Detail",
+           "Control_Type": "textBox",
+           "Control_Value": "",
+           "Checkbox_Control_Value": true,
+           "ToolTip": "tooltip1",
+           "Help_Icon": false,
+           "Help_Text": "",
+           "Visible": true,
+           "Background_Color": "red",
+           "Optional": "*"
+         },
+         "Data": {
+           "Input_Source": "",
+           "Source_Type": "Custom"
+         },
+         "Validation": {
+           "condition1": "required"
+         }
+       }
+      ]
+},
+{
+  "Node_id": "1.3",
+  "Template": [
+   {
+     "Properties": {
+       "Display_Name": "Api Source Detail",
+       "Control_Type": "textBox",
+       "Control_Value": "",
+       "Checkbox_Control_Value": true,
+       "ToolTip": "tooltip1",
+       "Help_Icon": false,
+       "Help_Text": "",
+       "Visible": true,
+       "Background_Color": "red",
+       "Optional": "*"
+     },
+     "Data": {
+       "Input_Source": "",
+       "Source_Type": "Custom"
+     },
+     "Validation": {
+       "condition1": "required"
+     }
+   }
+  ]
+},
+{
+      "Node_id": "2",
+      "Template": [
+  {
+      "Properties": {
+        "Display_Name": "Enable Column Mapping",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Enable Column Mapping",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+
+      "Node_id": "2.1.1",
+      "Template": [
+        {
+          "Properties": {
+            "Display_Name": "Current Name",
+            "Control_Type": "textBox",
+            "Control_Value": "Created Date",
+            "Checkbox_Control_Value": true,
+            "ToolTip": "tooltip1",
+            "Help_Icon": false,
+            "Help_Text": "",
+            "Visible": true,
+            "Background_Color": "red",
+            "Optional": "*"
+          },
+          "Data": {
+            "Input_Source": "",
+            "Source_Type": "Custom"
+          },
+          "Validation": {
+            "condition1": "required"
+          }
+        },
+        {
+          "Properties": {
+            "Display_Name": "New Name",
+            "Control_Type": "textBox",
+            "Control_Value": " Entry Date",
+            "Checkbox_Control_Value": true,
+            "ToolTip": "tooltip1",
+            "Help_Icon": false,
+            "Help_Text": "",
+            "Visible": true,
+            "Background_Color": "red",
+            "Optional": "*"
+          },
+          "Data": {
+            "Input_Source": "",
+            "Source_Type": "Custom"
+          },
+          "Validation": {
+            "condition1": "required"
+          }
+        },
+        {
+          "Properties": {
+            "Display_Name": "Field Type",
+            "Control_Type": "textBox",
+            "Control_Value": "Double",
+            "Checkbox_Control_Value": true,
+            "ToolTip": "tooltip1",
+            "Help_Icon": false,
+            "Help_Text": "",
+            "Visible": true,
+            "Background_Color": "red",
+            "Optional": "*"
+          },
+          "Data": {
+            "Input_Source": "",
+            "Source_Type": "Custom"
+          },
+          "Validation": {
+            "condition1": "required"
+          }
+        },
+
+        {
+          "Properties": {
+            "Display_Name": "Visibility",
+            "Control_Type": "checkbox",
+            "Control_Value": "",
+            "Checkbox_Control_Value": true,
+            "ToolTip": "tooltip2",
+            "Help_Icon": true,
+            "Help_Text": "Visiblity",
+            "Visible": true,
+            "Background_Color": "green",
+            "Optional": "*"
+          },
+          "Data": {
+            "Input_Source": "",
+            "Source_Type": "System"
+          },
+          "Validation": {
+            "condition1": "required"
+          }
+        },
+        {
+          "Properties": {
+            "Display_Name": "Enable",
+            "Control_Type": "checkbox",
+            "Control_Value": "",
+            "Checkbox_Control_Value": true,
+            "ToolTip": "tooltip2",
+            "Help_Icon": true,
+            "Help_Text": "Enable",
+            "Visible": true,
+            "Background_Color": "green",
+            "Optional": "*"
+          },
+          "Data": {
+            "Input_Source": "",
+            "Source_Type": "System"
+          },
+          "Validation": {
+            "condition1": "required"
+          }
+        }
+      ]
+},
+{
+  "Node_id": "2.1.2",
+  "Template": [
+    {
+      "Properties": {
+        "Display_Name": "Current Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Billing Name",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "New Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Name",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Field Type",
+        "Control_Type": "textBox",
+        "Control_Value": "Double",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+
+    {
+      "Properties": {
+        "Display_Name": "Visibility",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Visiblity",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Enable",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Enable",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "2.1.3",
+  "Template": [
+    {
+      "Properties": {
+        "Display_Name": "Current Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Billing City",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "New Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Field Type",
+        "Control_Type": "textBox",
+        "Control_Value": "String",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+
+    {
+      "Properties": {
+        "Display_Name": "Visibility",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Visibility",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Enable",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Enable",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "2.1.4",
+  "Template": [
+    {
+      "Properties": {
+        "Display_Name": "Shipping Email",
+        "Control_Type": "textBox",
+        "Control_Value": "Billing City",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "New Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Email",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Field Type",
+        "Control_Type": "textBox",
+        "Control_Value": "String",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+
+    {
+      "Properties": {
+        "Display_Name": "Visibility",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Visibility",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Enable",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Enable",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "3",
+  "Template": [
+    {
+      "Properties": {
+        "Display_Name": "Enable Contetnt Mapping",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Enable Contetnt Mapping",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "3.1.1",
+  "Template": [
+
+    {
+      "Properties": {
+        "Display_Name": "Source Column",
+        "Control_Type": "textBox",
+        "Control_Value": "City",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Look Source",
+        "Control_Type": "textBox",
+        "Control_Value": "File",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Mandatory",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Mandatory",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+
+{
+      "Properties": {
+        "Display_Name": "Integrated Security",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Integrated Security",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Data Base",
+        "Control_Type": "textBox",
+        "Control_Value": "MicroSoft Sql Server",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Service Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Orcl.cnse.com.pk",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Host",
+        "Control_Type": "textBox",
+        "Control_Value": "192.168.223.111",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Db Name",
+        "Control_Type": "textBox",
+        "Control_Value": "ZMDB",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "User",
+        "Control_Type": "textBox",
+        "Control_Value": "sa",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Password",
+        "Control_Type": "textBox",
+        "Control_Value": "CNSE@12345",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Table Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Behbud_crafts_ad_reports",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Port",
+        "Control_Type": "textBox",
+        "Control_Value": "192.168.223.111",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Connection Status",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Connection Status",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Connection Report",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Connection Report",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Mapping Mode",
+        "Control_Type": "textBox",
+        "Control_Value": "Offline",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Lookup Table",
+        "Control_Type": "textBox",
+        "Control_Value": "Lookup_citydata",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Lookup File Path",
+        "Control_Type": "textBox",
+        "Control_Value": "c://zoom360/tmp.csv",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Remove File After Use ",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "this is help text",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Match Column",
+        "Control_Type": "textBox",
+        "Control_Value": "Source Value",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Value Column",
+        "Control_Type": "textBox",
+        "Control_Value": "Target Value",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "When Match not found",
+        "Control_Type": "textBox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Create Column",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Create Column",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "New Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Billing City Shortly",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Enable",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Enable",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "4",
+  "Template": [
+    
+    {
+      "Properties": {
+        "Display_Name": "Enable Enrichent Function Script",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Enable Enrichent Function Script",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+
+  ]
+},
+{
+  "Node_id": "4.1.1",
+  "Template": [
+
+    {
+      "Properties": {
+        "Display_Name": "Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Entry Date",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "New Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Date Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Create Col",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Create Col",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Enable Script",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Enable Script",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Report",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Report",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Script Display Name",
+        "Control_Type": "textBox",
+        "Control_Value": "My Script 1",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "4.1.1.1.1",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Function Name",
+        "Control_Type": "textBox",
+        "Control_Value": "142",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Compare Column",
+        "Control_Type": "textBox",
+        "Control_Value": "Fees",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Compare Value",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Compare Value",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Split Sign",
+        "Control_Type": "textBox",
+        "Control_Value": "/",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Split Index To Save",
+        "Control_Type": "textBox",
+        "Control_Value": "0",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Function Display Name",
+        "Control_Type": "textBox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Enable Individual script",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Enable Individual script",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Save Previous Change",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Save Previous Changes",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Table Name",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Currency Col",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Mode",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Rule",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Ref String",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Seprator",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Delimiter",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Source",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Replacement_Dict",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Sign",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "value",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Substirng",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Start date",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "End Date",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Number Of Round Value",
+        "Control_Type": "textBox",
+        "Control_Value": "2",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Report",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "this is help text",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Row Remove Value 1",
+        "Control_Type": "textBox",
+        "Control_Value": "0",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Row Remove Value 2",
+        "Control_Type": "textBox",
+        "Control_Value": "9180",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Row Removal Operator",
+        "Control_Type": "textBox",
+        "Control_Value": ">",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Keep Sign Record For Data Dublication",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Keep Sign Record For Data Dublication",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "4.1.2",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Entry Date",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "New Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Time Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Create Col",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Create Col",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Enable Script",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Enable Script",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Report",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Report",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Script Display Name",
+        "Control_Type": "textBox",
+        "Control_Value": "My Script 1",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+
+  ]
+},
+{
+  "Node_id": "4.1.2.1.1",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Function Name",
+        "Control_Type": "textBox",
+        "Control_Value": "143",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Compare Column",
+        "Control_Type": "textBox",
+        "Control_Value": "Fees",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Compare Value",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Compare Value",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Split Sign",
+        "Control_Type": "textBox",
+        "Control_Value": "/",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Split Index To Save",
+        "Control_Type": "textBox",
+        "Control_Value": "0",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Function Display Name",
+        "Control_Type": "textBox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Enable Individual script",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Enable Individual script",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Save Previous Change",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Save Previous Change",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Table Name",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Currency Col",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Mode",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Rule",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Ref String",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Seprator",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Delimiter",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Source",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Replacement",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Sign",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "value",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Substirng",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Start date",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "End Date",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Number Of Round Value",
+        "Control_Type": "textBox",
+        "Control_Value": "2",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Report",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Report",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Row Remove Value 1",
+        "Control_Type": "textBox",
+        "Control_Value": "585",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Row Remove Value 2",
+        "Control_Type": "textBox",
+        "Control_Value": "454",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Row Removal Operator",
+        "Control_Type": "textBox",
+        "Control_Value": ">",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Keep Sign Record For Data Dublication",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Keep Sign Record For Data Dublication",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "4.1.3",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Email",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "New Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Create Col",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Create Col",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Enable Script",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Enable Script",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Report",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Report",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Script Display Name",
+        "Control_Type": "textBox",
+        "Control_Value": "My Script 1",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+
+  ]
+},
+{
+  "Node_id": "4.1.3.1.1",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Function Name",
+        "Control_Type": "textBox",
+        "Control_Value": "132",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Compare Column",
+        "Control_Type": "textBox",
+        "Control_Value": "Fees",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Compare Value",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Compare Value",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Split Sign",
+        "Control_Type": "textBox",
+        "Control_Value": ",",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Split Index To Save",
+        "Control_Type": "textBox",
+        "Control_Value": "0",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Function Display Name",
+        "Control_Type": "textBox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Enable Individual script",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Enable Individual script",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Save Previous Change",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Save Previous Change",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Table Name",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Currency Col",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Mode",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Rule",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Ref String",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Seprator",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Delimiter",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Source",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Replacement",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Sign",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Value",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Substirng",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Start date",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "End Date",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Number Of Round Value",
+        "Control_Type": "textBox",
+        "Control_Value": "2",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Report",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Report",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Row Remove Value 1",
+        "Control_Type": "textBox",
+        "Control_Value": "500",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Row Remove Value 2",
+        "Control_Type": "textBox",
+        "Control_Value": "5600",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Row Removal Operator",
+        "Control_Type": "textBox",
+        "Control_Value": "+",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Keep Sign Record For Data Dublication",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Keep Sign Record For Data Dublication",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "4.1.4",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Name",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "New Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "First Name",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Create Col",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Create Colt",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Enable Script",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Enable Script",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Report",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Report",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Script Display Name",
+        "Control_Type": "textBox",
+        "Control_Value": "My Script 1",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+
+  ]
+},
+{
+  "Node_id": "4.1.4.1.1",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Function Name",
+        "Control_Type": "textBox",
+        "Control_Value": "144",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Compare Column",
+        "Control_Type": "textBox",
+        "Control_Value": "Fees",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Compare Value",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Compare Value",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Split Sign",
+        "Control_Type": "textBox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Split Index To Save",
+        "Control_Type": "textBox",
+        "Control_Value": "0",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Function Display Name",
+        "Control_Type": "textBox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Enable Individual script",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Enable Individual script",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Save Previous Changes",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Save Previous Changes",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Table Name",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Currency Col",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Mode",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Rule",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Ref String",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Seprator",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Delimiter",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Source",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Replacement",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Sign",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "value",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Substirng",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Start date",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "End Date",
+        "Control_Type": "textBox",
+        "Control_Value": "string",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Number Of Round Value",
+        "Control_Type": "textBox",
+        "Control_Value": "2",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Report",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "this is help text",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Row Remove Value 1",
+        "Control_Type": "textBox",
+        "Control_Value": "0",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Row Remove Value 2",
+        "Control_Type": "textBox",
+        "Control_Value": "9180",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Row Removal Operator",
+        "Control_Type": "textBox",
+        "Control_Value": ">",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Keep Sign Record For Data Dublication",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Keep Sign Record For Data Dublication",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Enable Load Destination ",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Enable Load Destination",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.1",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Destination Type",
+        "Control_Type": "textBox",
+        "Control_Value": "File",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Database",
+        "Control_Type": "textBox",
+        "Control_Value": "Excel",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Service Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Orcl.CNSE.COM.PK",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Host",
+        "Control_Type": "textBox",
+        "Control_Value": "192.168.223.111",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Db Name",
+        "Control_Type": "textBox",
+        "Control_Value": "ZMDB",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "User",
+        "Control_Type": "textBox",
+        "Control_Value": "sa",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Password",
+        "Control_Type": "textBox",
+        "Control_Value": "CNSE@12345",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Table Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Enricment_Load_Data_Test",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Port",
+        "Control_Type": "textBox",
+        "Control_Value": "192.168.223.111",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Data_Table_Option",
+        "Control_Type": "textBox",
+        "Control_Value": "Update",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Data_Write_Option",
+        "Control_Type": "textBox",
+        "Control_Value": "Append",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "New_File_Path",
+        "Control_Type": "textBox",
+        "Control_Value": "192.168.223.111",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Access Db Path",
+        "Control_Type": "textBox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Access Db File Name",
+        "Control_Type": "textBox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Integrated Security",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Integrated Security",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Csv Seprator",
+        "Control_Type": "textBox",
+        "Control_Value": "|",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.1.1.1",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Entry Date",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Entry Date",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.1.1.2",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Name",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Name",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.1.1.3",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.1.1.4",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Email",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Email",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.1.1.5",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Time Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Time Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.1.1.6",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Date Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Date Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.1.1.7",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "First Name",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "First Name ",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.1.1.8",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City Shortly",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City Shortly",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.2",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Destination Type",
+        "Control_Type": "textBox",
+        "Control_Value": "File",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Database",
+        "Control_Type": "textBox",
+        "Control_Value": "CSV",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Service Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Orcl.CNSE.COM.PK",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Host",
+        "Control_Type": "textBox",
+        "Control_Value": "192.168.223.111",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Db Name",
+        "Control_Type": "textBox",
+        "Control_Value": "ZMDB",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "User",
+        "Control_Type": "textBox",
+        "Control_Value": "sa",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Password",
+        "Control_Type": "textBox",
+        "Control_Value": "CNSE@12345",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Table Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Enricment_Load_Data_Test",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Port",
+        "Control_Type": "textBox",
+        "Control_Value": "192.168.223.111",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Data_Table_Option",
+        "Control_Type": "textBox",
+        "Control_Value": "Update",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Data_Write_Option",
+        "Control_Type": "textBox",
+        "Control_Value": "Append",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "New_File_Path",
+        "Control_Type": "textBox",
+        "Control_Value": "192.168.223.111",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Access Db Path",
+        "Control_Type": "textBox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Access Db File Name",
+        "Control_Type": "textBox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Integrated Security",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Integrated Security",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Csv Seperator",
+        "Control_Type": "textBox",
+        "Control_Value": "|",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.2.1.1",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Entry Date",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Entry Date",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.2.1.2",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Name",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Name",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.2.1.3",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.2.1.4",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Email",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Email",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.2.1.5",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Time Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Time Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.2.1.6",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Date Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Date Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.2.1.7",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "First Name",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "First Name ",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.2.1.8",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City Shortly",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City Shortly",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.3",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Destination Type",
+        "Control_Type": "textBox",
+        "Control_Value": "File",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Database",
+        "Control_Type": "textBox",
+        "Control_Value": "Xml",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Service Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Orcl.CNSE.COM.PK",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Host",
+        "Control_Type": "textBox",
+        "Control_Value": "192.168.223.111",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Db Name",
+        "Control_Type": "textBox",
+        "Control_Value": "ZMDB",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "User",
+        "Control_Type": "textBox",
+        "Control_Value": "sa",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Password",
+        "Control_Type": "textBox",
+        "Control_Value": "CNSE@12345",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Table Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Enricment_Load_Data_Test",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Port",
+        "Control_Type": "textBox",
+        "Control_Value": "192.168.223.111",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Data_Table_Option",
+        "Control_Type": "textBox",
+        "Control_Value": "Update",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Data_Write_Option",
+        "Control_Type": "textBox",
+        "Control_Value": "Append",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "New_File_Path",
+        "Control_Type": "textBox",
+        "Control_Value": "192.168.223.111",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Access Db Path",
+        "Control_Type": "textBox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Access Db File Name",
+        "Control_Type": "textBox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Integrated Security",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Integrated Security",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Csv Seperator",
+        "Control_Type": "textBox",
+        "Control_Value": "|",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.3.1.1",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Entry Date",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Entry Date",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.3.1.2",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Name",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Name",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.3.1.3",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.3.1.4",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Email",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Email",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.3.1.5",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Time Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Time Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.3.1.6",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Date Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Date Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.3.1.7",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "First Name",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "First Name ",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.3.1.8",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City Shortly",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City Shortly",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.4",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Destination Type",
+        "Control_Type": "textBox",
+        "Control_Value": "File",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Database",
+        "Control_Type": "textBox",
+        "Control_Value": "Json",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Service Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Orcl.CNSE.COM.PK",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Host",
+        "Control_Type": "textBox",
+        "Control_Value": "192.168.223.111",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Db Name",
+        "Control_Type": "textBox",
+        "Control_Value": "ZMDB",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "User",
+        "Control_Type": "textBox",
+        "Control_Value": "sa",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Password",
+        "Control_Type": "textBox",
+        "Control_Value": "CNSE@12345",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Table Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Enricment_Load_Data_Test",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Port",
+        "Control_Type": "textBox",
+        "Control_Value": "192.168.223.111",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Data_Table_Option",
+        "Control_Type": "textBox",
+        "Control_Value": "Update",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Data_Write_Option",
+        "Control_Type": "textBox",
+        "Control_Value": "Append",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "New_File_Path",
+        "Control_Type": "textBox",
+        "Control_Value": "192.168.223.111",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Access Db Path",
+        "Control_Type": "textBox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Access Db File Name",
+        "Control_Type": "textBox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Integrated Security",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": false,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "Integrated Security",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Csv Seperator",
+        "Control_Type": "textBox",
+        "Control_Value": "|",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.4.1.1",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Entry Date",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Entry Date",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.4.1.2",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Name",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Name",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.4.1.3",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.4.1.4",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Email",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Customer Email",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.4.1.5",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Time Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Time Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.4.1.6",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Date Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "Date Only",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.4.1.7",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "First Name",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "First Name ",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},
+{
+  "Node_id": "5.1.4.1.8",
+  "Template":
+  [
+    {
+      "Properties": {
+        "Display_Name": "Source Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City Shortly",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Target Column Name",
+        "Control_Type": "textBox",
+        "Control_Value": "City Shortly",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+}
+]

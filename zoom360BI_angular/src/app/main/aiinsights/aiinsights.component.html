@@ -1,0 +1,314 @@
+
+    <div class="container-fluid" [ngClass]="this.widgetsDisplay">
+        <div class="row">
+                <div class="col-sm-12 col-md-2 col-lg-2 explore-sidebar subMenu-section-padding" style="border-right:1px solid rgb(221, 224, 228);padding-right:15px !important;padding-left: 15px !important;" >
+                    <div class="faq">
+                            <div   class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+                            <div class="css-ctqjzd" *ngFor="let item of MenuService.subMenuSection">
+                                <div role="tab" class="roleDiv" id="heading">
+                                        <!-- <h3 class="panel-title-z"> -->
+                                        
+                                        <a class="css-ucma6b collapsed" data-toggle="collapse" href="#collapse{{item.sectionId}}" aria-expanded="true" aria-controls="collapse">{{item.sectionName}}</a>
+                                        <!-- </h3> -->
+                                </div>
+                                <div id="collapse{{item.sectionId}}" class="panel-collapse collapse">
+                                        <div class="submenu-item-padding">
+                                        <div class="css-bk42y6">
+                                            <!-- <a class="css-1wfdhj" *ngFor="let itemsubMenu of item.submenuSectionitems" routerLink="/{{itemsubMenu.url}}" routerLinkActive="ActiveRoute" aria-expanded="false">
+                                                    {{itemsubMenu.subMenuName}}
+                                        </a> -->
+                                        <a id="link{{itemsubMenu.subMenuId}}" class="css-1wfdhj" *ngFor="let itemsubMenu of item.submenuSectionitems" (click)="this.getColumnName(itemsubMenu.subMenuName,itemsubMenu.subMenuId)">
+                                            {{itemsubMenu.subMenuName}}
+                                    </a>
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+                
+                            </div>
+                    </div>
+                </div>
+                <div Class="col-sm-12 col-md-8 col-lg-8 col-xl-8" style="height: 100%;margin-top: 20px;" >
+                    <div *ngFor="let item of AiinsightList">
+                        <div class="col-sm-6 col-md-6"  style="margin-bottom:20px;" *ngIf="item.widgetType=='Standard'">
+                            <app-aiinsight-widget [widgetData]="item" (gridData)="griddataReceiver($event)" ></app-aiinsight-widget> 
+                        </div>
+                </div>
+                    <div *ngFor="let item of AiinsightList">
+                        <div class="col-sm-12 col-md-12" style="margin-bottom:20px;" *ngIf="item.widgetType=='Expanded'"> 
+                            <app-aiinsights-expand-widget [widgetData]="item" (gridData)="griddataReceiver($event)" ></app-aiinsights-expand-widget>
+                        </div>
+                        </div>
+            </div>
+                <div class="col-sm-12 col-md-2 col-lg-2 explore-sidebar" style="border-left:1px solid rgb(221, 224, 228);">
+                        <div class="faq">
+                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+                                <div class="panel panel-default columnGroup-3NLeh">
+                                    <div class="panel-heading-explore" role="tab" id="headingfour" style="padding: 3px 8px;">
+                                        <h3 class="panel-title-z" style="display: flex; justify-content: space-between; padding-top: 3px;">
+                                            <a data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">Attributes</a>
+                                            <ejs-checkbox label="" [checked]="this.AllCheckbox"  (change)="SelectAllAttributes($event.checked)"></ejs-checkbox>
+                                        </h3>
+                                            
+                                    </div> 
+
+                                   
+                                    <div id="collapsefour" class="panel-collapse collapse" aria-labelledby="headingfour" data-parent="#accordion">
+                                        <div style="padding: 5px;">
+                                            <div role="navigation" class="list-group">
+                                            
+                                                <button type="button" class="columnItem-32fFB list-group-item-metric" *ngFor="let item of columnNames;i as index">
+                                                <div class="flexbox-1j2uq basisauto-2QHwI shrink1-3ax_A grow0-3ZlsV badgeFlexbox-2JGQI">
+                                                <span>
+                                                    <div class="iconThreshold-3qPnl"><span></span></div>
+                                                    {{item.attribute}}
+                                                </span>
+                                                <ejs-checkbox label="" [(checked)]="item.columnChecked" (change)="setArray(item.attributeID,item.attribute,$event.checked)" ></ejs-checkbox>
+                                                </div>
+                                            </button> &nbsp;
+                                            <div *ngIf="false">
+                                                <ejs-multiselect id='_ChartTypeDropdown' #checkbox [dataSource]='_ChartTypeDropdown' [allowFiltering]='true'  placeholder='Select Chart Type' [fields]='fieldsvalues'
+                                                [mode]='mode' [showDropDownIcon]='true' showSelectAll='true' filterBarPlaceholder='test' (change)="Makelist($event,'Chart Type')">
+                                            </ejs-multiselect>
+                                            </div>
+                                            <!-- <div class="related-widget-wrapper">
+                                                <ejs-dropdownlist id='_ChartTypeDropdown' [allowFiltering]="true" cssClass="edit-Dropdown"  [dataSource]="_ChartTypeDropdown" placeholder="Select Chart Type" [(fields)]='field'></ejs-dropdownlist>
+                                            </div>  -->
+                                            <br>
+                                            <div class="css-1w7dt24">
+                                            <div class="css-rvqhyx"> <button class="css-xpr64j" type="submit" (click)="this.getData(this.widgetCategory,this.selectedMenuId)" name="_save">Apply</button></div>
+                                        </div> 
+                                            </div>
+                                        
+
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="false">
+                                    <div class="panel panel-default columnGroup-3NLeh">
+                                        <div class="panel-heading-explore" role="tab" id="headingFive">
+                                            <h3 class="panel-title-z">
+                                                <a data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapsefour">Predict reach</a>
+                                            </h3>
+                                        </div>
+                                        <div id="collapseFive" class="panel-collapse collapse" aria-labelledby="collapseFive" data-parent="#accordion2">
+                                            <div style="padding: 5px;">
+                                                <div role="navigation" class="list-group">
+                                                    <div class="form-group controls-settings">
+                                                        
+                                                    <label for="amountSpentUSDReach" title="How much amount you want to spend on Campaigns?">Amount spend</label>
+                                                    <input type="number" name="amountSpentUSDReach" id="amountSpentUSDReach" class="numberinput form-control" min="0" [(ngModel)]="saveReachModel.AmountSpentUSD">
+                                                </div>
+                                                <div class="form-group controls-settings">
+                                                    <label for="resultsReach" title="How much web purchases you expect to finalize">Results</label>
+                                                    <input type="number" name="resultsReach" id="resultsReach" class="numberinput form-control" min="0" [(ngModel)]="saveReachModel.results">
+                                                </div>
+                                                <div class="form-group controls-settings">
+                                                    <label for="impressionReach" title="How much Ads Impression you are targeting against your campaigns">Impression</label>
+                                                    <input type="number" name="impressionReach" id="impressionReach" class="numberinput form-control" min="0" [(ngModel)]="saveReachModel.impressions">
+                                                </div>
+                                                <div class="form-group controls-settings">
+                                                    <div class="css-1w7dt24" style="float: right;">
+                                                    <div class="css-rvqhyx">
+                                                        <button class="css-xpr64j" type="button"  name="_save" (click)="CalculateAndSaveReach()">Calculate</button>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                <div class="form-group controls-settings">
+                                                    <label for="pridictedReach" title="System have identified HIGH correlation between Purchase Targets & Reach Predicted audience REACH as below:">Predicted reach</label>
+                                                    <input type="text" name="pridictedReach" id="pridictedReach" class="numberinput form-control" [(ngModel)]=" this.saveReachModel.PredictedResult">
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                            <div class="panel-group" id="accordion3" role="tablist" aria-multiselectable="false">
+                                <div class="panel panel-default columnGroup-3NLeh">
+                                    <div class="panel-heading-explore" role="tab" id="headingsix">
+                                        <h3 class="panel-title-z">
+                                            <a data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapsefour">Predict amount spend</a>
+                                        </h3>
+                                    </div>
+                                    <div id="collapseSix" class="panel-collapse collapse" aria-labelledby="collapseSix" data-parent="#accordion3">
+                                        <div style="padding: 5px;">
+                                            <div role="navigation" class="list-group">
+                                                <div class="form-group controls-settings">
+                                                <label for="purchaseConversionValueAmountspent" title="How much average earning per purchase is your target">Amount spend</label>
+                                                <input type="number" name="purchaseConversionValueAmountspent" id="purchaseConversionValueAmountspent" class="numberinput form-control" min="0" [(ngModel)]="this.saveAmountSpentModel.purchaseConversionValueUSD">
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="impressionAmountspent" title="How much Ads Impression you are targeting against your campaigns">Impression</label>
+                                                <input type="number" name="impressionAmountspent" id="impressionAmountspent" class="numberinput form-control" min="0" [(ngModel)]="this.saveAmountSpentModel.impressions">
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="resultAmountspent" title="How much web purchases you expect to finalize">Result</label>
+                                                <input type="number" name="resultAmountspent" id="resultAmountspent" class="numberinput form-control" min="0" [(ngModel)]="this.saveAmountSpentModel.results">
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="reachAmountspent" title="How much Audience Reach you are targeting?">Reach</label>
+                                                <input type="number" name="reach" id="reachAmountspent" class="numberinput form-control" min="0" [(ngModel)]="this.saveAmountSpentModel.reach">
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="resultTypeCodeAmountspent" title="What is type of Purchases target (1. Web, 2. Posts) ?">Result type code</label>
+                                                <input type="number" name="resultTypeCodeAmountspent" id="resultTypeCodeAmountspent" class="numberinput form-control" min="0" [(ngModel)]="this.saveAmountSpentModel.resultTypeCode">
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                            <div class="css-1w7dt24" style="float: right;">
+                                                <div class="css-rvqhyx">
+                                                    <button class="css-xpr64j" type="button"  name="_save" (click)="CalculateAndSaveAmountSpend()">Calculate</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="pridictedReachAmountSpent" title="Predicted spending required for Campaign sending:">Predicted amount spend</label>
+                                                <input type="text" name="pridictedReachAmountSpent" id="pridictedReachAmountSpent" class="numberinput form-control" [(ngModel)]=" this.saveAmountSpentModel.PredictedResult">
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            </div>
+                            <div class="panel-group" id="accordion4" role="tablist" aria-multiselectable="false">
+                                <div class="panel panel-default columnGroup-3NLeh">
+                                    <div class="panel-heading-explore" role="tab" id="heading4">
+                                        <h3 class="panel-title-z">
+                                            <a data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapsefour">Predict PCV</a>
+                                        </h3>
+                                    </div>
+                                    <div id="collapseSeven" class="panel-collapse collapse" aria-labelledby="collapseSeven" data-parent="#accordion4">
+                                        <div style="padding: 5px;">
+                                            <div role="navigation" class="list-group">
+                                                <div class="form-group controls-settings">
+                                                <label for="purchaseRoasPCV" title="Expected Return On Ad Spend (ROAS)">Purchase ROAS</label>
+                                                <input type="number" name="purchaseRoasPCV" id="purchaseRoasPCV" class="numberinput form-control" min="0" [(ngModel)]="this.savePCVModel.purchaseROASReturnonAdSpend">
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="impressionPCV" title="How much Ads Impression you are targeting against your campaigns">Impression</label>
+                                                <input type="number" name="impressionPCV" id="impressionPCV" class="numberinput form-control" min="0" [(ngModel)]="this.savePCVModel.impressions">
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="costPerResultsPCV" title="Per Purchase Net Cost should be in which range?">Cost per result</label>
+                                                <input type="number" name="costPerResultsPCV" id="costPerResultsPCV" class="numberinput form-control" min="0" [(ngModel)]="this.savePCVModel.costPerResultUSD">
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="amountspentPCV" title="How much you are planning to spend on Campaigns?">Amount spent</label>
+                                                <input type="number" name="amountspentPCV" id="amountspentPCV" class="numberinput form-control" min="0" [(ngModel)]="this.savePCVModel.AmountSpentUSD">
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="reachPCV" title="How much Audience Reach you are targeting?">Reach</label>
+                                                <input type="number" name="reachPCV" id="reachPCV" class="numberinput form-control" min="0" [(ngModel)]="this.savePCVModel.reach">
+                                            </div>
+                                            
+                                            <div class="form-group controls-settings">
+                                                <div class="css-1w7dt24" style="float: right;">
+                                                <div class="css-rvqhyx">
+                                                    <button class="css-xpr64j" type="button"  name="_save" (click)="CalculateAndSavePCV()">Calculate</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="pridictedReachPCV" title="Predicted PCV expected:">Predicted PCV</label>
+                                                <input type="text" name="pridictedReachPCV" id="pridictedReachPCV" class="numberinput form-control" [(ngModel)]="this.savePCVModel.PredictedResult">
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            </div>
+                            <div class="panel-group" id="accordion5" role="tablist" aria-multiselectable="false">
+                                <div class="panel panel-default columnGroup-3NLeh">
+                                    <div class="panel-heading-explore" role="tab" id="heading5">
+                                        <h3 class="panel-title-z">
+                                            <a data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseFive">Predict impressions</a>
+                                        </h3>
+                                    </div>
+                                    <div id="collapseTen" class="panel-collapse collapse" aria-labelledby="collapseTen" data-parent="#accordion5">
+                                        <div style="padding: 5px;">
+                                            <div role="navigation" class="list-group">
+                                                <div class="form-group controls-settings">
+                                                <label for="amountSpentUSDPI" title="What is your Campaign Budget? (in Dollars)">Amount spent</label>
+                                                <input type="number" name="amountSpentUSDPI" id="amountSpentUSDPI" class="numberinput form-control" min="0" [(ngModel)]="this.saveImpressionModel.AmountSpentUSD">
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="resultsPI" title="How much web purchases you expect to finalize?">Purchase</label>
+                                                <input type="number" name="resultsPI" id="resultsPI" class="numberinput form-control" min="0" [(ngModel)]="this.saveImpressionModel.results">
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="reachPI" title="How much Audience Reach you are targeting?">Reach</label>
+                                                <input type="number" name="reachPI" id="reachPI" class="numberinput form-control" min="0" [(ngModel)]="this.saveImpressionModel.reach">
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <div class="css-1w7dt24" style="float: right;">
+                                                <div class="css-rvqhyx">
+                                                    <button class="css-xpr64j" type="button"  name="_save" (click)="CalculateAndSaveImpressions()">Calculate</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="pridictedReachPCV" title="Predicted target of Impressions should be in the range:">Predicted impressions</label>
+                                                <input type="text" name="pridictedReachPCV" id="pridictedReachPCV" class="numberinput form-control" [(ngModel)]="this.saveImpressionModel.PredictedResult">
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            </div>
+                            <div class="panel-group" id="accordion6" role="tablist" aria-multiselectable="false">
+                                <div class="panel panel-default columnGroup-3NLeh">
+                                    <div class="panel-heading-explore" role="tab" id="heading11">
+                                        <h3 class="panel-title-z">
+                                            <a data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapse11">Predict results</a>
+                                        </h3>
+                                    </div>
+                                    <div id="collapseEleven" class="panel-collapse collapse" aria-labelledby="collapseEleven" data-parent="#accordion6">
+                                        <div style="padding: 5px;">
+                                            <div role="navigation" class="list-group">
+                                                <div class="form-group controls-settings">
+                                                <label for="amountSpentUSDPR" title="What is your Campaign Budget? (in Dollars)">Amount spent</label>
+                                                <input type="number" name="amountSpentUSDPR" id="amountSpentUSDPR" class="numberinput form-control" min="0" [(ngModel)]="this.saveResultModel.AmountSpentUSD">
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="reachPR" title="How much Audience Reach you are targeting?">Reach</label>
+                                                <input type="number" name="reachPR" id="reachPR" class="numberinput form-control" min="0" [(ngModel)]="this.saveResultModel.reach">
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="impressionPR" title="How much Ads Impression you are targeting against your campaigns">Impression</label>
+                                                <input type="number" name="impressionPR" id="impressionPR" class="numberinput form-control" min="0" [(ngModel)]="this.saveResultModel.impressions">
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="costPerResultPR" title="What is your target Cost Per Purchase amount?">Cost per result</label>
+                                                <input type="number" name="costPerResultPR" id="costPerResultPR" class="numberinput form-control" min="0" [(ngModel)]="this.saveResultModel.costPerResultUSD">
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <div class="css-1w7dt24" style="float: right;">
+                                                <div class="css-rvqhyx">
+                                                    <button class="css-xpr64j" type="button"  name="_save" (click)="CalculateAndSaveResults()">Calculate</button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <div class="form-group controls-settings">
+                                                <label for="pridictedReachPCV" title="On the basis of above Budgets & Targets, expected Web Purchases shall be:">Predicted result</label>
+                                                <input type="text" name="pridictedReachPCV" id="pridictedReachPCV" class="numberinput form-control" [(ngModel)]="this.saveResultModel.PredictedResult">
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            </div>
+                        </div>                     
+                </div>
+        </div>
+    </div>
+    <div class="row" [ngClass]="gridDisplay"  style="margin-left:0 !important; margin-right: 0!important;">
+        <div class="col-sm-12 col-md-12">
+            <app-ag-grid-data-viewer #agGridComponent (gridClose)="this.gridclose()"></app-ag-grid-data-viewer>
+        </div>
+    </div>

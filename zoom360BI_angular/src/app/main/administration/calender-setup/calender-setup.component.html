@@ -1,0 +1,154 @@
+<div class="generic-django-admin-header">
+    <div class="main-section">
+        <h3>Calender Settings</h3>
+    </div>
+    <div class="tool-section">
+    </div>
+</div>
+<div id="content-main" class="contentMain">
+    <form [formGroup]="CalenderSetup" (ngSubmit)="SaveConfig(CalenderSetup.value)" autocomplete="off">
+        <fieldset class="module aligned ">
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Apply calender set up to workspace </label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="CalenderSetup" value="Apply this calender" style="margin-top: -1px;" (click)="setbussinessYearDate(false)">Apply this calender
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="CalenderSetup" value="Do not use this calender" style="margin-top: -1px;" (click)="setbussinessYearDate(true)">Do not use this calender
+                        </div>
+
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack" *ngIf="bussinessYearDateToggle">
+                <div>
+                    <label class="required" for="id_auth">Business year start date </label>
+                    <div class="related-widget-wrapper">
+                        <input type="date" formControlName="bussinessYearDate" class="control-width" />
+                    </div>
+                    <div class="help">Date from which yearly analysis will be calculated in the system</div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Financial year start date </label>
+                    <div class="related-widget-wrapper">
+                        <input type="date" formControlName="finacialYearDate" class="control-width" />
+                    </div>
+                    <div class="help">Date from which financial analysis will be calculated in the system</div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Reporting year start date </label>
+                    <div class="related-widget-wrapper">
+                        <input type="date" formControlName="reportingYearDate" class="control-width" />
+                    </div>
+                    <div class="help">Date from which historical analysis will be calculated in the system</div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Weekstart day</label>
+                    <div class="related-widget-wrapper">
+                        <ejs-dropdownlist id='WeekStartDay' cssClass="edit-Dropdown"  [dataSource]="WeekStartDay" placeholder="Select Week-Day" [(fields)]='field' formControlName="weekStartDay"></ejs-dropdownlist>
+                        <!-- <select class="selectpicker" style="width: 478px;" formControlName="weekStartDay">
+                        <option *ngFor='let item of calenderService.WeekStartDay' value="{{item.dropdownValue}}">{{item.dropdownText}}</option>
+                      </select> -->
+                    </div>
+                    <div class="help">
+                        Day of week to start weekly analysis
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Holidays Calender</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Annual holidays calender </label>
+                    <div class="related-widget-wrapper">
+                        <input type="date" formControlName="annualHolidayCalender" class="control-width" />
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Campaigns Calender</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Annual campaigns calender </label>
+                    <div class="related-widget-wrapper">
+                        <input type="date" formControlName="annualCampaignCalender" class="control-width" />
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <ejs-checkbox id=""   label="Generate notifications for campaigns"   formControlName="notifyCampaignsCalender"></ejs-checkbox>
+                    <!-- <input type="checkbox" formControlName="notifyCampaignsCalender" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Generate notifications for campaigns</label> -->
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Milestone Calender</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Annual holidays calender </label>
+                    <div class="related-widget-wrapper">
+                        <input type="date" formControlName="milestoneAnnualHolidayCalender" class="control-width" />
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <ejs-checkbox id=""   label="Generate notifications for milestone" cssClass="e-label" formControlName="notifyMilestoneCalender"></ejs-checkbox>
+                    <!-- <input type="checkbox" formControlName="notifyMilestoneCalender" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Generate notifications for milestone</label> -->
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Setup Enforcement</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Apply and enforce calender setup</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="calenderApplyAndEnforce" value="All child workspaces" style="margin-top: -1px;">All child workspaces
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="calenderApplyAndEnforce" value="Selective child workspaces" style="margin-top: -1px;">Selective child workspaces
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+
+        </fieldset>
+        <div>
+            <div class="css-1qbrnrg">
+                <hr class="css-1c3fhlt" mx="zero" role="separator" aria-orientation="horizontal">
+                <div class="css-1x62jim">
+                    <div class="css-p84alj">
+                        <div class="css-rvqhyx"><a class="css-ebx8b0" href="/instagram_business/instagrambusinessdatastream/27/delete/">Delete</a><a class="css-b2qa21" href="/core/apidatastream/clone?pk=27">Clone</a></div>
+                    </div>
+                    <div class="css-1w7dt24">
+                        <ejs-toast #defaulttoast   [position]="position" >                
+                        </ejs-toast>
+                        <div class="css-rvqhyx"><button class="css-b2qa21" type="button" name="_continue">Save and continue editing</button>
+                            <button class="css-xpr64j  .e-toast-container .e-toast" type="submit" name="_save">Save</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

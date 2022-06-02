@@ -1,0 +1,78 @@
+<div class="main-content">
+    <div class="generic-django-admin-header">
+        <div class="main-section">
+            <h3>Save Configuration as Template</h3>
+        </div>
+        <div class="tool-section">
+            <div class="object-tools pull-right">
+                <div class="btn-group btn-group-sm">
+                </div>
+                <a href="/core/datastreampreset/383/history/" class="btn btn-default btn-sm historylink">
+                History
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="content-main" class="contentMain">
+        <form enctype="multipart/form-data" action="" method="post" id="datastreampreset_form" novalidate="">
+            <div>
+                <fieldset class="module aligned admin-tab admin-tab-configuration">
+                    <h2>Configuration</h2>
+                    <div class="form-row field-name">
+                        <div>
+                            <label class="required" for="id_name">Name</label>
+                            <input type="text" name="name" value="YouTube Analytics" class="vTextField" maxlength="200" required="" id="id_name">
+                        </div>
+                    </div>
+                    <div class="form-row hidden field-content_type">
+                        <div>
+                            <label class="required" for="id_content_type">Content type</label>
+                            <div class="related-widget-wrapper">
+                                <input type="hidden" name="content_type" value="178" id="id_content_type">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row field-stack">
+                        <div>
+                            <label class="required" for="id_auth">Serilized Data </label>
+                            <div class="related-widget-wrapper">
+                                <json-editor [options]="editorOptions" [data]="data"></json-editor>
+                                <!-- <textarea style="width: 48em; height:150px;max-width:480px">
+
+                                </textarea> -->
+
+                            </div>
+                            <div class="help">
+                                Enter Valid JSON {{templateSave | json}}
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="module aligned admin-tab admin-tab-description">
+                    <h2>Description</h2>
+                    <div class="form-row field-description">
+                        <div>
+                            <label for="id_description">Description</label>
+                            <textarea name="description" cols="40" rows="10" class="vLargeTextField" id="id_description" [(ngModel)]="jsonDescription"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <div>
+                    <div class="css-1qbrnrg">
+                        <hr class="css-1c3fhlt" mx="zero" role="separator" aria-orientation="horizontal">
+                        <div class="css-1x62jim">
+                            <div class="css-p84alj">
+                                <div class="css-rvqhyx"><a class="css-ebx8b0" href="/instagram_business/instagrambusinessdatastream/27/delete/">Delete</a><a class="css-b2qa21" href="/core/apidatastream/clone?pk=27">Clone</a></div>
+                            </div>
+                            <div class="css-1w7dt24">
+                                <div class="css-rvqhyx"><button class="css-b2qa21" type="button" name="_continue">Save and continue editing</button>
+                                    <button class="css-xpr64j" type="submit" name="_save" (click)="Save()">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

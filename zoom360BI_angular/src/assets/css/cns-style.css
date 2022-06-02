@@ -1,0 +1,8621 @@
+body {
+    font-family: "Open Sans"!important;
+    color: rgb(52, 59, 64) !important;
+    margin: 0px !important;
+}
+
+
+/* start navbar*/
+
+.css-1lqfg6t a,
+.css-1lqfg6t a:hover {
+    color: rgb(52, 59, 64);
+    text-decoration: none;
+}
+
+.generic-django-admin-header .tool-section .object-tools {
+    margin-top: 0;
+    margin-bottom: 16px;
+    float: none;
+}
+
+.object-tools {
+    margin-top: -40px;
+}
+
+.pull-right {
+    float: right!important;
+}
+
+.object-tools .btn-tool {
+    background: #219b9c;
+    border: 0;
+    color: #fff;
+}
+
+.btn-group-sm>.btn,
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 11px;
+    line-height: 1.5;
+    border-radius: 2px;
+}
+
+.css-7eznv6 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    background-color: rgb(255, 255, 255);
+    vertical-align: top;
+    overflow-y: auto;
+    border-width: 1px;
+    border-color: rgb(221, 224, 228);
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-1ogme1u {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    height: 56px;
+    vertical-align: top;
+}
+
+.css-3vdjz3 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    width: 100%;
+    vertical-align: top;
+    position: fixed;
+    top: 0px;
+    z-index: 40;
+}
+
+.css-1lqfg6t {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: block;
+    vertical-align: top;
+}
+
+.css-1ibg7jp {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: rgb(255, 255, 255);
+    vertical-align: top;
+    position: relative;
+}
+
+.css-1jkushg {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: rgb(221, 224, 228);
+    width: 100%;
+    height: 1px;
+    vertical-align: top;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    pointer-events: none;
+}
+
+.css-1jx390f {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-right: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    vertical-align: top;
+}
+
+.css-g5ouh4 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    max-width: 200px;
+    max-height: 32px;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.css-8mryim {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    vertical-align: top;
+    position: relative;
+}
+
+.css-1ghsfwx {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    height: 32px;
+    vertical-align: top;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.css-ovfwuf {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-ovfwuf> :not(:last-child) {
+    margin-right: 8px;
+}
+
+.css-1u2frpk {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: transparent;
+    color: rgb(52, 59, 64);
+    display: inline-flex;
+    width: auto;
+    height: 32px;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.css-1u2frpk:hover:not([aria-disabled="true"]) {
+    background-color: rgb(226, 242, 242);
+    color: rgb(52, 59, 64);
+}
+
+.css-1u2frpk:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1u2frpk:focus {
+    background-color: transparent;
+    color: rgb(52, 59, 64);
+    text-decoration: none;
+}
+
+.css-1u2frpk:hover {
+    text-decoration: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.css-ovfwuf> :not(:last-child) {
+    margin-right: 8px;
+}
+
+.css-1w7728k {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: rgb(230, 44, 44);
+    width: 16px;
+    height: 16px;
+    align-self: center;
+    vertical-align: top;
+    border-width: 0px;
+    border-color: rgb(147, 155, 163);
+    border-style: solid;
+    border-radius: 999px;
+}
+
+.css-g5ouh4 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    max-width: 200px;
+    max-height: 32px;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.css-1n29wf0 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    vertical-align: top;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.css-u4ffs4 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.css-u4ffs4> :not(:last-child) {
+    margin-right: 24px;
+}
+
+.css-rymhwc {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+    border-width: 0px 0px 1px;
+    border-color: rgb(33, 155, 156);
+    border-style: solid;
+}
+
+.css-1lqfg6t a,
+.css-1lqfg6t a:hover {
+    color: rgb(52, 59, 64);
+    text-decoration: none;
+}
+
+.css-1qsrl3t {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.css-u4ffs4> :not(:last-child) {
+    margin-right: 24px;
+}
+
+.css-1olq135 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+    border-width: 0px 0px 1px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+}
+
+.css-1qsrl3t {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.css-1dfzm3s {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: inline-flex;
+    vertical-align: top;
+    flex-direction: row;
+}
+
+.css-teyu7s {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    height: 32px;
+    vertical-align: top;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-teyu7s> :not(:last-child) {
+    margin-right: 8px;
+}
+
+.css-qowjcb {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-right: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    vertical-align: top;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 13px 0px, rgba(0, 0, 0, 0.08) 0px 0px 10px 0px;
+    flex-direction: column;
+    border-width: 0px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-m0pid7 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    vertical-align: top;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 13px 0px, rgba(0, 0, 0, 0.08) 0px 0px 10px 0px;
+    left: 0px;
+    z-index: 60;
+    border-width: 0px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-1i6yrak {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.css-1i6yrak.css-1i6yrak>*,
+.css-1i6yrak.css-1i6yrak> :hover {
+    color: rgb(52, 59, 64);
+    white-space: nowrap;
+}
+
+.css-1i6yrak {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+*,
+ :after,
+ :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.css-1i6yrak.css-1i6yrak>*,
+.css-1i6yrak.css-1i6yrak> :hover {
+    color: rgb(52, 59, 64);
+    white-space: nowrap;
+}
+
+.css-tmihtf {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: transparent;
+    color: rgb(52, 59, 64);
+    display: flex;
+    height: 24px;
+    width: 100%;
+    vertical-align: top;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 16px;
+    user-select: none;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    text-decoration: none;
+}
+
+.css-u41myu {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.css-ar6fxo {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: rgb(52, 59, 64);
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 0px;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.css-ar6fxo:active:not([aria-disabled="true"]) {
+    background-color: rgb(199, 230, 230);
+    color: rgb(52, 59, 64);
+}
+
+.css-ar6fxo:hover:not([aria-disabled="true"]) {
+    background-color: rgb(226, 242, 242);
+    color: rgb(52, 59, 64);
+}
+
+.css-ar6fxo:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-ar6fxo:focus {
+    background-color: transparent;
+    color: rgb(52, 59, 64);
+    text-decoration: none;
+}
+
+.css-ar6fxo:hover {
+    text-decoration: none;
+}
+
+.css-1l7xwpx {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
+    box-sizing: content-box;
+    transform: rotate(0deg);
+    overflow: visible;
+}
+
+.css-m0pid7 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    vertical-align: top;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 13px 0px, rgba(0, 0, 0, 0.08) 0px 0px 10px 0px;
+    left: 0px;
+    z-index: 60;
+    border-width: 0px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-4cggvm {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: rgb(33, 155, 156);
+    vertical-align: top;
+    z-index: 0;
+    position: relative;
+}
+
+.css-1mta4yu {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: rgb(33, 155, 156);
+    vertical-align: top;
+    z-index: 0;
+}
+
+.css-1jfl4m2 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: flex;
+    vertical-align: top;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+}
+
+.css-1jfl4m2> :not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.css-1mlvbuc {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 24px;
+    white-space: nowrap;
+}
+
+.css-x5dnxc {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.css-1lzrm4o {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-right: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    vertical-align: top;
+    flex-direction: column;
+}
+
+.css-1i6yrak {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.css-1i6yrak.css-1i6yrak>*,
+.css-1i6yrak.css-1i6yrak> :hover {
+    color: rgb(52, 59, 64);
+    white-space: nowrap;
+}
+
+.css-tmihtf {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: transparent;
+    color: rgb(52, 59, 64);
+    display: flex;
+    height: 24px;
+    width: 100%;
+    vertical-align: top;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 16px;
+    user-select: none;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    text-decoration: none;
+}
+
+.css-1uqv71b {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    max-width: 100px;
+    max-height: 24px;
+    vertical-align: top;
+    overflow: hidden;
+    border-width: 0px;
+    border-color: rgb(147, 155, 163);
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-176l2l7 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    max-height: 24px;
+    max-width: 100px;
+    vertical-align: top;
+    overflow: hidden;
+    border-width: 0px;
+    border-color: rgb(147, 155, 163);
+    border-style: solid;
+    border-radius: 2px;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+
+/* end navbar*/
+
+
+/*start left menu dropdown*/
+
+.css-frqpw1 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: rgba(99, 109, 117, 0.25);
+    vertical-align: top;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 60;
+}
+
+.css-mpceis {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    width: 296px;
+    height: 100vh;
+    flex-shrink: 0;
+    vertical-align: top;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 13px 0px, rgba(0, 0, 0, 0.08) 0px 0px 10px 0px;
+    position: fixed;
+    z-index: 60;
+    top: 0px;
+    left: 0px;
+    border-color: transparent;
+    border-width: 0px;
+    border-radius: 0px;
+}
+
+.css-1azlxae {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    vertical-align: top;
+    flex-direction: column;
+}
+
+.css-fzlwf6 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: rgb(33, 155, 156);
+    color: rgb(255, 255, 255);
+    vertical-align: top;
+    padding: 16px;
+}
+
+.css-1slzy86 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.css-1slzy86> :not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.css-x5dnxc {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.css-1qsrl3t {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.css-t1fwlm {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: rgb(226, 242, 242);
+    vertical-align: top;
+    padding: 16px;
+}
+
+.css-1w8w27e {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 155, 156);
+    display: inline-flex;
+    width: auto;
+    height: 24px;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: rgb(203, 209, 214);
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-1ttiz0w {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    padding-right: 4px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+    box-sizing: content-box;
+    transform: rotate(0deg);
+    overflow: visible;
+}
+
+.css-x5dnxc {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.css-16a0dnp {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    padding-left: 4px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+    box-sizing: content-box;
+    transform: rotate(0deg);
+    overflow: visible;
+}
+
+.css-4jsk13 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    vertical-align: top;
+    padding: 16px;
+}
+
+/* .css-ucma6b {
+    margin-top: unset;
+    margin-right: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    color: #515961;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: bold;
+} */
+
+.css-1uo4iwf {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+    padding-left: 8px;
+    color: rgb(52, 59, 64);
+    display: block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.css-rni0qy {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(221, 224, 228);
+    width: 100%;
+    height: 0px;
+    vertical-align: top;
+    border-width: 0px 0px 1px;
+    border-color: currentcolor;
+    border-style: solid;
+}
+
+hr {
+    clear: both;
+    color: #eee;
+    background-color: #eee;
+    height: 1px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+    line-height: 1px;
+}
+
+hr {
+    margin-top: 17px;
+    margin-bottom: 17px;
+    border: 0;
+    border-top: 1px solid #edeff1;
+}
+
+.css-15vk8fm {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(52, 59, 64);
+    vertical-align: top;
+    padding: 16px;
+}
+
+.css-1qnn2mf {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(52, 59, 64);
+    width: 100%;
+    height: 24px;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+    text-overflow: ellipsis;
+    resize: none;
+    border-width: 1px;
+    border-color: rgb(203, 209, 214);
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-svz17u {
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    margin-top: 0px;
+    vertical-align: top;
+    overflow: auto;
+}
+
+.css-ahgi49 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+    padding-left: 8px;
+    color: rgb(33, 155, 156);
+    display: block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+    background-color: rgb(244, 250, 250);
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+.css-qvjl95 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+    padding-left: 24px;
+    color: rgb(52, 59, 64);
+    display: block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.css-1as9gac {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: rgb(81, 89, 97);
+    color: rgb(255, 255, 255);
+    max-width: calc(100vw - 10px);
+    vertical-align: top;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 13px 0px, rgba(0, 0, 0, 0.08) 0px 0px 10px 0px;
+    font-size: 12px;
+    line-height: 16px;
+    word-break: break-word;
+    z-index: 90;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-1as9gac {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: rgb(81, 89, 97);
+    color: rgb(255, 255, 255);
+    max-width: calc(100vw - 10px);
+    vertical-align: top;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 13px 0px, rgba(0, 0, 0, 0.08) 0px 0px 10px 0px;
+    font-size: 12px;
+    line-height: 16px;
+    word-break: break-word;
+    z-index: 90;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 2px;
+}
+
+
+/*end left menu dropdown*/
+
+
+/*_______________________
+*************************
+*/
+
+
+/*start left content*/
+
+.sidebar-border {
+    border-width: 0px 1px 0px 0px;
+    border-color: rgb(221, 224, 228);
+    border-style: solid;
+}
+
+.css-g4ubxk {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-bottom: 36px;
+    background-color: rgb(255, 255, 255);
+    width: 224px;
+    vertical-align: top;
+    position: fixed;
+    z-index: 10;
+}
+
+.css-1he1u4o {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    vertical-align: top;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-lve0xm {
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 24px;
+    margin-top: 24px;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    vertical-align: top;
+    overflow: auto;
+}
+
+.css-yti68a {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+    flex-direction: column;
+}
+
+.css-pz52ya {
+    margin-top: unset;
+    margin-right: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    background-color: rgb(255, 255, 255);
+    vertical-align: top;
+    overflow-y: auto;
+    border-width: 1px;
+    border-color: rgb(221, 224, 228);
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-ctqjzd {
+    margin-top: unset;
+    margin-right: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    display: block;
+    vertical-align: top;
+}
+
+.css-ucma6b {
+    margin-top: unset;
+    margin-right: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    color: rgb(122, 131, 140);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+     font-weight: bold;
+}
+
+.css-15rwz9m {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: block;
+    vertical-align: top;
+}
+
+.css-xpkjqy {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 7px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: block;
+    vertical-align: top;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(33, 155, 156);
+    background-color: rgb(244, 250, 250);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: rgb(33, 155, 156);
+    text-decoration: none !important;
+}
+
+.css-1wfdhj {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: rgb(52, 59, 64);
+    display: block;
+    vertical-align: top;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration: none !important;
+}
+
+.css-d8rkty {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    color: rgb(52, 59, 64);
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    display: flex;
+    height: 24px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px;
+    padding: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    text-decoration: none;
+}
+
+.css-1higl9s {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: rgb(33, 155, 156);
+    width: 0px;
+    height: 24px;
+    min-height: 100%;
+    margin: 8px 0px 8px 11px;
+    padding: 0px;
+    border-width: 0px 0px 0px 1px;
+    border-style: solid;
+    border-color: currentcolor;
+}
+
+.css-d8rkty:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-d8rkty:focus {
+    color: rgb(52, 59, 64);
+    text-decoration: none;
+}
+
+.css-d8rkty:hover {
+    color: rgb(52, 59, 64);
+    background-color: rgb(226, 242, 242);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.css-d8rkty:active {
+    background-color: rgb(199, 230, 230);
+}
+
+.css-skkt0a {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(244, 250, 250);
+    color: rgb(33, 155, 156);
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    display: flex;
+    height: 24px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px;
+    padding: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    text-decoration: none;
+}
+
+.css-skkt0a:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-skkt0a:focus {
+    color: rgb(33, 155, 156);
+    text-decoration: none;
+}
+
+.css-skkt0a:hover {
+    color: rgb(33, 155, 156);
+    background-color: rgb(226, 242, 242);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.css-skkt0a:active {
+    background-color: rgb(199, 230, 230);
+}
+
+.css-skkt0a::before {
+    content: "2";
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-d8rkty::before {
+    content: url(../images/tick.svg);
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-1w5p645:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1w5p645:focus {
+    color: rgb(33, 155, 156);
+    text-decoration: none;
+}
+
+.css-1w5p645:hover {
+    color: rgb(33, 155, 156);
+    background-color: rgb(226, 242, 242);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.css-1w5p645:active {
+    background-color: rgb(199, 230, 230);
+}
+
+.css-bis9cy:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-bis9cy:focus {
+    color: rgb(33, 155, 156);
+    text-decoration: none;
+}
+
+.css-bis9cy:hover {
+    color: rgb(33, 155, 156);
+    background-color: rgb(226, 242, 242);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.css-bis9cy:active {
+    background-color: rgb(199, 230, 230);
+}
+
+
+/*end left content*/
+
+
+/*_______________________
+/*start main content*/
+
+
+/*_______________________*/
+
+.css-c6y5pb:active:not([aria-disabled="true"]) {
+    background-color: rgb(199, 230, 230);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-c6y5pb:hover:not([aria-disabled="true"]) {
+    background-color: rgb(226, 242, 242);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-c6y5pb:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-c6y5pb:focus {
+    color: rgb(33, 155, 156);
+    text-decoration: none;
+}
+
+.css-c6y5pb:hover {
+    text-decoration: none;
+}
+
+.css-c6y5pb {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    color: rgb(27, 132, 133);
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: rgb(203, 209, 214);
+    text-decoration: none;
+}
+
+.css-1j7c4l9 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    width: 224px;
+    position: fixed;
+    z-index: 10;
+    margin: 0px;
+    padding: 0px 0px 36px;
+}
+
+.css-4468y5 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    display: flex;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1qm07br {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    margin: 24px 0px 0px;
+    padding: 0px 0px 0px 24px;
+    border-width: 0px;
+    overflow: auto;
+}
+
+.css-12l7gva {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: inherit;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0px 24px 16px 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1vkpoll {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1vkpoll:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-4468y5> :not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.css-1w5p645 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(244, 250, 250);
+    color: rgb(33, 155, 156);
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    display: flex;
+    height: 24px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px;
+    padding: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    text-decoration: none;
+}
+
+.css-1w5p645::before {
+    content: "1";
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-iq3ejn {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: rgb(203, 209, 214);
+    width: 0px;
+    height: 24px;
+    min-height: 100%;
+    margin: 8px 0px 8px 11px;
+    padding: 0px;
+    border-width: 0px 0px 0px 1px;
+    border-style: solid;
+    border-color: currentcolor;
+}
+
+.css-107z33x {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: transparent;
+    color: rgb(178, 186, 194);
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    display: flex;
+    height: 24px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px;
+    padding: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    text-decoration: none;
+}
+
+.css-107z33x::before {
+    content: "2";
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-11p48i9 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: transparent;
+    color: rgb(178, 186, 194);
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    display: flex;
+    height: 24px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px;
+    padding: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    text-decoration: none;
+}
+
+.css-11p48i9::before {
+    content: "3";
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-192os43 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: transparent;
+    color: rgb(178, 186, 194);
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    display: flex;
+    height: 24px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px;
+    padding: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    text-decoration: none;
+}
+
+.css-192os43::before {
+    content: "4";
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-1hjncg2 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(244, 250, 250);
+    color: rgb(33, 155, 156);
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    display: flex;
+    height: 24px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px;
+    padding: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    text-decoration: none;
+}
+
+.css-1hjncg2::before {
+    content: "4";
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-1hjncg2:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1hjncg2:focus {
+    color: rgb(33, 155, 156);
+    text-decoration: none;
+}
+
+.css-1hjncg2:hover {
+    color: rgb(33, 155, 156);
+    background-color: rgb(226, 242, 242);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.css-1hjncg2:active {
+    background-color: rgb(199, 230, 230);
+}
+
+
+/**/
+
+.css-1hjn5c2 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(244, 250, 250);
+    color: rgb(33, 155, 156);
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    display: flex;
+    height: 24px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px;
+    padding: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    text-decoration: none;
+}
+
+.css-1hjn5c2::before {
+    content: "5";
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-1hjn5c2:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1hjn5c2:focus {
+    color: rgb(33, 155, 156);
+    text-decoration: none;
+}
+
+.css-1hjn5c2:hover {
+    color: rgb(33, 155, 156);
+    background-color: rgb(226, 242, 242);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.css-1hjn5c2:active {
+    background-color: rgb(199, 230, 230);
+}
+
+
+/**/
+
+
+/**/
+
+.css-1hjnc6g2 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(244, 250, 250);
+    color: rgb(33, 155, 156);
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    display: flex;
+    height: 24px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px;
+    padding: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    text-decoration: none;
+}
+
+.css-1hjnc6g2::before {
+    content: "6";
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-1hjnc6g2:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1hjnc6g2:focus {
+    color: rgb(33, 155, 156);
+    text-decoration: none;
+}
+
+.css-1hjnc6g2:hover {
+    color: rgb(33, 155, 156);
+    background-color: rgb(226, 242, 242);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.css-1hjnc6g2:active {
+    background-color: rgb(199, 230, 230);
+}
+
+
+/**/
+
+a:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+a:focus,
+a:hover {
+    color: #122745;
+    text-decoration: underline;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+.css-107z33x::before {
+    content: "2";
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-1w5p645::before {
+    content: "1";
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-11p48i9::before {
+    content: "3";
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-192os43::before {
+    content: "4";
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-bis9cy {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(244, 250, 250);
+    color: rgb(33, 155, 156);
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    display: flex;
+    height: 24px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px;
+    padding: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    text-decoration: none;
+}
+
+.css-bis9cy::before {
+    content: "3";
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-g7wiy4::before {
+    content: "5";
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-g7wiy4:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-g7wiy4:focus {
+    color: rgb(178, 186, 194);
+    text-decoration: none;
+}
+
+.css-g7wiy4:hover {
+    color: rgb(178, 186, 194);
+    background-color: unset;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+.css-g7wiy4 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: transparent;
+    color: rgb(178, 186, 194);
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    display: flex;
+    height: 24px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px;
+    padding: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    text-decoration: none;
+}
+
+
+/*end left content*/
+
+
+/*_______________________
+*************************
+
+*/
+
+
+/*start content*/
+
+
+/*_______________________
+*************************
+*/
+
+#content {
+    padding: 24px;
+}
+
+.css-14sqg09:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1csdgii:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-14sqg09 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 12px;
+    padding-right: 12px;
+    vertical-align: top;
+    max-width: 25%;
+    flex: 0 0 25%;
+}
+
+.css-12o7ikz {
+    margin-top: unset;
+    margin-right: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    background-color: rgb(255, 255, 255);
+    vertical-align: top;
+    overflow-y: auto;
+    border-width: 1px;
+    border-color: rgb(221, 224, 228);
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.generic-django-admin-header {
+    display: flex;
+}
+
+.generic-django-admin-header .main-section {
+    flex-grow: 1;
+}
+
+
+/*graph row start*/
+
+.css-1csdgii {
+    margin-top: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-left: -12px;
+    margin-right: -12px;
+    margin-bottom: 24px;
+    display: flex;
+    vertical-align: top;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.css-svi781:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-svi781 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 12px;
+    padding-right: 12px;
+    vertical-align: top;
+    max-width: 75%;
+    flex: 0 0 75%;
+}
+
+.css-1lw09vn {
+    margin-top: unset;
+    margin-bottom: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-left: -12px;
+    margin-right: -12px;
+    display: flex;
+    vertical-align: top;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+@media screen and (min-width: 1280px) {
+    .css-m15uzv {
+        max-width: 33.3333%;
+        flex: 0 0 33.3333%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .css-m15uzv {
+        max-width: 33.3333%;
+        flex: 0 0 33.3333%;
+    }
+}
+
+.css-m15uzv {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 12px;
+    padding-right: 12px;
+    vertical-align: top;
+    max-width: 33.3333%;
+    flex: 0 0 100%;
+}
+
+.css-1dq8531 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    height: 100%;
+    min-width: 0px;
+    vertical-align: top;
+}
+
+.css-1etgkeo {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.css-1fsjk6l {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(99, 109, 117);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.css-1h000ye {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-top: 8px;
+    vertical-align: top;
+}
+
+.css-qzqued {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(33, 155, 156);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+}
+
+
+/* .css-43pdm1 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    border-bottom: 2px solid rgb(33, 155, 156);
+    height: 16px;
+    vertical-align: top;
+} */
+
+.highcharts-1vXJh .highcharts-container,
+.highcharts-1vXJh .highcharts-root {
+    overflow: visible!important;
+}
+
+.fluid .highcharts-container,
+.fluid .highcharts-container svg {
+    width: 100%!important;
+}
+
+.css-8cvt2v {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 12px;
+    padding-right: 12px;
+    order: 1;
+    vertical-align: top;
+    max-width: 25%;
+    flex: 0 0 25%;
+}
+
+.css-d7fwyj {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+.css-2klymb {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 4px;
+    padding-right: 16px;
+    background-color: rgb(33, 155, 156);
+    color: rgb(255, 255, 255);
+    display: inline-flex;
+    width: auto;
+    height: 32px;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 2px;
+    text-decoration: none!important;
+}
+
+.css-2klymb:hover:not([aria-disabled="true"]) {
+    background-color: rgb(27, 132, 133);
+    color: rgb(255, 255, 255);
+}
+
+.css-1w7p77e {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    padding-right: 8px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
+    box-sizing: content-box;
+    transform: rotate(0deg);
+    overflow: visible;
+}
+
+.css-1qsrl3t {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.css-1hishl6 {
+    margin-top: unset;
+    margin-bottom: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-left: -12px;
+    margin-right: -12px;
+    display: flex;
+    vertical-align: top;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+
+/*graph row end*/
+
+
+/* no activity start*/
+
+
+/*start high chart*/
+
+.highcharts-1vXJh .highcharts-container,
+.highcharts-1vXJh .highcharts-root {
+    overflow: visible!important;
+}
+
+.fluid .highcharts-container,
+.fluid .highcharts-container svg {
+    width: 100%!important;
+}
+
+
+/*end high chart*/
+
+.css-n750lv {
+    margin-top: unset;
+    margin-right: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    background-color: rgb(255, 255, 255);
+    vertical-align: top;
+    overflow-y: auto;
+    border-width: 1px;
+    border-color: rgb(221, 224, 228);
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-8a3bcf {
+    margin-top: unset;
+    margin-right: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    background-color: rgb(255, 255, 255);
+    vertical-align: top;
+    overflow-y: auto;
+    border-width: 1px;
+    border-color: rgb(221, 224, 228);
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-cevrry {
+    margin-top: unset;
+    margin-right: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    background-color: rgb(255, 255, 255);
+    vertical-align: top;
+    overflow-y: auto;
+    border-width: 1px;
+    border-color: rgb(221, 224, 228);
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-8pd3g8 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    width: 100%;
+    vertical-align: top;
+    position: sticky;
+    z-index: 10;
+    top: 0px;
+}
+
+.css-19eq8b8 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    vertical-align: top;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-1v8nodn {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+}
+
+.css-f128gq {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.css-f128gq> :not(:last-child) {
+    margin-right: 8px;
+}
+
+.css-rni0qy {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(221, 224, 228);
+    width: 100%;
+    height: 0px;
+    vertical-align: top;
+    border-width: 0px 0px 1px;
+    border-color: currentcolor;
+    border-style: solid;
+}
+
+.css-1g99c7 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    background-color: rgb(255, 255, 255);
+    vertical-align: top;
+    overflow-y: auto;
+    border-width: 1px;
+    border-color: rgb(221, 224, 228);
+    border-style: solid;
+    border-radius: 2px !important;
+}
+
+hr {
+    clear: both;
+    color: #eee;
+    background-color: #eee;
+    height: 1px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+    line-height: 1px;
+}
+
+.css-1a9d1xp {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: rgb(248, 249, 249);
+    display: flex;
+    height: 120px;
+    vertical-align: top;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.css-mpt2t1 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(122, 131, 140);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+/* no activity end*/
+
+
+/* recent activity start*/
+
+.css-319qhy {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 12px;
+    padding-right: 12px;
+    vertical-align: top;
+    max-width: 50%;
+    flex: 0 0 50%;
+}
+
+.css-cevrry {
+    margin-top: unset;
+    margin-right: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    background-color: rgb(255, 255, 255);
+    vertical-align: top;
+    overflow-y: auto;
+    border-width: 1px;
+    border-color: rgb(221, 224, 228);
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-79bu3q {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 10px;
+    line-height: 16px;
+}
+
+.css-db069s {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(33, 73, 130);
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    text-decoration: inherit;
+}
+
+.css-178srh5> :not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.css-52rjj8 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    vertical-align: top;
+}
+
+.css-52rjj8:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1x48jmz {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: rgb(231, 240, 253);
+    color: rgb(41, 92, 163);
+    display: inline-flex;
+    height: 16px;
+    vertical-align: top;
+    font-size: 10px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: start;
+    white-space: nowrap;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+.css-qyqq4c {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(122, 131, 140);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+}
+
+.css-n0eob4:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-n0eob4 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    opacity: 0;
+    display: flex;
+    vertical-align: top;
+}
+
+.css-1cfj1v2:hover:not([aria-disabled="true"]) {
+    background-color: rgb(226, 242, 242);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-1cfj1v2:hover {
+    text-decoration: none;
+}
+
+.css-1cfj1v2:active:not([aria-disabled="true"]) {
+    background-color: rgb(199, 230, 230);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-1cfj1v2:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1cfj1v2:focus {
+    color: rgb(33, 155, 156);
+    text-decoration: none;
+}
+
+.css-1cfj1v2:hover {
+    text-decoration: none;
+}
+
+.css-1cfj1v2 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(27, 132, 133);
+    display: inline-flex;
+    width: auto;
+    height: 24px;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: rgb(203, 209, 214);
+    border-style: solid;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.css-1xurosb:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1xurosb {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+    box-sizing: content-box;
+    transform: rotate(0deg);
+    overflow: visible;
+}
+
+.css-qowjcb:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-m0pid7:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-qowjcb {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-right: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    vertical-align: top;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 13px 0px, rgba(0, 0, 0, 0.08) 0px 0px 10px 0px;
+    flex-direction: column;
+    border-width: 0px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-m0pid7 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    vertical-align: top;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 13px 0px, rgba(0, 0, 0, 0.08) 0px 0px 10px 0px;
+    left: 0px;
+    z-index: 60;
+    border-width: 0px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-178srh5 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-178srh5> :not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.css-1qck51l {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(17, 85, 86);
+    display: block;
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: inherit;
+    line-height: 24px;
+}
+
+.css-am6n7a {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(33, 73, 130);
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    word-break: break-word;
+    text-decoration: inherit;
+}
+
+.css-178srh5> :not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.css-1m45hbv {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    max-width: 100%;
+    vertical-align: top;
+    outline: none;
+    overflow: hidden;
+}
+
+.css-1m45hbv>* {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.css-db069s {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(33, 73, 130);
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    text-decoration: inherit;
+}
+
+.css-1vvpe8z {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(52, 59, 64);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.css-1agkww {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: transparent;
+    color: rgb(52, 59, 64);
+    display: flex;
+    height: 24px;
+    vertical-align: top;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 16px;
+    user-select: none;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    text-decoration: none;
+}
+
+.css-1agkww:focus.css-1agkww:focus {
+    box-shadow: none;
+}
+
+.css-1agkww:focus:not([aria-disabled="true"]) {
+    background-color: rgb(226, 242, 242);
+    color: rgb(52, 59, 64);
+}
+
+.css-1agkww:active:not([aria-disabled="true"]) {
+    background-color: rgb(199, 230, 230);
+}
+
+.css-1agkww:hover:not([aria-disabled="true"]) {
+    background-color: rgb(226, 242, 242);
+    color: rgb(52, 59, 64);
+}
+
+.css-1agkww:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1agkww:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+.css-1agkww:hover {
+    text-decoration: none;
+}
+
+.css-4jsk13 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    vertical-align: top;
+    padding: 16px;
+}
+
+.css-4jsk13:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-yhfgdp {
+    margin-top: unset;
+    margin-right: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 4px;
+    display: flex;
+    vertical-align: top;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    min-height: 24px;
+}
+
+.css-1fgetgk {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+    flex-wrap: wrap;
+}
+
+.css-1syklv8 {
+    margin-top: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 4px;
+    margin-right: 4px;
+    background-color: rgb(252, 234, 232);
+    color: rgb(165, 51, 35);
+    display: inline-flex;
+    height: 16px;
+    vertical-align: top;
+    font-size: 10px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: start;
+    white-space: nowrap;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+.css-yhlz1f {
+    margin-top: unset;
+    margin-right: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    color: rgb(122, 131, 140);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.css-139cb1c:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-139cb1c {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    min-width: 24px;
+    vertical-align: top;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+.css-1mnuzev:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1mnuzev {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+}
+
+.css-1712ujw:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-18du0cb:active:not([aria-disabled="true"]) {
+    background-color: rgb(199, 230, 230);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-18du0cb:hover:not([aria-disabled="true"]) {
+    background-color: rgb(226, 242, 242);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-18du0cb:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-18du0cb:focus {
+    color: rgb(33, 155, 156);
+    text-decoration: none;
+}
+
+.css-18du0cb:hover {
+    text-decoration: none;
+}
+
+.css-18du0cb {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 155, 156);
+    opacity: 0;
+    display: inline-flex;
+    width: auto;
+    height: 24px;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: rgb(203, 209, 214);
+    border-style: solid;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.css-1712ujw {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: rgb(226, 242, 242);
+    color: rgb(22, 108, 109);
+    display: inline-flex;
+    height: 16px;
+    vertical-align: top;
+    font-size: 10px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    border-width: 0px;
+    border-color: rgb(147, 155, 163);
+    border-style: solid;
+    border-radius: 9999px;
+}
+
+.css-1slzy86 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.css-1slzy86> :not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.css-1uthf9p {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    max-width: 100%;
+    vertical-align: top;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-1uthf9p> :not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.css-1qck51l {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(17, 85, 86);
+    display: block;
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: inherit;
+    line-height: 24px;
+}
+
+.css-am6n7a {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(33, 73, 130);
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    word-break: break-word;
+    text-decoration: inherit;
+}
+
+.css-x5dnxc {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.css-mpc60k {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: rgb(252, 234, 232);
+    display: flex;
+    vertical-align: top;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px;
+}
+
+.css-1l2ssm {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(165, 51, 35);
+    display: block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+    word-break: break-word;
+    flex: 1 1 0%;
+}
+
+.css-a4oruz {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+    word-break: break-word;
+}
+
+.css-1slzy86 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.css-x5dnxc {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.css-1mn79hm {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(237, 239, 241);
+    width: 100%;
+    height: 0px;
+    vertical-align: top;
+    border-width: 0px 0px 1px;
+    border-color: currentcolor;
+    border-style: solid;
+}
+
+.css-18du0cb {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 155, 156);
+    opacity: 0;
+    display: inline-flex;
+    width: auto;
+    height: 24px;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: rgb(203, 209, 214);
+    border-style: solid;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+
+/* recent activity end*/
+
+
+/*start content*/
+
+
+/*_______________________
+*************************
+*/
+
+
+/* start left menu*/
+
+.menuColumns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
+
+.left-menu-padding {
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 24px;
+    margin-top: 24px;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.left-menu {
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 24px;
+    margin-top: 24px;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.left-menu-nav {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+    flex-direction: column;
+}
+
+.ul-ln {
+    margin-top: unset;
+    margin-right: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    display: block;
+    vertical-align: top;
+}
+
+.li-ln-active {
+    margin-top: unset;
+    margin-right: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    color: rgb(122, 131, 140);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.li-ln {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: block;
+    vertical-align: top;
+}
+
+.li-link {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: rgb(52, 59, 64);
+    display: block;
+    vertical-align: top;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration: none !important;
+}
+
+
+/* end left menu*/
+
+.graph-outer {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 12px!important;
+    padding-right: 12px!important;
+    vertical-align: top;
+    max-width: 50%;
+    flex: 0 0 50%;
+}
+
+.graph-index {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.graph-text {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(99, 109, 117);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.graph-time {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(33, 155, 156);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+}
+
+.graph-time .graph-border {
+    border-bottom: rgb(33, 155, 156) solid 1px!important;
+}
+
+
+/* start Add addNewStream button*/
+
+.button-addNewStream {
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 16px;
+    background-color: rgb(33, 155, 156);
+    color: rgb(255, 255, 255);
+    display: inline-flex;
+    width: auto;
+    float: right;
+    height: 32px;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.button-addNewStream:hover {
+    background-color: rgb(27, 132, 133);
+    color: white;
+}
+
+.button-addNewStream>span {
+    padding-left: 5px;
+}
+
+
+/* end Add addNewStream button*/
+
+.justfyContent {
+    padding-top: 15px;
+}
+
+.side-mobile-cursor {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    max-width: 100px;
+    max-height: 24px;
+    vertical-align: top;
+    overflow: hidden;
+    border-width: 0px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 1px;
+}
+
+.side-mobile-cursor:hover {
+    cursor: pointer !important;
+    background-color: white;
+    padding: 1px;
+    border-radius: 1px;
+}
+
+
+/* The side  mobile navigation menu */
+
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    /* width: 250px;
+    width: 0; 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.2);
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.mobile-nav-content-Div {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /*- change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: white;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+}
+
+.mobile-side-nav-section1 {
+    background-color: rgb(33, 155, 156);
+    min-height: 80px;
+    padding-left: 15px;
+    padding: 15px;
+}
+
+.mobile-side-nav-section2 {
+    background-color: rgb(226, 242, 242);
+    min-height: 50px;
+    padding-left: 15px;
+    padding: 15px;
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+/* side mobile nav end */
+
+.topnav {
+    overflow: hidden;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 1px solid transparent;
+}
+
+.topnav a:hover {
+    border-bottom: 1px solid #00acc1;
+}
+
+.topnav a.active {
+    border-bottom: 1px solid #00838f;
+}
+
+.userIconSize {
+    height: 25px !important;
+    width: 25px !important;
+}
+
+.borderLeft {
+    border-left: 1px solid lightgray;
+}
+
+.paddding-submenu {
+    padding-top: 10px !important;
+    padding-right: 0px !important;
+}
+
+.sideNavigation {
+    list-style-type: none !important;
+    padding-left: 20px !important;
+}
+
+.sideNavigation>li {
+    display: block;
+    /* padding: 5px 5px 5px 5px; */
+    text-align: -webkit-match-parent;
+}
+
+.sideNavigation>li>a {
+    display: block;
+    text-decoration: none !important;
+    font-weight: 400;
+    color: black;
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 25px;
+    border-left: 1px solid transparent;
+}
+
+.sideNavigation>li>a:hover {
+    display: block;
+    border-left: 1px solid transparent;
+    color: #00838f;
+    background-color: rgb(226, 242, 242);
+    font-weight: 400;
+}
+
+.sideNavigation>li>a :active {
+    display: block;
+    border-left: 1px solid #00838f;
+    color: #00838f;
+    background-color: #f5f5f5;
+    font-weight: 400;
+}
+
+
+/* side navigation dynamic */
+
+
+/* Style the buttons */
+
+
+/* Style the active class, and buttons on mouse-over */
+
+
+/*start card section*/
+
+.noRadiousCard {
+    border-radius: 0px !important;
+}
+
+.card-header-link {
+    display: block;
+    font-weight: 400;
+    color: black;
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 25px;
+    border-left: 1px solid transparent;
+}
+
+.card-outer {
+    padding-top: 12px;
+}
+
+.card-Padding {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+}
+
+.Card-header-Color {
+    background-color: white !important;
+}
+
+.Card-Body-Color {
+    background-color: #f5f5f5;
+}
+
+.flex-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.activity-Monitor-Body {
+    display: flex;
+    align-content: stretch;
+    min-height: 200px;
+}
+
+
+/*start recent activity*/
+
+.recentActivityBodyColor {
+    background-color: white;
+}
+
+.css-1vb8eg4 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    display: flex;
+    height: 16px;
+    vertical-align: top;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-1vb8eg4:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-jgo6ip {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: rgb(252, 234, 232);
+    color: rgb(165, 51, 35);
+    display: inline-flex;
+    height: 16px;
+    vertical-align: top;
+    font-size: 10px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: start;
+    white-space: nowrap;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+.css-1x48jmz {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: rgb(231, 240, 253);
+    color: rgb(41, 92, 163);
+    display: inline-flex;
+    height: 16px;
+    vertical-align: top;
+    font-size: 10px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: start;
+    white-space: nowrap;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+.css-qyqq4c {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(122, 131, 140);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.css-1r2omyt {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    opacity: 1;
+    display: flex;
+    vertical-align: top;
+}
+
+.css-1cfj1v2 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(27, 132, 133);
+    display: inline-flex;
+    width: auto;
+    height: 24px;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: rgb(203, 209, 214);
+    border-style: solid;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.css-qowjcb {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-right: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    vertical-align: top;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 13px 0px, rgba(0, 0, 0, 0.08) 0px 0px 10px 0px;
+    flex-direction: column;
+    border-width: 0px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-1srhg7a:active:not([aria-disabled="true"]) {
+    background-color: rgb(199, 230, 230);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-1srhg7a:hover:not([aria-disabled="true"]) {
+    background-color: rgb(226, 242, 242);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-m0pid7 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    vertical-align: top;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 13px 0px, rgba(0, 0, 0, 0.08) 0px 0px 10px 0px;
+    left: 0px;
+    z-index: 60;
+    border-width: 0px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-178srh5 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    vertical-align: top;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-178srh5> :not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.css-1qck51l {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(17, 85, 86);
+    display: block;
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: inherit;
+    line-height: 24px;
+}
+
+.css-am6n7a {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(33, 73, 130);
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    word-break: break-word;
+    text-decoration: inherit;
+}
+
+.css-178srh5> :not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.css-db069s {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(33, 73, 130);
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    text-decoration: inherit;
+}
+
+.css-1m45hbv> ::after {
+    content: "";
+    display: block;
+}
+
+.css-1vvpe8z {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(52, 59, 64);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+
+/*end recent activity*/
+
+
+/*start table uper button*/
+
+.css-gpglrx {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1xp6imf> :not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.css-fw9vt9 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(33, 155, 156);
+    color: rgb(255, 255, 255);
+    display: inline-flex;
+    width: auto;
+    height: 24px;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px 4px 0px 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: transparent;
+    text-decoration: none;
+}
+
+.css-fw9vt9:active:not([aria-disabled="true"]) {
+    background-color: rgb(22, 108, 109);
+    color: rgb(255, 255, 255);
+}
+
+.css-fw9vt9:focus:not([aria-disabled="true"]) {
+    background-color: rgb(33, 155, 156);
+}
+
+.css-fw9vt9:hover:not([aria-disabled="true"]) {
+    background-color: rgb(27, 132, 133);
+    color: rgb(255, 255, 255);
+}
+
+.css-fw9vt9:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-fw9vt9:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.css-fw9vt9:hover {
+    text-decoration: none;
+}
+
+.css-rvqhyx> :not(:last-child) {
+    margin-right: 8px;
+}
+
+.css-15lu7l8 {
+    vertical-align: top;
+    font-family: inherit;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    box-sizing: content-box;
+    transform: rotate(0deg);
+    margin: 0px;
+    padding: 0px 0px 0px 4px;
+    border-width: 0px;
+    overflow: visible;
+}
+
+
+/*end table upper button*/
+
+
+/* #mainMenu {
+    justify-content: center !important;
+  } */
+
+#mainMenu>li>a {
+    padding: 5px 15px 5px 15px;
+    color: black !important;
+}
+
+#mainMenu>li:hover {
+    border-bottom: 1px solid #00acc1 !important;
+}
+
+.active1 {
+    border-bottom: 1px solid #00acc1 !important;
+}
+
+
+/* High Chart */
+
+#contentFilter>div>p {
+    color: #636d75;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+#contentFilter>div>h2 {
+    color: #00838f;
+}
+
+
+/* High Chart design */
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #EBEBEB;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+
+/* start footer*/
+
+#footer {
+    clear: both;
+    padding: 10px;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px 20px;
+    font-size: 90%;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    line-height: 2;
+    z-index: 10;
+}
+
+.footer .footer__copyright,
+.footer .footer__version {
+    -webkit-flex: 0 1 50%;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0;
+}
+
+.footer .footer__copyright {
+    text-align: right;
+}
+
+
+/* end footer*/
+
+
+/*=================================*/
+
+
+/*start connect all issues */
+
+.css-yimy3q {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: rgb(33, 155, 156);
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    cursor: pointer;
+    border-width: 2px;
+    border-color: rgb(33, 155, 156);
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.css-12237yf {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+    box-sizing: content-box;
+    transform: rotate(0deg);
+    overflow: visible;
+}
+
+
+/*end connect all issues */
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: Glyphicons Halflings;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.input-group-addon:first-child {
+    border-right: 0;
+}
+
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: initial;
+}
+
+:focus {
+    outline: -webkit-focus-ring-color auto 1px;
+}
+
+.glyphicon-search:before {
+    content: "\e003";
+}
+
+.input-group-addon,
+.input-group-btn,
+.input-group .form-control {
+    display: table-cell;
+}
+
+.input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.form-control {
+    width: 100%;
+    height: 31px;
+    padding: 6px 12px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #cbd1d6;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.form-control,
+output {
+    display: block;
+    font-size: 12px;
+    line-height: 1.42857143;
+    color: #636d75;
+}
+
+.css-1he1u4o {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    vertical-align: top;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.css-lve0xm {
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 24px;
+    margin-top: 24px;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    vertical-align: top;
+    overflow: auto;
+}
+
+.css-1af0a1c {
+    margin-top: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    margin-right: 24px;
+    color: inherit;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.css-18qe4ku {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.css-18qe4ku:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-qv44wc {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: rgb(244, 250, 250);
+    color: rgb(33, 155, 156);
+    display: flex;
+    height: 24px;
+    width: 100%;
+    vertical-align: top;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    text-decoration: none;
+}
+
+.css-jz1pvl {
+    margin-right: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-left: 11px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: rgb(203, 209, 214);
+    width: 0px;
+    height: 24px;
+    min-height: 100%;
+    vertical-align: top;
+    border-width: 0px 0px 0px 1px;
+    border-color: currentcolor;
+    border-style: solid;
+}
+
+.css-5co276 {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: rgb(178, 186, 194);
+    display: flex;
+    height: 24px;
+    width: 100%;
+    vertical-align: top;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    text-decoration: none;
+}
+
+.css-5co276::before {
+    content: "2";
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-jz1pvl {
+    margin-right: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-left: 11px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: rgb(203, 209, 214);
+    width: 0px;
+    height: 24px;
+    min-height: 100%;
+    vertical-align: top;
+    border-width: 0px 0px 0px 1px;
+    border-color: currentcolor;
+    border-style: solid;
+}
+
+.css-1aj75wm:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1aj75wm:focus {
+    color: rgb(178, 186, 194);
+    text-decoration: none;
+}
+
+.css-1aj75wm:hover {
+    color: rgb(178, 186, 194);
+    background-color: unset;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+.css-1aj75wm {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: rgb(178, 186, 194);
+    display: flex;
+    height: 24px;
+    width: 100%;
+    vertical-align: top;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    text-decoration: none;
+}
+
+.css-jz1pvl:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-jz1pvl {
+    margin-right: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-left: 11px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: rgb(203, 209, 214);
+    width: 0px;
+    height: 24px;
+    min-height: 100%;
+    vertical-align: top;
+    border-width: 0px 0px 0px 1px;
+    border-color: currentcolor;
+    border-style: solid;
+}
+
+.css-1i6w1tb:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1i6w1tb:focus {
+    color: rgb(178, 186, 194);
+    text-decoration: none;
+}
+
+.css-1i6w1tb:hover {
+    color: rgb(178, 186, 194);
+    background-color: unset;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+.css-1i6w1tb {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: rgb(178, 186, 194);
+    display: flex;
+    height: 24px;
+    width: 100%;
+    vertical-align: top;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    text-decoration: none;
+}
+
+.css-1i6w1tb::before {
+    content: "4";
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.css-1njzw4v:focus:not(.focus-visible) {
+    outline: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.css-1njzw4v {
+    vertical-align: top;
+    font-family: inherit;
+    color: rgb(52, 59, 64);
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    box-sizing: content-box;
+    transform: rotate(0deg);
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    overflow: visible;
+}
+
+.css-1qxx6vw {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    max-width: 480px!important;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1qxx6vw:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1x0srhu {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    height: 24px;
+    width: 100%;
+    cursor: auto;
+    margin: 0px;
+    padding: 0px 4px 0px 8px;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(203, 209, 214);
+}
+
+.css-1x0srhu:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1x0srhu:hover {
+    border-color: rgb(33, 155, 156);
+}
+
+.css-1x0srhu:active {
+    border-color: rgb(27, 132, 133);
+}
+
+.css-1x0srhu> :not(:last-child) {
+    margin-right: 4px;
+}
+
+.css-1x0srhu:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1x0srhu:hover {
+    border-color: rgb(33, 155, 156);
+}
+
+.css-1x0srhu:active {
+    border-color: rgb(27, 132, 133);
+}
+
+.css-1qumlef {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: rgb(52, 59, 64);
+    width: 100%;
+    background-color: transparent;
+    cursor: inherit;
+    font-size: 12px;
+    height: inherit;
+    line-height: 16px;
+    text-overflow: ellipsis;
+    margin: 0px;
+    padding: 0px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    flex: 1 1 0%;
+}
+
+.css-1x0srhu> :not(:last-child) {
+    margin-right: 4px;
+}
+
+.css-1x0srhu:active {
+    border-color: rgb(27, 132, 133);
+}
+
+.css-1imxhff {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1imxhff:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-p84alj {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    order: 0;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1w7dt24 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    order: 1;
+    margin: 0px 0px 0px auto;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-rvqhyx {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: row;
+    align-items: flex-start;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-rvqhyx> :not(:last-child) {
+    margin-right: 8px;
+}
+
+.css-xpr64j {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(33, 155, 156);
+    color: rgb(255, 255, 255);
+    display: inline-flex;
+    width: auto;
+    height: 24px;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: transparent;
+    text-decoration: none;
+}
+
+.css-xpr64j:active:not([aria-disabled="true"]) {
+    background-color: rgb(22, 108, 109);
+    color: rgb(255, 255, 255);
+}
+
+.css-xpr64j:focus:not([aria-disabled="true"]) {
+    background-color: rgb(33, 155, 156);
+}
+
+.css-xpr64j:hover:not([aria-disabled="true"]) {
+    background-color: rgb(27, 132, 133);
+    color: rgb(255, 255, 255);
+}
+
+.css-xpr64j:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-xpr64j:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.css-xpr64j:hover {
+    text-decoration: none;
+}
+
+.css-1qbrnrg {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1qbrnrg> :not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.css-1c3fhlt:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1c3fhlt {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    width: 100%;
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px 0px 1px;
+    border-style: solid;
+    border-color: currentcolor;
+}
+
+.css-1x62jim {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    display: flex;
+    max-width: 480px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-b2qa21:active:not([aria-disabled="true"]) {
+    background-color: rgb(199, 230, 230);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-b2qa21:hover:not([aria-disabled="true"]) {
+    background-color: rgb(226, 242, 242);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-b2qa21:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-b2qa21:focus {
+    color: rgb(33, 155, 156);
+    text-decoration: none;
+}
+
+.css-b2qa21:hover {
+    text-decoration: none;
+}
+
+.css-b2qa21 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 155, 156);
+    display: inline-flex;
+    width: auto;
+    height: 24px;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: rgb(203, 209, 214);
+    text-decoration: none;
+}
+
+
+/* start youtube analytics*/
+
+.css-119vcg8 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    margin: 0px;
+    border-width: 0px;
+    padding: 24px;
+}
+
+.css-1jsno1q {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1jsno1q> :not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.css-qym05r {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1hlylix {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    max-width: 100%;
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-k1huws {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-k1huws> :not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.css-4d8m1v:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-4d8m1v {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: inherit;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    word-break: break-word;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-r7560m {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: rgb(122, 131, 140);
+    display: inline-block;
+    font-size: 10px;
+    line-height: 16px;
+    word-break: break-word;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-i0bei4:active:not([aria-disabled="true"]) {
+    background-color: rgb(199, 230, 230);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-i0bei4:hover:not([aria-disabled="true"]) {
+    background-color: rgb(226, 242, 242);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-i0bei4:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-i0bei4:focus {
+    color: rgb(33, 155, 156);
+    text-decoration: none;
+}
+
+.css-i0bei4:hover {
+    text-decoration: none;
+}
+
+.css-i0bei4 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 155, 156);
+    display: inline-flex;
+    width: auto;
+    height: 24px;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px 8px 0px 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: rgb(203, 209, 214);
+    text-decoration: none;
+}
+
+.css-1qq0zwx {
+    vertical-align: top;
+    font-family: inherit;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    box-sizing: content-box;
+    transform: rotate(0deg);
+    margin: 0px;
+    padding: 0px 4px 0px 0px;
+    border-width: 0px;
+    overflow: visible;
+}
+
+.css-16ccpyb {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: rgb(221, 224, 228);
+    width: 100%;
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px 0px 1px;
+    border-style: solid;
+    border-color: currentcolor;
+}
+
+.css-1c6b0fv {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    margin: 0px;
+    padding: 0px 0px 0px 24px;
+    border-width: 0px;
+    overflow: auto;
+}
+
+.css-3zbf4y {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1ua6fjh {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    display: block;
+    margin: 0px 0px 16px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-rrihw8 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1mqkhgo {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0px;
+    border-width: 0px;
+}
+
+.css-oxkbc3 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    display: flex;
+    height: 16px;
+    margin: 0px 0px 8px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1bluye4:active[href] {
+    background-color: rgb(199, 230, 230);
+}
+
+.css-1bluye4:hover[href] {
+    background-color: rgb(226, 242, 242);
+}
+
+.css-1bluye4:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1bluye4:hover {
+    color: rgb(33, 155, 156);
+    text-decoration: underline;
+}
+
+.css-1bluye4:focus {
+    position: relative;
+    color: rgb(33, 155, 156);
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+a:focus,
+a:hover {
+    color: #122745;
+    text-decoration: underline;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+.css-1bluye4 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    display: block;
+    padding-left: 7px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(33, 155, 156);
+    background-color: rgb(244, 250, 250);
+    border-left-style: solid;
+    border-left-color: rgb(33, 155, 156);
+    margin: 0px;
+    border-width: 0px 0px 0px 1px;
+    text-decoration: none !important;
+}
+
+.css-s5joy4:active[href] {
+    background-color: rgb(199, 230, 230);
+}
+
+.css-s5joy4:hover[href] {
+    background-color: rgb(226, 242, 242);
+}
+
+.css-s5joy4:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-s5joy4:hover {
+    color: rgb(52, 59, 64);
+    text-decoration: underline;
+}
+
+.css-s5joy4:focus {
+    position: relative;
+    color: rgb(52, 59, 64);
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+a:focus,
+a:hover {
+    color: #122745;
+    text-decoration: underline;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+.css-s5joy4 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: rgb(52, 59, 64);
+    display: block;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px;
+    border-width: 0px;
+    text-decoration: none !important;
+}
+
+.css-1t2l0tx {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: rgb(99, 109, 117);
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: normal;
+    line-height: 16px;
+    margin: 0px 0px 8px;
+    padding: 0px;
+    border-width: 0px;
+    /* font-weight: bold; */
+}
+
+.css-1ua6fjh {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    display: block;
+    margin: 0px 0px 16px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1v9nsrz {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    margin: 0px;
+    padding: 24px 0px;
+    border-width: 0px;
+}
+
+.css-3zbf4y {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1mpcogu {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-wrap: wrap !important;
+    align-items: flex-start;
+    display: flex;
+    margin: 0px -12px 24px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-11hb4bh {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    max-width: 75%;
+    margin: 0px;
+    padding: 0px 12px;
+    border-width: 0px;
+    flex: 0 0 75%;
+}
+
+.css-hao5zl {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    display: flex;
+    margin: 0px -12px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1jfqp4a {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    max-width: 33.3333%;
+    margin: 0px;
+    padding: 0px 12px;
+    border-width: 0px;
+    flex: 0 0 33.3333%;
+}
+
+.css-1jfqp4a:focus:not(.focus-visible) {
+    outline: none;
+}
+
+@media screen and (min-width: 1280px) {
+    .css-1jfqp4a {
+        max-width: 33.3333%;
+        flex: 0 0 33.3333%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .css-1jfqp4a {
+        max-width: 33.3333%;
+        flex: 0 0 33.3333%;
+    }
+}
+
+.css-36lf05 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    height: 100%;
+    min-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-8v8u66 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    display: flex;
+    margin: 0px;
+    border-width: 0px;
+    padding: 16px;
+}
+
+.css-19hnmvn {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    max-width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    outline: none;
+    overflow: hidden;
+}
+
+.css-19hnmvn>* {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.css-1atfxbq {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: rgb(99, 109, 117);
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-19hnmvn> ::after {
+    content: "";
+    display: block;
+}
+
+.css-1hgtjlv {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    margin: 0px;
+    padding: 8px 0px 0px;
+    border-width: 0px;
+}
+
+.css-19hnmvn {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    max-width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    outline: none;
+    overflow: hidden;
+}
+
+.css-19j9ct9 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: rgb(33, 155, 156);
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-19hnmvn>* {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.css-19hnmvn> ::after {
+    content: "";
+    display: block;
+}
+
+.css-1w8hb3f {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    height: 16px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-3k9vzf {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    order: 1;
+    max-width: 25%;
+    margin: 0px;
+    padding: 0px 12px;
+    border-width: 0px;
+    flex: 0 0 25%;
+}
+
+.css-mh5jdk {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-19vyr89 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(33, 155, 156);
+    color: rgb(255, 255, 255);
+    display: inline-flex;
+    width: auto;
+    height: 32px;
+    font-size: 16px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: transparent;
+    text-decoration: none;
+}
+
+.css-19vyr89:active:not([aria-disabled="true"]) {
+    background-color: rgb(22, 108, 109);
+    color: rgb(255, 255, 255);
+}
+
+.css-19vyr89:focus:not([aria-disabled="true"]) {
+    background-color: rgb(33, 155, 156);
+}
+
+.css-19vyr89:hover:not([aria-disabled="true"]) {
+    background-color: rgb(27, 132, 133);
+    color: rgb(255, 255, 255);
+}
+
+.css-19vyr89:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-19vyr89:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.css-19vyr89:hover {
+    text-decoration: none;
+}
+
+.css-qpocv {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    display: flex;
+    margin: 0px -12px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1ule69w {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    max-width: 25%;
+    margin: 0px 0px 24px;
+    padding: 0px 12px;
+    border-width: 0px;
+    flex: 0 0 25%;
+}
+
+.css-1qbrnrg {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1qbrnrg> :not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.css-1by9hcn {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: rgb(221, 224, 228);
+}
+
+.css-1c2eaib:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1c2eaib {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    display: flex;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-12idpux:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-12idpux {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: inherit;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-12tdhbf:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-12tdhbf {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-t6qlc3:hover:not([aria-disabled="true"])[aria-checked="true"]>* {
+    background-color: rgb(27, 132, 133);
+}
+
+.css-t6qlc3:hover:not([aria-disabled="true"])>* {
+    background-color: rgb(122, 131, 140);
+}
+
+.css-t6qlc3[aria-checked="true"]>* {
+    background-color: rgb(33, 155, 156);
+    transform: translateX(16px);
+}
+
+.css-t6qlc3>* {
+    transform: none;
+    transition: transform 0.225s ease 0s;
+}
+
+.css-t6qlc3 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(221, 224, 228);
+    display: inline-flex;
+    height: 16px;
+    width: 32px;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 9999px;
+    border-color: transparent;
+}
+
+.css-1traygz {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    margin: 0px;
+    border-width: 0px;
+    padding: 16px;
+}
+
+.css-1traygz> :not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.css-1md41mo {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: inherit;
+    display: block;
+    align-self: center;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    text-decoration: inherit;
+}
+
+.css-1md41mo:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1md41mo:hover {
+    color: rgb(41, 92, 163);
+    text-decoration: underline;
+}
+
+.css-1md41mo:focus {
+    text-decoration: none;
+}
+
+.css-t07o2k {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    max-width: 100%;
+    height: 48px;
+    filter: grayscale(100%);
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-m0gf7b {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(231, 240, 253);
+    flex-direction: row;
+    align-items: flex-start;
+    display: flex;
+    margin: 0px;
+    border-width: 0px;
+    padding: 8px;
+}
+
+.css-2pc4h1 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: rgb(41, 92, 163);
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    word-break: break-word;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    flex: 1 1 0%;
+}
+
+.css-12mpsfm {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: inherit;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-nwhvs1 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: rgb(33, 73, 130);
+    display: inline-block;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    text-decoration: inherit;
+}
+
+.css-nwhvs1:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-nwhvs1:hover {
+    color: rgb(41, 92, 163);
+    text-decoration: underline;
+}
+
+.css-nwhvs1:focus {
+    text-decoration: none;
+}
+
+.css-6ujv13 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-6ujv13> :not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.css-18p0dn8 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    align-self: center;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-11mi42a {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    max-width: 100%;
+    height: 48px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1ps2qh4 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    display: flex;
+    margin: 0px;
+    border-width: 0px;
+    padding: 16px;
+}
+
+.css-s66zvw {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: row;
+    align-items: flex-start;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-s66zvw> :not(:last-child) {
+    margin-right: 4px;
+}
+
+.css-1atfxbq {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: rgb(99, 109, 117);
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-s66zvw {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: row;
+    align-items: flex-start;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1fk366v {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: inherit;
+    display: inline-block;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-bguyf2 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: row;
+    align-items: flex-start;
+    display: flex;
+    margin: 0px;
+    border-width: 0px;
+    padding: 16px;
+}
+
+.css-i0bei4:active:not([aria-disabled="true"]) {
+    background-color: rgb(199, 230, 230);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-i0bei4:hover:not([aria-disabled="true"]) {
+    background-color: rgb(226, 242, 242);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-i0bei4:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-bguyf2> :not(:last-child) {
+    margin-right: 8px;
+}
+
+.css-i0bei4:focus {
+    color: rgb(33, 155, 156);
+    text-decoration: none;
+}
+
+.css-i0bei4:hover {
+    text-decoration: none;
+}
+
+.css-1by9hcn {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: rgb(221, 224, 228);
+}
+
+.css-1sps544 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1h4jrd2 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(240, 231, 253);
+    color: rgb(97, 50, 164);
+    display: inline-flex;
+    height: 16px;
+    font-size: 10px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px 4px;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 9999px;
+    border-color: rgb(147, 155, 163);
+}
+
+.css-1reebyc {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    margin: 0px;
+    border-width: 0px;
+    padding: 16px;
+    background: url(data:images/bg-smartnaming.svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iODY2cHgiIGhlaWdodD0iMzg0cHgiIHZpZXdCb3g9IjAgMCA4NjYgMzg0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA2My4xICg5MjQ1MikgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+QXJ0Ym9hcmRAMXg8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz4KICAgICAgICA8bGluZWFyR3JhZGllbnQgeDE9IjE2LjM5OTAyODQlIiB5MT0iNTUuOTMwODA4NyUiIHgyPSIxMzguNzA4MTk3JSIgeTI9IjU0LjM3MjQ2MDklIiBpZD0ibGluZWFyR3JhZGllbnQtMSI+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNGMEU3RkQiIG9mZnNldD0iMCUiPjwvc3RvcD4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzhDNDlFQiIgb2Zmc2V0PSIxMDAlIj48L3N0b3A+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSJBcnRib2FyZCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgb3BhY2l0eT0iMC43Ij4KICAgICAgICA8ZyBpZD0iR3JvdXAtMTAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM5LjAwMDAwMCwgMTkuMDAwMDAwKSIgc3Ryb2tlPSJ1cmwoI2xpbmVhckdyYWRpZW50LTEpIiBzdHJva2Utd2lkdGg9IjAuNSI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0wLDIwLjEwMzgxNDMgQzIwNS44MzYxNDIsLTc2LjMwNzA3MjEgMjY4LjY1MjYyMiwyMTAuNDI3ODk2IDU5OSwxMTcuMDE0MjM5IiBpZD0iUGF0aC03Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik05LDI4LjEwMzgxNDMgQzIxNC44MzYxNDIsLTY4LjMwNzA3MjEgMjc3LjY1MjYyMiwyMTguNDI3ODk2IDYwOCwxMjUuMDE0MjM5IiBpZD0iUGF0aC03Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xOCwzNi4xMDM4MTQzIEMyMjMuODM2MTQyLC02MC4zMDcwNzIxIDI4Ni42NTI2MjIsMjI2LjQyNzg5NiA2MTcsMTMzLjAxNDIzOSIgaWQ9IlBhdGgtNyI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNMjcsNDQuMTAzODE0MyBDMjMyLjgzNjE0MiwtNTIuMzA3MDcyMSAyOTUuNjUyNjIyLDIzNC40Mjc4OTYgNjI2LDE0MS4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTM2LDUyLjEwMzgxNDMgQzI0MS44MzYxNDIsLTQ0LjMwNzA3MjEgMzA0LjY1MjYyMiwyNDIuNDI3ODk2IDYzNSwxNDkuMDE0MjM5IiBpZD0iUGF0aC03Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik00NSw2MC4xMDM4MTQzIEMyNTAuODM2MTQyLC0zNi4zMDcwNzIxIDMxMy42NTI2MjIsMjUwLjQyNzg5NiA2NDQsMTU3LjAxNDIzOSIgaWQ9IlBhdGgtNyI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNTQsNjguMTAzODE0MyBDMjU5LjgzNjE0MiwtMjguMzA3MDcyMSAzMjIuNjUyNjIyLDI1OC40Mjc4OTYgNjUzLDE2NS4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTYzLDc2LjEwMzgxNDMgQzI2OC44MzYxNDIsLTIwLjMwNzA3MjEgMzMxLjY1MjYyMiwyNjYuNDI3ODk2IDY2MiwxNzMuMDE0MjM5IiBpZD0iUGF0aC03Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik03Miw4NC4xMDM4MTQzIEMyNzcuODM2MTQyLC0xMi4zMDcwNzIxIDM0MC42NTI2MjIsMjc0LjQyNzg5NiA2NzEsMTgxLjAxNDIzOSIgaWQ9IlBhdGgtNyI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNODEsOTIuMTAzODE0MyBDMjg2LjgzNjE0MiwtNC4zMDcwNzIwOSAzNDkuNjUyNjIyLDI4Mi40Mjc4OTYgNjgwLDE4OS4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTkwLDEwMC4xMDM4MTQgQzI5NS44MzYxNDIsMy42OTI5Mjc5MSAzNTguNjUyNjIyLDI5MC40Mjc4OTYgNjg5LDE5Ny4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTk5LDEwOC4xMDM4MTQgQzMwNC44MzYxNDIsMTEuNjkyOTI3OSAzNjcuNjUyNjIyLDI5OC40Mjc4OTYgNjk4LDIwNS4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTAsMjAuMTAzODE0MyBDMjA1LjgzNjE0MiwtNzYuMzA3MDcyMSAyNjguNjUyNjIyLDIxMC40Mjc4OTYgNTk5LDExNy4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTksMjguMTAzODE0MyBDMjE0LjgzNjE0MiwtNjguMzA3MDcyMSAyNzcuNjUyNjIyLDIxOC40Mjc4OTYgNjA4LDEyNS4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTE4LDM2LjEwMzgxNDMgQzIyMy44MzYxNDIsLTYwLjMwNzA3MjEgMjg2LjY1MjYyMiwyMjYuNDI3ODk2IDYxNywxMzMuMDE0MjM5IiBpZD0iUGF0aC03Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yNyw0NC4xMDM4MTQzIEMyMzIuODM2MTQyLC01Mi4zMDcwNzIxIDI5NS42NTI2MjIsMjM0LjQyNzg5NiA2MjYsMTQxLjAxNDIzOSIgaWQ9IlBhdGgtNyI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNMzYsNTIuMTAzODE0MyBDMjQxLjgzNjE0MiwtNDQuMzA3MDcyMSAzMDQuNjUyNjIyLDI0Mi40Mjc4OTYgNjM1LDE0OS4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTQ1LDYwLjEwMzgxNDMgQzI1MC44MzYxNDIsLTM2LjMwNzA3MjEgMzEzLjY1MjYyMiwyNTAuNDI3ODk2IDY0NCwxNTcuMDE0MjM5IiBpZD0iUGF0aC03Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik01NCw2OC4xMDM4MTQzIEMyNTkuODM2MTQyLC0yOC4zMDcwNzIxIDMyMi42NTI2MjIsMjU4LjQyNzg5NiA2NTMsMTY1LjAxNDIzOSIgaWQ9IlBhdGgtNyI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNjMsNzYuMTAzODE0MyBDMjY4LjgzNjE0MiwtMjAuMzA3MDcyMSAzMzEuNjUyNjIyLDI2Ni40Mjc4OTYgNjYyLDE3My4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTcyLDg0LjEwMzgxNDMgQzI3Ny44MzYxNDIsLTEyLjMwNzA3MjEgMzQwLjY1MjYyMiwyNzQuNDI3ODk2IDY3MSwxODEuMDE0MjM5IiBpZD0iUGF0aC03Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik04MSw5Mi4xMDM4MTQzIEMyODYuODM2MTQyLC00LjMwNzA3MjA5IDM0OS42NTI2MjIsMjgyLjQyNzg5NiA2ODAsMTg5LjAxNDIzOSIgaWQ9IlBhdGgtNyI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNOTAsMTAwLjEwMzgxNCBDMjk1LjgzNjE0MiwzLjY5MjkyNzkxIDM1OC42NTI2MjIsMjkwLjQyNzg5NiA2ODksMTk3LjAxNDIzOSIgaWQ9IlBhdGgtNyI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNOTksMTA4LjEwMzgxNCBDMzA0LjgzNjE0MiwxMS42OTI5Mjc5IDM2Ny42NTI2MjIsMjk4LjQyNzg5NiA2OTgsMjA1LjAxNDIzOSIgaWQ9IlBhdGgtNyI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNMTA4LDExNi4xMDM4MTQgQzMxMy44MzYxNDIsMTkuNjkyOTI3OSAzNzYuNjUyNjIyLDMwNi40Mjc4OTYgNzA3LDIxMy4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTExNywxMjQuMTAzODE0IEMzMjIuODM2MTQyLDI3LjY5MjkyNzkgMzg1LjY1MjYyMiwzMTQuNDI3ODk2IDcxNiwyMjEuMDE0MjM5IiBpZD0iUGF0aC03Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMjYsMTMyLjEwMzgxNCBDMzMxLjgzNjE0MiwzNS42OTI5Mjc5IDM5NC42NTI2MjIsMzIyLjQyNzg5NiA3MjUsMjI5LjAxNDIzOSIgaWQ9IlBhdGgtNyI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNMTM1LDE0MC4xMDM4MTQgQzM0MC44MzYxNDIsNDMuNjkyOTI3OSA0MDMuNjUyNjIyLDMzMC40Mjc4OTYgNzM0LDIzNy4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTE0NCwxNDguMTAzODE0IEMzNDkuODM2MTQyLDUxLjY5MjkyNzkgNDEyLjY1MjYyMiwzMzguNDI3ODk2IDc0MywyNDUuMDE0MjM5IiBpZD0iUGF0aC03Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNTMsMTU2LjEwMzgxNCBDMzU4LjgzNjE0Miw1OS42OTI5Mjc5IDQyMS42NTI2MjIsMzQ2LjQyNzg5NiA3NTIsMjUzLjAxNDIzOSIgaWQ9IlBhdGgtNyI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNMTYyLDE2NC4xMDM4MTQgQzM2Ny44MzYxNDIsNjcuNjkyOTI3OSA0MzAuNjUyNjIyLDM1NC40Mjc4OTYgNzYxLDI2MS4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTE3MSwxNzIuMTAzODE0IEMzNzYuODM2MTQyLDc1LjY5MjkyNzkgNDM5LjY1MjYyMiwzNjIuNDI3ODk2IDc3MCwyNjkuMDE0MjM5IiBpZD0iUGF0aC03Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xODAsMTgwLjEwMzgxNCBDMzg1LjgzNjE0Miw4My42OTI5Mjc5IDQ0OC42NTI2MjIsMzcwLjQyNzg5NiA3NzksMjc3LjAxNDIzOSIgaWQ9IlBhdGgtNyI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNMTg5LDE4OC4xMDM4MTQgQzM5NC44MzYxNDIsOTEuNjkyOTI3OSA0NTcuNjUyNjIyLDM3OC40Mjc4OTYgNzg4LDI4NS4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTE5OCwxOTYuMTAzODE0IEM0MDMuODM2MTQyLDk5LjY5MjkyNzkgNDY2LjY1MjYyMiwzODYuNDI3ODk2IDc5NywyOTMuMDE0MjM5IiBpZD0iUGF0aC03Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMDcsMjA0LjEwMzgxNCBDNDEyLjgzNjE0MiwxMDcuNjkyOTI4IDQ3NS42NTI2MjIsMzk0LjQyNzg5NiA4MDYsMzAxLjAxNDIzOSIgaWQ9IlBhdGgtNyI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNMTA4LDExNi4xMDM4MTQgQzMxMy44MzYxNDIsMTkuNjkyOTI3OSAzNzYuNjUyNjIyLDMwNi40Mjc4OTYgNzA3LDIxMy4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTExNywxMjQuMTAzODE0IEMzMjIuODM2MTQyLDI3LjY5MjkyNzkgMzg1LjY1MjYyMiwzMTQuNDI3ODk2IDcxNiwyMjEuMDE0MjM5IiBpZD0iUGF0aC03Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMjYsMTMyLjEwMzgxNCBDMzMxLjgzNjE0MiwzNS42OTI5Mjc5IDM5NC42NTI2MjIsMzIyLjQyNzg5NiA3MjUsMjI5LjAxNDIzOSIgaWQ9IlBhdGgtNyI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNMTM1LDE0MC4xMDM4MTQgQzM0MC44MzYxNDIsNDMuNjkyOTI3OSA0MDMuNjUyNjIyLDMzMC40Mjc4OTYgNzM0LDIzNy4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTE0NCwxNDguMTAzODE0IEMzNDkuODM2MTQyLDUxLjY5MjkyNzkgNDEyLjY1MjYyMiwzMzguNDI3ODk2IDc0MywyNDUuMDE0MjM5IiBpZD0iUGF0aC03Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNTMsMTU2LjEwMzgxNCBDMzU4LjgzNjE0Miw1OS42OTI5Mjc5IDQyMS42NTI2MjIsMzQ2LjQyNzg5NiA3NTIsMjUzLjAxNDIzOSIgaWQ9IlBhdGgtNyI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNMTYyLDE2NC4xMDM4MTQgQzM2Ny44MzYxNDIsNjcuNjkyOTI3OSA0MzAuNjUyNjIyLDM1NC40Mjc4OTYgNzYxLDI2MS4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTE3MSwxNzIuMTAzODE0IEMzNzYuODM2MTQyLDc1LjY5MjkyNzkgNDM5LjY1MjYyMiwzNjIuNDI3ODk2IDc3MCwyNjkuMDE0MjM5IiBpZD0iUGF0aC03Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xODAsMTgwLjEwMzgxNCBDMzg1LjgzNjE0Miw4My42OTI5Mjc5IDQ0OC42NTI2MjIsMzcwLjQyNzg5NiA3NzksMjc3LjAxNDIzOSIgaWQ9IlBhdGgtNyI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNMTg5LDE4OC4xMDM4MTQgQzM5NC44MzYxNDIsOTEuNjkyOTI3OSA0NTcuNjUyNjIyLDM3OC40Mjc4OTYgNzg4LDI4NS4wMTQyMzkiIGlkPSJQYXRoLTciPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTE5OCwxOTYuMTAzODE0IEM0MDMuODM2MTQyLDk5LjY5MjkyNzkgNDY2LjY1MjYyMiwzODYuNDI3ODk2IDc5NywyOTMuMDE0MjM5IiBpZD0iUGF0aC03Ij48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMDcsMjA0LjEwMzgxNCBDNDEyLjgzNjE0MiwxMDcuNjkyOTI4IDQ3NS42NTI2MjIsMzk0LjQyNzg5NiA4MDYsMzAxLjAxNDIzOSIgaWQ9IlBhdGgtNyI+PC9wYXRoPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+) -128px -16px no-repeat;
+}
+
+.css-8hzys1 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(140, 73, 235);
+    color: rgb(255, 255, 255);
+    display: inline-flex;
+    width: auto;
+    height: 24px;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: transparent;
+    text-decoration: none;
+}
+
+.css-8hzys1:active:not([aria-disabled="true"]) {
+    background-color: rgb(97, 50, 164);
+    color: rgb(255, 255, 255);
+}
+
+.css-8hzys1:focus:not([aria-disabled="true"]) {
+    background-color: rgb(140, 73, 235);
+}
+
+.css-8hzys1:hover:not([aria-disabled="true"]) {
+    background-color: rgb(119, 62, 199);
+    color: rgb(255, 255, 255);
+}
+
+.css-8hzys1:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-8hzys1:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.css-8hzys1:hover {
+    text-decoration: none;
+}
+
+.css-8npdyw {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    max-width: 33.3333%;
+    margin: 0px;
+    padding: 0px 12px;
+    border-width: 0px;
+    flex: 0 0 33.3333%;
+}
+
+.css-1x3r38m {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    overflow-y: auto;
+    margin: 0px 0px 24px;
+    padding: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: rgb(221, 224, 228);
+}
+
+.css-1x3r38m:focus:not(.focus-visible) {
+    outline: none;
+}
+
+@media screen and (min-width: 1280px) {
+    .css-1x3r38m {
+        margin-bottom: 32px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .css-1x3r38m {
+        margin-bottom: 24px;
+    }
+}
+
+.css-1x3r38m {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    overflow-y: auto;
+    margin: 0px 0px 24px;
+    padding: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: rgb(221, 224, 228);
+}
+
+@media screen and (min-width: 1280px) {
+    .css-1x3r38m {
+        margin-bottom: 32px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .css-1x3r38m {
+        margin-bottom: 24px;
+    }
+}
+
+.css-13bm0oq {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    width: 100%;
+    position: sticky;
+    z-index: 10;
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-c0e5b3 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 0px;
+    border-width: 0px;
+}
+
+.css-1kw40m5 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: inherit;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-13pfocx {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(248, 249, 249);
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    display: flex;
+    height: 120px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-140od6e {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(226, 242, 242);
+    color: rgb(52, 59, 64);
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    height: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: default;
+    margin: 0px;
+    border-width: 0px;
+}
+
+.css-h7axzh {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: inherit;
+    display: inline-block;
+    font-size: 10px;
+    line-height: 16px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-14g4k5d {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: rgb(33, 73, 130);
+    display: inline-block;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    text-decoration: inherit;
+}
+
+.css-14g4k5d:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-14g4k5d:hover {
+    color: rgb(41, 92, 163);
+    text-decoration: underline;
+}
+
+.css-14g4k5d:focus {
+    text-decoration: none;
+}
+
+.css-1mrnzqs {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    margin: 0px;
+    border-width: 0px;
+    padding: 16px;
+}
+
+.css-13eslc0 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    display: flex;
+    min-height: 24px;
+    margin: 0px 0px 4px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-ii6xtk {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-wrap: wrap;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-12ntbu6 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(249, 242, 224);
+    color: rgb(144, 108, 10);
+    display: inline-flex;
+    height: 16px;
+    font-size: 10px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: start;
+    white-space: nowrap;
+    margin: 0px 4px 4px 0px;
+    padding: 0px 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: transparent;
+}
+
+.css-13iff8v {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: rgb(122, 131, 140);
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px 0px 4px 4px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-2oms03 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    display: flex;
+    min-width: 24px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-ur7ntk {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-rceol:active:not([aria-disabled="true"]) {
+    background-color: rgb(199, 230, 230);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-rceol:hover:not([aria-disabled="true"]) {
+    background-color: rgb(226, 242, 242);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-rceol:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-rceol:focus {
+    color: rgb(33, 155, 156);
+    text-decoration: none;
+}
+
+.css-rceol:hover {
+    text-decoration: none;
+}
+
+.css-rceol {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 155, 156);
+    opacity: 0;
+    display: inline-flex;
+    width: auto;
+    height: 24px;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: rgb(203, 209, 214);
+    text-decoration: none;
+}
+
+.css-ndpog {
+    vertical-align: top;
+    font-family: inherit;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    box-sizing: content-box;
+    transform: rotate(0deg);
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    overflow: visible;
+}
+
+.css-ndpog:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1z0bvi8 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 13px 0px, rgba(0, 0, 0, 0.08) 0px 0px 10px 0px;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    display: flex;
+    margin: 0px;
+    padding: 8px 0px;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: transparent;
+}
+
+.css-1v6oy02 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 13px 0px, rgba(0, 0, 0, 0.08) 0px 0px 10px 0px;
+    background-color: rgb(255, 255, 255);
+    left: 0px;
+    z-index: 60;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: transparent;
+}
+
+.css-sye81a {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: transparent;
+    color: rgb(52, 59, 64);
+    display: flex;
+    height: 24px;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 16px;
+    user-select: none;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    text-decoration: none;
+}
+
+.css-sye81a:focus.css-sye81a:focus {
+    box-shadow: none;
+}
+
+.css-sye81a:active:not([aria-disabled="true"]) {
+    background-color: rgb(199, 230, 230);
+}
+
+.css-sye81a:focus:not([aria-disabled="true"]) {
+    background-color: rgb(226, 242, 242);
+    color: rgb(52, 59, 64);
+}
+
+.css-sye81a:hover:not([aria-disabled="true"]) {
+    background-color: rgb(226, 242, 242);
+    color: rgb(52, 59, 64);
+}
+
+.css-sye81a:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-sye81a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+.css-sye81a:hover {
+    text-decoration: none;
+}
+
+.css-1v7ka52 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    opacity: 0;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1qekaiy {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    overflow-y: auto;
+    margin: 0px 0px 24px;
+    padding: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: rgb(221, 224, 228);
+}
+
+@media screen and (min-width: 1280px) {
+    .css-1qekaiy {
+        margin-bottom: 32px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .css-1qekaiy {
+        margin-bottom: 24px;
+    }
+}
+
+.css-nxk590 {
+    vertical-align: top;
+    font-family: inherit;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    box-sizing: content-box;
+    transform: rotate(0deg);
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    overflow: visible;
+}
+
+.css-ypoqh {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    display: flex;
+    max-width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-9styhe {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(252, 234, 232);
+    flex-direction: row;
+    align-items: flex-start;
+    display: flex;
+    margin: 0px;
+    border-width: 0px;
+    padding: 8px;
+}
+
+.css-1c6rnzy {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: rgb(165, 51, 35);
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    word-break: break-word;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    flex: 1 1 0%;
+}
+
+.css-13w0gju {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: inherit;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    word-break: break-word;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-ebx8b0 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    color: rgb(232, 83, 62);
+    display: inline-flex;
+    width: auto;
+    height: 24px;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: rgb(203, 209, 214);
+    text-decoration: none;
+}
+
+.css-ebx8b0:active:not([aria-disabled="true"]) {
+    background-color: rgb(249, 215, 210);
+    color: rgb(232, 83, 62);
+    border-color: rgb(232, 83, 62);
+}
+
+.css-ebx8b0:hover:not([aria-disabled="true"]) {
+    background-color: rgb(252, 234, 232);
+    color: rgb(232, 83, 62);
+    border-color: rgb(232, 83, 62);
+}
+
+.css-ebx8b0:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-ebx8b0:focus {
+    color: rgb(232, 83, 62);
+    text-decoration: none;
+}
+
+.css-ebx8b0:hover {
+    text-decoration: none;
+}
+
+.css-1v028ab {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(232, 83, 62);
+    color: rgb(255, 255, 255);
+    display: inline-flex;
+    width: auto;
+    height: 24px;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: transparent;
+    text-decoration: none;
+}
+
+.css-1v028ab:active:not([aria-disabled="true"]) {
+    background-color: rgb(165, 51, 35);
+    color: rgb(255, 255, 255);
+}
+
+.css-1v028ab:focus:not([aria-disabled="true"]) {
+    background-color: rgb(232, 83, 62);
+}
+
+.css-1v028ab:hover:not([aria-disabled="true"]) {
+    background-color: rgb(201, 62, 43);
+    color: rgb(255, 255, 255);
+}
+
+.css-1v028ab:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-1v028ab:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.css-1v028ab:hover {
+    text-decoration: none;
+}
+
+.css-rvqhyx> :not(:last-child) {
+    margin-right: 8px;
+}
+
+.css-7nm8m1 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    -webkit-box-align: initial;
+    align-items: initial;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1rrdap7 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    align-items: flex-end;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-7nm8m1> :not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.css-1rkuqld {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: inherit;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 32px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-ha9xgj {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: row;
+    display: inline-flex;
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+/* .css-xpr64j:active:not([aria-disabled="true"]) {
+    background-color: rgb(22, 108, 109);
+    color: rgb(255, 255, 255);
+} */
+/* 
+.css-xpr64j {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(33, 155, 156);
+    color: rgb(255, 255, 255);
+    display: inline-flex;
+    width: auto;
+    height: 24px;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: transparent;
+    text-decoration: none;
+} */
+/* 
+.css-xpr64j:focus:not([aria-disabled="true"]) {
+    background-color: rgb(33, 155, 156);
+}
+
+.css-xpr64j:hover:not([aria-disabled="true"]) {
+    background-color: rgb(27, 132, 133);
+    color: rgb(255, 255, 255);
+} */
+
+/* .css-xpr64j:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.css-xpr64j:hover {
+    text-decoration: none;
+} */
+
+.css-xpr64j:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-ha9xgj .ads_GROUP_ITEM:focus {
+    z-index: 20;
+    position: relative;
+}
+
+.css-ha9xgj .ads_GROUP_ITEM:hover {
+    z-index: 10;
+    position: relative;
+}
+
+.css-ha9xgj> :focus {
+    z-index: 20;
+    position: relative;
+}
+
+.css-ha9xgj> :hover {
+    z-index: 10;
+    position: relative;
+}
+
+.css-ha9xgj> :first-child {
+    border-radius: 2px 0px 0px 2px;
+}
+
+.css-ha9xgj>* {
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+}
+
+.css-b2qa21:active:not([aria-disabled="true"]) {
+    background-color: rgb(199, 230, 230);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-b2qa21:hover:not([aria-disabled="true"]) {
+    background-color: rgb(226, 242, 242);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-b2qa21 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 155, 156);
+    display: inline-flex;
+    width: auto;
+    height: 24px;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: rgb(203, 209, 214);
+    text-decoration: none;
+}
+
+.css-b2qa21:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-ha9xgj .ads_GROUP_ITEM:focus {
+    z-index: 20;
+    position: relative;
+}
+
+.css-ha9xgj .ads_GROUP_ITEM:hover {
+    z-index: 10;
+    position: relative;
+}
+
+.css-ha9xgj> :not(:first-child):not(:last-child) {
+    border-radius: 0px;
+}
+
+.css-b2qa21:focus {
+    color: rgb(33, 155, 156);
+    text-decoration: none;
+}
+
+.css-b2qa21:hover {
+    text-decoration: none;
+}
+
+.css-ha9xgj> :focus {
+    z-index: 20;
+    position: relative;
+}
+
+.css-ha9xgj> :hover {
+    z-index: 10;
+    position: relative;
+}
+
+.css-ha9xgj> :not(:first-child) {
+    margin-left: -1px;
+}
+
+.css-ha9xgj>* {
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+}
+
+.css-7nm8m1> :not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.css-phn8md {
+    vertical-align: top;
+    font-family: inherit;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    box-sizing: content-box;
+    transform: rotate(0deg);
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    overflow: visible;
+}
+
+.css-1c5lkc4 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: inherit;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px 0px 0px 8px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-19g8yv2 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 155, 156);
+    display: inline-flex;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: rgb(52, 59, 64);
+}
+
+.css-19g8yv2::after {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    content: "";
+    background-color: rgb(33, 155, 156);
+    visibility: hidden;
+    transform: scale(0);
+    border-radius: 50%;
+}
+
+.css-19g8yv2:not([aria-disabled="true"]):hover {
+    border-color: rgb(33, 155, 156);
+}
+
+.css-19g8yv2[aria-checked="true"]::after {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.css-19g8yv2:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-19g8yv2:not([aria-disabled="true"])[aria-checked="true"]::after {
+    background-color: rgb(33, 155, 156);
+}
+
+.css-k1huws> :not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.css-1sh1lpv {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    display: inline-block;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1d6f5iv {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(237, 239, 241);
+    color: rgb(99, 109, 117);
+    display: inline-flex;
+    height: 24px;
+    font-size: 12px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: start;
+    white-space: nowrap;
+    margin: 0px;
+    padding: 0px 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 12px;
+    border-color: transparent;
+}
+
+.css-1pcexqc-container {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.css-16t0d96-control:hover {
+    border-color: rgb(179, 179, 179);
+}
+
+.css-16t0d96-control {
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    cursor: default;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    min-height: 34px;
+    position: relative;
+    box-sizing: border-box;
+    border-color: rgb(204, 204, 204);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    transition: all 100ms ease 0s;
+    outline: 0px !important;
+}
+
+.css-1hwfws3 {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    box-sizing: border-box;
+    flex: 1 1 0%;
+    padding: 2px 8px;
+    overflow: hidden;
+}
+
+.css-dvua67-singleValue {
+    color: rgb(51, 51, 51);
+    margin-left: 2px;
+    margin-right: 2px;
+    max-width: calc(100% - 8px);
+    position: absolute;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.css-15gzlhj {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(232, 245, 237);
+    color: rgb(53, 124, 85);
+    display: inline-flex;
+    height: 16px;
+    font-size: 10px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: start;
+    white-space: nowrap;
+    margin: 0px;
+    padding: 0px 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: transparent;
+}
+
+.css-xn06t7 {
+    padding-bottom: 2px;
+    padding-top: 2px;
+    visibility: visible;
+    color: rgb(51, 51, 51);
+    box-sizing: border-box;
+    margin: 2px;
+}
+
+.css-xn06t7 input {
+    box-shadow: none !important;
+}
+
+.css-1wy0on6 {
+    -webkit-box-align: center;
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.css-1botyex-indicatorContainer:hover {
+    color: rgb(153, 153, 153);
+}
+
+.css-1botyex-indicatorContainer {
+    color: rgb(204, 204, 204);
+    display: flex;
+    box-sizing: border-box;
+    padding: 2px 8px;
+    transition: color 150ms ease 0s;
+}
+
+.css-bgvzuu-indicatorSeparator {
+    align-self: stretch;
+    background-color: rgb(204, 204, 204);
+    margin-bottom: 8px;
+    margin-top: 8px;
+    width: 1px;
+    box-sizing: border-box;
+}
+
+.css-1botyex-indicatorContainer:hover {
+    color: rgb(153, 153, 153);
+}
+
+.css-1botyex-indicatorContainer {
+    color: rgb(204, 204, 204);
+    display: flex;
+    box-sizing: border-box;
+    padding: 2px 8px;
+    transition: color 150ms ease 0s;
+}
+
+.css-19bqh2r {
+    display: inline-block;
+    fill: currentcolor;
+    line-height: 1;
+    stroke: currentcolor;
+    stroke-width: 0;
+}
+
+.css-1hdhdye {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(231, 240, 253);
+    color: rgb(41, 92, 163);
+    display: inline-flex;
+    height: 16px;
+    font-size: 10px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: start;
+    white-space: nowrap;
+    margin: 0px;
+    padding: 0px 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: transparent;
+}
+
+.css-izup1v {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(255, 255, 255);
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 2px;
+    border-color: rgb(52, 59, 64);
+}
+
+.css-izup1v:hover {
+    border-color: rgb(33, 155, 156);
+}
+
+.css-1gsertt {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+    cursor: inherit;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-h97pjl:hover {
+    background-color: rgb(27, 132, 133);
+    border-color: rgb(27, 132, 133);
+}
+
+.css-h97pjl {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    background-color: rgb(33, 155, 156);
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 2px;
+    border-color: rgb(33, 155, 156);
+}
+
+.css-1juo0f3 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    border-radius: 2px;
+}
+
+.css-1av5ke4 {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    max-width: 480px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1n5qwyl {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: row;
+    align-items: flex-start;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-1n5qwyl> :not(:last-child) {
+    margin-right: 32px;
+}
+
+.css-1av5ke4> :not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.css-19yeg4l {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-basis: 30px;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-jniivr {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    max-width: 100%;
+    max-height: 30px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-k1huws {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-k1huws> :not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.css-1h33d8v {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    color: inherit;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-k1huws> :not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.css-b2qa21:active:not([aria-disabled="true"]) {
+    background-color: rgb(199, 230, 230);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-b2qa21:hover:not([aria-disabled="true"]) {
+    background-color: rgb(226, 242, 242);
+    color: rgb(33, 155, 156);
+    border-color: rgb(33, 155, 156);
+}
+
+.css-b2qa21:focus:not(.focus-visible) {
+    outline: none;
+}
+
+.css-b2qa21:focus {
+    color: rgb(33, 155, 156);
+    text-decoration: none;
+}
+
+.css-b2qa21:hover {
+    text-decoration: none;
+}
+
+.css-11tdnxu {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: row;
+    align-items: flex-start;
+    display: flex;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-11tdnxu> :not(:last-child) {
+    margin-right: 32px;
+}
+
+.css-f9be5g {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+.css-160zqio {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    display: flex;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+
+/* end youtube analytics*/
+
+.present-grid-box {
+    padding: 10px;
+}
+
+.box-label-present {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* opacity: .8; */
+    /* border-radius: 0 0 2px 2px; */
+    /* height: 1px; */
+    font-family: 'Open Sans'!important;
+    margin-bottom: 20px;
+    color: #343b40;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+    padding: 4px;
+}
+
+.add-box-present {
+    display: inline-block;
+    min-height: 120px;
+    text-align: center;
+    padding: 8px;
+    margin: 0;
+    border: 1px solid #cbd1d6;
+    background-color: #fff;
+    position: relative;
+}
+
+.add-box-present img {
+    padding: 20px;
+}
+
+.add-box-present:hover {
+    background: #eee;
+}
+
+.add-box-present:active {
+    background: #eee;
+}
+
+.add-box-grid {
+    display: inline-block;
+    min-height: 120px;
+    text-align: center;
+    padding: 8px;
+    margin: 0;
+    border: 1px solid #cbd1d6;
+    background-color: #fff;
+    position: relative;
+}
+
+.add-box-grid img {
+    padding: 20px;
+}
+
+.add-box-grid:hover {
+    background: #eee;
+}
+
+.add-box-grid:active {
+    background: #eee;
+}
+
+.add-box {
+    display: inline-block;
+    min-height: 120px;
+    text-align: center;
+    padding: 8px;
+    margin: 15px 0;
+    border: 1px solid #cbd1d6;
+    background-color: #fff;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden
+}
+
+.add-box .premium-label {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: -30px;
+    width: 100px;
+    background-color: #219b9c;
+    color: #fff;
+    font-size: 10px
+}
+
+.add-box .box-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: .8;
+    border-radius: 0 0 2px 2px;
+    background-color: #edeff1;
+    height: 24px;
+    font-family: 'Open Sans'!important;
+    color: #343b40;
+    text-align: left;
+    line-height: 16px;
+    font-size: 11px;
+    padding: 4px
+}
+
+.add-box:hover {
+    border: 1px solid #219b9c
+}
+
+.add-box:active {
+    border: 1px solid #1b8485
+}
+
+.connect-box {
+    display: inline-block;
+    min-height: 120px;
+    text-align: center;
+    padding: 8px;
+    margin: 15px 0;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+    background-color: #fff;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden
+}
+
+.connect-box:hover {
+    text-decoration: none;
+    color: #555;
+    background-color: #f5f5f5;
+}
+
+.connect-type-box {
+    display: block;
+    /* min-height: 120px;
+	 max-height:120px; */
+    text-align: left;
+    padding: 8px;
+    margin: 15px 0;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+    background-color: #fff;
+    font-family: 'Open Sans';
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden
+}
+
+.connect-type-box h3 {
+    font-size: 14px;
+    font-family: 'Open Sans';
+}
+
+.connect-type-box:hover {
+    text-decoration: none;
+    color: #555;
+    background-color: #f5f5f5;
+}
+
+.connect-grid-box {
+    padding: 10px 20px 10px 0;
+}
+
+.connect-type-box:hover {
+    border: 1px solid #219b9c
+}
+
+.connect-type-box:active {
+    border: 1px solid #1b8485
+}
+
+.connect-type-recent {
+    display: block;
+    /* min-height: 120px;
+	 max-height:120px; */
+    text-align: left;
+    padding: 8px;
+    margin: 15px 0;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+    background-color: #fff;
+    font-family: 'Open Sans';
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden
+}
+
+.connect-type-recent:hover {
+    text-decoration: none;
+    color: #555;
+    background-color: #f5f5f5;
+}
+
+.add-box-recent {
+    display: inline-block;
+    text-align: center;
+    padding: 0 8px 8px 8px;
+    margin: 0;
+}
+
+.box-label-recent {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: .8;
+    /* border-radius: 0 0 2px 2px; */
+    /* height: 1px; */
+    font-family: 'Open Sans'!important;
+    margin-bottom: 20px;
+    color: #343b40;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+    padding: 4px;
+}
+
+.report-compain h4 {
+    font-weight: bold;
+}
+
+.report-count {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-right: unset;
+    padding-bottom: unset;
+    padding-left: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: rgb(33, 155, 156);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+}
+
+.layout-action-box {
+    display: block;
+    text-align: left;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+    background-color: #fff;
+    font-family: 'Open Sans';
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.layout-action-box:hover {
+    text-decoration: none;
+    color: #555;
+    background-color: #f5f5f5;
+    border: 1px solid #219b9c;
+}
+
+.lable-round-yellow {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    background: #ffeec4;
+    border: 1px solid #ffeec4;
+    color: #7f540b;
+    display: inline-flex;
+    height: 16px;
+    vertical-align: top;
+    font-size: 10px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: start;
+    white-space: nowrap;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+.lable-round-green {
+    margin-top: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    margin-left: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    background: #ccffe6;
+    border: 1px solid #ccffe6;
+    color: #004d26;
+    display: inline-flex;
+    height: 16px;
+    vertical-align: top;
+    font-size: 10px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: start;
+    white-space: nowrap;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+.layout-quick-box {
+    display: block;
+    /* width: 172px; */
+    height: 142px;
+    /* margin-right: 15px; */
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+    background-color: #fff;
+    font-family: 'Open Sans';
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.layout-quick-box:hover {
+    text-decoration: none;
+    color: #555;
+    background-color: #f5f5f5;
+    border: 1px solid #219b9c;
+}
+
+.kpi-section {
+    padding: 20px 0 20px 0;
+}

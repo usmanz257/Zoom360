@@ -1,0 +1,134 @@
+ 
+  <div class="row">
+  <div class="col-md-12" style="padding: 0px;" >
+      <div class="col-md-4"  >
+        <div class="main-section">
+            <h3 style="margin-bottom: 17.5px;">
+                Data Quality
+            </h3>
+        </div>   
+    </div>
+    <div class="col-md-4 col-md-offset-4"  >
+        <div class="main-section  pull-right"  style="padding: 0px;">
+            <div class="input-bar-item">
+                <input class="css-xpr64j" id="savebtn" type="button" value="Save Config" (click)="SaveConfiguration()">
+                 
+              </div>
+        </div> 
+        <div class="main-section  pull-right"  style="padding: 0px; margin-right:5px;">
+            <div class="input-bar-item">
+                <input class="css-xpr64j" id="savebtn" type="submit" value="+ Add New">
+                 
+              </div>
+        </div>   
+    </div>
+    
+  </div>
+  </div>
+    
+ 
+  
+<div id="content-main" class="contentMain">
+     <div id="changelist">
+        <form id="changelist-form" method="post" novalidate="">
+            <input type="hidden" name="csrfmiddlewaretoken" value="BzJ7MpE5jnM2lyqnbJrbEVtNiZc8GLk8udbCXR4ixTJfrCjd1V5zy452hpZwSEiq">
+            <input type="hidden" name="action" value="">
+            <input name="index" value="0" type="hidden">
+            <input class="select-across" name="select_across" value="0" type="hidden">
+            <div class="results">
+                <table id="result_list" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="action-checkbox-column">
+                                <!-- <input type="checkbox" name="all" /> -->
+                            </th>
+
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link"  >
+                                        Display Name
+                                    
+                                    </a>
+                                    <!-- <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" ></a>
+                                    </div> -->
+                                </div>
+                            </th>
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link">
+                                        Function Group
+                                    
+                                    </a>
+                                    <!-- <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting"  ></a>
+                                    </div> -->
+                                </div>
+                            </th>
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link">
+                                        Function Detail
+                                     
+                                    </a>
+                                    <!-- <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" ></a>
+                                    </div> -->
+                                </div>
+                            </th>
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" >
+                                        Column Name
+                                     
+                                    </a>
+                                    <!-- <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting"  ></a>
+                                    </div> -->
+                                </div>
+                            </th>
+                            
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" >
+                                        Enabled
+                                     
+                                    </a>
+                                    <!-- <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting"  ></a>
+                                    </div> -->
+                                </div>
+                            </th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- *ngFor="let connection of allConService._connectionData;let i = index" -->
+                        <tr  *ngFor="let Dataquality of DataqualityModel;let i = index">
+                            <td>
+                                <input   type="checkbox"   name="something"/>
+                            </td>
+                            <td class="field-stack">{{Dataquality.funcitionDisplayName}}</td>
+                            <td class="field-stack" nowrap>{{Dataquality.functiongroup}}</td>
+                            <td class="field-name"><a routerLink="/connect/connections" routerLinkActive="ActiveRoute">{{Dataquality.functiondetail}}</a></td>
+                            <td class="field-name nowrap" style="width: 400px;" >
+                                <!-- <input style="max-width: 250px;" id="workspaces1" ej-dropdownlist [dataSource]="_workspaces" [fields]="fields" showCheckbox="true" watermarkText="Select a skill" width="100%" multiSelectMode="visualmode" width="480px" /> -->
+                                <ejs-multiselect id='local{{i}}' #checkbox{{i}} [dataSource]='_workspaces' [placeholder]='checkWaterMark' [fields]='fields'
+                                [mode]='mode' [showDropDownIcon]='true' showSelectAll='true' [filterBarPlaceholder]='filterPlaceholder' (change)="Makelist($event,i)"></ejs-multiselect>
+                            </td>
+                            <td class="field-auth_status" >
+                                <div class="switch">
+                                    <input type="checkbox" name="enabled{{i}}" [(ngModel)]="Dataquality.enable" >
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pull-left changelist-botton-row changelist-pagination ">
+                &nbsp;
+                <span class="pagination-element-counter ">{{dataqualitylistrecord}} Connections</span>
+            </div>
+        </form>
+    </div>
+</div>

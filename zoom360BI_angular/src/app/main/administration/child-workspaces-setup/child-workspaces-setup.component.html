@@ -1,0 +1,62 @@
+<div class="generic-django-admin-header">
+    <div class="main-section">
+        <h3>Child Workspace Options</h3>
+    </div>
+    <div class="tool-section">
+    </div>
+</div>
+<div id="content-main" class="contentMain">
+    <form [formGroup]="ChildspaceSetup" (ngSubmit)="SaveConfig(ChildspaceSetup.value)" autocomplete="off">
+        <fieldset class="module aligned " style="min-height: 519px;">
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Child workspace option </label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="childWorkspace" value="Workspace can have childs" style="margin-top: -1px;">Workspace can have childs
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="childWorkspace" value="Child workspace not allowed" style="margin-top: -1px;">Child workspace not allowed
+                        </div>
+
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <ejs-checkbox id=""   label="Apply all parent workspace selected options to child workspaces"   formControlName="childSelectedOption"></ejs-checkbox>
+                    <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="childSelectedOption">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Apply all parent workspace selected options to child workspaces</label> -->
+                </div>
+                <div class="form-check" style="padding-left: 0px;">
+                    <ejs-checkbox id=""   label="Apply all parent workspace changes to child workspaces"   formControlName="childChange"></ejs-checkbox>
+                    <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="childChange">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Apply all parent workspace changes to child workspaces</label> -->
+                </div>
+                <div class="form-check" style="padding-left: 0px;">
+                    <ejs-checkbox id=""   label="Currency field is mandatory for presenting data"   formControlName="childOverrideSelectedOption"></ejs-checkbox>
+                    <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="childOverrideSelectedOption">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Currency field is mandatory for presenting data</label> -->
+                </div>
+            </div>
+        </fieldset>
+        <div>
+            <div class="css-1qbrnrg">
+                <hr class="css-1c3fhlt" mx="zero" role="separator" aria-orientation="horizontal">
+                <div class="css-1x62jim">
+                    <div class="css-p84alj">
+                        <div class="css-rvqhyx"><a class="css-ebx8b0" href="/instagram_business/instagrambusinessdatastream/27/delete/">Delete</a><a class="css-b2qa21" href="/core/apidatastream/clone?pk=27">Clone</a></div>
+                    </div>
+                    <div class="css-1w7dt24">
+                        <ejs-toast #defaulttoast   [position]="position" >                
+                        </ejs-toast>
+                        <div class="css-rvqhyx"><button class="css-b2qa21" type="button" name="_continue">Save and continue editing</button>
+                            <button class="css-xpr64j  .e-toast-container .e-toast" type="submit" name="_save">Save</button><span>{{childWorkspacesService.Status_message}}</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

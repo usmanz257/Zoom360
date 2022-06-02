@@ -1,0 +1,142 @@
+<div class="generic-django-admin-header">
+    <div class="main-section">
+        <h3>Users Log Summary</h3>
+    </div>
+    <div class="tool-section">
+    </div>
+</div>
+<div id="content-main" class="contentMain">
+
+    <div style="min-height: 519px;margin-top: 30px;">
+        <label class="label-text" style="margin-bottom: 15px;" for="id_stack">Workspace users summary, allowed access</label>
+        <table id="result_list" class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col" class="action-checkbox-column">
+                        <input type="checkbox" name="all" [checked]="allcheckbox" (change)="checkAll($event)" (click)="functionCount($event)" />
+                    </th>
+
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('clientId')">
+                                Client ID
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="clientId_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="clientId_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('userLoginId')">
+                                User Login Id
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="userLoginId_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="userLoginId_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('workspaceName')">
+                                Workspace Name
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="workspaceName_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="workspaceName_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('workspaceParentName')">
+                                Workspace Parent Name
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="workspaceParentName_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="workspaceParentName_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('dateAccessStart')">
+                                Date Access Start
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="dateAccessStart_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="dateAccessStart_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('dateAccessEnd')">
+                                Date Access End
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="dateAccessEnd_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="dateAccessEnd_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('statusGranted')">
+                                Status Granted
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="statusGranted_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="statusGranted_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of userLogService._UserLogGrid">
+                    <td>
+                        <input type="checkbox" [(ngModel)]="item.state" name="something" (change)="findCount($event)" />
+                    </td>
+                    <td class="field-type_logo">{{item.client_Id}}</td>
+                    <td class="field-type_logo">{{item.user_LogIn_Id}}</td>
+                    <td class="field-stack nowrap">{{item.workSpace_Name}}</td>
+                    <td class="field-name">{{item.workSpace_Parent_Name}}</td>
+                    <td class="field-auth_status">{{item.date_Access_Start}}</td>
+                    <td class="field-auth_status">{{item.date_Access_End}}</td>
+                    <td class="field-auth_status"><img src="assets\images\icon-{{item.active}}.svg" alt="error" title="{{item.active}}"></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <!-- <div class="css-1qbrnrg">
+            <hr class="css-1c3fhlt" mx="zero" role="separator" aria-orientation="horizontal">
+            <div class="css-1x62jim">
+                <div class="css-p84alj">
+                    <div class="css-rvqhyx"><a class="css-ebx8b0" href="/instagram_business/instagrambusinessdatastream/27/delete/">Delete</a><a class="css-b2qa21" href="/core/apidatastream/clone?pk=27">Clone</a></div>
+                </div>
+                <div class="css-1w7dt24">
+                    <div class="css-rvqhyx"><button class="css-b2qa21" type="button" name="_continue">Save and continue editing</button><button class="css-xpr64j" type="submit" name="_save">Save</button></div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>

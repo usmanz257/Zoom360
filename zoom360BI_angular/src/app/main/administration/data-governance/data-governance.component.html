@@ -1,0 +1,286 @@
+<div class="generic-django-admin-header">
+    <div class="main-section">
+        <h3>Schema Configuration</h3>
+    </div>
+    <div class="tool-section">
+    </div>
+</div>
+<div id="content-main" class="contentMain">
+    <form [formGroup]="DataGovernance" (ngSubmit)="SaveConfig(DataGovernance.value)" autocomplete="off">
+        <fieldset class="module aligned ">
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Schema mode to be used</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="schemaMode" value="Data Tap schema mode" style="margin-top: -1px;">Data Tap schema mode
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="schemaMode" value="Data Lake schema mode" style="margin-top: -1px;">Data Lake schema mode
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="schemaMode" value="Enterprise Data Hub mode" style="margin-top: -1px;">Enterprise Data Hub mode
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="schemaMode" value="Enterprise Data Warehouse mode" style="margin-top: -1px;">Enterprise Data Warehouse mode
+                        </div>
+
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Data Inheritance and Sharing</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Child workspace inheritance options</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="childWorkspaceInheritance" value="Full inheritance" style="margin-top: -1px;">Full inheritance - share sources and collected data
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="childWorkspaceInheritance" value="Restricted to source and elements only" style="margin-top: -1px;">Restricted to source and elements only
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="childWorkspaceInheritance" value="Restricted to collected data only" style="margin-top: -1px;">Restricted to collected data only
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Workspace allowed to share data with other workspaces</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="workspaceShareData" value="Can share data" style="margin-top: -1px;">Can share data
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="workspaceShareData" value="Do not share data" style="margin-top: -1px;">Do not share data
+                        </div>
+
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Out of application, data sharing over the web using published URL</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="outOffAppWebShareData" value="Can share data" style="margin-top: -1px;">Can share data
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="outOffAppWebShareData" value="Do not share data" style="margin-top: -1px;">Do not share data
+                        </div>
+
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Out of application, data sharing using API's exposure to outside applications and users</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="outOffApiShareData" value="Can share data" style="margin-top: -1px;">Can share data
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="outOffApiShareData" value="Do not share data" style="margin-top: -1px;">Do not share data
+                        </div>
+
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Data Stagging</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Raw source data stagging</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="rawDataStagging" value="Use stagging server to process source data" style="margin-top: -1px;">Use stagging server to process source data
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="rawDataStagging" value="Do not use stagging, transfer to destination location and process" style="margin-top: -1px;">Do not use stagging, transfer to destination location and process
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Stagging storage location type</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="staggingStorageLocationType" value="CSV only" style="margin-top: -1px;">CSV only
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="staggingStorageLocationType" value="Database only" style="margin-top: -1px;">Database only
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="staggingStorageLocationType" value="Both CSV and Database" style="margin-top: -1px;">Both CSV and Database
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Stagging archive retention days</label>
+                    <div class="related-widget-wrapper">
+                        <input type="number" formControlName="staggingRetentionDays" name="retention_number" id="id_retention_number" class="numberinput form-control" min="0">
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="module aligned ">
+            <h2>Storage Locations</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Active Source Location</label>
+                    <div class="related-widget-wrapper">
+                        <ejs-dropdownlist id='ActiveSourceLocation'  [dataSource]="ActiveSourceLocation" cssClass="edit-Dropdown" placeholder="Select Active Source Location" [(fields)]='field' formControlName="activeSourceLocation"></ejs-dropdownlist>
+                        <!-- <select class="selectpicker" style="width: 478px;" formControlName="activeSourceLocation">
+                            <option value="Active Source Location">Select Active Source Location</option>
+                        <option *ngFor="let item of ActiveSourceLocation" value="{{item.dropdownValue}}">{{item.dropdownText}}</option>
+                      </select> -->
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Destination Workspace</label>
+                    <div class="related-widget-wrapper">
+                        <ejs-dropdownlist id='Workspaces'  [dataSource]="Workspaces" cssClass="edit-Dropdown" placeholder="Select Destination workspace" [(fields)]='field' formControlName="destinationWorkspace"></ejs-dropdownlist>
+                        <!-- <select class="selectpicker" style="width: 478px;" formControlName="destinationWorkspace">
+                            <option value="Destination Workspace">Select Destination Workspace</option>
+                        <option *ngFor="let item of Workspaces" value="{{item.dropdownValue}}">{{item.dropdownText}}</option>
+                      </select> -->
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Active Destination Location </label>
+                    <div class="related-widget-wrapper">
+                        <ejs-dropdownlist id='ActiveDestinationLocation'  [dataSource]="ActiveDestinationLocation" cssClass="edit-Dropdown" placeholder="Select Active Destination"  [(fields)]='field' formControlName="activeDestinationLocation"></ejs-dropdownlist>
+                        <!-- <select class="selectpicker" style="width: 478px;" formControlName="activeDestinationLocation">
+                            <option value="Active Destination Location">Select Active Destination Location </option>
+                        <option *ngFor="let item of ActiveDestinationLocation" value="{{item.dropdownValue}}">{{item.dropdownText}}</option>
+                      </select> -->
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Passive Destination Location</label>
+                    <div class="related-widget-wrapper">
+                        <ejs-dropdownlist id='PassiveDestinationLocation'  [dataSource]="PassiveDestinationLocation" cssClass="edit-Dropdown" placeholder="Select Passive  Destination" [(fields)]='field' formControlName="passiveDestinationLocation"></ejs-dropdownlist>
+                        <!-- <select class="selectpicker" style="width: 478px;" formControlName="passiveDestinationLocation">
+                            <option value="Passive Destination Location">Select Passive Destination Location</option>
+                        <option *ngFor="let item of PassiveDestinationLocation" value="{{item.dropdownValue}}">{{item.dropdownText}}</option>
+                      </select> -->
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Data Collecting and Storing</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Default data collecting process type</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="dataCollectionType" value="Full Data Snapshot" style="margin-top: -1px;">Full Data Snapshot - (Each process will result in single extract)
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="dataCollectionType" value="Datewise Snapshot" style="margin-top: -1px;">Datewise Snapshot - (Each process will result in Date wise extract, against Key Date Field)
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <ejs-checkbox id=""   label="Allow users to override data snapshot options during individual data processing activities"   formControlName="overrideDataSnapshot"></ejs-checkbox>
+                    <!-- <input type="checkbox" formControlName="overrideDataSnapshot" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Allow users to override data snapshot options during individual data processing activities</label> -->
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Default data storage option</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="dataStorage" value="Truncate existing data" style="margin-top: -1px;">Truncate existing data - Load new snapshot each time
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="dataStorage" value="Retain existing data" style="margin-top: -1px;">Retain existing data - Append new snapshot each time
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="dataStorage" value="Merge new and existing data" style="margin-top: -1px;">Merge new and existing data - Load only new & updated entries
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Default data destination</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="dataDestination" value="Destination table is mandatory for source data" style="margin-top: -1px;">Destination table is mandatory for source data - verify before loading
+                        </div>
+                        <div style="display: block; margin-left: 20px; ">
+                            <input type="radio" formControlName="dataDestination" value="Create destination table for source data" style="margin-top: -1px; ">Create destination table for source data - if do not exists before loading
+                        </div>
+                    </div>
+                    <div class="help "></div>
+                </div>
+            </div>
+            <div class="form-group " style="margin-bottom: 0px; ">
+                <div class="form-check " style="padding-left: 0px; ">
+                    <ejs-checkbox id=""   label="Allow users to override data storage options during individual data processing activities"   formControlName="overrideDataStorage"></ejs-checkbox>
+                    <!-- <input type="checkbox" formControlName="overrideDataStorage" class="form-check-input " id="exampleCheck1 ">
+                    <label class="form-check-label " for="exampleCheck1 " style="margin-left: 20px; ">Allow users to override data storage options during individual data processing activities</label> -->
+                </div>
+            </div>
+            <div class="form-row field-stack ">
+                <div>
+                    <label class="label-text " for="id_stack ">Destination archive retention days</label>
+                    <div class="related-widget-wrapper ">
+                        <input type="number" formControlName="destinationRetentionDays" name="retention_number " id="id_retention_number " class="numberinput form-control " min="0 ">
+                    </div>
+                    <div class="help ">
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <div>
+            <div class="css-1qbrnrg ">
+                <hr class="css-1c3fhlt " mx="zero " role="separator " aria-orientation="horizontal ">
+                <div class="css-1x62jim ">
+                    <div class="css-p84alj ">
+                        <ejs-toast #defaulttoast   [position]="position" >                
+                        </ejs-toast>
+                        <div class="css-rvqhyx "><a class="css-ebx8b0 " href="/instagram_business/instagrambusinessdatastream/27/delete/ ">Delete</a><a class="css-b2qa21 " href="/core/apidatastream/clone?pk=27 ">Clone</a></div>
+                    </div>
+                    <div class="css-1w7dt24 ">
+                        <div class="css-rvqhyx "><button class="css-xpr64j .e-toast-container .e-toast " type="button " name="_continue ">Save and continue editing</button><button class="css-xpr64j " type="submit " name="_save ">Save</button><span>{{dataGovernanceService.Status_message}}</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

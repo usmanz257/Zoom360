@@ -1,0 +1,150 @@
+.header-style {
+    /* height: 40px; */
+    background-color: #f8f9f9;
+    border-bottom: 1px solid #219b9c;
+}
+.scriptName{
+    width: 250px;
+    border: 1px solid transparent; background-color: transparent; padding-left: 4px; color: #343B40;
+}
+.scriptNameEdit{
+    /* border: 1px solid rgba(0, 0, 0, .125) !important; */
+    outline: 0px auto -webkit-focus-ring-color;
+    border: 1px solid rgb(27, 132, 133);
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(27 132 133 / 60%);
+}
+.textbox-size{
+    padding: 2px 15px !important;
+    width: 300px !important;
+}
+.toggle-margin{
+    margin-bottom: 20px;
+}
+.form-group-margin{
+    margin-bottom: 15px;
+}
+.input.e-input, textarea.e-input, .e-input-group, .e-input-group.e-control-wrapper {
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif, "-apple-system", "BlinkMacSystemFont";
+    font-size: 12px !important;
+    font-weight: 400 !important;
+}
+input[type=checkbox]:focus, input[type=file]:focus, input[type=radio]:focus {
+    outline: none !important;
+    outline-offset: -2px;
+}
+.close-button{font-size: 28px;
+    line-height: 0.8;
+    margin-left: 18px;
+}
+/* sync fusion */
+.e-multi-select-wrapper .e-delim-values {
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 32px;
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 6px;
+    vertical-align: middle;
+}
+.control-group-mar-pad{
+    margin-bottom: 0px;
+    padding: 2px 12px 2px 0
+}
+.control-pad-left{
+    padding-left: 0px;
+}
+/* Tooltip */
+.wrapper {
+    width: 50%;
+    height: 50%;
+}
+.wrapper .social-links {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.wrapper .social-links li {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    float: left;
+}
+.wrapper .social-links li a {
+    font-size: 24px;
+    color: whitesmoke;
+}
+a[data-tooltip].top:before, a[data-tooltip].top:after {
+    transform: translateY(10px);
+}
+a[data-tooltip].top:hover:after, a[data-tooltip].top:hover:before {
+    transform: translateY(0px);
+}
+a[data-tooltip] {
+    position: relative;
+}
+a[data-tooltip]:after, a[data-tooltip]:before {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 200ms ease, opacity 200ms;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+}
+a[data-tooltip]:before {
+    content: attr(data-tooltip);
+    background: #343B40;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    white-space: nowrap;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+a[data-tooltip]:after {
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    content: "";
+}
+a[data-tooltip]:hover:after, a[data-tooltip]:hover:before {
+    visibility: visible;
+    opacity: 0.85;
+    transform: translateY(0px);
+}
+a[data-tooltip][data-position="top"]:before {
+    bottom: 100%;
+    left: -130%;
+    margin-bottom: 10px;
+}
+a[data-tooltip][data-position="top"]:after {
+    border-top-color: #000;
+    border-bottom: none;
+    bottom: 101%;
+    left: calc(50% - 6px);
+    margin-bottom: 4px;
+}
+/* End Tooltip */
+.summary-show-filter{
+    border-radius: 2px !important;
+    background-color: rgb(33, 155, 156) !important;
+    color: #FFFFFF !important;
+     /* margin: 0 4px 0 4px !important; */
+     padding: 0px 8px 0 8px !important;
+     height: 24px !important;
+    }
+/* COnfirm dialog box */
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+.e-btn.e-icon-btn, .e-css.e-btn.e-icon-btn {
+    padding: 0 0px !important;
+}
+/*  end confirm dialog box */

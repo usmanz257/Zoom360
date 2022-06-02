@@ -1,0 +1,71 @@
+<div class="css-7eznv6">
+    <div class="css-8pd3g8" style="z-index: 0;">
+        <div class="css-19eq8b8"> <span class="css-1v8nodn">Issues logs <span class="css-1x48jmz" style="margin-top: 4px;">{{allissueSer._recordLength}}</span></span>
+            <div class="css-f128gq"><span class="css-79bu3q"><a class="css-db069s" role="tab" id="heading10" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10" (click)="buttonText()">{{widgetAccorButtonText}}</a></span>
+            </div>
+        </div>
+        <hr class="css-rni0qy" mx="zero" role="separator" aria-orientation="horizontal">
+    </div>
+    <div id="collapse10" class="panel-collapse collapse" aria-labelledby="heading10" data-parent="#accordion10">
+        <div class="css-15rwz9m" *ngFor="let issue of this.allissueSer._issueData">
+            <div style="display: flex;">
+                <div class="css-4jsk13" style="width: 80%;">
+                    <div class="css-yhfgdp">
+                        <div class="css-1fgetgk">
+                            <span [ngClass]="
+                {
+                'css-1syklv8': (issue.messageType == 'Deleted' || issue.messageType == 'Error'),
+                'label-raw': issue.messageType === 'Raw',
+                'css-12ntbu6': issue.messageType === 'Warning',
+                'label-blue': issue.messageType === 'Collected',
+                'css-15gzlhj': issue.messageType === 'Imported'
+                }">{{issue.messageType}}</span>
+                            <span class="css-yhlz1f">{{issue.serverInsertDate}}</span>
+                        </div>
+                        <div class="css-139cb1c">
+                            <div class="css-1mnuzev">
+                                <button class="css-18du0cb" type="button" aria-expanded="false" aria-controls="id-a5bki0" aria-haspopup="menu">
+                        <svg class="css-1xurosb" fill="currentcolor" viewBox="0 0 24 24">
+                            <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
+                        </svg>
+                    </button>
+                                <div class="css-qowjcb css-m0pid7" id="id-a5bki0" hidden="" role="menu" tabindex="-1" data-dialog="true" aria-orientation="vertical" style="display: none; position: absolute; top: auto; right: auto; bottom: 0px; left: 0px; transform: translate(1308px, 121px);">
+                                    <button class="css-1agkww" id="id-a5bki0-1" tabindex="0" role="menuitem">
+                            <svg class="css-1oepmph" fill="currentcolor" viewBox="0 0 24 24">
+                                <path d="M13 14.328v-.666c0-1.076.369-1.65 1.67-2.418 1.312-.79 2.141-1.926 2.141-3.535C16.811 5.599 15.05 4 12.467 4 9.588 4 8.113 5.773 8 7.975h1.752c.113-1.465 1.096-2.377 2.643-2.377 1.527 0 2.51.933 2.51 2.203 0 1.097-.46 1.742-1.649 2.47-1.404.84-2.06 1.762-2.049 3.114v.943H13zM12.109 19c.666 0 1.168-.512 1.168-1.168 0-.666-.502-1.168-1.168-1.168-.656 0-1.168.502-1.168 1.168 0 .656.512 1.168 1.168 1.168z"></path>
+                            </svg>Help</button>
+                                    <button class="css-1agkww" id="id-a5bki0-2" tabindex="-1" role="menuitem">
+                            <svg class="css-1oepmph" fill="currentcolor" viewBox="0 0 24 24">
+                                <path d="M5 12.9l1.414-1.415 3.243 3.243 7.485-7.485 1.414 1.414-8.9 8.9L5 12.898z"></path>
+                            </svg>Acknowledge</button>
+                                    <button class="css-1agkww" id="id-a5bki0-3" tabindex="-1" role="menuitem">
+                            <svg class="css-1oepmph" fill="currentcolor" viewBox="0 0 24 24">
+                                <path d="M7.05 16.95L5 19v-6h6l-2.536 2.536A5.002 5.002 0 0016.9 13h2.03a7.002 7.002 0 01-11.88 3.95zm8.486-8.486A5.002 5.002 0 007.1 11H5.07a7.002 7.002 0 0111.88-3.95L19 5v6h-6l2.536-2.536z"></path>
+                            </svg>Retry</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="css-1slzy86">
+                        <div class="css-1uthf9p">
+                            <h1 class="css-1qck51l"><a class="css-am6n7a" href="#">{{issue.connectionName}}</a></h1>
+                            <div class="css-19hnmvn" tabindex="-1"><a class="css-14g4k5d" href="/utils/58/instagram-business-page-report-m1-cloned/instagram_business-58-20200803.csv/preview/">{{issue.fileName}}</a></div>
+                            <!-- <span class="css-x5dnxc">An error occurred while fetching time range {{issue.date | date:'shortDate'}} - {{issue.date | date:'shortDate'}}</span> -->
+                        </div>
+                        <div class="css-mpc60k"> <span class="css-1l2ssm">
+              <span class="css-a4oruz">
+                 <div class="css-1slzy86"><span class="css-x5dnxc">{{issue.message_1}}</span>
+                        </div>
+                        </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="../../assets/images/{{issue.appearanceLogo}}" width="95" height="70" style="padding: 15px;" />
+            </div>
+        </div>
+        <hr class="css-1mn79hm" mx="zero" role="separator" aria-orientation="horizontal">
+    </div>
+
+</div>

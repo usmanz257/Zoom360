@@ -1,0 +1,228 @@
+<!-- <div class="generic-django-admin-header"> -->
+
+    <!-- <div class="main-section">
+        <div>
+        <h3 style="margin-bottom: 17.5px;">
+            Available Connections
+        </h3>
+    </div>
+        <div class="input-bar-item  pull-right">
+            <input class="css-xpr64j" id="savebtn" type="submit"   value="+ Add New">
+             
+          </div>
+    </div> -->
+    <!-- <div class="main-section  pull-right"  style="padding: 0px;">
+       
+    </div> -->
+    <div class="row">
+        <div class="col-md-12" style="padding: 0px;" >
+            <div class="col-md-5">
+              <div class="main-section">
+                  <h3 style="margin-bottom: 17.5px;">
+                    Available Connections
+                  </h3>
+              </div>   
+          </div>
+          <div class="col-md-3 offset-md-4" style="padding-top: 14px; padding-left: 75px;">
+            <!-- <div class="col-md-1"> -->
+                <!-- <div class="main-section" style="padding-top: 14px">
+                    <div class="input-bar-item"> -->
+                        <input class="css-xpr64j" id="savebtn" type="submit" routerLink="/extract/AddnewDataStream/SelectType" value="+ Add New" style="margin-right: 5px;">
+                         
+                      <!-- </div>
+                </div>    -->
+            <!-- </div> -->
+            <!-- <div class="col-md-1"> -->
+              <!-- <div class="main-section" > -->
+                  <!-- <div class="input-bar-item" style="padding-top: 14px"> -->
+                      <input class="css-xpr64j" id="savebtn" type="submit" routerLink="/extract/destination/Type" value="+ Add Destination" style="margin-right: 5px;">
+                  <!-- </div> -->
+              <!-- </div>    -->
+          <!-- </div> -->
+           <!-- <div class="col-md-1"> -->
+              <!-- <div class="main-section " style="padding-top: 14px"> -->
+                  <!-- <div class="input-bar-item"> -->
+                      <!-- <a class="css-xpr64j"     
+                      href="https://www.facebook.com/v9.0/dialog/oauth?client_id=1920128158125223&redirect_uri=http://localhost:4200/extract/destination/Template&state=0" style="margin-right: 5px;">
+                      Facebook token</a> -->
+                    <!-- </div> -->
+              <!-- </div>    -->
+          <!-- </div> -->
+          <!-- <div class="col-md-1"> -->
+              <!-- <div class="main-section" style="padding-top: 14px"> -->
+                  <!-- <div class="input-bar-item"> -->
+                      <!-- <a class="css-xpr64j"  
+                      href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.metadata.readonly&access_type=offline&include_granted_scopes=true&response_type=code&state=state_parameter_passthrough_value&redirect_uri=http%3A%2F%2Flocalhost%3A4200%2Fextract%2Fextraction%2Fsummary&client_id=101852806266-tacnlqnqqd5h6i7iilf2mn5a2e4aemot.apps.googleusercontent.com&flowName=GeneralOAuthFlow" style="margin-right: 5px;">
+                      Google account</a> -->
+                    <!-- </div> -->
+              <!-- </div>    -->
+          <!-- </div> -->
+          <!-- <div class="col-md-1"> -->
+              <!-- <div class="main-section" style="padding-top: 14px"> -->
+                  <!-- <div class="input-bar-item"> -->
+                      <!-- <a class="css-xpr64j"    
+                      href="http://localhost:4200/extract/AddNewConnection/Configuration?state=state_parameter_passthrough_value&code=4%2F0AY0e-g5LAa6PaaDmMpfRO8hUfZ5ftuLffAA7Ih48jH4GY8h_H5YouAUViEtvfx2Hm_iHew&scope=https:%2F%2Fwww.googleapis.com%2Fauth%2Fdrive%20https:%2F%2Fmail.google.com%2F%20https:%2F%2Fwww.googleapis.com%2Fauth%2Fspreadsheets.readonly%20https:%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.metadata.readonly" style="margin-right: 5px;">
+                      Upload File </a> -->
+                    <!-- </div> -->
+              <!-- </div>    -->
+          <!-- </div> -->
+          </div>
+           
+          
+          
+        </div>
+        </div>
+<!-- </div> -->
+<app-connect-filters></app-connect-filters>
+<div class="generic-django-admin-header" style="padding-top: 20px;">
+    <div class="main-section">
+        <div id="toolbar" class="filter-toolbar" role="toolbar">
+            <div class="actions btn-group btn-group-sm">
+                <button type="button" class="select-button-secondary" data-toggle="dropdown" style="min-width: 80px;">
+                {{_tablecounter}} of {{allConService._recordLength}}
+       
+            </button>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+<div id="content-main" class="contentMain">
+    <!-- Feedback -->
+    <div id="feedback-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×
+                </button>
+                    <h4 class="modal-title">Submit Error Classification Feedback</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="feedback-modal-form" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="feedback-text" class="col-sm-2 control-label">
+                      Your Feedback Message
+                      </label>
+                            <textarea rows="10" cols="50" id="feedback-text" required="">Please review this classification.</textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                Close
+                </button>
+                    <button id="feedback-modal-submit" class="btn btn-primary">Submit
+                </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feedback -->
+    <div id="changelist">
+        <form id="changelist-form" method="post" novalidate="">
+            <input type="hidden" name="csrfmiddlewaretoken" value="BzJ7MpE5jnM2lyqnbJrbEVtNiZc8GLk8udbCXR4ixTJfrCjd1V5zy452hpZwSEiq">
+            <input type="hidden" name="action" value="">
+            <input name="index" value="0" type="hidden">
+            <input class="select-across" name="select_across" value="0" type="hidden">
+            <div class="results">
+                <table id="result_list" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="action-checkbox-column">
+                                <input type="checkbox" name="all" [checked]="allcheckbox" (change)="checkAll($event)" (click)="functionCount($event)" />
+                            </th>
+
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('connectorName')">
+                                        Type
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="" [ngClass]="appearanceLogo_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="appearanceLogo_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('workspaceName')">
+                                        Workspace
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="" [ngClass]="workspaceName_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="workspaceName_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('account_Display_Name')">
+                                        Name
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="" [ngClass]="connectorName_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="connectorName_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('accessgranted')">
+                                        Access Granted
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="" [ngClass]="bstatus_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="bstatus_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('accessgranted')">
+                                        Destination Enabled
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="" [ngClass]="bstatus_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="bstatus_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let connection of allConService._connectionData;let i = index">
+                            <td>
+                                <input id="check{{i+1}}" type="checkbox" [(ngModel)]="connection.state" name="something" (change)="findCount(i,$event)" />
+                            </td>
+                            <td class="field-type_logo"><img src="assets\images\{{connection.appearanceLogo}}" class="type-logo" alt="{{connection.appearanceLogo}}"> - {{connection.connectorName}}</td>
+                            <td class="field-stack nowrap">{{connection.workspaceName}}</td>
+                            <td class="field-name" id="{{connection.sourceConnectionId}}"><a (click)="ConnectionUpdate(connection.sourceConnectionId,connection.connectorName,connection.sourceConnectorId,connection.appearanceLogo)"  routerLinkActive="ActiveRoute">{{connection.accountDisplayName}}</a></td>
+                            <td class="field-auth_status"><img src="assets\images\icon-{{connection.accessgranted}}.svg" alt="error" title="{{connection.accessgranted}}"></td>
+                            <td class="field-auth_status">
+                                <div class="switch">
+                                    <input type="checkbox" name="toggle{{i}}" [(ngModel)]="connection.destinationEnabled" [checked]="connection.destinationEnabled" (change)="ToggleDestination(i)">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pull-left changelist-botton-row changelist-pagination ">
+                &nbsp;
+                <span class="pagination-element-counter ">{{allConService._recordLength}} Connections</span>
+            </div>
+        </form>
+    </div>
+</div>

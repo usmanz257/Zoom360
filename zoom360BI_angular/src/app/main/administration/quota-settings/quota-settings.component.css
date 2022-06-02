@@ -1,0 +1,8 @@
+.control-width {
+    width: 478px !important;
+}
+
+.diabled-color {
+    background-color: rgb(102, 202, 203) !important;
+    cursor: not-allowed !important;
+}

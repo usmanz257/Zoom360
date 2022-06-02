@@ -1,0 +1,162 @@
+<!-- <div class="wrapper fadeInDown">
+  <div id="formContent"> -->
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <!-- <div class="fadeIn first">
+      <img src="/assets/images/gold-logo-angle.png" id="icon" alt="User Icon" />
+    </div> -->
+
+    <!-- Register Form -->
+    <!-- <form [formGroup]="registerForm" (ngSubmit)="register(registerForm.value)">
+      <div class="form-group col-12" *ngIf="isAlert">
+        <div class="alert alert-danger" role="alert">
+          Invalid Username or Password
+        </div>
+      </div>
+      
+      <input type="text" id="companyName" formControlName="userName" [ngClass]="{ 'is-invalid': submitted && registerFormControlles.companyName.errors }"
+        name="companyName" class="fadeIn second" placeholder="userName">
+        <div *ngIf="submitted && registerFormControlles.userName.errors" class="text-danger">
+          <div *ngIf="registerFormControlles.userName.errors.required">Comapny Name is required</div>
+        </div>
+      <div *ngIf="serverValidationErrors.firstName" class="text-danger">{{serverValidationErrors.firstName}}</div>
+
+      <input type="text" id="firstName" formControlName="firstName" [ngClass]="{ 'is-invalid': submitted && registerFormControlles.email.errors }"
+        name="firstName" class="fadeIn second" placeholder="First Name">
+      <div *ngIf="submitted && registerFormControlles.firstName.errors" class="text-danger">
+        <div *ngIf="registerFormControlles.firstName.errors.required">First Name is required</div>
+      </div>
+      <div *ngIf="serverValidationErrors.firstName" class="text-danger">{{serverValidationErrors.firstName}}</div>
+
+      <input type="text" id="lastName" class="fadeIn second" formControlName="lastName" [ngClass]="{ 'is-invalid': submitted && registerFormControlles.lastName.errors }"
+      name="lastName" placeholder="Last Name">
+      <div *ngIf="submitted && registerFormControlles.lastName.errors" class="text-danger">
+        <div *ngIf="registerFormControlles.lastName.errors.required">Last Name is required</div>
+      </div>
+      <div *ngIf="serverValidationErrors.lastName" class="text-danger">{{serverValidationErrors.lastName}}</div>
+
+      <input type="text" id="phone" class="fadeIn second" formControlName="phoneNumber" [ngClass]="{ 'is-invalid': submitted && registerFormControlles.phone.errors }"
+      name="phone" placeholder="Phone Number">
+      <div *ngIf="submitted && registerFormControlles.phoneNumber.errors" class="text-danger">
+        <div *ngIf="registerFormControlles.phoneNumber.errors.required">Phone is required</div>
+      </div>
+      <div *ngIf="serverValidationErrors.phone" class="text-danger">{{serverValidationErrors.phone}}</div>
+     
+      <input type="email" id="email" class="fadeIn second"  formControlName="email" [ngClass]="{ 'is-invalid': submitted && registerFormControlles.email.errors }"
+      name="email" placeholder="Email">
+      <div *ngIf="submitted && registerFormControlles.email.errors" class="text-danger">
+        <div *ngIf="registerFormControlles.email.errors.required">Email is required</div>
+        <div *ngIf="registerFormControlles.email.errors.email">Enter valid email</div>
+      </div>
+      <div *ngIf="serverValidationErrors.email" class="text-danger">{{serverValidationErrors.email}}</div>
+
+      <input type="password" id="password" class="fadeIn third" formControlName="password" [ngClass]="{ 'is-invalid': submitted && registerFormControlles.password.errors }"
+      name="password" placeholder="password">
+      <div *ngIf="submitted && registerFormControlles.email.errors" class="text-danger">
+        <div *ngIf="registerFormControlles.password.errors.required">Password is required</div>
+      </div>
+      <div *ngIf="serverValidationErrors.password" class="text-danger">{{serverValidationErrors.password}}</div> -->
+
+      <!-- <input type="password" id="confirmPassword" class="fadeIn third" formControlName="confirmPassword" [ngClass]="{ 'is-invalid': submitted && registerFormControlles.confirmPassword.errors }"
+      name="confirmPassword" placeholder="Confirm Password">
+
+      <div *ngIf="submitted && registerFormControlles.confirmPassword.errors" class="text-danger">
+        <div *ngIf="registerFormControlles.confirmPassword.errors.required">Confirm Password is required</div>
+        <div *ngIf="registerFormControlles.confirmPassword.errors.mustMatch">Passwords must match</div>
+      </div>
+      <div *ngIf="serverValidationErrors.confirmPassword" class="text-danger">{{serverValidationErrors.confirmPassword}}</div>
+ -->
+
+
+      <!-- <input type="submit" class="fadeIn fourth" value=Register>
+    </form> -->
+    <!-- Login -->
+    <!-- <div id="formFooter">
+      <a class="underlineHover" routerLink="/auth/login">Sign In</a>
+    </div>
+  </div>
+</div> -->
+<div id="content">
+  <div id="wrapper">
+     <p class="user-page-image">
+        <img src="../../../assets/images/Zoomlogo.png" class="logo" alt="Logo">
+     </p>
+     <hr>
+     <form class="user-form-page" [formGroup]="registerForm" (ngSubmit)="register(registerForm.value)">
+      <div class="form-group col-12" *ngIf="isAlert">
+        <div class="alert alert-danger" role="alert">
+          Invalid Username or Password
+        </div>
+      </div>
+      <!-- <p class="user-page-text">
+        <label for="id_username">User Name:</label> -->
+        <!-- <input type="text" name="username" autofocus="" required="" id="id_username" maxlength="254"> -->
+        <!-- <input type="text" id="companyName" formControlName="userName" [ngClass]="{ 'is-invalid': submitted && registerFormControlles.companyName.errors }"
+        name="companyName" class="fadeIn second" placeholder="userName">
+        <div *ngIf="submitted && registerFormControlles.userName.errors" class="text-danger">
+          <div *ngIf="registerFormControlles.userName.errors.required">Comapny Name is required</div>
+        </div>
+      <div *ngIf="serverValidationErrors.firstName" class="text-danger">{{serverValidationErrors.firstName}}</div> -->
+      <p class="user-page-text">
+        <label for="id_password">Email:</label>
+        <!-- <input type="password" name="password" required="" id="id_password"> -->
+        <input type="email" id="email" class="fadeIn second"  formControlName="email" [ngClass]="{ 'is-invalid': submitted && registerFormControlles.email.errors }"
+          name="email" placeholder="Email">
+          <div *ngIf="submitted && registerFormControlles.email.errors" class="text-danger">
+          <div *ngIf="registerFormControlles.email.errors.required">Email is required</div>
+         <div *ngIf="registerFormControlles.email.errors.email">Enter valid email</div>
+        </div>
+        <div *ngIf="serverValidationErrors.email" class="text-danger">{{serverValidationErrors.email}}</div>
+    
+        <p class="user-page-text">
+           <label for="id_username">First Name:</label>
+           <!-- <input type="text" name="username" autofocus="" required="" id="id_username" maxlength="254"> -->
+           <input type="text" id="firstName" formControlName="firstName" [ngClass]="{ 'is-invalid': submitted && registerFormControlles.email.errors }"
+        name="firstName" class="fadeIn second" placeholder="First Name">
+      <div *ngIf="submitted && registerFormControlles.firstName.errors" class="text-danger">
+        <div *ngIf="registerFormControlles.firstName.errors.required">First Name is required</div>
+      </div>
+      <div *ngIf="serverValidationErrors.firstName" class="text-danger">{{serverValidationErrors.firstName}}</div>
+   
+          <p class="user-page-text">
+           <label for="id_username">Last Name:</label>
+           <!-- <input type="text" name="username" autofocus="" required="" id="id_username" maxlength="254"> -->
+           <input type="text" id="lastName" class="fadeIn second" formControlName="lastName" [ngClass]="{ 'is-invalid': submitted && registerFormControlles.lastName.errors }"
+      name="lastName" placeholder="Last Name">
+      <div *ngIf="submitted && registerFormControlles.lastName.errors" class="text-danger">
+        <div *ngIf="registerFormControlles.lastName.errors.required">Last Name is required</div>
+      </div>
+      <div *ngIf="serverValidationErrors.lastName" class="text-danger">{{serverValidationErrors.lastName}}</div>
+       
+        <p class="user-page-text">
+           <label for="id_email">Phone No:</label>
+           <!-- <input type="text" name="email" autofocus="" required="" id="id_email" maxlength="254"> -->
+           <input type="text" id="phone" class="fadeIn second" formControlName="phoneNumber" [ngClass]="{ 'is-invalid': submitted && registerFormControlles.phone.errors }"
+      name="phone" placeholder="Phone Number">
+      <div *ngIf="submitted && registerFormControlles.phoneNumber.errors" class="text-danger">
+        <div *ngIf="registerFormControlles.phoneNumber.errors.required">Phone is required</div>
+      </div>
+      <div *ngIf="serverValidationErrors.phone" class="text-danger">{{serverValidationErrors.phone}}</div>
+        
+       
+        <p class="user-page-text">
+           <label for="id_password">Password:</label>
+           <input type="password" id="password" class="fadeIn third" formControlName="password" [ngClass]="{ 'is-invalid': submitted && registerFormControlles.password.errors }"
+           name="password" placeholder="password">
+           <div *ngIf="submitted && registerFormControlles.email.errors" class="text-danger">
+             <div *ngIf="registerFormControlles.password.errors.required">Password is required</div>
+           </div>
+           <div *ngIf="serverValidationErrors.password" class="text-danger">{{serverValidationErrors.password}}</div>
+           <!-- <input type="password" name="password" required="" id="id_password"> -->
+       
+       <p> <button type="submit" name="Signup">Signup</button></p>
+       <p> <button type="button" name="Signup" routerLink="/auth/login">Sign in</button></p>
+     </form>
+     <hr>
+     <div class="saml-idpselection">
+        <div class="saml-idpselection__idplist">
+        </div>
+     </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+/* .e-input-group, .e-input-group.e-control-wrapper {
+     display: inline-flex; 
+    vertical-align: baseline !important;
+} */
+.query-container{
+    border: 1px solid black ;
+    border-radius: 10px ;
+}

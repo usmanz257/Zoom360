@@ -1,0 +1,612 @@
+<button type="button" class="btn btn-info btn-sm pull-right " style="margin-bottom: 5px; margin-top:5px;" (click)="updateLayout()">Update layout</button>
+<gridster [options]="options" [ngStyle]="{'background':this.options.backgroundColor}">
+<ng-container *ngFor="let item of Widgets;let i=index">
+    <gridster-item [item]="item.layout">
+        <!-- <div class="">
+            <div class="d-flex align-items-center justify-content-between chart_header_custom">
+              <span class="px-3">  {{item.name}}
+              </span>  
+            </div>
+            </div> -->
+        <!-- <highcharts-chart [Highcharts]="Highcharts" [options]="item?.chart"
+            style="width: 100%; height: 100%; display: block;" *ngIf="!(item.type == 'table' ||  item.type == 'dualaxis')"></highcharts-chart>
+             -->
+             <!-- <highcharts-chart [constructorType]="item.type == 'stock' ? 'stockChart' : ''"></highcharts-chart> -->
+        <highcharts-chart [Highcharts]="Highcharts" [options]="item?.chart" 
+        [constructorType]="item.type == 'stock' ? 'stockChart' : ''"
+        style="width: 100%; height: 100%; display: block;" *ngIf="!(item.type == 'table' || item.type == 'DMATPtable' ||  item.type == 'DefaultScoreCard' ||  
+        item.type == 'DMALSScoreCard' || item.type == 'DMNPSScoreCard' || item.type == 'MultiBRScoreCardimg' ||  
+        item.type == 'DMDRScoreCard' || item.type == 'MultiBRScoreCardimgTwo' || 
+        item.type == 'DMWTLRScoreCard' || item.type == 'DMCDScoreCard' || item.type == 'DMEWLScoreCard' || 
+         item.type == 'DMNSCRScoreCard' || item.type == 'DMCACScoreCard' ||  
+         item.type == 'DMBRScoreCard' || item.type == 'ScoreCardtwoValue' || item.type == 'DMMOCScoreCard' || 
+         item.type == 'ScoreCardValueColor' || item.type == 'imgScoreCard' || item.type == 'ScoreCardColorLPurple' || item.type == 'AIWidgetStyleCard') ">
+        </highcharts-chart>
+        <!-- <highcharts-chart [Highcharts]="Highcharts" [options]="mayChart2"style="width: 100%; height: 100%; display: block;" *ngIf="item.type == 'dualaxis'"></highcharts-chart> -->
+        <ag-grid-angular style="width: 100%; height: 100%;" class="ag-theme-alpine" (gridReady)="onGridReady($event,item)"
+        [rowData]="item?.rowData" [columnDefs]="item?.columnDefs" *ngIf="item.type == 'table'">
+        </ag-grid-angular>
+        <!-- start default score card -->
+        <div  *ngIf="item.type == 'DefaultScoreCard'"  style="height: 100%;width: 100%;"
+        [ngStyle]="{'background':item.chart.colorBackground,'color':item.chart.colorForeground,'display':item.chart.display,'flex-direction':item.chart.flexDirection,
+        'justify-content':item.chart.justifyContent,'align-items':item.chart.alignItems,'overflow' :'auto'}">
+        <ng-container *ngFor="let measure of item?.measure">
+            <div>
+                <h5 [ngStyle]="{'width':item.chart.width, 'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                [ngClass]="{'bgCounterStyle':item.chart.bgCounterColorStyle,'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                [countUp]="measure.total" 
+                [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                <h6 class="text-center">{{measure.name}}</h6>
+            </div>
+            <hr aria-orientation="vertical" [ngClass]="{'separatorScorecard':item.chart.scoreCardHr,
+                'separatorScorecardNone':!item.chart.scoreCardHr}">
+        </ng-container>
+        </div>
+         <!--end default score card -->
+        <!-- Start scorecard with one value color -->
+        <div  *ngIf="item.type == 'ScoreCardValueColor'" style="width: 100%; height: 100%;grid-template-columns: repeat(3, 1fr);"
+            [ngStyle]="{'background':item.chart.colorBackground,'color':item.chart.colorForeground,'display':item.chart.display,
+            'justify-content':item.chart.justifyContent,'text-align':item.chart.counterAlign,'grid-template-columns':'repeat(3, 1fr)','gap':'10px','align-items':'center','overflow':'auto'}">
+            <ng-container>
+                <div>
+                    <h5  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                    [countUp]="item?.measure[0].total" 
+                    [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                    <h6 class="text-center">{{item?.measure[0].name}}</h6>
+                </div>
+                <hr aria-orientation="vertical" [ngClass]="{'separatorScorecard':item.chart.scoreCardHr,
+                    'separatorScorecardNone':!item.chart.scoreCardHr}">
+                <div>
+                    <h5  class="text-center" style="line-height: 9px;" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight, 'background':item.chart.bgCounterColor}"
+                    [ngClass]="{'bgClrCounterStyle':item.chart.bgCounterColorStyle, 'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                    [countUp]="item?.measure[1].total" 
+                    [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                    <h6 class="text-center">{{item?.measure[1].name}}</h6>
+                </div>
+                <hr aria-orientation="vertical" [ngClass]="{'separatorScorecard':item.chart.scoreCardHr,
+                    'separatorScorecardNone':!item.chart.scoreCardHr}">
+                <div>
+                    <h5  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                    [countUp]="item?.measure[2].total" 
+                    [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                    <h6 class="text-center">{{item?.measure[2].name}}</h6>
+                </div>
+            </ng-container>
+        </div>
+        <!-- end scorecard with one value color -->
+        <!-- Start scorecard with one value color Purple -->
+        <div  *ngIf="item.type == 'ScoreCardColorLPurple'" style="width: 100%; height: 100%;grid-template-columns: repeat(3, 1fr);"
+            [ngStyle]="{'background':item.chart.colorBackground,'color':item.chart.colorForeground,'display':item.chart.display,
+            'justify-content':item.chart.justifyContent,'text-align':item.chart.counterAlign,'grid-template-columns':'repeat(3, 1fr)','gap':'10px','align-items':'center','overflow':'auto'}">
+            <ng-container>
+                <div>
+                    <h5  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                    [countUp]="item?.measure[0].total" 
+                    [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                    <h6 class="text-center">{{item?.measure[0].name}}</h6>
+                </div>
+                <hr aria-orientation="vertical" [ngClass]="{'separatorScorecard':item.chart.scoreCardHr,
+                    'separatorScorecardNone':!item.chart.scoreCardHr}">
+                <div>
+                    <h5  class="text-center" style="line-height: 9px;" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight, 'background':item.chart.bgCounterColor}"
+                    [ngClass]="{'bgClrCounterStyle':item.chart.bgCounterColorStyle, 'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                    [countUp]="item?.measure[1].total" 
+                    [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                    <h6 class="text-center">{{item?.measure[1].name}}</h6>
+                </div>
+                <hr aria-orientation="vertical" [ngClass]="{'separatorScorecard':item.chart.scoreCardHr,
+                    'separatorScorecardNone':!item.chart.scoreCardHr}">
+                <div>
+                    <h5  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                    [countUp]="item?.measure[2].total" 
+                    [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                    <h6 class="text-center">{{item?.measure[2].name}}</h6>
+                </div>
+            </ng-container>
+        </div>
+        <!-- end scorecard with one value color Purple -->
+        <!-- start image card -->
+        <div  *ngIf="item.type == 'imgScoreCard'" [ngStyle]="{'display':item.chart.display}"  style="height: 100%;width: 100%; text-align: center;">
+            <ng-container>
+                <div style="margin: 20px;" >
+                    <img [src]="item.chart.cardImg" alt="" >
+
+                </div>
+                <div>
+                    <a href="">{{item.chart.cardImgText}}</a>
+                </div>
+            </ng-container>
+        </div>
+        <!-- end image card -->
+         <!--start ScoreCardtwoValue -->
+        <div  *ngIf="item.type == 'ScoreCardtwoValue'" style="width: 100%; height: 100%;grid-template-columns: repeat(3, 1fr);"
+            [ngStyle]="{'background':item.chart.colorBackground,'color':item.chart.colorForeground,'display':item.chart.display,'flex-direction':item.chart.flexDirection,
+            'justify-content':item.chart.justifyContent,'align-items':item.chart.alignItems,'overflow' :'auto'}">
+            <ng-container>
+                <div>
+                    <h5  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                    [countUp]="item?.measure[0].total" 
+                    [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                    <h6 class="text-center">{{item?.measure[0].name}}</h6>
+                </div>
+                <hr aria-orientation="vertical" [ngClass]="{'separatorScorecard':item.chart.scoreCardHr,
+                    'separatorScorecardNone':!item.chart.scoreCardHr}">
+                <div>
+                    <h5  class="text-center" style="    font-size: 16px;line-height: 8px;" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'background':item.chart.bgCounterColor}"
+                    [ngClass]="{'bgClrCounterStyle':item.chart.bgCounterColorStyle, 'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                    [countUp]="item?.measure[1].total" 
+                    [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                    <h6 class="text-center">{{item?.measure[1].name}}</h6>
+                </div>
+            </ng-container>
+        </div>
+         <!-- end ScoreCardtwoValue -->
+        <!-- <div  *ngIf="item.type == 'scorecard'"  style="height: 100%;width: 100%;"
+            [ngStyle]="{'background':item.chart.colorBackground,'color':item.chart.colorForeground,'display':item.chart.display,'flex-direction':item.chart.flexDirection,
+            'justify-content':item.chart.justifyContent,'align-items':item.chart.alignItems,'overflow' :'auto'}"> 
+            <app-dm-average-lead-score   [test]="this.Widgets" ></app-dm-average-lead-score> 
+            </div> -->
+        <!-- DMALSScoreCard -->
+        <div  *ngIf="item.type == 'DMALSScoreCard'" style="width: 100%; height: 100%;grid-template-columns: repeat(3, 1fr);"
+            [ngStyle]="{'background':item.chart.colorBackground,'color':item.chart.colorForeground,'display':item.chart.display,
+            'justify-content':item.chart.justifyContent,'text-align':item.chart.counterAlign,'grid-template-columns':'repeat(3, 1fr)','gap':'10px','align-items':'center','overflow':'auto'}">
+            <ng-container *ngFor="let measure of item?.measure">
+                <div>
+                    <h5  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                    [ngClass]="{'bgCounterStyle':item.chart.bgCounterColorStyle, 'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                    [countUp]="measure.total" 
+                    [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                    <h6 class="text-center" [ngStyle]="{'font-size':item.chart.labelfontSize,'font-weight':item.chart.labelfontWeight}">{{measure.name}}</h6>
+                </div>
+                <!-- <hr aria-orientation="vertical" [ngClass]="{'separatorScorecard':item.chart.scoreCardHr,
+                    'separatorScorecardNone':!item.chart.scoreCardHr}"> -->
+            </ng-container>
+        </div>
+        <!-- start DMBRScoreCard -->
+        <div  *ngIf="item.type == 'DMBRScoreCard'" style="width: 100%; height: 100%;grid-template-columns: repeat(3, 1fr);"
+        [ngStyle]="{'background':item.chart.colorBackground,'color':item.chart.colorForeground,'display':item.chart.display,
+        'justify-content':item.chart.justifyContent,'text-align':item.chart.counterAlign,'grid-template-columns':'repeat(3, 1fr)','gap':'10px','align-items':'center','overflow':'auto'}">
+            <ng-container>
+                <div style="display:inline-flex;">
+                    <div>
+                        <h5 style="font-size:52px; font-weight: 600;" class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign}"
+                        [ngClass]="{'bgCounterStyle':item.chart.bgCounterColorStyle, 'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                        [countUp]="item?.measure[0].total" 
+                        [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                        <!-- <h6 class="text-center">{{item?.measure[0].name}}</h6> -->
+                    </div>
+                    <div>
+                        <div style="display: flex;width: fit-content;">
+                            <h5 style="font-size: 18px; font-weight: 500; padding: 0 8px 0 10px; margin-bottom: 0;" class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign}"
+                            [ngClass]="{'bgCounterStyle':item.chart.bgCounterColorStyle, 'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                            [countUp]="item?.measure[2].total" 
+                            [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                            <div>
+                                <img src="../../../../assets/images/arrow-up-filled-triangle.png"  width="8px" height="8px" alt="">
+                          <!-- <img [src]="item.chart.iconImg" width="8px" height="8px" alt=""> -->
+                            <!-- <h6 style="margin: 3px 0 0 0;" class="text-center">{{item?.measure[2].name}}</h6> -->
+                        </div>
+                        </div>
+                        <div style="display: flex;width: fit-content; margin: 0 0 0 7px;">
+                            <h5 style="padding: 0 5px 0 5px;">vs.</h5>
+                            <h5 style="font-size: 12px; font-weight: 500;"  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign}"
+                            [ngClass]="{'bgCounterStyle':item.chart.bgCounterColorStyle, 'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                            [countUp]="item?.measure[1].total" 
+                            [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                            <h6 style="padding: 0 5px 0 5px;" class="text-center">{{item?.measure[1].name}}</h6>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <!-- end DMBRScoreCard -->
+        <!-- start DMMOCScoreCard -->
+        <div  *ngIf="item.type == 'DMMOCScoreCard'"  style="height: 100%;width: 100%;"
+                [ngStyle]="{'background':item.chart.colorBackground,'color':item.chart.colorForeground,'display':item.chart.display,'flex-direction':item.chart.flexDirection,
+                'justify-content':item.chart.justifyContent,'align-items':item.chart.alignItems,'overflow' :'auto'}">
+                <ng-container *ngFor="let measure of item?.measure">
+                    <div>
+                        <h5 [ngStyle]="{'width':item.chart.width, 'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                        [ngClass]="{'bgCounterStyle':item.chart.bgCounterColorStyle,'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                        [countUp]="measure.total" 
+                        [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                        <h6>of total customers</h6>
+                        <!-- <h6 class="text-center">{{measure.name}}</h6> -->
+                    </div>
+                </ng-container>
+        </div>
+        <!--end DMMOCScoreCard -->
+         <!-- start DMNPSScoreCard -->
+        <div  *ngIf="item.type == 'DMNPSScoreCard'" style="width: 100%; height: 100%;grid-template-columns: repeat(3, 1fr);"
+                [ngStyle]="{'background':item.chart.colorBackground,'color':item.chart.colorForeground,'display':item.chart.display,
+                'justify-content':item.chart.justifyContent,'text-align':item.chart.counterAlign,'grid-template-columns':'repeat(3, 1fr)','gap':'10px','align-items':'center','overflow':'auto'}">
+                <ng-container>
+                    <div style="display:inline-flex;">
+                        <div>
+                            <h5 style="font-size:52px; font-weight: 600;" class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign}"
+                            [ngClass]="{'bgCounterStyle':item.chart.bgCounterColorStyle, 'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                            [countUp]="item?.measure[0].total" 
+                            [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                            <!-- <h6 class="text-center">{{item?.measure[0].name}}</h6> -->
+                        </div>
+                        <div>
+                            <div style="display: flex;width: fit-content;">
+                                <!-- <img src="../../../../assets/images/arrow-up-filled-triangle.svg" style="color: #56b853;" width="7px" height="7px" alt=""> -->
+                                <h5 style="font-size: 18px; font-weight: 500; padding: 0 8px 0 10px; margin-bottom: 0;" class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign}"
+                                [ngClass]="{'bgCounterStyle':item.chart.bgCounterColorStyle, 'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                                [countUp]="item?.measure[1].total" 
+                                [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                                <!-- <h6 style="margin: 3px 0 0 0;" class="text-center">{{item?.measure[1].name}}</h6> -->
+                            </div>
+                            <div style="display: flex;width: fit-content; margin: 0 0 0 7px;">
+                                <h5 style="padding: 0 5px 0 5px;">vs.</h5>
+                                <h5 style="font-size: 12px; font-weight: 500;"  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign}"
+                                [ngClass]="{'bgCounterStyle':item.chart.bgCounterColorStyle, 'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                                [countUp]="item?.measure[2].total" 
+                                [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                                <h6 style="padding: 0 5px 0 5px;" class="text-center">{{item?.measure[2].name}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+        </div>
+        <!-- end DMNPSScoreCard -->
+        <!-- start DMNSCRScoreCard -->
+        <div  *ngIf="item.type == 'DMNSCRScoreCard'"  style="height: 100%;width: 100%;"
+          [ngStyle]="{'background':item.chart.colorBackground,'color':item.chart.colorForeground,'display':item.chart.display,'flex-direction':item.chart.flexDirection,
+          'justify-content':item.chart.justifyContent,'align-items':item.chart.alignItems,'overflow' :'auto'}">
+          <ng-container *ngFor="let measure of item?.measure">
+            <div>
+                <h5 [ngStyle]="{'width':item.chart.width, 'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                [ngClass]="{'bgCounterStyle':item.chart.bgCounterColorStyle,'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                [countUp]="measure.total" 
+                [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                <h6 class="text-center">{{measure.name}}</h6>
+            </div>
+            <hr aria-orientation="vertical" [ngClass]="{'separatorScorecard':item.chart.scoreCardHr,
+                'separatorScorecardNone':!item.chart.scoreCardHr}">
+          </ng-container>
+        </div>
+        <!--end DMNSCRScoreCard -->
+        <!-- start DMCACScoreCard -->
+        <div  *ngIf="item.type == 'DMCACScoreCard'"  style="height: 100%;width: 100%;"
+                [ngStyle]="{'background':item.chart.colorBackground,'color':item.chart.colorForeground,'display':item.chart.display,'flex-direction':item.chart.flexDirection,
+                'justify-content':item.chart.justifyContent,'align-items':item.chart.alignItems,'overflow' :'auto'}">
+                <ng-container>
+                    <div>
+                        <h5 [ngStyle]="{'width':item.chart.width, 'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                        [ngClass]="{'bgCounterStyle':item.chart.bgCounterColorStyle,'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                        [countUp]="item?.measure[0].total" 
+                        [options]="{prefix:item.chart.prefix}">0</h5>
+                    </div>
+                    <div style="display: flex;width: fit-content; margin: 0 0 0 7px;">
+                        <!-- <h5 style="padding: 0 5px 0 5px;">vs.</h5> -->
+                        <div style="padding: 0 5px;">
+                        <img [src]="item.chart.iconImg" width="8px" height="8px" style="margin-bottom: 6px;" alt="">
+                            <!-- <h6 style="margin: 3px 0 0 0;" class="text-center">{{item?.measure[2].name}}</h6> -->
+                        </div>
+                        <h5 style="font-size: 12px; font-weight: 600;"  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign}"
+                        [ngClass]="{'bgCounterStyle':item.chart.bgCounterColorStyle, 'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                        [countUp]="item?.measure[1].total" 
+                        [options]="{suffix:item.chart.suffix}">0</h5>
+                        <h6 style="padding: 0 5px 0 5px;" class="text-center">{{item?.measure[1].name}}</h6>
+                    </div>
+                </ng-container>
+        </div>
+        <!--end DMCACScoreCard -->
+        <!-- start DMWTLRScoreCard -->
+        <div  *ngIf="item.type == 'DMWTLRScoreCard'"  style="height: 100%;width: 100%;"
+                [ngStyle]="{'background':item.chart.colorBackground,'color':item.chart.colorForeground,'display':item.chart.display,'flex-direction':item.chart.flexDirection,
+                'justify-content':item.chart.justifyContent,'align-items':item.chart.alignItems,'overflow' :'auto'}">
+                <ng-container>
+                    <div style="display:flex">
+                        <h5 [ngStyle]="{'width':item.chart.width, 'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                        [ngClass]="{'bgCounterStyle':item.chart.bgCounterColorStyle,'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                        [countUp]="item?.measure[0].total" 
+                        [options]="">0</h5>
+                        <h4 style="font-weight: 600; font-size:32px;margin: 0 5px;">:</h4>
+                        <h4 [ngStyle]="{'width':item.chart.width, 'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                        [ngClass]="{'bgCounterStyle':item.chart.bgCounterColorStyle,'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                        [countUp]="item?.measure[1].total" 
+                        [options]="">0</h4>
+                    </div>
+                    <div style="display:flex;">
+                        <h6 style="font-size: 18px; font-weight: 600;"
+                        [ngClass]="{'bgCounterStyle':item.chart.bgCounterColorStyle,'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                        [countUp]="item?.measure[2].total" 
+                        [options]="{suffix:item.chart.suffix}">0</h6>    
+                        <h6 style="font-size: 18px; font-weight: 600;">Conversion Rate</h6>
+                    </div>
+                </ng-container>
+        </div>
+        <!--end DMWTLRScoreCard -->
+        
+         <!-- start DMCDScoreCard -->
+         <div  *ngIf="item.type == 'DMCDScoreCard'"  style="height: 100%;width: 100%;"
+           [ngStyle]="{'background':item.chart.colorBackground,'color':item.chart.colorForeground,'display':item.chart.display,'flex-direction':item.chart.flexDirection,
+          'justify-content':item.chart.justifyContent,'align-items':item.chart.alignItems,'overflow' :'auto'}">
+            <ng-container>
+                <div>
+                    <h5  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                    [countUp]="item?.measure[0].total" 
+                    [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                    <h6 class="text-center">{{item?.measure[0].name}}</h6>
+                </div>
+                <div style="grid-template-columns: repeat(3, 1fr);"
+                [ngStyle]="{'background':item.chart.colorBackground,'color':item.chart.colorForeground,'display':item.chart.display,
+                'justify-content':item.chart.justifyContent,'text-align':item.chart.counterAlign,'grid-template-columns':'repeat(3, 1fr)','gap':'40px','align-items':'center','overflow':'auto'} ">
+                <div>
+                    <h5  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                    [countUp]="item?.measure[1].total" 
+                    [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                    <h6 class="text-center">{{item?.measure[1].name}}</h6>
+                </div>
+                <div>
+                    <h5  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                    [countUp]="item?.measure[2].total" 
+                    [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                    <h6 class="text-center">{{item?.measure[2].name}}</h6>
+                </div>
+                <div>
+                    <h5  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                    [countUp]="item?.measure[3].total" 
+                    [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                    <h6 class="text-center">{{item?.measure[3].name}}</h6>
+                </div>
+            </div>
+             </ng-container>
+         </div>
+        <!--end DMCDScoreCard -->
+        <!-- start DMDRScoreCard -->
+        <div  *ngIf="item.type == 'DMDRScoreCard'"  style="height: 100%;width: 100%;"
+          [ngStyle]="{'background':item.chart.colorBackground,'color':item.chart.colorForeground,'display':item.chart.display,'flex-direction':item.chart.flexDirection,
+          'justify-content':item.chart.justifyContent,'align-items':item.chart.alignItems,'overflow' :'auto'}">
+          <ng-container *ngFor="let measure of item?.measure">
+            <div>
+
+                <h5 [ngStyle]="{'width':item.chart.width, 'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                [ngClass]="{'bgCounterStyle':item.chart.bgCounterColorStyle,'bgCounterStyleDefault':!item.chart.bgCounterColorStyle}"
+                [countUp]="measure.total" 
+                [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                <h6 class="text-center">{{measure.name}}</h6>
+            </div>
+          </ng-container>
+        </div>
+        <!--end DMDRScoreCard -->
+                <!-- start DMEWLScoreCard -->
+        <!-- <div  *ngIf="item.type == 'DMEWLScoreCard'"  style="height: 100%;width: 100%;"
+                [ngStyle]="{'background':item.chart.colorBackground,'color':item.chart.colorForeground,
+                'display':item.chart.display,'flex-direction':item.chart.flexDirection,
+                'justify-content':item.chart.justifyContent,'align-items':item.chart.alignItems,'overflow' :'auto'}">
+                <ng-container>
+                    <div>
+                        <h5  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                        [countUp]="item?.measure[1].total" 
+                        [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                        <h6 class="text-center">{{item?.measure[1].name}}</h6>
+                    </div>
+                    <div>
+                        <h5  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                        [countUp]="item?.measure[0].total" 
+                        [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                        <h6 class="text-center">{{item?.measure[0].name}}</h6>
+                    </div>
+                    <div>
+                        <h5  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                        [countUp]="item?.measure[2].total" 
+                        [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                        <h6 class="text-center">{{item?.measure[2].name}}</h6>
+                    </div>
+                    <div>
+                        <h5  class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign,'font-size':item.chart.fontSize,'font-weight':item.chart.fontWeight}"
+                        [countUp]="item?.measure[3].total" 
+                        [options]="{prefix:item.chart.prefix,suffix:item.chart.suffix}">0</h5>
+                        <h6 class="text-center">{{item?.measure[3].name}}</h6>
+                    </div>
+                </ng-container>
+        </div> -->
+
+        <!--end DMEWLScoreCard -->
+        <!-- start MultiBRScoreCardimg -->
+        <div  *ngIf="item.type == 'MultiBRScoreCardimg'" style="width: 100%; height: 100%;display: flex;flex-direction: column;
+        justify-content: center;align-items: center;overflow: auto;">
+            <ng-container *ngFor="let itemData of this.Widgets[i].chart.data;let j=index">
+                <div style="display:flex; gap: 18px;flex-direction: row;align-items: center; margin-bottom: 20px;">
+                    <div *ngIf="itemData[item.dimension[0].name]!=''">
+                         <img [src]="itemData[item.dimension[0].name]"  width="40px" height="40px" alt="{{itemData[item.dimension[0].name]}}" >
+                    </div>
+                    <div> 
+                        <div  style="display:flex;flex-direction:row;vertical-align: middle;">
+                        <h5 *ngIf="itemData[item?.measure[0].name]!=''" style="font-size:49px; font-weight: 600; margin: 0;" class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign}"
+                       [countUp]="itemData[item?.measure[0].name]">0</h5>
+                        <h5 *ngIf="itemData[item?.dimension[1].name]!=''" style="font-size:49px; font-weight: 600;margin: 0;">{{itemData[item?.dimension[1].name]}}</h5>
+                    </div>
+                        <h6 *ngIf="itemData[item?.dimension[2].name]!=''" class="text-center">{{itemData[item?.dimension[2].name]}}</h6>
+                    </div>
+                    <div>
+                    <div>
+                        <div style="display:flex; gap:4px;flex-direction: row;align-items: center;">
+                            <div>
+                            <h5 *ngIf="itemData[item?.measure[1].name]!=''" style="font-size: 18px; font-weight: 500;text-align: center;margin: 0px;" class="text-center" 
+                            [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign}"
+                          [countUp]="itemData[item?.measure[1].name]">0</h5>
+                        </div>
+                            <div *ngIf="itemData[item?.dimension[3].name]!=''">
+                            <h5  style="margin: 2px 0 0 0;">{{itemData[item?.dimension[3].name]}}</h5>
+                        </div>
+                        <div *ngIf="itemData[item.dimension[4].name]!=''">
+                            <img [src]="itemData[item.dimension[4].name]"  width="8px" height="8px" alt="{{itemData[item.dimension[4].name]}}">
+                        </div>
+                        </div>
+                        <div  *ngIf="itemData[item?.dimension[5].name]!=''" >
+                            <h6>{{itemData[item?.dimension[5].name]}}</h6>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="display:flex; gap:4px;flex-direction: row;align-items: center;">
+                         <div *ngIf="itemData[item?.measure[2].name]!=''">
+                            <h5   style="font-size: 18px; font-weight: 500; margin: 0;" class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign}"
+                        [countUp]="itemData[item?.measure[2].name]">0</h5>
+                        </div>
+                        <div *ngIf="itemData[item?.dimension[6].name]!=''">
+                            <h5 style="margin: 2px 0 0 0;">{{itemData[item?.dimension[6].name]}}</h5>
+                        </div>
+                            <div *ngIf="itemData[item.dimension[7].name]!=''"> 
+                                <img [src]="itemData[item.dimension[7].name]"  width="8px" height="8px" alt="{{itemData[item.dimension[7].name]}}">
+                            </div>
+                        </div>
+                        <div *ngIf="itemData[item?.dimension[8].name]!=''">
+                            <h6>{{itemData[item?.dimension[8].name]}}</h6>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </ng-container>
+        </div>
+        <!-- end MultiBRScoreCardimg -->
+        <!-- start MultiBRScoreCardimgTwo -->
+        <div  *ngIf="item.type == 'MultiBRScoreCardimgTwo'" style="width: 100%; height: 100%;display: flex;flex-direction: column;
+                justify-content: center;align-items: center;overflow: auto;">
+                    <ng-container *ngFor="let itemData of this.Widgets[i].chart.data;let j=index">
+                        <div style="display:flex; gap: 18px;flex-direction: row;align-items: center; margin-bottom: 20px;">
+                            <div *ngIf="itemData[item.dimension[0].name]!=''">
+                                 <img [src]="itemData[item.dimension[0].name]"  width="40px" height="40px" alt="{{itemData[item.dimension[0].name]}}" >
+                            </div>
+                            <div> 
+                                <div  style="display: flex;flex-direction: row;vertical-align: middle;">
+                                <h5 *ngIf="itemData[item?.measure[0].name]!=''" style="font-size:49px; font-weight: 600; margin: 0;" class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign}"
+                               [countUp]="itemData[item?.measure[0].name]">0</h5>
+                                <h5 *ngIf="itemData[item?.dimension[1].name]!=''" style="font-size:49px; font-weight: 600;margin: 0;">{{itemData[item?.dimension[1].name]}}</h5>
+                            </div>
+                                <h6 *ngIf="itemData[item?.dimension[2].name]!=''" class="text-center">{{itemData[item?.dimension[2].name]}}</h6>
+                            </div>
+                            <div>
+                            <div>
+                                <div style="display:flex; gap:4px;flex-direction: row;align-items: center;">
+                                    <div>
+                                    <h5 *ngIf="itemData[item?.measure[1].name]!=''" style="font-size: 18px; font-weight: 500;text-align: center;margin: 0px;" class="text-center" 
+                                    [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign}"
+                                  [countUp]="itemData[item?.measure[1].name]">0</h5>
+                                </div>
+                                    <div *ngIf="itemData[item?.dimension[3].name]!=''">
+                                    <h5  style="margin: 2px 0 0 0;">{{itemData[item?.dimension[3].name]}}</h5>
+                                </div>
+                                <div *ngIf="itemData[item.dimension[4].name]!=''">
+                                    <img [src]="itemData[item.dimension[4].name]"  width="8px" height="8px" alt="{{itemData[item.dimension[4].name]}}">
+                                </div>
+                                </div>
+                                <div  *ngIf="itemData[item?.dimension[5].name]!=''" >
+                                    <h6>{{itemData[item?.dimension[5].name]}}</h6>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display:flex; gap:4px;flex-direction: row;align-items: center;">
+                                 <div *ngIf="itemData[item?.measure[2].name]!=''">
+                                    <h5   style="font-size: 18px; font-weight: 500; margin: 0;" class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign}"
+                                [countUp]="itemData[item?.measure[2].name]">0</h5>
+                                </div>
+                                <div *ngIf="itemData[item?.dimension[6].name]!=''">
+                                    <h5 style="margin: 2px 0 0 0;">{{itemData[item?.dimension[6].name]}}</h5>
+                                </div>
+                                    <div *ngIf="itemData[item.dimension[7].name]!=''"> 
+                                        <img [src]="itemData[item.dimension[7].name]"  width="8px" height="8px" alt="{{itemData[item.dimension[7].name]}}">
+                                    </div>
+                                </div>
+                                <div *ngIf="itemData[item?.dimension[8].name]!=''">
+                                    <h6>{{itemData[item?.dimension[8].name]}}</h6>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display:flex; gap:4px;flex-direction: row;align-items: center;">
+                                 <div *ngIf="itemData[item?.measure[3].name]!=''">
+                                    <h5   style="font-size: 18px; font-weight: 500; margin: 0;" class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign}"
+                                [countUp]="itemData[item?.measure[3].name]">0</h5>
+                                </div>
+                                <div *ngIf="itemData[item?.dimension[9].name]!=''">
+                                    <h5 style="margin: 2px 0 0 0;">{{itemData[item?.dimension[9].name]}}</h5>
+                                </div>
+                                    <div *ngIf="itemData[item.dimension[10].name]!=''"> 
+                                        <img [src]="itemData[item.dimension[10].name]"  width="8px" height="8px" alt="{{itemData[item.dimension[10].name]}}">
+                                    </div>
+                                </div>
+                                <div *ngIf="itemData[item?.dimension[11].name]!=''">
+                                    <h6>{{itemData[item?.dimension[11].name]}}</h6>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display:flex; gap:4px;flex-direction: row;align-items: center;">
+                                 <div *ngIf="itemData[item?.measure[4].name]!=''">
+                                    <h5   style="font-size: 18px; font-weight: 500; margin: 0;" class="text-center" [ngStyle]="{'width':item.chart.width,'text-align':item.chart.counterAlign}"
+                                [countUp]="itemData[item?.measure[4].name]">0</h5>
+                                </div>
+                                <div *ngIf="itemData[item?.dimension[12].name]!=''">
+                                    <h5 style="margin: 2px 0 0 0;">{{itemData[item?.dimension[12].name]}}</h5>
+                                </div>
+                                    <div *ngIf="itemData[item.dimension[13].name]!=''"> 
+                                        <img [src]="itemData[item.dimension[13].name]"  width="8px" height="8px" alt="{{itemData[item.dimension[13].name]}}">
+                                    </div>
+                                </div>
+                                <div *ngIf="itemData[item?.dimension[14].name]!=''">
+                                    <h6>{{itemData[item?.dimension[14].name]}}</h6>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </ng-container>
+        </div>
+
+        
+    <div *ngIf="item.type =='AIWidgetStyleCard'"  style="height: 100%;width: 100%; overflow-y: auto;  overflow-x: hidden;">
+        <ng-container  *ngFor="let itemData of this.Widgets[i].chart.data;let j=index">
+        <div class="AI-widget-Style-Border" style="padding:8px;">
+            <div class="row">
+                <div class="col-sm-12 col-md-9">
+                    <div style="display: flex;">
+                        <div>
+                            <span *ngIf="itemData[item?.dimension[0].name]!=''" style="padding-right: 5px;">{{itemData[item?.dimension[0].name]}}</span>
+                        </div>
+                        <div>
+                            <span *ngIf="itemData[item?.dimension[1].name]!=''" style="padding-right: 5px;" class="red-label">{{itemData[item?.dimension[1].name]}}</span>
+                        </div>
+                        <div>
+                            <span *ngIf="itemData[item?.dimension[2].name]!=''" class="green-label">{{itemData[item?.dimension[2].name]}}</span>
+                        </div>
+                    </div>
+                    <div style="">
+                        <p style="font-weight: 600;font-size: 12px; margin-top: 0;margin-bottom: 4px;"></p>
+                    </div>
+                   
+                    <div><span *ngIf="itemData[item?.dimension[3].name]!=''">{{itemData[item?.dimension[3].name]}}</span></div>
+                </div>
+                <div class="col-sm-12 col-md-3" style="display: inline-block; text-align: center;">
+                    <div  *ngIf="itemData[item.dimension[6].name]!=''">
+                        <img src="../../../../assets/images/{{itemData[item?.dimension[6].name]}}" style="width:36%" alt="">
+                    </div>
+                    <div>
+                        <span>
+                
+                </span>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top: 24px;">
+                <p *ngIf="itemData[item?.dimension[4].name]!=''" style="font-weight: 600; font-size:16px;">
+                    {{itemData[item?.dimension[4].name]}}
+                    </p>
+                    <p *ngIf="itemData[item?.dimension[5].name]!=''">{{itemData[item?.dimension[5].name]}}</p>
+                <!-- <p style="font-weight: 600; font-size:16px;">
+                    Increase Return on Investment
+                </p>
+                <p>One campaign was identified which is limited in budget.</p>
+                <p>You can schive a higer overall <b>Return on Investment</b>by shifiting budget to this campaign.</p> -->
+            </div>
+        </div>
+    </ng-container>
+    </div>
+         <!-- end MultiBRScoreCardimgTwo -->
+        <ag-grid-angular style="width: 100%; height: 100%;" class="ag-theme-alpine" (gridReady)="onGridReady($event,item)"
+        [rowData]="item?.rowData" [columnDefs]="item?.columnDefs" *ngIf="item.type == 'DMATPtable'">
+        </ag-grid-angular>
+    </gridster-item>
+</ng-container>
+</gridster>

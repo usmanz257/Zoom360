@@ -1,0 +1,105 @@
+<table id="result_list" class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col" class="action-checkbox-column">
+                <input type="checkbox" name="all" [checked]="allcheckbox" (change)="checkAll($event)" (click)="functionCount($event)" />
+            </th>
+
+            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                <div class="cell-wrapper" title="Toggle sorting">
+                    <a class="toggle-link" (click)="applySort('workspaceName')">
+                        Workspace Name
+                    <span class="sortoptions sortdirectionn">
+                            <span class="" [ngClass]="type_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="type_arrow"></span>
+                    </span>
+                    </a>
+                    <div class="sortoptions remove">
+                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                    </div>
+                </div>
+            </th>
+            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                <div class="cell-wrapper" title="Toggle sorting">
+                    <a class="toggle-link" (click)="applySort('displayName')">
+                        Display Name
+                    <span class="sortoptions sortdirectionn">
+                            <span class="" [ngClass]="displayName_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="displayName_arrow"></span>
+                    </span>
+                    </a>
+                    <div class="sortoptions remove">
+                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                    </div>
+                </div>
+            </th>
+            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                <div class="cell-wrapper" title="Toggle sorting">
+                    <a class="toggle-link" (click)="applySort('parentWorkspace')">
+                        PARENT WORKSPACE
+                    <span class="sortoptions sortdirectionn">
+                            <span class="" [ngClass]="workspace_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="workspace_arrow"></span>
+                    </span>
+                    </a>
+                    <div class="sortoptions remove">
+                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                    </div>
+                </div>
+            </th>
+            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                <div class="cell-wrapper" title="Toggle sorting">
+                    <a class="toggle-link" (click)="applySort('childApplyandEnforce')">
+                        Child Apply
+                    <span class="sortoptions sortdirectionn">
+                            <span class="" [ngClass]="name_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="name_arrow"></span>
+                    </span>
+                    </a>
+                    <div class="sortoptions remove">
+                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                    </div>
+                </div>
+            </th>
+            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                <div class="cell-wrapper" title="Toggle sorting">
+                    <a class="toggle-link" (click)="applySort('excludeChildWorkspace')">
+                    Exclude Child
+                    <span class="sortoptions sortdirectionn">
+                            <span class="" [ngClass]="userAccessGranted_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="userAccessGranted_arrow"></span>
+                    </span>
+                    </a>
+                    <div class="sortoptions remove">
+                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                    </div>
+                </div>
+            </th>
+            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                <div class="cell-wrapper" title="Toggle sorting">
+                    <a class="toggle-link" (click)="applySort('bStatus')">
+                        Is Active
+                    <span class="sortoptions sortdirectionn">
+                            <span class="" [ngClass]="bStatus_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="bStatus_arrow"></span>
+                    </span>
+                    </a>
+                    <div class="sortoptions remove">
+                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                    </div>
+                </div>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of _workSpaceGrid;let i = index">
+            <td>
+                <input type="checkbox" [(ngModel)]="item.state" name="something" (change)="findCount($event)" />
+            </td>
+            <td class="field-type_logo" (click)="getDataById(item.workSpaceId)">{{item.workspaceName}}</td>
+            <td class="field-type_logo">{{item.displayName}}</td>
+            <td class="field-stack nowrap">{{item.parentWorkspace}}</td>
+            <td class="field-name">{{item.childApplyandEnforce}}</td>
+            <td class="field-auth_status"><div class="switch" >
+                <input type="checkbox" name="checkbox{{i}}" [(ngModel)]="item.excludeChildWorkspace">
+                <!-- <label style="padding:2px 0 0 12px;" class="" for="EnableScript">Enable</label> -->
+            </div></td>
+            <td class="field-auth_status"><img src="assets\images\icon-{{item.bStatus_arrow}}.svg" alt="error" title="{{item.bStatus}}"></td>
+        </tr>
+
+    </tbody>
+</table>

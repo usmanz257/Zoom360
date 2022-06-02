@@ -1,0 +1,219 @@
+[{
+  "Node_id": "1.1.1.1.1.1.1",
+  "Template": [
+    {
+      "Properties": {
+        "Display_Name": "First name",
+        "Control_Type": "textBox",
+        "Control_Value": "Usman",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Date Format",
+        "Control_Type": "dropdown",
+        "Control_Value": "zaeem",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "this is help text",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "Date Format",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Parent Workspace",
+        "Control_Type": "dropdown",
+        "Control_Value": "zaeem",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "this is help text",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "Parent Workspace",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Enabled",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "this is help text",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Enabled",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "this is help text",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+},{
+  "Node_id": "1.1.1.1.1.1.2",
+  "Template": [
+    {
+      "Properties": {
+        "Display_Name": "First name",
+        "Control_Type": "textBox",
+        "Control_Value": "Usman",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip1",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Last name",
+        "Control_Type": "textBox",
+        "Control_Value": "Zulfiqar",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "test",
+        "Help_Icon": false,
+        "Help_Text": "",
+        "Visible": true,
+        "Background_Color": "red",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "Custom"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Date Format",
+        "Control_Type": "dropdown",
+        "Control_Value": "zaeem",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "this is help text",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "Date Format",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Time Format",
+        "Control_Type": "dropdown",
+        "Control_Value": "zaeem",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "this is help text",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "Time Format",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    },
+    {
+      "Properties": {
+        "Display_Name": "Enabled",
+        "Control_Type": "checkbox",
+        "Control_Value": "",
+        "Checkbox_Control_Value": true,
+        "ToolTip": "tooltip2",
+        "Help_Icon": true,
+        "Help_Text": "this is help text",
+        "Visible": true,
+        "Background_Color": "green",
+        "Optional": "*"
+      },
+      "Data": {
+        "Input_Source": "",
+        "Source_Type": "System"
+      },
+      "Validation": {
+        "condition1": "required"
+      }
+    }
+  ]
+}]

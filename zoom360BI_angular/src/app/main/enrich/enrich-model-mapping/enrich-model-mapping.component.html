@@ -1,0 +1,64 @@
+<div class="row" style="margin-bottom: 5px;">
+    <div class="col col-sm-12 col-md-3">
+        <!-- <ejs-multiselect id='test' #checkbox{{i}} [dataSource]='_workspaces' [placeholder]='checkWaterMark' [fields]='fields'
+        [mode]='mode' [showDropDownIcon]='true' showSelectAll='true' [filterBarPlaceholder]='filterPlaceholder' (change)="Makelist($event,1)"></ejs-multiselect> -->
+        <ejs-dropdownlist id='_workspace' Name="workspaceDropDown" [dataSource]="_modelList" [(value)]='workspaceName' [fields]='fieldsvalues' placeholder='Select Model' ></ejs-dropdownlist>
+    </div>
+</div>
+<div class="row">
+    <div class="col col-sm-12 col-md-8 col-lg-8 col-xl-8">
+        <table id="result_list" class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link">
+                                Source Column
+                            </a>
+                            <!-- <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" ></a>
+                            </div> -->
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" >
+                               Target
+                            </a>
+                            <!-- <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting"  ></a>
+                            </div> -->
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- *ngFor="let connection of allConService._connectionData;let i = index" -->
+                <tr  *ngFor="let item of headerList;let i = index">
+                    <td class="field-stack">{{item.SourceColumn}}</td>
+                   <td class="field-name nowrap" style="width: 400px;" >
+                        <!-- <input style="max-width: 250px;" id="workspaces1" ej-dropdownlist [dataSource]="_workspaces" [fields]="fields" showCheckbox="true" watermarkText="Select a skill" width="100%" multiSelectMode="visualmode" width="480px" /> -->
+                        <ejs-dropdownlist id='_workspace{{i}}' Name="workspaceDropDown" [dataSource]="_modelList" [fields]='fieldsvalues' placeholder='Select Model' ></ejs-dropdownlist>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--<div class="row">
+     <div class="col col-sm-12,col-md-12">
+<ejs-grid #grid [dataSource]="headerList" [pageSettings]="pageSettings">
+    <e-columns> -->
+        <!-- <e-column *ngFor="let item of columnNameList" field="{{item.columnName}}" headerText='{{item.columnName}}' textAlign='left' width=90></e-column> -->
+        <!-- <e-column field='SourceColumn' headerText='Source Column' textAlign='left' format='C2' width=90></e-column>-->
+       <!-- <e-column headerText='TargetColumn' width=120> -->
+               <!-- <ng-template #template  let-data>
+                <ejs-dropdownlist id='_workspace' Name="workspaceDropDown" [dataSource]="_workspaces" [fields]='fieldsvalues' placeholder='Select Model' ></ejs-dropdownlist>
+                </ng-template> -->
+       <!-- </e-column> -->
+          <!--<e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
+        <e-column field='OrderDate' headerText='Order Date' textAlign='Right' format='yMd' width=120></e-column> -->
+    <!-- </e-columns>      -->
+<!-- </ejs-grid>
+    </div> 
+    </div> -->

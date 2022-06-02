@@ -1,0 +1,70 @@
+<div class="generic-django-admin-header">
+    <div class="main-section">
+        <h3>Templates</h3>
+    </div>
+    <div class="tool-section">
+    </div>
+</div>
+<div id="content-main" class="contentMain">
+    <form autocomplete="off">
+        <fieldset class="module aligned ">
+
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Export templateXLS</label>
+                    <div class="related-widget-wrapper">
+                        <input type="file" (change)="onXLSChange($event)" accept="image/*" style="height: 28px; padding: 2px 8px; width: 478px;" />
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Export templatePPT</label>
+                    <div class="related-widget-wrapper">
+                        <input type="file" (change)="onPPTChange($event)" accept="image/*" style="height: 28px; padding: 2px 8px; width: 478px;" />
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Export templatePDF</label>
+                    <div class="related-widget-wrapper">
+                        <input type="file" (change)="onPDFChange($event)" accept="image/*" style="height: 28px; padding: 2px 8px; width: 478px;" />
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Data Collection Templates</h2>
+            <div style="margin-top:35px;margin-bottom: 95px;">
+                <div style="float: right;">
+                    <div class="css-d7fwyj">
+                        <a class="css-2klymb" href="connect-add_new_datastream.html">
+                            <svg class="css-1w7p77e" fill="currentcolor" viewBox="0 0 24 24">
+                           <path d="M13 5v6h6v2h-6v6h-2v-6H5v-2h6V5h2z"></path>
+                        </svg>
+                            <span class="css-1qsrl3t">Add Templete</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <app-workspace-setup-grid></app-workspace-setup-grid>
+        </fieldset>
+        <div>
+            <div class="css-1qbrnrg">
+                <hr class="css-1c3fhlt" mx="zero" role="separator" aria-orientation="horizontal">
+                <div class="css-1x62jim">
+                    <div class="css-p84alj">
+                        <div class="css-rvqhyx"><a class="css-ebx8b0" href="/instagram_business/instagrambusinessdatastream/27/delete/">Delete</a><a class="css-b2qa21" href="/core/apidatastream/clone?pk=27">Clone</a></div>
+                    </div>
+                    <div class="css-1w7dt24">
+                        <div class="css-rvqhyx"><button class="css-b2qa21" type="button" name="_continue">Save and continue editing</button><button class="css-xpr64j" type="button" name="_save">Save</button><span></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

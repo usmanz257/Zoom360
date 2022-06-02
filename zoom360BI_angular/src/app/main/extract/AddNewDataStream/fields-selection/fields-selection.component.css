@@ -1,0 +1,88 @@
+.dropdown-box{
+    width: 100%;
+    padding: 3px;
+    border: 1px solid transparent;
+    outline: 0;
+    min-width:70px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* -webkit-appearance: button;
+    -moz-appearance: button; */
+    
+}
+
+/* .table td, .table th {
+    padding: 0rem 1px;
+    border: none;
+} */
+.dropdown-box:hover{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    border: 1px solid transparent;
+}
+.dropdown-box:focus{
+    border: 1px solid #818181 ;
+    border-radius: 4px;
+    min-width:70px;
+    display: block;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+}
+.DropdownAlingment{
+    background-color: transparent;
+    color: rgb(33, 155, 156);
+    height: 24px;
+       font-size: 12px;
+       border-radius: 2px;
+       /* justify-content: center; */
+       cursor: pointer;
+  }
+  #dropdownColor{
+    padding: 2px;
+}
+#Btngrouphover>a:hover{
+  background-color:rgb(170, 248, 248);
+}
+ 
+.EditableCell{
+    max-width: 12px;
+    outline: none;
+    min-width: 12px;
+    padding: 15px 0px 0px 11px;
+}
+.css-bgColoryes {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    margin: 0px;
+    padding: 0px 8px;
+    border-width: 1px;
+      
+    background-color: rgb(232, 245, 237);
+    color: black;
+    font-size: 12px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: start;
+    white-space: nowrap;
+}
+.css-bgColorNo {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    margin: 0px;
+    padding: 0px 8px;
+    border-width: 1px;
+     
+     background-color: rgb(231, 240, 253);
+    color:black;
+    font-size: 12px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: start;
+    white-space: nowrap;
+}

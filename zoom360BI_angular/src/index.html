@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ZOOM360</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" > -->
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/help-style.css">
+    <link rel="stylesheet" media="all" href="assets/css/help-style.css">
+     <link rel="stylesheet" href="assets/css/login-siginup.css" />
+    <link rel="stylesheet" href="assets/css/cns-style.css" />
+    <link rel="shortcut icon" href="assets/images/zoomSmallLogo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/zoom360-style-2.css" />
+    <link rel="stylesheet" href="assets/css/navbar_css.css" />
+    <link rel="stylesheet" href="assets/css/header-navbar.css" />
+    <link rel="stylesheet" href="assets/css/zoom360-vendor.css" />
+    <link rel="stylesheet" href="assets/css/zoom360-common.css" />
+    <link rel="stylesheet" href="assets/css/zoom360-dashboard-2.css" />
+
+    <link rel="stylesheet" href="assets/css/app-cns-style-1.css" />
+    <link rel="stylesheet" href="assets/css/vendor-cns-style-2.css" />
+    <link rel="stylesheet" href="assets/css/legacy-cns-style-3.css" />
+    <link rel="stylesheet" href="assets/all.css" />
+    <link rel="stylesheet" href="assets/css/channels.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/accordian.css" />
+    
+    <link rel="stylesheet" href="assets/css/style-syncfusion-edit.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <app-root></app-root>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- <script src="assets/js/popper.js"></script> -->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-dropdown-filter.js"></script>
+
+    <script>
+        
+        function exploredropdown() {
+            document.getElementById("explore-nav-drop-btn").classList.toggle("show");
+        }
+
+        function myFunction2() {
+            document.getElementById("myDropdown2").classList.toggle("show");
+        }
+
+        function myFunction3() {
+            document.getElementById("myDropdown3").classList.toggle("show");
+        }
+
+function toggleIcon(e) {
+    $(e.target)
+        .prev('.panel-heading')
+        .find(".more-less")
+        .toggleClass('glyphicon-plus glyphicon-minus');
+}
+$('.panel-group').on('hidden.bs.collapse', toggleIcon);
+$('.panel-group').on('shown.bs.collapse', toggleIcon);
+    </script>
+    <script>
+        function hideshowbtn() {
+            var x = document.getElementById("show-pw");
+            if (x.style.display === "none") {
+
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        function exploredropdown() {
+            document.getElementById("explore-nav-drop-btn").classList.toggle("show");
+        }
+    </script>
+    <script>
+        $.fn.extend({
+            treed: function() {
+                return this.each(function() {
+                    //initialize each of the top levels
+                    var tree = $(this);
+                    tree.addClass("tree");
+                    tree.find('li').has("ul").each(function() {
+                        var branch = $(this); //li with children ul
+                        branch.prepend("<i class='indicator fa fa-plus-square-o'></i>");
+                        branch.addClass('branch');
+                        branch.on('click', function(e) {
+                            if (this == e.target) {
+                                var icon = $(this).children('i:first');
+                                icon.toggleClass("fa-minus-square-o fa-plus-square-o");
+                                $(this).children().children().toggle();
+                            }
+                        })
+                        branch.children().children().toggle();
+                    });
+                    //fire event from the dynamically added icon
+                    $('.branch .indicator').on('click', function() {
+                        $(this).closest('li').click();
+                    });
+                    //fire event to open branch if the li contains an anchor instead of text
+                    $('.branch a').on('click', function(e) {
+                        $(this).closest('li').click();
+                        e.preventDefault();
+                    });
+                    //fire event to open branch if the li contains a button instead of text
+                    $('.branch button').on('click', function(e) {
+                        $(this).closest('li').click();
+                        e.preventDefault();
+                    });
+                });
+            }
+        });
+        $('.tree').treed();
+    </script>
+    <script>
+        function hideshowbtn() {
+            var x = document.getElementById("show-pw");
+            if (x.style.display === "none") {
+
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        function exploredropdown() {
+            document.getElementById("explore-nav-drop-btn").classList.toggle("show");
+        }
+    </script>
+
+</body>
+
+</html>

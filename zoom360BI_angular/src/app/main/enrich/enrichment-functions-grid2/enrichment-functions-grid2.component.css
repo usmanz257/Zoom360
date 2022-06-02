@@ -1,0 +1,23 @@
+.e-checkbox-wrapper .e-frame.e-check, .e-css.e-checkbox-wrapper .e-frame.e-check {
+    background-color: #219b9c;
+    border-color: #ccc;
+    color: #fff;
+}
+.header-a{
+    text-decoration: none;
+    font-size: 12;
+    font-weight: 400;
+}
+.input.e-input, textarea.e-input, .e-input-group, .e-input-group.e-control-wrapper {
+    font-family: "Open Sans","Helvetica Neue", "Helvetica", "Arial", sans-serif, "-apple-system", "BlinkMacSystemFont";
+    font-weight: 400;
+    /* padding-left: 2px; */
+    font-size: 12px;
+}
+.form-row p, form .button, input, select, textarea {
+    padding: 2px 0px;
+}
+input[type=checkbox]:focus, input[type=file]:focus, input[type=radio]:focus {
+    outline: none !important;
+    outline-offset: -2px;
+}

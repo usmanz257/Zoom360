@@ -1,0 +1,69 @@
+<div id="action-description">
+    <div class="row">
+        <div class="col-sm-12 col-md-4" style="margin-bottom: 10px;">
+          <label for="exampleInputEmail1" class="form-label">Enter Script Name</label>
+          <input type="text" class="form-control" style="padding-left: 9px;" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="scriptname">
+          <div id="emailHelp" class="form-text">Write script name here.</div>
+        </div>
+      </div>
+      <div class="row">
+      <div class="col-sm-12 col-md-4" style="margin-bottom: 10px;">
+        <label for="exampleInputEmail1" class="form-label">Select table</label>
+        <ejs-dropdownlist id='_tableNames' Name="workspaceDropDown" [allowFiltering]="true" [dataSource]="tableNameList" [(fields)]='fieldsvalues' placeholder='Select table' (change)='getobjectfield()' [(value)]="tableName"></ejs-dropdownlist>
+        <div id="emailHelp" class="form-text">Select table from here.</div>
+      </div>
+    
+    </div>
+    <div class="row" style="margin-bottom: 10px;">
+        <div class="col-sm-12 col-md-4 form-group-margin">
+          <div class="switch">
+            <input type="checkbox" id="EnableScript" [(ngModel)]="scriptEnable">
+            <label style="padding:2px 0 0 12px;" class=" " for="EnableScript">Enable</label>
+        </div>
+
+          <small id="emailHelp" class="form-text text-muted" style="font-size: 12px;">You can enable & disable script from here</small>
+        </div>
+        <div class="col-sm-12 offset-md-5 col-md-3 align-self-center">
+            <button class="css-xpr64j pull-right" type="submit" name="_save" (click)="save()">Save & continue</button>
+            <button class="css-xpr64j pull-right" style="margin-right:5px" type="submit" name="Reset" (click)="resetAll()">Reset All</button> 
+        </div>
+        <!-- <div class="col-sm-12 offset-md-6 col-md-2 align-self-center">
+            <button class="css-xpr64j pull-right" type="submit" name="_save" (click)="save()">Save & continue</button>
+            </div>
+        </div> -->
+</div>
+<div style="max-width: 100%;overflow-x: scroll;">
+<div class="results">
+    <table id="result_list" class="table table-hover" *ngIf="this.showGrid">
+        <thead>
+            <tr>
+                <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                    <a class="header-a">
+                        Function Names
+                    </a>
+                </th>
+                <th scope="col" class="sortable column-dashboard_link sorted ascending" style="text-align: center;" *ngFor="let column of this.columnNames;let k = index">
+                    <!-- <div class="cell-wrapper" title="Toggle sorting">
+                        <a class="toggle-link" > -->
+                            <a class="header-a">
+                                {{column.objecT_FIELD_NAME}}
+                            </a>
+                            <br>
+                            <ejs-checkbox label="" [checked]="this.GridColumnAll[k].checkboxToggle" (change)="SelectAllFunctionsForSingleColumn(k,$event.checked)"></ejs-checkbox>
+                        <!-- </a>
+                    </div> -->
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of this._functionList;let i = index">
+                <td class="field-stack nowrap"><ejs-checkbox label="" [checked]="this.GridFunctionAll[i].checkboxToggle" (change)="SelectAllColumnsforSingleFunction(i,$event.checked)"></ejs-checkbox> {{item.dropdownText}}</td>
+                <td *ngFor="let item2 of this.columnNames;let j = index" style="text-align:center;">
+                    <!-- <input id="check" type="checkbox" name="something"/> -->
+                    <ejs-checkbox label="" [checked]="this.GridState[i][j].checkboxToggle" (change)="changeHandler(i,j,$event.checked)"></ejs-checkbox>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>

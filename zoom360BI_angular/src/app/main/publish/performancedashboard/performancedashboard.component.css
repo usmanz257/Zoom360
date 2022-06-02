@@ -1,0 +1,23 @@
+.channels-column-right {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 24px 0
+    }
+    .channels-small-box {
+    min-height: 250px;
+    display: block;
+    text-align: center;
+    border: rgb(221, 224, 228) 1px solid;
+    margin: 15px 0;
+    }
+    @media (max-width:680px) {
+    .masthead {
+    display: none
+    }
+    .channels-column-right {
+    padding-left: 0;
+    padding-top: 20px
+    }
+    }

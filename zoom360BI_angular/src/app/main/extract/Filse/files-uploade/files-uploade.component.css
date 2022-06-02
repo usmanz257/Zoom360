@@ -1,0 +1,11 @@
+.upload-color{
+    background-color: rgb(27, 132, 133);
+    color: white;
+}
+.upload{
+    font-weight:bold;
+    /* color:#28a745; */
+    color: rgb(27, 132, 133);
+    margin-left: 15px;
+    line-height: 36px;
+}

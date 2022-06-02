@@ -1,0 +1,97 @@
+.user-page-image img {
+	max-width: 280px;
+	max-height: 65px
+}
+
+.user-page-logo {
+	width: 280px
+}
+
+.user-form-page button{
+	font: 13px Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+	width: 100%;
+	max-width: 300px;
+	height: 32px;
+	text-align: center;
+	outline: none;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, .02);
+	border: 2px solid rgba(0, 0, 0, .2);
+	margin-bottom: 5px;
+	transition: background-color .2s ease-out, border-color .2s ease-out
+}
+
+.user-form-page button:focus,
+.user-form-page button:hover{
+	background-color: rgba(0, 0, 0, .05);
+	transition: background-color .3s ease-in, border-color .3s ease-in
+}
+
+.user-form-page button:active {
+	background-color: hsla(0, 0%, 100%, .07);
+	transition: none
+}
+
+.user-page-text{
+	text-align: center;
+	margin: 10px auto;
+	max-width: 300px
+}
+.user-form-page input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px #fff inset!important
+}
+
+.user-page-text input{
+	width: 100%;
+	max-width: 300px;
+	height: 32px;
+	padding: 0 8px;
+	outline: none;
+	border: 1px solid rgba(0, 0, 0, .3);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+.user-page-text input:active,
+.user-page-text input:focus{
+	border: 1px solid rgba(0, 0, 0, .5);
+	box-shadow: 0
+}
+
+.user-page-text label{
+	display: block !important;
+	text-align: left !important;
+	font-size: 12px !important;
+}
+
+#forgot-password {
+	font-size: 12px;
+	margin-top: 15px
+}
+
+.error {
+	width: 100%;
+	max-width: 300px;
+	font-size: 12px;
+	min-height: 32px;
+	background-color: #fff6e5;
+	border: 1px solid #b27300;
+	color: #b27300;
+	padding: 8px;
+	margin: 10px auto;
+	display: block;
+	text-align: center;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+.login-twofactor-help {
+	font-size: 12px;
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 12px
+}
+

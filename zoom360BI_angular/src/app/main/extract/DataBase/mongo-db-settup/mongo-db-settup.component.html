@@ -1,0 +1,121 @@
+<form #sql="ngForm"   novalidate>
+    <div class="">
+      <div class="main-section">
+       <!-- <h6> Connection credentials</h6> -->
+      </div>
+      <div class="tool-section">
+      </div>
+      <div class="row">
+     <div class="col-md-12"> 
+        <div class="col-md-8" style="padding: 0px;">
+         <fieldset class="module aligned " >
+            <div class="col-md-7 col-md-pull-0 col-sm-7 col-sm-pull-0" style="padding:0px;" >
+                     <input type="hidden" name="csrfmiddlewaretoken" value="GZ57TCjJnapfiuvPZBneYMTeKSc75buq5OikcdmQXsH1X33QVmu1KUBx81Fr76Xh">
+                     <div class="form-group">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="GZ57TCjJnapfiuvPZBneYMTeKSc75buq5OikcdmQXsH1X33QVmu1KUBx81Fr76Xh"> 
+                        <div id="div_id_hostname" class="form-group">
+                           <label for="id_hostname" class="control-label  requiredField">
+                           Hostname<span class="asteriskField">*</span> </label> 
+                           <div class="controls ">
+                              <select id="hostName" style="height: 31px;" name="Hostname" [(ngModel)]="sourceAccountSettup.Hostname"  class="form-control">
+                                 <option *ngFor='let item of _SqlConnector.Mydropdonw' value="{{item.dropdownValue}}">{{item.dropdownText}}</option>
+                              </select>
+                           </div>
+                            
+                        </div>
+                        <div class="form-row field-stack">
+                   
+                           <label class="label-text" for="id_stack">Port Number</label>
+                           <div class="related-widget-wrapper">
+                              <input type="text" name="portnumber"  [(ngModel)]="sourceAccountSettup.PortNumber"    id="portnumber" required="" class="form-control"  maxlength="200"> 
+                           </div>
+                            
+                       </div>
+                        <div class="form-row field-stack">
+                   
+                           <label class="label-text" for="id_stack"> Database *</label>
+                           <div class="related-widget-wrapper">
+                              <input type="text" name="Database"  [(ngModel)]="sourceAccountSettup.Database"     id="dataBase" required="" class="form-control"  maxlength="200"> 
+                           </div>
+                           <div class="help">
+                              <span class="text-danger" style="margin-top:4px" *ngIf="sourceAccountSettup.DataBase_Span">
+                                 Database Name is required
+                             </span> 
+                              
+                        </div>
+                       </div>
+                      
+                        <div class="form-row field-stack">
+                   
+                           <label class="label-text" for="id_stack">Username*</label>
+                           <div class="related-widget-wrapper">
+                              <input type="text" name="Username" [(ngModel)]="sourceAccountSettup.Username"   required id="userName"  required="" class="form-control" maxlength="500">
+                           </div>
+                           <div class="help">
+                              <span class="text-danger" style="margin-top:4px" *ngIf="sourceAccountSettup.Username_Span">
+                                 Username is Required
+                             </span>
+                               
+                        </div>
+                            
+                       </div>
+                         
+                             <div class="form-row field-stack">
+                   
+                              <label class="label-text" for="id_stack">Password*</label>
+                              <div class="related-widget-wrapper">
+                                 <input type="password" name="Password" [(ngModel)]="sourceAccountSettup.Password"   id="password"  required class="form-control" maxlength="500"> 
+                                  
+                              </div>
+                              <div class="help">
+                                 <span class="text-danger" style="margin-top:4px" *ngIf="sourceAccountSettup.Password_Span">
+                                    Password is required
+                                </span> 
+                                  
+                           </div>
+                               
+                          </div>
+                        
+                     </div>
+                      <div class="form-row field-stack" >
+                         <div class="related-widget-wrapper">
+                         <div class="controls " style="display: inline-flex;" >
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" value="ConnectivityStatus">
+                              <label  style="padding: 0 0 0 23px;" class="form-check-label" for="exampleCheck1">Connectivity status</label>
+                                <button class="css-xpr64j" type="button" style="margin-left: 50px;padding: 13px;">Verify Connection</button>
+      
+                              </div>                     
+                       
+                       <div class="help"></div>
+                       
+                   </div>
+                     
+               </div>  
+                   
+                      
+                  </div>
+           </fieldset>
+        </div>
+        <div class="col-md-3" style="padding: 50px 0px 0px 100px;">  
+         <div>
+            <div class="related-widget-wrapper">
+               <img  src="../../../assets/images/{{imgname}}" style="height: 60px;" width="100" >
+            </div>
+            
+          </div>
+      </div>
+     </div>
+      </div>
+     
+     
+     </div>
+      <div class="row">
+         <div class="col-md-12">
+           <hr>
+         </div>
+      </div>
+  
+  </form>         
+    
+   
+

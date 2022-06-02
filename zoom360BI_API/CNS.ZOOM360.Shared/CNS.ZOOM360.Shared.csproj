@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="StoreProcedures\Workspace\Dto\**" />
+    <EmbeddedResource Remove="StoreProcedures\Workspace\Dto\**" />
+    <None Remove="StoreProcedures\Workspace\Dto\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="26.0.1" />
+    <PackageReference Include="EPPlus" Version="4.5.3.3" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="1.6.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CNS.ZOOM360.Entities\CNS.ZOOM360.Entities.csproj" />
+    <ProjectReference Include="..\ZOOM360.Charts\ZOOM360.Charts.csproj" />
+    <ProjectReference Include="..\ZOOM360.Identity\ZOOM360.Identity.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="StoreProcedures\TreeControlsTemplate\Dto\" />
+  </ItemGroup>
+
+</Project>

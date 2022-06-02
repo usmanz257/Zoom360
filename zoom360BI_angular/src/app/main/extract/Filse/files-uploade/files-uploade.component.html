@@ -1,0 +1,69 @@
+<form #fileupload="ngForm"   novalidate>
+ 
+    <div class="">
+      <div class="main-section">
+       <!-- <h3>Upload File</h3> -->
+      </div>
+      <div class="tool-section">
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="FileEmptyMessageError">
+        {{FileEmptyMsg}} 
+      </div>
+     <fieldset class="module aligned">
+        <div class="row">
+         <div class="col-md-12">
+          <div class="col-md-4">
+            <div class="form-row field-stack">
+              <label class="label-text" for="id_stack">Upload File</label>
+               <div class="related-widget-wrapper" >
+                    <!-- <input type="file" #file  name="file"  style="outline: 0px auto -webkit-focus-ring-color;" [(ngModel)]="sourceAccountSettupservis.getFileFromFilesComponent"  class="form-control" maxlength="200" [accept]="sourceAccountSettupservis.FileType"  (change)="sourceAccountSettupservis.filesName($event,file.files)"  required>  -->
+                    <!-- <span class="error" id="AccountName_span" style="margin-top:4px;padding:5px;" *ngIf="establishConnectorServic.AccountName_span">Account Display Name is Required</span> -->
+                    <div class="input-group">
+                     <input type="file" #file  name="file"  style="outline: 0px auto -webkit-focus-ring-color;"  class="form-control" maxlength="200" [accept]="FileType"  (change)="filesName($event,file.files)"  required> 
+                      
+                   </div>
+                   </div>
+                
+               
+           </div>
+         </div>
+         <div class="col-md-2" style="padding:28px 0 0 0">
+          <div class="input-group-append">
+            <button type="button"  class="btn upload-color" (click)="uploadFile(file.files)">upload</button>
+          </div>
+         </div>
+         <div class="col-md-2" style="padding:27px 0 0 0">
+          <span class="upload" *ngIf="progress > 0">
+            {{progress}}%
+          </span>
+          <span class="upload" *ngIf="message">
+            {{message}}
+          </span>
+        </div>
+        <div class="col-md-3">
+          <div>
+               <div class="related-widget-wrapper">
+                  <img  src="../../../assets/images/{{imgname}}" style="height: 60px;" width="100" >
+               </div>
+               
+             </div>
+         </div>
+         </div>
+           
+         </div>
+    </fieldset>
+ </div>
+ <div class="row">
+  <div class="col-md-12">
+    <hr>
+  </div>
+</div>
+  </form>         
+    
+  <!-- *ngIf="_SqlConnector.SqlServerConnector" -->
+
+   
+<!-- </div>
+</div> -->
+
+

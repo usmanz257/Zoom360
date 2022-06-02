@@ -1,0 +1,38 @@
+.form-check .e-label{
+    display: inline-block;
+    font-family: 'Open Sans'!important;
+    font-size: 12px !important;
+    font-weight: normal;
+    line-height: 16px !important;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: normal;
+}
+/* .related-widget-wrapper .edit-Dropdown select option{
+    font-size: 8px;
+} */
+.related-widget-wrapper .edit-Dropdown .e-input-group.e-ddl{
+    height: 28px!important;
+    border-radius: 1px!important;
+    
+}
+.e-ddl.e-input-group, .e-ddl.e-input-group.e-input-focus:focus {
+    border-radius: 2px!important;
+}
+.related-widget-wrapper .edit-Dropdown .e-input-group-icon{
+    min-height: 26px!important;
+    min-width: 26px!important;
+}
+.related-widget-wrapper .edit-Dropdown input{
+    padding-left: 8px!important;
+    font-size: 12px!important;
+    height: 26px!important;
+}
+
+.related-widget-wrapper .edit-Dropdown select{
+display: none;
+
+}

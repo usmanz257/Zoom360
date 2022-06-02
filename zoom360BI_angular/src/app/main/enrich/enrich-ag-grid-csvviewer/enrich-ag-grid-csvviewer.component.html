@@ -1,0 +1,11 @@
+
+<div class="row" style="padding:20px 20px 0px 20px;">
+    <div class="col offset-md-11 offset-lg-11 offset-xl-11 col-sm-11 col-md-1 col-lg-1 col-xl-1" style="margin-bottom: 10px;">
+        <button class="css-xpr64j Right" type="submit" name="_save" (click)="save()">Save</button>
+       </div>
+    <div class="col col-sm-12 col-md-12" style="min-height: 600px;">
+        <ag-grid-angular #agGrid style="width: 100%; height: 100%;" id="myGrid" class="ag-theme-alpine" [statusBar]="statusBar" [enableRangeSelection]="true" [animateRows]="false" [rowClassRules]="rowClassRules" [columnDefs]="columnDefs" [defaultColDef]="defaultColDef"
+        [rowData]="rowData" [rowHeight]="rowHeight" [headerHeight]="headerHeight" [sideBar]="sideBar" [rowSelection]="rowSelection" [chartThemeOverrides]="chartThemeOverrides" [enableCharts]="true" [rowGroupPanelShow]="rowGroupPanelShow" [skipHeaderOnAutoSize]="skipHeaderOnAutoSize"
+        [pivotPanelShow]="pivotPanelShow" [rowDragManaged]="true" (gridReady)="onGridReady($event)"></ag-grid-angular>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="card" >
+    <div class="card-body">
+          <div class="row" style="padding:0 0 1.2rem 0;">
+                  <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                        <img src="../../../../assets/images/{{notification.apprearance_Logo}}" style="Height:30px;width: 40px;" alt="">
+                  </div>
+                  <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9" style="padding:0;" >
+                          <p style="color: #9ea1a1;">System generated  <strong class="css-1x48jmz" [ngClass]="
+                            {
+                            'label-red': notification.platform_status === 'Drop' || notification.platform_status === 'Error',
+                            'label-orange': notification.platform_status === 'Prolonged Spike' || notification.platform_status === 'Warning',
+                            'label-green': notification.platform_status === 'Success' 
+                            }">{{notification.platform_status}}</strong></p>
+                          <span style="color: #cdcece;">{{notification.platform_Time}}</span>
+                  </div>
+          </div>
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding:0;">
+    <img src="../../../../assets/images/{{notification.reportImage}}" style="width:100%;height:188px; border:1px solid" alt="">
+    </div>
+    </div>
+  </div>

@@ -1,0 +1,18 @@
+
+<div class="row" style="margin-bottom:20px">
+    <div class="col offset-md-10 offset-lg-10 offset-xl-10 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+        <button class="css-xpr64j Right" style="margin-right: 5px;"type="button" name="_save" (click)="filter()">Filters</button>   <button class="css-xpr64j Right" style="margin-right: 5px;"type="button" name="_save" (click)="getData()">Load</button>   <button class="css-xpr64j Right" type="submit" name="_save" (click)="save()">Save</button>
+    </div>
+</div>
+<div class="row" style="margin-bottom:20px">
+    <div class="col col-sm-12,col-md-12">
+        <!-- (rowDataBound)= "rows($event)"         [toolbar]='toolbarOptions' -->
+<ejs-grid #grid [dataSource]="data" [allowSorting]="true" rowHeight="40"  [filterSettings]="filterSettings" [allowFiltering]='true'
+gridLines="Horizontal" [editSettings]="editOptions" height='600' [enableInfiniteScrolling]="true"  [contextMenuItems]="contextMenuItems"
+ [toolbar]="toolbarOptions">
+   
+</ejs-grid>
+
+    </div>
+</div>
+    

@@ -1,0 +1,49 @@
+<div class="css-7eznv6" style="z-index: 0;">
+    <div class="css-8pd3g8" style="z-index: 0;">
+        <div class="css-19eq8b8"> <span class="css-1v8nodn">Connection Logs <span class="css-1x48jmz" style="margin-top: 4px;">{{_recordLength}}</span></span>
+            <div class="css-f128gq"><span class="css-79bu3q"><a class="css-db069s" role="tab" id="heading5" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5" (click)="buttonText()">{{widgetAccorButtonText}}</a></span>
+            </div>
+        </div>
+        <hr class="css-rni0qy" mx="zero" role="separator" aria-orientation="horizontal">
+    </div>
+    <div id="collapse5" class="panel-collapse collapse" aria-labelledby="heading5" data-parent="#accordion5">
+        <div class="for-hover" *ngFor="let recent of ResentModules">
+            <div class="" style="min-height: 120px; padding-top: 15px; padding-bottom: 15px;">
+
+                <div class="col-md-3">
+                    <span class="add-box-recent">
+                  <img src="../../../assets//images/{{recent.appearanceLogo}}" height="40px" width="80px" title="Oracle DBMS" alt="{{recent.connectiontype}}">
+                  <span class="box-label-recent " style="white-space:pre-wrap; display: inline-block; margin-bottom: 0px; ">{{recent.connectiontype}}</span>
+                    </span>
+                </div>
+                <div class="col-md-9" style="opacity: 0.8;">
+                    <div>
+                        <label>
+                     Connection Type:<span> {{recent.connectiontype}}</span>
+                     </label>
+                        <br>
+                        <label>
+                     Configured Account:<span> {{recent.configuredAccounts}}</span>
+                     </label>
+                        <br>
+                        <label>
+                     First Created On:<span> {{recent.firstcreated}}</span>
+                     </label>
+                        <br>
+                        <label>
+                     Last Accessed at:<span> {{recent.lastaccessed}}</span>
+                     </label>
+                        <br>
+                        <label>
+                     Total Extracts:<span> {{recent.totalextract}}</span>
+                     </label>
+                    </div>
+                </div>
+
+
+            </div>
+            <hr class="css-1mn79hm" mx="zero" role="separator" aria-orientation="horizontal">
+        </div>
+        <hr class="css-1mn79hm" mx="zero" role="separator" aria-orientation="horizontal">
+    </div>
+</div>

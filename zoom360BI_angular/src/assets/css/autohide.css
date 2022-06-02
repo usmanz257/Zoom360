@@ -1,0 +1,7 @@
+.autohide_hide {
+    display: none !important;
+}
+
+fieldset.module.autohide_hide {
+    display: none !important;
+}

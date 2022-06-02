@@ -1,0 +1,1396 @@
+INDEX,PLATFORM,PERIOD_DATE,PERIOD_DISPLAY_DATE,IMPRESSIONS,CLICKS,CTR,CONNECTOR_IMAGE
+0,Ad set(ladies + kids),1,03-01-2020,150,138,265,fbcore.svg
+1,Ad set(ladies + kids),2,03-02-2020,160,147,266,fbcore.svg
+2,Ad set(ladies + kids),3,03-03-2020,170,156,267,fbcore.svg
+3,Ad set(ladies + kids),4,03-04-2020,180,166,268,fbcore.svg
+4,Ad set(ladies + kids),5,03-05-2020,190,175,269,fbcore.svg
+5,Ad set(ladies + kids),6,03-06-2020,200,184,270,fbcore.svg
+6,Ad set(ladies + kids),7,03-07-2020,220,202,271,fbcore.svg
+7,Ad set(ladies + kids),8,03-08-2020,225,207,272,fbcore.svg
+8,Ad set(ladies + kids),9,03-09-2020,230,212,273,fbcore.svg
+9,Ad set(ladies + kids),10,03-10-2020,240,221,274,fbcore.svg
+10,Ad set(ladies + kids),11,03-11-2020,245,225,275,fbcore.svg
+11,Ad set(ladies + kids),12,03-12-2020,270,248,277,fbcore.svg
+12,Ad set(ladies + kids),13,3/13/2020,265,244,274,fbcore.svg
+13,Ad set(ladies + kids),14,3/14/2020,250,230,275,fbcore.svg
+14,Ad set(ladies + kids),15,3/15/2020,235,216,276,fbcore.svg
+15,Ad set(ladies + kids),16,3/16/2020,230,212,273,fbcore.svg
+16,Ad set(ladies + kids),17,3/17/2020,225,207,274,fbcore.svg
+17,Ad set(ladies + kids),18,3/18/2020,222,204,275,fbcore.svg
+18,Ad set(ladies + kids),19,3/19/2020,210,193,275,fbcore.svg
+19,Ad set(ladies + kids),20,3/20/2020,211,194,274,fbcore.svg
+20,Ad set(ladies + kids),21,3/21/2020,212,195,273,fbcore.svg
+21,Ad set(ladies + kids),22,3/22/2020,213,196,272,fbcore.svg
+22,Ad set(ladies + kids),23,3/23/2020,215,198,271,fbcore.svg
+23,Ad set(ladies + kids),24,3/24/2020,230,212,273,fbcore.svg
+24,Ad set(ladies + kids),25,3/25/2020,232,213,274,fbcore.svg
+25,Ad set(ladies + kids),26,3/26/2020,235,216,272,fbcore.svg
+26,Ad set(ladies + kids),27,3/27/2020,195,179,273,fbcore.svg
+27,Ad set(ladies + kids),28,3/28/2020,190,175,274,fbcore.svg
+28,Ad set(ladies + kids),29,3/29/2020,180,166,273,fbcore.svg
+29,Ad set(ladies + kids),30,3/30/2020,170,156,274,fbcore.svg
+30,Ad set(ladies + kids),31,3/31/2020,160,147,287,fbcore.svg
+31,Ads set(kids + gents),1,03-01-2020,130,118,245,microsoft-excel.svg
+32,Ads set(kids + gents),2,03-02-2020,140,127,246,microsoft-excel.svg
+33,Ads set(kids + gents),3,03-03-2020,150,136,247,microsoft-excel.svg
+34,Ads set(kids + gents),4,03-04-2020,160,146,248,microsoft-excel.svg
+35,Ads set(kids + gents),5,03-05-2020,170,155,249,microsoft-excel.svg
+36,Ads set(kids + gents),6,03-06-2020,180,164,250,microsoft-excel.svg
+37,Ads set(kids + gents),7,03-07-2020,200,182,251,microsoft-excel.svg
+38,Ads set(kids + gents),8,03-08-2020,205,187,252,microsoft-excel.svg
+39,Ads set(kids + gents),9,03-09-2020,210,192,253,microsoft-excel.svg
+40,Ads set(kids + gents),10,03-10-2020,220,201,254,microsoft-excel.svg
+41,Ads set(kids + gents),11,03-11-2020,225,205,255,microsoft-excel.svg
+42,Ads set(kids + gents),12,03-12-2020,250,228,257,microsoft-excel.svg
+43,Ads set(kids + gents),13,3/13/2020,245,224,254,microsoft-excel.svg
+44,Ads set(kids + gents),14,3/14/2020,230,210,255,microsoft-excel.svg
+45,Ads set(kids + gents),15,3/15/2020,215,196,256,microsoft-excel.svg
+46,Ads set(kids + gents),16,3/16/2020,210,192,253,microsoft-excel.svg
+47,Ads set(kids + gents),17,3/17/2020,205,187,254,microsoft-excel.svg
+48,Ads set(kids + gents),18,3/18/2020,202,184,255,microsoft-excel.svg
+49,Ads set(kids + gents),19,3/19/2020,155,110,256,microsoft-excel.svg
+50,Ads set(kids + gents),20,3/20/2020,145,120,257,microsoft-excel.svg
+51,Ads set(kids + gents),21,3/21/2020,192,175,253,microsoft-excel.svg
+52,Ads set(kids + gents),22,3/22/2020,193,176,252,microsoft-excel.svg
+53,Ads set(kids + gents),23,3/23/2020,195,178,251,microsoft-excel.svg
+54,Ads set(kids + gents),24,3/24/2020,210,192,253,microsoft-excel.svg
+55,Ads set(kids + gents),25,3/25/2020,212,193,254,microsoft-excel.svg
+56,Ads set(kids + gents),26,3/26/2020,215,196,252,microsoft-excel.svg
+57,Ads set(kids + gents),27,3/27/2020,175,159,253,microsoft-excel.svg
+58,Ads set(kids + gents),28,3/28/2020,170,155,254,microsoft-excel.svg
+59,Ads set(kids + gents),29,3/29/2020,160,146,253,microsoft-excel.svg
+60,Ads set(kids + gents),30,3/30/2020,150,136,254,microsoft-excel.svg
+61,Ads set(kids + gents),31,3/31/2020,140,127,199,microsoft-excel.svg
+62,Ads set(gents),1,03-01-2020,190,178,305,mssql_shared.svg
+63,Ads set(gents),2,03-02-2020,200,187,306,mssql_shared.svg
+64,Ads set(gents),3,03-03-2020,210,196,307,mssql_shared.svg
+65,Ads set(gents),4,03-04-2020,220,206,308,mssql_shared.svg
+66,Ads set(gents),5,03-05-2020,230,215,309,mssql_shared.svg
+67,Ads set(gents),6,03-06-2020,240,224,310,mssql_shared.svg
+68,Ads set(gents),7,03-07-2020,260,242,311,mssql_shared.svg
+69,Ads set(gents),8,03-08-2020,265,247,312,mssql_shared.svg
+70,Ads set(gents),9,03-09-2020,270,252,313,mssql_shared.svg
+71,Ads set(gents),10,03-10-2020,280,261,314,mssql_shared.svg
+72,Ads set(gents),11,03-11-2020,285,265,315,mssql_shared.svg
+73,Ads set(gents),12,03-12-2020,310,288,317,mssql_shared.svg
+74,Ads set(gents),13,3/13/2020,305,284,314,mssql_shared.svg
+75,Ads set(gents),14,3/14/2020,290,270,315,mssql_shared.svg
+76,Ads set(gents),15,3/15/2020,275,256,316,mssql_shared.svg
+77,Ads set(gents),16,3/16/2020,270,252,313,mssql_shared.svg
+78,Ads set(gents),17,3/17/2020,265,247,314,mssql_shared.svg
+79,Ads set(gents),18,3/18/2020,262,244,315,mssql_shared.svg
+80,Ads set(gents),19,3/19/2020,250,233,315,mssql_shared.svg
+81,Ads set(gents),20,3/20/2020,251,234,314,mssql_shared.svg
+82,Ads set(gents),21,3/21/2020,252,235,313,mssql_shared.svg
+83,Ads set(gents),22,3/22/2020,253,236,312,mssql_shared.svg
+84,Ads set(gents),23,3/23/2020,255,238,311,mssql_shared.svg
+85,Ads set(gents),24,3/24/2020,270,252,313,mssql_shared.svg
+86,Ads set(gents),25,3/25/2020,290,273,334,mssql_shared.svg
+87,Ads set(gents),26,3/26/2020,300,270,340,mssql_shared.svg
+88,Ads set(gents),27,3/27/2020,235,219,313,mssql_shared.svg
+89,Ads set(gents),28,3/28/2020,230,215,314,mssql_shared.svg
+90,Ads set(gents),29,3/29/2020,220,206,313,mssql_shared.svg
+91,Ads set(gents),30,3/30/2020,210,196,314,mssql_shared.svg
+92,Ads set(gents),31,3/31/2020,200,187,312,mssql_shared.svg
+93,Ads set(ladies + kids + gents),1,03-01-2020,150,138,265,fbcore.svg
+94,Ads set(ladies + kids + gents),2,03-02-2020,160,147,266,fbcore.svg
+95,Ads set(ladies + kids + gents),3,03-03-2020,170,156,267,fbcore.svg
+96,Ads set(ladies + kids + gents),4,03-04-2020,180,166,268,fbcore.svg
+97,Ads set(ladies + kids + gents),5,03-05-2020,190,175,269,fbcore.svg
+98,Ads set(ladies + kids + gents),6,03-06-2020,200,184,270,fbcore.svg
+99,Ads set(ladies + kids + gents),7,03-07-2020,220,202,271,fbcore.svg
+100,Ads set(ladies + kids + gents),8,03-08-2020,225,207,272,fbcore.svg
+101,Ads set(ladies + kids + gents),9,03-09-2020,230,212,273,fbcore.svg
+102,Ads set(ladies + kids + gents),10,03-10-2020,240,221,274,fbcore.svg
+103,Ads set(ladies + kids + gents),11,03-11-2020,245,225,275,fbcore.svg
+104,Ads set(ladies + kids + gents),12,03-12-2020,270,248,277,fbcore.svg
+105,Ads set(ladies + kids + gents),13,3/13/2020,265,244,274,fbcore.svg
+106,Ads set(ladies + kids + gents),14,3/14/2020,250,230,275,fbcore.svg
+107,Ads set(ladies + kids + gents),15,3/15/2020,235,216,276,fbcore.svg
+108,Ads set(ladies + kids + gents),16,3/16/2020,230,212,273,fbcore.svg
+109,Ads set(ladies + kids + gents),17,3/17/2020,225,207,274,fbcore.svg
+110,Ads set(ladies + kids + gents),18,3/18/2020,222,204,275,fbcore.svg
+111,Ads set(ladies + kids + gents),19,3/19/2020,210,193,275,fbcore.svg
+112,Ads set(ladies + kids + gents),20,3/20/2020,211,194,274,fbcore.svg
+113,Ads set(ladies + kids + gents),21,3/21/2020,212,195,273,fbcore.svg
+114,Ads set(ladies + kids + gents),22,3/22/2020,213,196,272,fbcore.svg
+115,Ads set(ladies + kids + gents),23,3/23/2020,215,198,271,fbcore.svg
+116,Ads set(ladies + kids + gents),24,3/24/2020,230,212,273,fbcore.svg
+117,Ads set(ladies + kids + gents),25,3/25/2020,232,213,274,fbcore.svg
+118,Ads set(ladies + kids + gents),26,3/26/2020,235,216,272,fbcore.svg
+119,Ads set(ladies + kids + gents),27,3/27/2020,195,179,273,fbcore.svg
+120,Ads set(ladies + kids + gents),28,3/28/2020,190,175,274,fbcore.svg
+121,Ads set(ladies + kids + gents),29,3/29/2020,180,166,273,fbcore.svg
+122,Ads set(ladies + kids + gents),30,3/30/2020,170,156,274,fbcore.svg
+123,Ads set(ladies + kids + gents),31,3/31/2020,160,147,272,fbcore.svg
+124,Ads set(kids),1,03-01-2020,150,138,265,fbcore.svg
+125,Ads set(kids),2,03-02-2020,160,147,266,fbcore.svg
+126,Ads set(kids),3,03-03-2020,170,156,267,fbcore.svg
+127,Ads set(kids),4,03-04-2020,180,166,268,fbcore.svg
+128,Ads set(kids),5,03-05-2020,190,175,269,fbcore.svg
+129,Ads set(kids),6,03-06-2020,200,184,270,fbcore.svg
+130,Ads set(kids),7,03-07-2020,220,202,271,fbcore.svg
+131,Ads set(kids),8,03-08-2020,225,207,272,fbcore.svg
+132,Ads set(kids),9,03-09-2020,230,212,273,fbcore.svg
+133,Ads set(kids),10,03-10-2020,240,221,274,fbcore.svg
+134,Ads set(kids),11,03-11-2020,245,225,275,fbcore.svg
+135,Ads set(kids),12,03-12-2020,270,248,277,fbcore.svg
+136,Ads set(kids),13,3/13/2020,265,244,274,fbcore.svg
+137,Ads set(kids),14,3/14/2020,250,230,275,fbcore.svg
+138,Ads set(kids),15,3/15/2020,235,216,276,fbcore.svg
+139,Ads set(kids),16,3/16/2020,230,212,273,fbcore.svg
+140,Ads set(kids),17,3/17/2020,225,207,274,fbcore.svg
+141,Ads set(kids),18,3/18/2020,222,204,275,fbcore.svg
+142,Ads set(kids),19,3/19/2020,210,193,275,fbcore.svg
+143,Ads set(kids),20,3/20/2020,211,194,274,fbcore.svg
+144,Ads set(kids),21,3/21/2020,212,195,273,fbcore.svg
+145,Ads set(kids),22,3/22/2020,213,196,272,fbcore.svg
+146,Ads set(kids),23,3/23/2020,215,198,271,fbcore.svg
+147,Ads set(kids),24,3/24/2020,230,212,273,fbcore.svg
+148,Ads set(kids),25,3/25/2020,232,213,274,fbcore.svg
+149,Ads set(kids),26,3/26/2020,235,216,272,fbcore.svg
+150,Ads set(kids),27,3/27/2020,195,179,273,fbcore.svg
+151,Ads set(kids),28,3/28/2020,190,175,274,fbcore.svg
+152,Ads set(kids),29,3/29/2020,180,166,273,fbcore.svg
+153,Ads set(kids),30,3/30/2020,170,156,274,fbcore.svg
+154,Ads set(kids),31,3/31/2020,160,147,272,fbcore.svg
+0,Ad set(ladies + kids),1,03-01-2020,150,138,265,fbcore.svg
+1,Ad set(ladies + kids),2,03-02-2020,160,147,266,fbcore.svg
+2,Ad set(ladies + kids),3,03-03-2020,170,156,267,fbcore.svg
+3,Ad set(ladies + kids),4,03-04-2020,180,166,268,fbcore.svg
+4,Ad set(ladies + kids),5,03-05-2020,190,175,269,fbcore.svg
+5,Ad set(ladies + kids),6,03-06-2020,200,184,270,fbcore.svg
+6,Ad set(ladies + kids),7,03-07-2020,220,202,271,fbcore.svg
+7,Ad set(ladies + kids),8,03-08-2020,225,207,272,fbcore.svg
+8,Ad set(ladies + kids),9,03-09-2020,230,212,273,fbcore.svg
+9,Ad set(ladies + kids),10,03-10-2020,240,221,274,fbcore.svg
+10,Ad set(ladies + kids),11,03-11-2020,245,225,275,fbcore.svg
+11,Ad set(ladies + kids),12,03-12-2020,270,248,277,fbcore.svg
+12,Ad set(ladies + kids),13,3/13/2020,265,244,274,fbcore.svg
+13,Ad set(ladies + kids),14,3/14/2020,250,230,275,fbcore.svg
+14,Ad set(ladies + kids),15,3/15/2020,235,216,276,fbcore.svg
+15,Ad set(ladies + kids),16,3/16/2020,230,212,273,fbcore.svg
+16,Ad set(ladies + kids),17,3/17/2020,225,207,274,fbcore.svg
+17,Ad set(ladies + kids),18,3/18/2020,222,204,275,fbcore.svg
+18,Ad set(ladies + kids),19,3/19/2020,210,193,275,fbcore.svg
+19,Ad set(ladies + kids),20,3/20/2020,211,194,274,fbcore.svg
+20,Ad set(ladies + kids),21,3/21/2020,212,195,273,fbcore.svg
+21,Ad set(ladies + kids),22,3/22/2020,213,196,272,fbcore.svg
+22,Ad set(ladies + kids),23,3/23/2020,215,198,271,fbcore.svg
+23,Ad set(ladies + kids),24,3/24/2020,230,212,273,fbcore.svg
+24,Ad set(ladies + kids),25,3/25/2020,232,213,274,fbcore.svg
+25,Ad set(ladies + kids),26,3/26/2020,235,216,272,fbcore.svg
+26,Ad set(ladies + kids),27,3/27/2020,195,179,273,fbcore.svg
+27,Ad set(ladies + kids),28,3/28/2020,190,175,274,fbcore.svg
+28,Ad set(ladies + kids),29,3/29/2020,180,166,273,fbcore.svg
+29,Ad set(ladies + kids),30,3/30/2020,170,156,274,fbcore.svg
+30,Ad set(ladies + kids),31,3/31/2020,160,147,287,fbcore.svg
+31,Ads set(kids + gents),1,03-01-2020,130,118,245,microsoft-excel.svg
+32,Ads set(kids + gents),2,03-02-2020,140,127,246,microsoft-excel.svg
+33,Ads set(kids + gents),3,03-03-2020,150,136,247,microsoft-excel.svg
+34,Ads set(kids + gents),4,03-04-2020,160,146,248,microsoft-excel.svg
+35,Ads set(kids + gents),5,03-05-2020,170,155,249,microsoft-excel.svg
+36,Ads set(kids + gents),6,03-06-2020,180,164,250,microsoft-excel.svg
+37,Ads set(kids + gents),7,03-07-2020,200,182,251,microsoft-excel.svg
+38,Ads set(kids + gents),8,03-08-2020,205,187,252,microsoft-excel.svg
+39,Ads set(kids + gents),9,03-09-2020,210,192,253,microsoft-excel.svg
+40,Ads set(kids + gents),10,03-10-2020,220,201,254,microsoft-excel.svg
+41,Ads set(kids + gents),11,03-11-2020,225,205,255,microsoft-excel.svg
+42,Ads set(kids + gents),12,03-12-2020,250,228,257,microsoft-excel.svg
+43,Ads set(kids + gents),13,3/13/2020,245,224,254,microsoft-excel.svg
+44,Ads set(kids + gents),14,3/14/2020,230,210,255,microsoft-excel.svg
+45,Ads set(kids + gents),15,3/15/2020,215,196,256,microsoft-excel.svg
+46,Ads set(kids + gents),16,3/16/2020,210,192,253,microsoft-excel.svg
+47,Ads set(kids + gents),17,3/17/2020,205,187,254,microsoft-excel.svg
+48,Ads set(kids + gents),18,3/18/2020,202,184,255,microsoft-excel.svg
+49,Ads set(kids + gents),19,3/19/2020,155,110,256,microsoft-excel.svg
+50,Ads set(kids + gents),20,3/20/2020,145,120,257,microsoft-excel.svg
+51,Ads set(kids + gents),21,3/21/2020,192,175,253,microsoft-excel.svg
+52,Ads set(kids + gents),22,3/22/2020,193,176,252,microsoft-excel.svg
+53,Ads set(kids + gents),23,3/23/2020,195,178,251,microsoft-excel.svg
+54,Ads set(kids + gents),24,3/24/2020,210,192,253,microsoft-excel.svg
+55,Ads set(kids + gents),25,3/25/2020,212,193,254,microsoft-excel.svg
+56,Ads set(kids + gents),26,3/26/2020,215,196,252,microsoft-excel.svg
+57,Ads set(kids + gents),27,3/27/2020,175,159,253,microsoft-excel.svg
+58,Ads set(kids + gents),28,3/28/2020,170,155,254,microsoft-excel.svg
+59,Ads set(kids + gents),29,3/29/2020,160,146,253,microsoft-excel.svg
+60,Ads set(kids + gents),30,3/30/2020,150,136,254,microsoft-excel.svg
+61,Ads set(kids + gents),31,3/31/2020,140,127,199,microsoft-excel.svg
+62,Ads set(gents),1,03-01-2020,190,178,305,mssql_shared.svg
+63,Ads set(gents),2,03-02-2020,200,187,306,mssql_shared.svg
+64,Ads set(gents),3,03-03-2020,210,196,307,mssql_shared.svg
+65,Ads set(gents),4,03-04-2020,220,206,308,mssql_shared.svg
+66,Ads set(gents),5,03-05-2020,230,215,309,mssql_shared.svg
+67,Ads set(gents),6,03-06-2020,240,224,310,mssql_shared.svg
+68,Ads set(gents),7,03-07-2020,260,242,311,mssql_shared.svg
+69,Ads set(gents),8,03-08-2020,265,247,312,mssql_shared.svg
+70,Ads set(gents),9,03-09-2020,270,252,313,mssql_shared.svg
+71,Ads set(gents),10,03-10-2020,280,261,314,mssql_shared.svg
+72,Ads set(gents),11,03-11-2020,285,265,315,mssql_shared.svg
+73,Ads set(gents),12,03-12-2020,310,288,317,mssql_shared.svg
+74,Ads set(gents),13,3/13/2020,305,284,314,mssql_shared.svg
+75,Ads set(gents),14,3/14/2020,290,270,315,mssql_shared.svg
+76,Ads set(gents),15,3/15/2020,275,256,316,mssql_shared.svg
+77,Ads set(gents),16,3/16/2020,270,252,313,mssql_shared.svg
+78,Ads set(gents),17,3/17/2020,265,247,314,mssql_shared.svg
+79,Ads set(gents),18,3/18/2020,262,244,315,mssql_shared.svg
+80,Ads set(gents),19,3/19/2020,250,233,315,mssql_shared.svg
+81,Ads set(gents),20,3/20/2020,251,234,314,mssql_shared.svg
+82,Ads set(gents),21,3/21/2020,252,235,313,mssql_shared.svg
+83,Ads set(gents),22,3/22/2020,253,236,312,mssql_shared.svg
+84,Ads set(gents),23,3/23/2020,255,238,311,mssql_shared.svg
+85,Ads set(gents),24,3/24/2020,270,252,313,mssql_shared.svg
+86,Ads set(gents),25,3/25/2020,290,273,334,mssql_shared.svg
+87,Ads set(gents),26,3/26/2020,300,270,340,mssql_shared.svg
+88,Ads set(gents),27,3/27/2020,235,219,313,mssql_shared.svg
+89,Ads set(gents),28,3/28/2020,230,215,314,mssql_shared.svg
+90,Ads set(gents),29,3/29/2020,220,206,313,mssql_shared.svg
+91,Ads set(gents),30,3/30/2020,210,196,314,mssql_shared.svg
+92,Ads set(gents),31,3/31/2020,200,187,312,mssql_shared.svg
+93,Ads set(ladies + kids + gents),1,03-01-2020,150,138,265,fbcore.svg
+94,Ads set(ladies + kids + gents),2,03-02-2020,160,147,266,fbcore.svg
+95,Ads set(ladies + kids + gents),3,03-03-2020,170,156,267,fbcore.svg
+96,Ads set(ladies + kids + gents),4,03-04-2020,180,166,268,fbcore.svg
+97,Ads set(ladies + kids + gents),5,03-05-2020,190,175,269,fbcore.svg
+98,Ads set(ladies + kids + gents),6,03-06-2020,200,184,270,fbcore.svg
+99,Ads set(ladies + kids + gents),7,03-07-2020,220,202,271,fbcore.svg
+100,Ads set(ladies + kids + gents),8,03-08-2020,225,207,272,fbcore.svg
+101,Ads set(ladies + kids + gents),9,03-09-2020,230,212,273,fbcore.svg
+102,Ads set(ladies + kids + gents),10,03-10-2020,240,221,274,fbcore.svg
+103,Ads set(ladies + kids + gents),11,03-11-2020,245,225,275,fbcore.svg
+104,Ads set(ladies + kids + gents),12,03-12-2020,270,248,277,fbcore.svg
+105,Ads set(ladies + kids + gents),13,3/13/2020,265,244,274,fbcore.svg
+106,Ads set(ladies + kids + gents),14,3/14/2020,250,230,275,fbcore.svg
+107,Ads set(ladies + kids + gents),15,3/15/2020,235,216,276,fbcore.svg
+108,Ads set(ladies + kids + gents),16,3/16/2020,230,212,273,fbcore.svg
+109,Ads set(ladies + kids + gents),17,3/17/2020,225,207,274,fbcore.svg
+110,Ads set(ladies + kids + gents),18,3/18/2020,222,204,275,fbcore.svg
+111,Ads set(ladies + kids + gents),19,3/19/2020,210,193,275,fbcore.svg
+112,Ads set(ladies + kids + gents),20,3/20/2020,211,194,274,fbcore.svg
+113,Ads set(ladies + kids + gents),21,3/21/2020,212,195,273,fbcore.svg
+114,Ads set(ladies + kids + gents),22,3/22/2020,213,196,272,fbcore.svg
+115,Ads set(ladies + kids + gents),23,3/23/2020,215,198,271,fbcore.svg
+116,Ads set(ladies + kids + gents),24,3/24/2020,230,212,273,fbcore.svg
+117,Ads set(ladies + kids + gents),25,3/25/2020,232,213,274,fbcore.svg
+118,Ads set(ladies + kids + gents),26,3/26/2020,235,216,272,fbcore.svg
+119,Ads set(ladies + kids + gents),27,3/27/2020,195,179,273,fbcore.svg
+120,Ads set(ladies + kids + gents),28,3/28/2020,190,175,274,fbcore.svg
+121,Ads set(ladies + kids + gents),29,3/29/2020,180,166,273,fbcore.svg
+122,Ads set(ladies + kids + gents),30,3/30/2020,170,156,274,fbcore.svg
+123,Ads set(ladies + kids + gents),31,3/31/2020,160,147,272,fbcore.svg
+124,Ads set(kids),1,03-01-2020,150,138,265,fbcore.svg
+125,Ads set(kids),2,03-02-2020,160,147,266,fbcore.svg
+126,Ads set(kids),3,03-03-2020,170,156,267,fbcore.svg
+127,Ads set(kids),4,03-04-2020,180,166,268,fbcore.svg
+128,Ads set(kids),5,03-05-2020,190,175,269,fbcore.svg
+129,Ads set(kids),6,03-06-2020,200,184,270,fbcore.svg
+130,Ads set(kids),7,03-07-2020,220,202,271,fbcore.svg
+131,Ads set(kids),8,03-08-2020,225,207,272,fbcore.svg
+132,Ads set(kids),9,03-09-2020,230,212,273,fbcore.svg
+133,Ads set(kids),10,03-10-2020,240,221,274,fbcore.svg
+134,Ads set(kids),11,03-11-2020,245,225,275,fbcore.svg
+135,Ads set(kids),12,03-12-2020,270,248,277,fbcore.svg
+136,Ads set(kids),13,3/13/2020,265,244,274,fbcore.svg
+137,Ads set(kids),14,3/14/2020,250,230,275,fbcore.svg
+138,Ads set(kids),15,3/15/2020,235,216,276,fbcore.svg
+139,Ads set(kids),16,3/16/2020,230,212,273,fbcore.svg
+140,Ads set(kids),17,3/17/2020,225,207,274,fbcore.svg
+141,Ads set(kids),18,3/18/2020,222,204,275,fbcore.svg
+142,Ads set(kids),19,3/19/2020,210,193,275,fbcore.svg
+143,Ads set(kids),20,3/20/2020,211,194,274,fbcore.svg
+144,Ads set(kids),21,3/21/2020,212,195,273,fbcore.svg
+145,Ads set(kids),22,3/22/2020,213,196,272,fbcore.svg
+146,Ads set(kids),23,3/23/2020,215,198,271,fbcore.svg
+147,Ads set(kids),24,3/24/2020,230,212,273,fbcore.svg
+148,Ads set(kids),25,3/25/2020,232,213,274,fbcore.svg
+149,Ads set(kids),26,3/26/2020,235,216,272,fbcore.svg
+150,Ads set(kids),27,3/27/2020,195,179,273,fbcore.svg
+151,Ads set(kids),28,3/28/2020,190,175,274,fbcore.svg
+152,Ads set(kids),29,3/29/2020,180,166,273,fbcore.svg
+153,Ads set(kids),30,3/30/2020,170,156,274,fbcore.svg
+154,Ads set(kids),31,3/31/2020,160,147,272,fbcore.svg
+0,Ad set(ladies + kids),1,03-01-2020,150,138,265,fbcore.svg
+1,Ad set(ladies + kids),2,03-02-2020,160,147,266,fbcore.svg
+2,Ad set(ladies + kids),3,03-03-2020,170,156,267,fbcore.svg
+3,Ad set(ladies + kids),4,03-04-2020,180,166,268,fbcore.svg
+4,Ad set(ladies + kids),5,03-05-2020,190,175,269,fbcore.svg
+5,Ad set(ladies + kids),6,03-06-2020,200,184,270,fbcore.svg
+6,Ad set(ladies + kids),7,03-07-2020,220,202,271,fbcore.svg
+7,Ad set(ladies + kids),8,03-08-2020,225,207,272,fbcore.svg
+8,Ad set(ladies + kids),9,03-09-2020,230,212,273,fbcore.svg
+9,Ad set(ladies + kids),10,03-10-2020,240,221,274,fbcore.svg
+10,Ad set(ladies + kids),11,03-11-2020,245,225,275,fbcore.svg
+11,Ad set(ladies + kids),12,03-12-2020,270,248,277,fbcore.svg
+12,Ad set(ladies + kids),13,3/13/2020,265,244,274,fbcore.svg
+13,Ad set(ladies + kids),14,3/14/2020,250,230,275,fbcore.svg
+14,Ad set(ladies + kids),15,3/15/2020,235,216,276,fbcore.svg
+15,Ad set(ladies + kids),16,3/16/2020,230,212,273,fbcore.svg
+16,Ad set(ladies + kids),17,3/17/2020,225,207,274,fbcore.svg
+17,Ad set(ladies + kids),18,3/18/2020,222,204,275,fbcore.svg
+18,Ad set(ladies + kids),19,3/19/2020,210,193,275,fbcore.svg
+19,Ad set(ladies + kids),20,3/20/2020,211,194,274,fbcore.svg
+20,Ad set(ladies + kids),21,3/21/2020,212,195,273,fbcore.svg
+21,Ad set(ladies + kids),22,3/22/2020,213,196,272,fbcore.svg
+22,Ad set(ladies + kids),23,3/23/2020,215,198,271,fbcore.svg
+23,Ad set(ladies + kids),24,3/24/2020,230,212,273,fbcore.svg
+24,Ad set(ladies + kids),25,3/25/2020,232,213,274,fbcore.svg
+25,Ad set(ladies + kids),26,3/26/2020,235,216,272,fbcore.svg
+26,Ad set(ladies + kids),27,3/27/2020,195,179,273,fbcore.svg
+27,Ad set(ladies + kids),28,3/28/2020,190,175,274,fbcore.svg
+28,Ad set(ladies + kids),29,3/29/2020,180,166,273,fbcore.svg
+29,Ad set(ladies + kids),30,3/30/2020,170,156,274,fbcore.svg
+30,Ad set(ladies + kids),31,3/31/2020,160,147,287,fbcore.svg
+31,Ads set(kids + gents),1,03-01-2020,130,118,245,microsoft-excel.svg
+32,Ads set(kids + gents),2,03-02-2020,140,127,246,microsoft-excel.svg
+33,Ads set(kids + gents),3,03-03-2020,150,136,247,microsoft-excel.svg
+34,Ads set(kids + gents),4,03-04-2020,160,146,248,microsoft-excel.svg
+35,Ads set(kids + gents),5,03-05-2020,170,155,249,microsoft-excel.svg
+36,Ads set(kids + gents),6,03-06-2020,180,164,250,microsoft-excel.svg
+37,Ads set(kids + gents),7,03-07-2020,200,182,251,microsoft-excel.svg
+38,Ads set(kids + gents),8,03-08-2020,205,187,252,microsoft-excel.svg
+39,Ads set(kids + gents),9,03-09-2020,210,192,253,microsoft-excel.svg
+40,Ads set(kids + gents),10,03-10-2020,220,201,254,microsoft-excel.svg
+41,Ads set(kids + gents),11,03-11-2020,225,205,255,microsoft-excel.svg
+42,Ads set(kids + gents),12,03-12-2020,250,228,257,microsoft-excel.svg
+43,Ads set(kids + gents),13,3/13/2020,245,224,254,microsoft-excel.svg
+44,Ads set(kids + gents),14,3/14/2020,230,210,255,microsoft-excel.svg
+45,Ads set(kids + gents),15,3/15/2020,215,196,256,microsoft-excel.svg
+46,Ads set(kids + gents),16,3/16/2020,210,192,253,microsoft-excel.svg
+47,Ads set(kids + gents),17,3/17/2020,205,187,254,microsoft-excel.svg
+48,Ads set(kids + gents),18,3/18/2020,202,184,255,microsoft-excel.svg
+49,Ads set(kids + gents),19,3/19/2020,155,110,256,microsoft-excel.svg
+50,Ads set(kids + gents),20,3/20/2020,145,120,257,microsoft-excel.svg
+51,Ads set(kids + gents),21,3/21/2020,192,175,253,microsoft-excel.svg
+52,Ads set(kids + gents),22,3/22/2020,193,176,252,microsoft-excel.svg
+53,Ads set(kids + gents),23,3/23/2020,195,178,251,microsoft-excel.svg
+54,Ads set(kids + gents),24,3/24/2020,210,192,253,microsoft-excel.svg
+55,Ads set(kids + gents),25,3/25/2020,212,193,254,microsoft-excel.svg
+56,Ads set(kids + gents),26,3/26/2020,215,196,252,microsoft-excel.svg
+57,Ads set(kids + gents),27,3/27/2020,175,159,253,microsoft-excel.svg
+58,Ads set(kids + gents),28,3/28/2020,170,155,254,microsoft-excel.svg
+59,Ads set(kids + gents),29,3/29/2020,160,146,253,microsoft-excel.svg
+60,Ads set(kids + gents),30,3/30/2020,150,136,254,microsoft-excel.svg
+61,Ads set(kids + gents),31,3/31/2020,140,127,199,microsoft-excel.svg
+62,Ads set(gents),1,03-01-2020,190,178,305,mssql_shared.svg
+63,Ads set(gents),2,03-02-2020,200,187,306,mssql_shared.svg
+64,Ads set(gents),3,03-03-2020,210,196,307,mssql_shared.svg
+65,Ads set(gents),4,03-04-2020,220,206,308,mssql_shared.svg
+66,Ads set(gents),5,03-05-2020,230,215,309,mssql_shared.svg
+67,Ads set(gents),6,03-06-2020,240,224,310,mssql_shared.svg
+68,Ads set(gents),7,03-07-2020,260,242,311,mssql_shared.svg
+69,Ads set(gents),8,03-08-2020,265,247,312,mssql_shared.svg
+70,Ads set(gents),9,03-09-2020,270,252,313,mssql_shared.svg
+71,Ads set(gents),10,03-10-2020,280,261,314,mssql_shared.svg
+72,Ads set(gents),11,03-11-2020,285,265,315,mssql_shared.svg
+73,Ads set(gents),12,03-12-2020,310,288,317,mssql_shared.svg
+74,Ads set(gents),13,3/13/2020,305,284,314,mssql_shared.svg
+75,Ads set(gents),14,3/14/2020,290,270,315,mssql_shared.svg
+76,Ads set(gents),15,3/15/2020,275,256,316,mssql_shared.svg
+77,Ads set(gents),16,3/16/2020,270,252,313,mssql_shared.svg
+78,Ads set(gents),17,3/17/2020,265,247,314,mssql_shared.svg
+79,Ads set(gents),18,3/18/2020,262,244,315,mssql_shared.svg
+80,Ads set(gents),19,3/19/2020,250,233,315,mssql_shared.svg
+81,Ads set(gents),20,3/20/2020,251,234,314,mssql_shared.svg
+82,Ads set(gents),21,3/21/2020,252,235,313,mssql_shared.svg
+83,Ads set(gents),22,3/22/2020,253,236,312,mssql_shared.svg
+84,Ads set(gents),23,3/23/2020,255,238,311,mssql_shared.svg
+85,Ads set(gents),24,3/24/2020,270,252,313,mssql_shared.svg
+86,Ads set(gents),25,3/25/2020,290,273,334,mssql_shared.svg
+87,Ads set(gents),26,3/26/2020,300,270,340,mssql_shared.svg
+88,Ads set(gents),27,3/27/2020,235,219,313,mssql_shared.svg
+89,Ads set(gents),28,3/28/2020,230,215,314,mssql_shared.svg
+90,Ads set(gents),29,3/29/2020,220,206,313,mssql_shared.svg
+91,Ads set(gents),30,3/30/2020,210,196,314,mssql_shared.svg
+92,Ads set(gents),31,3/31/2020,200,187,312,mssql_shared.svg
+93,Ads set(ladies + kids + gents),1,03-01-2020,150,138,265,fbcore.svg
+94,Ads set(ladies + kids + gents),2,03-02-2020,160,147,266,fbcore.svg
+95,Ads set(ladies + kids + gents),3,03-03-2020,170,156,267,fbcore.svg
+96,Ads set(ladies + kids + gents),4,03-04-2020,180,166,268,fbcore.svg
+97,Ads set(ladies + kids + gents),5,03-05-2020,190,175,269,fbcore.svg
+98,Ads set(ladies + kids + gents),6,03-06-2020,200,184,270,fbcore.svg
+99,Ads set(ladies + kids + gents),7,03-07-2020,220,202,271,fbcore.svg
+100,Ads set(ladies + kids + gents),8,03-08-2020,225,207,272,fbcore.svg
+101,Ads set(ladies + kids + gents),9,03-09-2020,230,212,273,fbcore.svg
+102,Ads set(ladies + kids + gents),10,03-10-2020,240,221,274,fbcore.svg
+103,Ads set(ladies + kids + gents),11,03-11-2020,245,225,275,fbcore.svg
+104,Ads set(ladies + kids + gents),12,03-12-2020,270,248,277,fbcore.svg
+105,Ads set(ladies + kids + gents),13,3/13/2020,265,244,274,fbcore.svg
+106,Ads set(ladies + kids + gents),14,3/14/2020,250,230,275,fbcore.svg
+107,Ads set(ladies + kids + gents),15,3/15/2020,235,216,276,fbcore.svg
+108,Ads set(ladies + kids + gents),16,3/16/2020,230,212,273,fbcore.svg
+109,Ads set(ladies + kids + gents),17,3/17/2020,225,207,274,fbcore.svg
+110,Ads set(ladies + kids + gents),18,3/18/2020,222,204,275,fbcore.svg
+111,Ads set(ladies + kids + gents),19,3/19/2020,210,193,275,fbcore.svg
+112,Ads set(ladies + kids + gents),20,3/20/2020,211,194,274,fbcore.svg
+113,Ads set(ladies + kids + gents),21,3/21/2020,212,195,273,fbcore.svg
+114,Ads set(ladies + kids + gents),22,3/22/2020,213,196,272,fbcore.svg
+115,Ads set(ladies + kids + gents),23,3/23/2020,215,198,271,fbcore.svg
+116,Ads set(ladies + kids + gents),24,3/24/2020,230,212,273,fbcore.svg
+117,Ads set(ladies + kids + gents),25,3/25/2020,232,213,274,fbcore.svg
+118,Ads set(ladies + kids + gents),26,3/26/2020,235,216,272,fbcore.svg
+119,Ads set(ladies + kids + gents),27,3/27/2020,195,179,273,fbcore.svg
+120,Ads set(ladies + kids + gents),28,3/28/2020,190,175,274,fbcore.svg
+121,Ads set(ladies + kids + gents),29,3/29/2020,180,166,273,fbcore.svg
+122,Ads set(ladies + kids + gents),30,3/30/2020,170,156,274,fbcore.svg
+123,Ads set(ladies + kids + gents),31,3/31/2020,160,147,272,fbcore.svg
+124,Ads set(kids),1,03-01-2020,150,138,265,fbcore.svg
+125,Ads set(kids),2,03-02-2020,160,147,266,fbcore.svg
+126,Ads set(kids),3,03-03-2020,170,156,267,fbcore.svg
+127,Ads set(kids),4,03-04-2020,180,166,268,fbcore.svg
+128,Ads set(kids),5,03-05-2020,190,175,269,fbcore.svg
+129,Ads set(kids),6,03-06-2020,200,184,270,fbcore.svg
+130,Ads set(kids),7,03-07-2020,220,202,271,fbcore.svg
+131,Ads set(kids),8,03-08-2020,225,207,272,fbcore.svg
+132,Ads set(kids),9,03-09-2020,230,212,273,fbcore.svg
+133,Ads set(kids),10,03-10-2020,240,221,274,fbcore.svg
+134,Ads set(kids),11,03-11-2020,245,225,275,fbcore.svg
+135,Ads set(kids),12,03-12-2020,270,248,277,fbcore.svg
+136,Ads set(kids),13,3/13/2020,265,244,274,fbcore.svg
+137,Ads set(kids),14,3/14/2020,250,230,275,fbcore.svg
+138,Ads set(kids),15,3/15/2020,235,216,276,fbcore.svg
+139,Ads set(kids),16,3/16/2020,230,212,273,fbcore.svg
+140,Ads set(kids),17,3/17/2020,225,207,274,fbcore.svg
+141,Ads set(kids),18,3/18/2020,222,204,275,fbcore.svg
+142,Ads set(kids),19,3/19/2020,210,193,275,fbcore.svg
+143,Ads set(kids),20,3/20/2020,211,194,274,fbcore.svg
+144,Ads set(kids),21,3/21/2020,212,195,273,fbcore.svg
+145,Ads set(kids),22,3/22/2020,213,196,272,fbcore.svg
+146,Ads set(kids),23,3/23/2020,215,198,271,fbcore.svg
+147,Ads set(kids),24,3/24/2020,230,212,273,fbcore.svg
+148,Ads set(kids),25,3/25/2020,232,213,274,fbcore.svg
+149,Ads set(kids),26,3/26/2020,235,216,272,fbcore.svg
+150,Ads set(kids),27,3/27/2020,195,179,273,fbcore.svg
+151,Ads set(kids),28,3/28/2020,190,175,274,fbcore.svg
+152,Ads set(kids),29,3/29/2020,180,166,273,fbcore.svg
+153,Ads set(kids),30,3/30/2020,170,156,274,fbcore.svg
+154,Ads set(kids),31,3/31/2020,160,147,272,fbcore.svg
+0,Ad set(ladies + kids),1,03-01-2020,150,138,265,fbcore.svg
+1,Ad set(ladies + kids),2,03-02-2020,160,147,266,fbcore.svg
+2,Ad set(ladies + kids),3,03-03-2020,170,156,267,fbcore.svg
+3,Ad set(ladies + kids),4,03-04-2020,180,166,268,fbcore.svg
+4,Ad set(ladies + kids),5,03-05-2020,190,175,269,fbcore.svg
+5,Ad set(ladies + kids),6,03-06-2020,200,184,270,fbcore.svg
+6,Ad set(ladies + kids),7,03-07-2020,220,202,271,fbcore.svg
+7,Ad set(ladies + kids),8,03-08-2020,225,207,272,fbcore.svg
+8,Ad set(ladies + kids),9,03-09-2020,230,212,273,fbcore.svg
+9,Ad set(ladies + kids),10,03-10-2020,240,221,274,fbcore.svg
+10,Ad set(ladies + kids),11,03-11-2020,245,225,275,fbcore.svg
+11,Ad set(ladies + kids),12,03-12-2020,270,248,277,fbcore.svg
+12,Ad set(ladies + kids),13,3/13/2020,265,244,274,fbcore.svg
+13,Ad set(ladies + kids),14,3/14/2020,250,230,275,fbcore.svg
+14,Ad set(ladies + kids),15,3/15/2020,235,216,276,fbcore.svg
+15,Ad set(ladies + kids),16,3/16/2020,230,212,273,fbcore.svg
+16,Ad set(ladies + kids),17,3/17/2020,225,207,274,fbcore.svg
+17,Ad set(ladies + kids),18,3/18/2020,222,204,275,fbcore.svg
+18,Ad set(ladies + kids),19,3/19/2020,210,193,275,fbcore.svg
+19,Ad set(ladies + kids),20,3/20/2020,211,194,274,fbcore.svg
+20,Ad set(ladies + kids),21,3/21/2020,212,195,273,fbcore.svg
+21,Ad set(ladies + kids),22,3/22/2020,213,196,272,fbcore.svg
+22,Ad set(ladies + kids),23,3/23/2020,215,198,271,fbcore.svg
+23,Ad set(ladies + kids),24,3/24/2020,230,212,273,fbcore.svg
+24,Ad set(ladies + kids),25,3/25/2020,232,213,274,fbcore.svg
+25,Ad set(ladies + kids),26,3/26/2020,235,216,272,fbcore.svg
+26,Ad set(ladies + kids),27,3/27/2020,195,179,273,fbcore.svg
+27,Ad set(ladies + kids),28,3/28/2020,190,175,274,fbcore.svg
+28,Ad set(ladies + kids),29,3/29/2020,180,166,273,fbcore.svg
+29,Ad set(ladies + kids),30,3/30/2020,170,156,274,fbcore.svg
+30,Ad set(ladies + kids),31,3/31/2020,160,147,287,fbcore.svg
+31,Ads set(kids + gents),1,03-01-2020,130,118,245,microsoft-excel.svg
+32,Ads set(kids + gents),2,03-02-2020,140,127,246,microsoft-excel.svg
+33,Ads set(kids + gents),3,03-03-2020,150,136,247,microsoft-excel.svg
+34,Ads set(kids + gents),4,03-04-2020,160,146,248,microsoft-excel.svg
+35,Ads set(kids + gents),5,03-05-2020,170,155,249,microsoft-excel.svg
+36,Ads set(kids + gents),6,03-06-2020,180,164,250,microsoft-excel.svg
+37,Ads set(kids + gents),7,03-07-2020,200,182,251,microsoft-excel.svg
+38,Ads set(kids + gents),8,03-08-2020,205,187,252,microsoft-excel.svg
+39,Ads set(kids + gents),9,03-09-2020,210,192,253,microsoft-excel.svg
+40,Ads set(kids + gents),10,03-10-2020,220,201,254,microsoft-excel.svg
+41,Ads set(kids + gents),11,03-11-2020,225,205,255,microsoft-excel.svg
+42,Ads set(kids + gents),12,03-12-2020,250,228,257,microsoft-excel.svg
+43,Ads set(kids + gents),13,3/13/2020,245,224,254,microsoft-excel.svg
+44,Ads set(kids + gents),14,3/14/2020,230,210,255,microsoft-excel.svg
+45,Ads set(kids + gents),15,3/15/2020,215,196,256,microsoft-excel.svg
+46,Ads set(kids + gents),16,3/16/2020,210,192,253,microsoft-excel.svg
+47,Ads set(kids + gents),17,3/17/2020,205,187,254,microsoft-excel.svg
+48,Ads set(kids + gents),18,3/18/2020,202,184,255,microsoft-excel.svg
+49,Ads set(kids + gents),19,3/19/2020,155,110,256,microsoft-excel.svg
+50,Ads set(kids + gents),20,3/20/2020,145,120,257,microsoft-excel.svg
+51,Ads set(kids + gents),21,3/21/2020,192,175,253,microsoft-excel.svg
+52,Ads set(kids + gents),22,3/22/2020,193,176,252,microsoft-excel.svg
+53,Ads set(kids + gents),23,3/23/2020,195,178,251,microsoft-excel.svg
+54,Ads set(kids + gents),24,3/24/2020,210,192,253,microsoft-excel.svg
+55,Ads set(kids + gents),25,3/25/2020,212,193,254,microsoft-excel.svg
+56,Ads set(kids + gents),26,3/26/2020,215,196,252,microsoft-excel.svg
+57,Ads set(kids + gents),27,3/27/2020,175,159,253,microsoft-excel.svg
+58,Ads set(kids + gents),28,3/28/2020,170,155,254,microsoft-excel.svg
+59,Ads set(kids + gents),29,3/29/2020,160,146,253,microsoft-excel.svg
+60,Ads set(kids + gents),30,3/30/2020,150,136,254,microsoft-excel.svg
+61,Ads set(kids + gents),31,3/31/2020,140,127,199,microsoft-excel.svg
+62,Ads set(gents),1,03-01-2020,190,178,305,mssql_shared.svg
+63,Ads set(gents),2,03-02-2020,200,187,306,mssql_shared.svg
+64,Ads set(gents),3,03-03-2020,210,196,307,mssql_shared.svg
+65,Ads set(gents),4,03-04-2020,220,206,308,mssql_shared.svg
+66,Ads set(gents),5,03-05-2020,230,215,309,mssql_shared.svg
+67,Ads set(gents),6,03-06-2020,240,224,310,mssql_shared.svg
+68,Ads set(gents),7,03-07-2020,260,242,311,mssql_shared.svg
+69,Ads set(gents),8,03-08-2020,265,247,312,mssql_shared.svg
+70,Ads set(gents),9,03-09-2020,270,252,313,mssql_shared.svg
+71,Ads set(gents),10,03-10-2020,280,261,314,mssql_shared.svg
+72,Ads set(gents),11,03-11-2020,285,265,315,mssql_shared.svg
+73,Ads set(gents),12,03-12-2020,310,288,317,mssql_shared.svg
+74,Ads set(gents),13,3/13/2020,305,284,314,mssql_shared.svg
+75,Ads set(gents),14,3/14/2020,290,270,315,mssql_shared.svg
+76,Ads set(gents),15,3/15/2020,275,256,316,mssql_shared.svg
+77,Ads set(gents),16,3/16/2020,270,252,313,mssql_shared.svg
+78,Ads set(gents),17,3/17/2020,265,247,314,mssql_shared.svg
+79,Ads set(gents),18,3/18/2020,262,244,315,mssql_shared.svg
+80,Ads set(gents),19,3/19/2020,250,233,315,mssql_shared.svg
+81,Ads set(gents),20,3/20/2020,251,234,314,mssql_shared.svg
+82,Ads set(gents),21,3/21/2020,252,235,313,mssql_shared.svg
+83,Ads set(gents),22,3/22/2020,253,236,312,mssql_shared.svg
+84,Ads set(gents),23,3/23/2020,255,238,311,mssql_shared.svg
+85,Ads set(gents),24,3/24/2020,270,252,313,mssql_shared.svg
+86,Ads set(gents),25,3/25/2020,290,273,334,mssql_shared.svg
+87,Ads set(gents),26,3/26/2020,300,270,340,mssql_shared.svg
+88,Ads set(gents),27,3/27/2020,235,219,313,mssql_shared.svg
+89,Ads set(gents),28,3/28/2020,230,215,314,mssql_shared.svg
+90,Ads set(gents),29,3/29/2020,220,206,313,mssql_shared.svg
+91,Ads set(gents),30,3/30/2020,210,196,314,mssql_shared.svg
+92,Ads set(gents),31,3/31/2020,200,187,312,mssql_shared.svg
+93,Ads set(ladies + kids + gents),1,03-01-2020,150,138,265,fbcore.svg
+94,Ads set(ladies + kids + gents),2,03-02-2020,160,147,266,fbcore.svg
+95,Ads set(ladies + kids + gents),3,03-03-2020,170,156,267,fbcore.svg
+96,Ads set(ladies + kids + gents),4,03-04-2020,180,166,268,fbcore.svg
+97,Ads set(ladies + kids + gents),5,03-05-2020,190,175,269,fbcore.svg
+98,Ads set(ladies + kids + gents),6,03-06-2020,200,184,270,fbcore.svg
+99,Ads set(ladies + kids + gents),7,03-07-2020,220,202,271,fbcore.svg
+100,Ads set(ladies + kids + gents),8,03-08-2020,225,207,272,fbcore.svg
+101,Ads set(ladies + kids + gents),9,03-09-2020,230,212,273,fbcore.svg
+102,Ads set(ladies + kids + gents),10,03-10-2020,240,221,274,fbcore.svg
+103,Ads set(ladies + kids + gents),11,03-11-2020,245,225,275,fbcore.svg
+104,Ads set(ladies + kids + gents),12,03-12-2020,270,248,277,fbcore.svg
+105,Ads set(ladies + kids + gents),13,3/13/2020,265,244,274,fbcore.svg
+106,Ads set(ladies + kids + gents),14,3/14/2020,250,230,275,fbcore.svg
+107,Ads set(ladies + kids + gents),15,3/15/2020,235,216,276,fbcore.svg
+108,Ads set(ladies + kids + gents),16,3/16/2020,230,212,273,fbcore.svg
+109,Ads set(ladies + kids + gents),17,3/17/2020,225,207,274,fbcore.svg
+110,Ads set(ladies + kids + gents),18,3/18/2020,222,204,275,fbcore.svg
+111,Ads set(ladies + kids + gents),19,3/19/2020,210,193,275,fbcore.svg
+112,Ads set(ladies + kids + gents),20,3/20/2020,211,194,274,fbcore.svg
+113,Ads set(ladies + kids + gents),21,3/21/2020,212,195,273,fbcore.svg
+114,Ads set(ladies + kids + gents),22,3/22/2020,213,196,272,fbcore.svg
+115,Ads set(ladies + kids + gents),23,3/23/2020,215,198,271,fbcore.svg
+116,Ads set(ladies + kids + gents),24,3/24/2020,230,212,273,fbcore.svg
+117,Ads set(ladies + kids + gents),25,3/25/2020,232,213,274,fbcore.svg
+118,Ads set(ladies + kids + gents),26,3/26/2020,235,216,272,fbcore.svg
+119,Ads set(ladies + kids + gents),27,3/27/2020,195,179,273,fbcore.svg
+120,Ads set(ladies + kids + gents),28,3/28/2020,190,175,274,fbcore.svg
+121,Ads set(ladies + kids + gents),29,3/29/2020,180,166,273,fbcore.svg
+122,Ads set(ladies + kids + gents),30,3/30/2020,170,156,274,fbcore.svg
+123,Ads set(ladies + kids + gents),31,3/31/2020,160,147,272,fbcore.svg
+124,Ads set(kids),1,03-01-2020,150,138,265,fbcore.svg
+125,Ads set(kids),2,03-02-2020,160,147,266,fbcore.svg
+126,Ads set(kids),3,03-03-2020,170,156,267,fbcore.svg
+127,Ads set(kids),4,03-04-2020,180,166,268,fbcore.svg
+128,Ads set(kids),5,03-05-2020,190,175,269,fbcore.svg
+129,Ads set(kids),6,03-06-2020,200,184,270,fbcore.svg
+130,Ads set(kids),7,03-07-2020,220,202,271,fbcore.svg
+131,Ads set(kids),8,03-08-2020,225,207,272,fbcore.svg
+132,Ads set(kids),9,03-09-2020,230,212,273,fbcore.svg
+133,Ads set(kids),10,03-10-2020,240,221,274,fbcore.svg
+134,Ads set(kids),11,03-11-2020,245,225,275,fbcore.svg
+135,Ads set(kids),12,03-12-2020,270,248,277,fbcore.svg
+136,Ads set(kids),13,3/13/2020,265,244,274,fbcore.svg
+137,Ads set(kids),14,3/14/2020,250,230,275,fbcore.svg
+138,Ads set(kids),15,3/15/2020,235,216,276,fbcore.svg
+139,Ads set(kids),16,3/16/2020,230,212,273,fbcore.svg
+140,Ads set(kids),17,3/17/2020,225,207,274,fbcore.svg
+141,Ads set(kids),18,3/18/2020,222,204,275,fbcore.svg
+142,Ads set(kids),19,3/19/2020,210,193,275,fbcore.svg
+143,Ads set(kids),20,3/20/2020,211,194,274,fbcore.svg
+144,Ads set(kids),21,3/21/2020,212,195,273,fbcore.svg
+145,Ads set(kids),22,3/22/2020,213,196,272,fbcore.svg
+146,Ads set(kids),23,3/23/2020,215,198,271,fbcore.svg
+147,Ads set(kids),24,3/24/2020,230,212,273,fbcore.svg
+148,Ads set(kids),25,3/25/2020,232,213,274,fbcore.svg
+149,Ads set(kids),26,3/26/2020,235,216,272,fbcore.svg
+150,Ads set(kids),27,3/27/2020,195,179,273,fbcore.svg
+151,Ads set(kids),28,3/28/2020,190,175,274,fbcore.svg
+152,Ads set(kids),29,3/29/2020,180,166,273,fbcore.svg
+153,Ads set(kids),30,3/30/2020,170,156,274,fbcore.svg
+154,Ads set(kids),31,3/31/2020,160,147,272,fbcore.svg
+0,Ad set(ladies + kids),1,03-01-2020,150,138,265,fbcore.svg
+1,Ad set(ladies + kids),2,03-02-2020,160,147,266,fbcore.svg
+2,Ad set(ladies + kids),3,03-03-2020,170,156,267,fbcore.svg
+3,Ad set(ladies + kids),4,03-04-2020,180,166,268,fbcore.svg
+4,Ad set(ladies + kids),5,03-05-2020,190,175,269,fbcore.svg
+5,Ad set(ladies + kids),6,03-06-2020,200,184,270,fbcore.svg
+6,Ad set(ladies + kids),7,03-07-2020,220,202,271,fbcore.svg
+7,Ad set(ladies + kids),8,03-08-2020,225,207,272,fbcore.svg
+8,Ad set(ladies + kids),9,03-09-2020,230,212,273,fbcore.svg
+9,Ad set(ladies + kids),10,03-10-2020,240,221,274,fbcore.svg
+10,Ad set(ladies + kids),11,03-11-2020,245,225,275,fbcore.svg
+11,Ad set(ladies + kids),12,03-12-2020,270,248,277,fbcore.svg
+12,Ad set(ladies + kids),13,3/13/2020,265,244,274,fbcore.svg
+13,Ad set(ladies + kids),14,3/14/2020,250,230,275,fbcore.svg
+14,Ad set(ladies + kids),15,3/15/2020,235,216,276,fbcore.svg
+15,Ad set(ladies + kids),16,3/16/2020,230,212,273,fbcore.svg
+16,Ad set(ladies + kids),17,3/17/2020,225,207,274,fbcore.svg
+17,Ad set(ladies + kids),18,3/18/2020,222,204,275,fbcore.svg
+18,Ad set(ladies + kids),19,3/19/2020,210,193,275,fbcore.svg
+19,Ad set(ladies + kids),20,3/20/2020,211,194,274,fbcore.svg
+20,Ad set(ladies + kids),21,3/21/2020,212,195,273,fbcore.svg
+21,Ad set(ladies + kids),22,3/22/2020,213,196,272,fbcore.svg
+22,Ad set(ladies + kids),23,3/23/2020,215,198,271,fbcore.svg
+23,Ad set(ladies + kids),24,3/24/2020,230,212,273,fbcore.svg
+24,Ad set(ladies + kids),25,3/25/2020,232,213,274,fbcore.svg
+25,Ad set(ladies + kids),26,3/26/2020,235,216,272,fbcore.svg
+26,Ad set(ladies + kids),27,3/27/2020,195,179,273,fbcore.svg
+27,Ad set(ladies + kids),28,3/28/2020,190,175,274,fbcore.svg
+28,Ad set(ladies + kids),29,3/29/2020,180,166,273,fbcore.svg
+29,Ad set(ladies + kids),30,3/30/2020,170,156,274,fbcore.svg
+30,Ad set(ladies + kids),31,3/31/2020,160,147,287,fbcore.svg
+31,Ads set(kids + gents),1,03-01-2020,130,118,245,microsoft-excel.svg
+32,Ads set(kids + gents),2,03-02-2020,140,127,246,microsoft-excel.svg
+33,Ads set(kids + gents),3,03-03-2020,150,136,247,microsoft-excel.svg
+34,Ads set(kids + gents),4,03-04-2020,160,146,248,microsoft-excel.svg
+35,Ads set(kids + gents),5,03-05-2020,170,155,249,microsoft-excel.svg
+36,Ads set(kids + gents),6,03-06-2020,180,164,250,microsoft-excel.svg
+37,Ads set(kids + gents),7,03-07-2020,200,182,251,microsoft-excel.svg
+38,Ads set(kids + gents),8,03-08-2020,205,187,252,microsoft-excel.svg
+39,Ads set(kids + gents),9,03-09-2020,210,192,253,microsoft-excel.svg
+40,Ads set(kids + gents),10,03-10-2020,220,201,254,microsoft-excel.svg
+41,Ads set(kids + gents),11,03-11-2020,225,205,255,microsoft-excel.svg
+42,Ads set(kids + gents),12,03-12-2020,250,228,257,microsoft-excel.svg
+43,Ads set(kids + gents),13,3/13/2020,245,224,254,microsoft-excel.svg
+44,Ads set(kids + gents),14,3/14/2020,230,210,255,microsoft-excel.svg
+45,Ads set(kids + gents),15,3/15/2020,215,196,256,microsoft-excel.svg
+46,Ads set(kids + gents),16,3/16/2020,210,192,253,microsoft-excel.svg
+47,Ads set(kids + gents),17,3/17/2020,205,187,254,microsoft-excel.svg
+48,Ads set(kids + gents),18,3/18/2020,202,184,255,microsoft-excel.svg
+49,Ads set(kids + gents),19,3/19/2020,155,110,256,microsoft-excel.svg
+50,Ads set(kids + gents),20,3/20/2020,145,120,257,microsoft-excel.svg
+51,Ads set(kids + gents),21,3/21/2020,192,175,253,microsoft-excel.svg
+52,Ads set(kids + gents),22,3/22/2020,193,176,252,microsoft-excel.svg
+53,Ads set(kids + gents),23,3/23/2020,195,178,251,microsoft-excel.svg
+54,Ads set(kids + gents),24,3/24/2020,210,192,253,microsoft-excel.svg
+55,Ads set(kids + gents),25,3/25/2020,212,193,254,microsoft-excel.svg
+56,Ads set(kids + gents),26,3/26/2020,215,196,252,microsoft-excel.svg
+57,Ads set(kids + gents),27,3/27/2020,175,159,253,microsoft-excel.svg
+58,Ads set(kids + gents),28,3/28/2020,170,155,254,microsoft-excel.svg
+59,Ads set(kids + gents),29,3/29/2020,160,146,253,microsoft-excel.svg
+60,Ads set(kids + gents),30,3/30/2020,150,136,254,microsoft-excel.svg
+61,Ads set(kids + gents),31,3/31/2020,140,127,199,microsoft-excel.svg
+62,Ads set(gents),1,03-01-2020,190,178,305,mssql_shared.svg
+63,Ads set(gents),2,03-02-2020,200,187,306,mssql_shared.svg
+64,Ads set(gents),3,03-03-2020,210,196,307,mssql_shared.svg
+65,Ads set(gents),4,03-04-2020,220,206,308,mssql_shared.svg
+66,Ads set(gents),5,03-05-2020,230,215,309,mssql_shared.svg
+67,Ads set(gents),6,03-06-2020,240,224,310,mssql_shared.svg
+68,Ads set(gents),7,03-07-2020,260,242,311,mssql_shared.svg
+69,Ads set(gents),8,03-08-2020,265,247,312,mssql_shared.svg
+70,Ads set(gents),9,03-09-2020,270,252,313,mssql_shared.svg
+71,Ads set(gents),10,03-10-2020,280,261,314,mssql_shared.svg
+72,Ads set(gents),11,03-11-2020,285,265,315,mssql_shared.svg
+73,Ads set(gents),12,03-12-2020,310,288,317,mssql_shared.svg
+74,Ads set(gents),13,3/13/2020,305,284,314,mssql_shared.svg
+75,Ads set(gents),14,3/14/2020,290,270,315,mssql_shared.svg
+76,Ads set(gents),15,3/15/2020,275,256,316,mssql_shared.svg
+77,Ads set(gents),16,3/16/2020,270,252,313,mssql_shared.svg
+78,Ads set(gents),17,3/17/2020,265,247,314,mssql_shared.svg
+79,Ads set(gents),18,3/18/2020,262,244,315,mssql_shared.svg
+80,Ads set(gents),19,3/19/2020,250,233,315,mssql_shared.svg
+81,Ads set(gents),20,3/20/2020,251,234,314,mssql_shared.svg
+82,Ads set(gents),21,3/21/2020,252,235,313,mssql_shared.svg
+83,Ads set(gents),22,3/22/2020,253,236,312,mssql_shared.svg
+84,Ads set(gents),23,3/23/2020,255,238,311,mssql_shared.svg
+85,Ads set(gents),24,3/24/2020,270,252,313,mssql_shared.svg
+86,Ads set(gents),25,3/25/2020,290,273,334,mssql_shared.svg
+87,Ads set(gents),26,3/26/2020,300,270,340,mssql_shared.svg
+88,Ads set(gents),27,3/27/2020,235,219,313,mssql_shared.svg
+89,Ads set(gents),28,3/28/2020,230,215,314,mssql_shared.svg
+90,Ads set(gents),29,3/29/2020,220,206,313,mssql_shared.svg
+91,Ads set(gents),30,3/30/2020,210,196,314,mssql_shared.svg
+92,Ads set(gents),31,3/31/2020,200,187,312,mssql_shared.svg
+93,Ads set(ladies + kids + gents),1,03-01-2020,150,138,265,fbcore.svg
+94,Ads set(ladies + kids + gents),2,03-02-2020,160,147,266,fbcore.svg
+95,Ads set(ladies + kids + gents),3,03-03-2020,170,156,267,fbcore.svg
+96,Ads set(ladies + kids + gents),4,03-04-2020,180,166,268,fbcore.svg
+97,Ads set(ladies + kids + gents),5,03-05-2020,190,175,269,fbcore.svg
+98,Ads set(ladies + kids + gents),6,03-06-2020,200,184,270,fbcore.svg
+99,Ads set(ladies + kids + gents),7,03-07-2020,220,202,271,fbcore.svg
+100,Ads set(ladies + kids + gents),8,03-08-2020,225,207,272,fbcore.svg
+101,Ads set(ladies + kids + gents),9,03-09-2020,230,212,273,fbcore.svg
+102,Ads set(ladies + kids + gents),10,03-10-2020,240,221,274,fbcore.svg
+103,Ads set(ladies + kids + gents),11,03-11-2020,245,225,275,fbcore.svg
+104,Ads set(ladies + kids + gents),12,03-12-2020,270,248,277,fbcore.svg
+105,Ads set(ladies + kids + gents),13,3/13/2020,265,244,274,fbcore.svg
+106,Ads set(ladies + kids + gents),14,3/14/2020,250,230,275,fbcore.svg
+107,Ads set(ladies + kids + gents),15,3/15/2020,235,216,276,fbcore.svg
+108,Ads set(ladies + kids + gents),16,3/16/2020,230,212,273,fbcore.svg
+109,Ads set(ladies + kids + gents),17,3/17/2020,225,207,274,fbcore.svg
+110,Ads set(ladies + kids + gents),18,3/18/2020,222,204,275,fbcore.svg
+111,Ads set(ladies + kids + gents),19,3/19/2020,210,193,275,fbcore.svg
+112,Ads set(ladies + kids + gents),20,3/20/2020,211,194,274,fbcore.svg
+113,Ads set(ladies + kids + gents),21,3/21/2020,212,195,273,fbcore.svg
+114,Ads set(ladies + kids + gents),22,3/22/2020,213,196,272,fbcore.svg
+115,Ads set(ladies + kids + gents),23,3/23/2020,215,198,271,fbcore.svg
+116,Ads set(ladies + kids + gents),24,3/24/2020,230,212,273,fbcore.svg
+117,Ads set(ladies + kids + gents),25,3/25/2020,232,213,274,fbcore.svg
+118,Ads set(ladies + kids + gents),26,3/26/2020,235,216,272,fbcore.svg
+119,Ads set(ladies + kids + gents),27,3/27/2020,195,179,273,fbcore.svg
+120,Ads set(ladies + kids + gents),28,3/28/2020,190,175,274,fbcore.svg
+121,Ads set(ladies + kids + gents),29,3/29/2020,180,166,273,fbcore.svg
+122,Ads set(ladies + kids + gents),30,3/30/2020,170,156,274,fbcore.svg
+123,Ads set(ladies + kids + gents),31,3/31/2020,160,147,272,fbcore.svg
+124,Ads set(kids),1,03-01-2020,150,138,265,fbcore.svg
+125,Ads set(kids),2,03-02-2020,160,147,266,fbcore.svg
+126,Ads set(kids),3,03-03-2020,170,156,267,fbcore.svg
+127,Ads set(kids),4,03-04-2020,180,166,268,fbcore.svg
+128,Ads set(kids),5,03-05-2020,190,175,269,fbcore.svg
+129,Ads set(kids),6,03-06-2020,200,184,270,fbcore.svg
+130,Ads set(kids),7,03-07-2020,220,202,271,fbcore.svg
+131,Ads set(kids),8,03-08-2020,225,207,272,fbcore.svg
+132,Ads set(kids),9,03-09-2020,230,212,273,fbcore.svg
+133,Ads set(kids),10,03-10-2020,240,221,274,fbcore.svg
+134,Ads set(kids),11,03-11-2020,245,225,275,fbcore.svg
+135,Ads set(kids),12,03-12-2020,270,248,277,fbcore.svg
+136,Ads set(kids),13,3/13/2020,265,244,274,fbcore.svg
+137,Ads set(kids),14,3/14/2020,250,230,275,fbcore.svg
+138,Ads set(kids),15,3/15/2020,235,216,276,fbcore.svg
+139,Ads set(kids),16,3/16/2020,230,212,273,fbcore.svg
+140,Ads set(kids),17,3/17/2020,225,207,274,fbcore.svg
+141,Ads set(kids),18,3/18/2020,222,204,275,fbcore.svg
+142,Ads set(kids),19,3/19/2020,210,193,275,fbcore.svg
+143,Ads set(kids),20,3/20/2020,211,194,274,fbcore.svg
+144,Ads set(kids),21,3/21/2020,212,195,273,fbcore.svg
+145,Ads set(kids),22,3/22/2020,213,196,272,fbcore.svg
+146,Ads set(kids),23,3/23/2020,215,198,271,fbcore.svg
+147,Ads set(kids),24,3/24/2020,230,212,273,fbcore.svg
+148,Ads set(kids),25,3/25/2020,232,213,274,fbcore.svg
+149,Ads set(kids),26,3/26/2020,235,216,272,fbcore.svg
+150,Ads set(kids),27,3/27/2020,195,179,273,fbcore.svg
+151,Ads set(kids),28,3/28/2020,190,175,274,fbcore.svg
+152,Ads set(kids),29,3/29/2020,180,166,273,fbcore.svg
+153,Ads set(kids),30,3/30/2020,170,156,274,fbcore.svg
+154,Ads set(kids),31,3/31/2020,160,147,272,fbcore.svg
+0,Ad set(ladies + kids),1,03-01-2020,150,138,265,fbcore.svg
+1,Ad set(ladies + kids),2,03-02-2020,160,147,266,fbcore.svg
+2,Ad set(ladies + kids),3,03-03-2020,170,156,267,fbcore.svg
+3,Ad set(ladies + kids),4,03-04-2020,180,166,268,fbcore.svg
+4,Ad set(ladies + kids),5,03-05-2020,190,175,269,fbcore.svg
+5,Ad set(ladies + kids),6,03-06-2020,200,184,270,fbcore.svg
+6,Ad set(ladies + kids),7,03-07-2020,220,202,271,fbcore.svg
+7,Ad set(ladies + kids),8,03-08-2020,225,207,272,fbcore.svg
+8,Ad set(ladies + kids),9,03-09-2020,230,212,273,fbcore.svg
+9,Ad set(ladies + kids),10,03-10-2020,240,221,274,fbcore.svg
+10,Ad set(ladies + kids),11,03-11-2020,245,225,275,fbcore.svg
+11,Ad set(ladies + kids),12,03-12-2020,270,248,277,fbcore.svg
+12,Ad set(ladies + kids),13,3/13/2020,265,244,274,fbcore.svg
+13,Ad set(ladies + kids),14,3/14/2020,250,230,275,fbcore.svg
+14,Ad set(ladies + kids),15,3/15/2020,235,216,276,fbcore.svg
+15,Ad set(ladies + kids),16,3/16/2020,230,212,273,fbcore.svg
+16,Ad set(ladies + kids),17,3/17/2020,225,207,274,fbcore.svg
+17,Ad set(ladies + kids),18,3/18/2020,222,204,275,fbcore.svg
+18,Ad set(ladies + kids),19,3/19/2020,210,193,275,fbcore.svg
+19,Ad set(ladies + kids),20,3/20/2020,211,194,274,fbcore.svg
+20,Ad set(ladies + kids),21,3/21/2020,212,195,273,fbcore.svg
+21,Ad set(ladies + kids),22,3/22/2020,213,196,272,fbcore.svg
+22,Ad set(ladies + kids),23,3/23/2020,215,198,271,fbcore.svg
+23,Ad set(ladies + kids),24,3/24/2020,230,212,273,fbcore.svg
+24,Ad set(ladies + kids),25,3/25/2020,232,213,274,fbcore.svg
+25,Ad set(ladies + kids),26,3/26/2020,235,216,272,fbcore.svg
+26,Ad set(ladies + kids),27,3/27/2020,195,179,273,fbcore.svg
+27,Ad set(ladies + kids),28,3/28/2020,190,175,274,fbcore.svg
+28,Ad set(ladies + kids),29,3/29/2020,180,166,273,fbcore.svg
+29,Ad set(ladies + kids),30,3/30/2020,170,156,274,fbcore.svg
+30,Ad set(ladies + kids),31,3/31/2020,160,147,287,fbcore.svg
+31,Ads set(kids + gents),1,03-01-2020,130,118,245,microsoft-excel.svg
+32,Ads set(kids + gents),2,03-02-2020,140,127,246,microsoft-excel.svg
+33,Ads set(kids + gents),3,03-03-2020,150,136,247,microsoft-excel.svg
+34,Ads set(kids + gents),4,03-04-2020,160,146,248,microsoft-excel.svg
+35,Ads set(kids + gents),5,03-05-2020,170,155,249,microsoft-excel.svg
+36,Ads set(kids + gents),6,03-06-2020,180,164,250,microsoft-excel.svg
+37,Ads set(kids + gents),7,03-07-2020,200,182,251,microsoft-excel.svg
+38,Ads set(kids + gents),8,03-08-2020,205,187,252,microsoft-excel.svg
+39,Ads set(kids + gents),9,03-09-2020,210,192,253,microsoft-excel.svg
+40,Ads set(kids + gents),10,03-10-2020,220,201,254,microsoft-excel.svg
+41,Ads set(kids + gents),11,03-11-2020,225,205,255,microsoft-excel.svg
+42,Ads set(kids + gents),12,03-12-2020,250,228,257,microsoft-excel.svg
+43,Ads set(kids + gents),13,3/13/2020,245,224,254,microsoft-excel.svg
+44,Ads set(kids + gents),14,3/14/2020,230,210,255,microsoft-excel.svg
+45,Ads set(kids + gents),15,3/15/2020,215,196,256,microsoft-excel.svg
+46,Ads set(kids + gents),16,3/16/2020,210,192,253,microsoft-excel.svg
+47,Ads set(kids + gents),17,3/17/2020,205,187,254,microsoft-excel.svg
+48,Ads set(kids + gents),18,3/18/2020,202,184,255,microsoft-excel.svg
+49,Ads set(kids + gents),19,3/19/2020,155,110,256,microsoft-excel.svg
+50,Ads set(kids + gents),20,3/20/2020,145,120,257,microsoft-excel.svg
+51,Ads set(kids + gents),21,3/21/2020,192,175,253,microsoft-excel.svg
+52,Ads set(kids + gents),22,3/22/2020,193,176,252,microsoft-excel.svg
+53,Ads set(kids + gents),23,3/23/2020,195,178,251,microsoft-excel.svg
+54,Ads set(kids + gents),24,3/24/2020,210,192,253,microsoft-excel.svg
+55,Ads set(kids + gents),25,3/25/2020,212,193,254,microsoft-excel.svg
+56,Ads set(kids + gents),26,3/26/2020,215,196,252,microsoft-excel.svg
+57,Ads set(kids + gents),27,3/27/2020,175,159,253,microsoft-excel.svg
+58,Ads set(kids + gents),28,3/28/2020,170,155,254,microsoft-excel.svg
+59,Ads set(kids + gents),29,3/29/2020,160,146,253,microsoft-excel.svg
+60,Ads set(kids + gents),30,3/30/2020,150,136,254,microsoft-excel.svg
+61,Ads set(kids + gents),31,3/31/2020,140,127,199,microsoft-excel.svg
+62,Ads set(gents),1,03-01-2020,190,178,305,mssql_shared.svg
+63,Ads set(gents),2,03-02-2020,200,187,306,mssql_shared.svg
+64,Ads set(gents),3,03-03-2020,210,196,307,mssql_shared.svg
+65,Ads set(gents),4,03-04-2020,220,206,308,mssql_shared.svg
+66,Ads set(gents),5,03-05-2020,230,215,309,mssql_shared.svg
+67,Ads set(gents),6,03-06-2020,240,224,310,mssql_shared.svg
+68,Ads set(gents),7,03-07-2020,260,242,311,mssql_shared.svg
+69,Ads set(gents),8,03-08-2020,265,247,312,mssql_shared.svg
+70,Ads set(gents),9,03-09-2020,270,252,313,mssql_shared.svg
+71,Ads set(gents),10,03-10-2020,280,261,314,mssql_shared.svg
+72,Ads set(gents),11,03-11-2020,285,265,315,mssql_shared.svg
+73,Ads set(gents),12,03-12-2020,310,288,317,mssql_shared.svg
+74,Ads set(gents),13,3/13/2020,305,284,314,mssql_shared.svg
+75,Ads set(gents),14,3/14/2020,290,270,315,mssql_shared.svg
+76,Ads set(gents),15,3/15/2020,275,256,316,mssql_shared.svg
+77,Ads set(gents),16,3/16/2020,270,252,313,mssql_shared.svg
+78,Ads set(gents),17,3/17/2020,265,247,314,mssql_shared.svg
+79,Ads set(gents),18,3/18/2020,262,244,315,mssql_shared.svg
+80,Ads set(gents),19,3/19/2020,250,233,315,mssql_shared.svg
+81,Ads set(gents),20,3/20/2020,251,234,314,mssql_shared.svg
+82,Ads set(gents),21,3/21/2020,252,235,313,mssql_shared.svg
+83,Ads set(gents),22,3/22/2020,253,236,312,mssql_shared.svg
+84,Ads set(gents),23,3/23/2020,255,238,311,mssql_shared.svg
+85,Ads set(gents),24,3/24/2020,270,252,313,mssql_shared.svg
+86,Ads set(gents),25,3/25/2020,290,273,334,mssql_shared.svg
+87,Ads set(gents),26,3/26/2020,300,270,340,mssql_shared.svg
+88,Ads set(gents),27,3/27/2020,235,219,313,mssql_shared.svg
+89,Ads set(gents),28,3/28/2020,230,215,314,mssql_shared.svg
+90,Ads set(gents),29,3/29/2020,220,206,313,mssql_shared.svg
+91,Ads set(gents),30,3/30/2020,210,196,314,mssql_shared.svg
+92,Ads set(gents),31,3/31/2020,200,187,312,mssql_shared.svg
+93,Ads set(ladies + kids + gents),1,03-01-2020,150,138,265,fbcore.svg
+94,Ads set(ladies + kids + gents),2,03-02-2020,160,147,266,fbcore.svg
+95,Ads set(ladies + kids + gents),3,03-03-2020,170,156,267,fbcore.svg
+96,Ads set(ladies + kids + gents),4,03-04-2020,180,166,268,fbcore.svg
+97,Ads set(ladies + kids + gents),5,03-05-2020,190,175,269,fbcore.svg
+98,Ads set(ladies + kids + gents),6,03-06-2020,200,184,270,fbcore.svg
+99,Ads set(ladies + kids + gents),7,03-07-2020,220,202,271,fbcore.svg
+100,Ads set(ladies + kids + gents),8,03-08-2020,225,207,272,fbcore.svg
+101,Ads set(ladies + kids + gents),9,03-09-2020,230,212,273,fbcore.svg
+102,Ads set(ladies + kids + gents),10,03-10-2020,240,221,274,fbcore.svg
+103,Ads set(ladies + kids + gents),11,03-11-2020,245,225,275,fbcore.svg
+104,Ads set(ladies + kids + gents),12,03-12-2020,270,248,277,fbcore.svg
+105,Ads set(ladies + kids + gents),13,3/13/2020,265,244,274,fbcore.svg
+106,Ads set(ladies + kids + gents),14,3/14/2020,250,230,275,fbcore.svg
+107,Ads set(ladies + kids + gents),15,3/15/2020,235,216,276,fbcore.svg
+108,Ads set(ladies + kids + gents),16,3/16/2020,230,212,273,fbcore.svg
+109,Ads set(ladies + kids + gents),17,3/17/2020,225,207,274,fbcore.svg
+110,Ads set(ladies + kids + gents),18,3/18/2020,222,204,275,fbcore.svg
+111,Ads set(ladies + kids + gents),19,3/19/2020,210,193,275,fbcore.svg
+112,Ads set(ladies + kids + gents),20,3/20/2020,211,194,274,fbcore.svg
+113,Ads set(ladies + kids + gents),21,3/21/2020,212,195,273,fbcore.svg
+114,Ads set(ladies + kids + gents),22,3/22/2020,213,196,272,fbcore.svg
+115,Ads set(ladies + kids + gents),23,3/23/2020,215,198,271,fbcore.svg
+116,Ads set(ladies + kids + gents),24,3/24/2020,230,212,273,fbcore.svg
+117,Ads set(ladies + kids + gents),25,3/25/2020,232,213,274,fbcore.svg
+118,Ads set(ladies + kids + gents),26,3/26/2020,235,216,272,fbcore.svg
+119,Ads set(ladies + kids + gents),27,3/27/2020,195,179,273,fbcore.svg
+120,Ads set(ladies + kids + gents),28,3/28/2020,190,175,274,fbcore.svg
+121,Ads set(ladies + kids + gents),29,3/29/2020,180,166,273,fbcore.svg
+122,Ads set(ladies + kids + gents),30,3/30/2020,170,156,274,fbcore.svg
+123,Ads set(ladies + kids + gents),31,3/31/2020,160,147,272,fbcore.svg
+124,Ads set(kids),1,03-01-2020,150,138,265,fbcore.svg
+125,Ads set(kids),2,03-02-2020,160,147,266,fbcore.svg
+126,Ads set(kids),3,03-03-2020,170,156,267,fbcore.svg
+127,Ads set(kids),4,03-04-2020,180,166,268,fbcore.svg
+128,Ads set(kids),5,03-05-2020,190,175,269,fbcore.svg
+129,Ads set(kids),6,03-06-2020,200,184,270,fbcore.svg
+130,Ads set(kids),7,03-07-2020,220,202,271,fbcore.svg
+131,Ads set(kids),8,03-08-2020,225,207,272,fbcore.svg
+132,Ads set(kids),9,03-09-2020,230,212,273,fbcore.svg
+133,Ads set(kids),10,03-10-2020,240,221,274,fbcore.svg
+134,Ads set(kids),11,03-11-2020,245,225,275,fbcore.svg
+135,Ads set(kids),12,03-12-2020,270,248,277,fbcore.svg
+136,Ads set(kids),13,3/13/2020,265,244,274,fbcore.svg
+137,Ads set(kids),14,3/14/2020,250,230,275,fbcore.svg
+138,Ads set(kids),15,3/15/2020,235,216,276,fbcore.svg
+139,Ads set(kids),16,3/16/2020,230,212,273,fbcore.svg
+140,Ads set(kids),17,3/17/2020,225,207,274,fbcore.svg
+141,Ads set(kids),18,3/18/2020,222,204,275,fbcore.svg
+142,Ads set(kids),19,3/19/2020,210,193,275,fbcore.svg
+143,Ads set(kids),20,3/20/2020,211,194,274,fbcore.svg
+144,Ads set(kids),21,3/21/2020,212,195,273,fbcore.svg
+145,Ads set(kids),22,3/22/2020,213,196,272,fbcore.svg
+146,Ads set(kids),23,3/23/2020,215,198,271,fbcore.svg
+147,Ads set(kids),24,3/24/2020,230,212,273,fbcore.svg
+148,Ads set(kids),25,3/25/2020,232,213,274,fbcore.svg
+149,Ads set(kids),26,3/26/2020,235,216,272,fbcore.svg
+150,Ads set(kids),27,3/27/2020,195,179,273,fbcore.svg
+151,Ads set(kids),28,3/28/2020,190,175,274,fbcore.svg
+152,Ads set(kids),29,3/29/2020,180,166,273,fbcore.svg
+153,Ads set(kids),30,3/30/2020,170,156,274,fbcore.svg
+154,Ads set(kids),31,3/31/2020,160,147,272,fbcore.svg
+0,Ad set(ladies + kids),1,03-01-2020,150,138,265,fbcore.svg
+1,Ad set(ladies + kids),2,03-02-2020,160,147,266,fbcore.svg
+2,Ad set(ladies + kids),3,03-03-2020,170,156,267,fbcore.svg
+3,Ad set(ladies + kids),4,03-04-2020,180,166,268,fbcore.svg
+4,Ad set(ladies + kids),5,03-05-2020,190,175,269,fbcore.svg
+5,Ad set(ladies + kids),6,03-06-2020,200,184,270,fbcore.svg
+6,Ad set(ladies + kids),7,03-07-2020,220,202,271,fbcore.svg
+7,Ad set(ladies + kids),8,03-08-2020,225,207,272,fbcore.svg
+8,Ad set(ladies + kids),9,03-09-2020,230,212,273,fbcore.svg
+9,Ad set(ladies + kids),10,03-10-2020,240,221,274,fbcore.svg
+10,Ad set(ladies + kids),11,03-11-2020,245,225,275,fbcore.svg
+11,Ad set(ladies + kids),12,03-12-2020,270,248,277,fbcore.svg
+12,Ad set(ladies + kids),13,3/13/2020,265,244,274,fbcore.svg
+13,Ad set(ladies + kids),14,3/14/2020,250,230,275,fbcore.svg
+14,Ad set(ladies + kids),15,3/15/2020,235,216,276,fbcore.svg
+15,Ad set(ladies + kids),16,3/16/2020,230,212,273,fbcore.svg
+16,Ad set(ladies + kids),17,3/17/2020,225,207,274,fbcore.svg
+17,Ad set(ladies + kids),18,3/18/2020,222,204,275,fbcore.svg
+18,Ad set(ladies + kids),19,3/19/2020,210,193,275,fbcore.svg
+19,Ad set(ladies + kids),20,3/20/2020,211,194,274,fbcore.svg
+20,Ad set(ladies + kids),21,3/21/2020,212,195,273,fbcore.svg
+21,Ad set(ladies + kids),22,3/22/2020,213,196,272,fbcore.svg
+22,Ad set(ladies + kids),23,3/23/2020,215,198,271,fbcore.svg
+23,Ad set(ladies + kids),24,3/24/2020,230,212,273,fbcore.svg
+24,Ad set(ladies + kids),25,3/25/2020,232,213,274,fbcore.svg
+25,Ad set(ladies + kids),26,3/26/2020,235,216,272,fbcore.svg
+26,Ad set(ladies + kids),27,3/27/2020,195,179,273,fbcore.svg
+27,Ad set(ladies + kids),28,3/28/2020,190,175,274,fbcore.svg
+28,Ad set(ladies + kids),29,3/29/2020,180,166,273,fbcore.svg
+29,Ad set(ladies + kids),30,3/30/2020,170,156,274,fbcore.svg
+30,Ad set(ladies + kids),31,3/31/2020,160,147,287,fbcore.svg
+31,Ads set(kids + gents),1,03-01-2020,130,118,245,microsoft-excel.svg
+32,Ads set(kids + gents),2,03-02-2020,140,127,246,microsoft-excel.svg
+33,Ads set(kids + gents),3,03-03-2020,150,136,247,microsoft-excel.svg
+34,Ads set(kids + gents),4,03-04-2020,160,146,248,microsoft-excel.svg
+35,Ads set(kids + gents),5,03-05-2020,170,155,249,microsoft-excel.svg
+36,Ads set(kids + gents),6,03-06-2020,180,164,250,microsoft-excel.svg
+37,Ads set(kids + gents),7,03-07-2020,200,182,251,microsoft-excel.svg
+38,Ads set(kids + gents),8,03-08-2020,205,187,252,microsoft-excel.svg
+39,Ads set(kids + gents),9,03-09-2020,210,192,253,microsoft-excel.svg
+40,Ads set(kids + gents),10,03-10-2020,220,201,254,microsoft-excel.svg
+41,Ads set(kids + gents),11,03-11-2020,225,205,255,microsoft-excel.svg
+42,Ads set(kids + gents),12,03-12-2020,250,228,257,microsoft-excel.svg
+43,Ads set(kids + gents),13,3/13/2020,245,224,254,microsoft-excel.svg
+44,Ads set(kids + gents),14,3/14/2020,230,210,255,microsoft-excel.svg
+45,Ads set(kids + gents),15,3/15/2020,215,196,256,microsoft-excel.svg
+46,Ads set(kids + gents),16,3/16/2020,210,192,253,microsoft-excel.svg
+47,Ads set(kids + gents),17,3/17/2020,205,187,254,microsoft-excel.svg
+48,Ads set(kids + gents),18,3/18/2020,202,184,255,microsoft-excel.svg
+49,Ads set(kids + gents),19,3/19/2020,155,110,256,microsoft-excel.svg
+50,Ads set(kids + gents),20,3/20/2020,145,120,257,microsoft-excel.svg
+51,Ads set(kids + gents),21,3/21/2020,192,175,253,microsoft-excel.svg
+52,Ads set(kids + gents),22,3/22/2020,193,176,252,microsoft-excel.svg
+53,Ads set(kids + gents),23,3/23/2020,195,178,251,microsoft-excel.svg
+54,Ads set(kids + gents),24,3/24/2020,210,192,253,microsoft-excel.svg
+55,Ads set(kids + gents),25,3/25/2020,212,193,254,microsoft-excel.svg
+56,Ads set(kids + gents),26,3/26/2020,215,196,252,microsoft-excel.svg
+57,Ads set(kids + gents),27,3/27/2020,175,159,253,microsoft-excel.svg
+58,Ads set(kids + gents),28,3/28/2020,170,155,254,microsoft-excel.svg
+59,Ads set(kids + gents),29,3/29/2020,160,146,253,microsoft-excel.svg
+60,Ads set(kids + gents),30,3/30/2020,150,136,254,microsoft-excel.svg
+61,Ads set(kids + gents),31,3/31/2020,140,127,199,microsoft-excel.svg
+62,Ads set(gents),1,03-01-2020,190,178,305,mssql_shared.svg
+63,Ads set(gents),2,03-02-2020,200,187,306,mssql_shared.svg
+64,Ads set(gents),3,03-03-2020,210,196,307,mssql_shared.svg
+65,Ads set(gents),4,03-04-2020,220,206,308,mssql_shared.svg
+66,Ads set(gents),5,03-05-2020,230,215,309,mssql_shared.svg
+67,Ads set(gents),6,03-06-2020,240,224,310,mssql_shared.svg
+68,Ads set(gents),7,03-07-2020,260,242,311,mssql_shared.svg
+69,Ads set(gents),8,03-08-2020,265,247,312,mssql_shared.svg
+70,Ads set(gents),9,03-09-2020,270,252,313,mssql_shared.svg
+71,Ads set(gents),10,03-10-2020,280,261,314,mssql_shared.svg
+72,Ads set(gents),11,03-11-2020,285,265,315,mssql_shared.svg
+73,Ads set(gents),12,03-12-2020,310,288,317,mssql_shared.svg
+74,Ads set(gents),13,3/13/2020,305,284,314,mssql_shared.svg
+75,Ads set(gents),14,3/14/2020,290,270,315,mssql_shared.svg
+76,Ads set(gents),15,3/15/2020,275,256,316,mssql_shared.svg
+77,Ads set(gents),16,3/16/2020,270,252,313,mssql_shared.svg
+78,Ads set(gents),17,3/17/2020,265,247,314,mssql_shared.svg
+79,Ads set(gents),18,3/18/2020,262,244,315,mssql_shared.svg
+80,Ads set(gents),19,3/19/2020,250,233,315,mssql_shared.svg
+81,Ads set(gents),20,3/20/2020,251,234,314,mssql_shared.svg
+82,Ads set(gents),21,3/21/2020,252,235,313,mssql_shared.svg
+83,Ads set(gents),22,3/22/2020,253,236,312,mssql_shared.svg
+84,Ads set(gents),23,3/23/2020,255,238,311,mssql_shared.svg
+85,Ads set(gents),24,3/24/2020,270,252,313,mssql_shared.svg
+86,Ads set(gents),25,3/25/2020,290,273,334,mssql_shared.svg
+87,Ads set(gents),26,3/26/2020,300,270,340,mssql_shared.svg
+88,Ads set(gents),27,3/27/2020,235,219,313,mssql_shared.svg
+89,Ads set(gents),28,3/28/2020,230,215,314,mssql_shared.svg
+90,Ads set(gents),29,3/29/2020,220,206,313,mssql_shared.svg
+91,Ads set(gents),30,3/30/2020,210,196,314,mssql_shared.svg
+92,Ads set(gents),31,3/31/2020,200,187,312,mssql_shared.svg
+93,Ads set(ladies + kids + gents),1,03-01-2020,150,138,265,fbcore.svg
+94,Ads set(ladies + kids + gents),2,03-02-2020,160,147,266,fbcore.svg
+95,Ads set(ladies + kids + gents),3,03-03-2020,170,156,267,fbcore.svg
+96,Ads set(ladies + kids + gents),4,03-04-2020,180,166,268,fbcore.svg
+97,Ads set(ladies + kids + gents),5,03-05-2020,190,175,269,fbcore.svg
+98,Ads set(ladies + kids + gents),6,03-06-2020,200,184,270,fbcore.svg
+99,Ads set(ladies + kids + gents),7,03-07-2020,220,202,271,fbcore.svg
+100,Ads set(ladies + kids + gents),8,03-08-2020,225,207,272,fbcore.svg
+101,Ads set(ladies + kids + gents),9,03-09-2020,230,212,273,fbcore.svg
+102,Ads set(ladies + kids + gents),10,03-10-2020,240,221,274,fbcore.svg
+103,Ads set(ladies + kids + gents),11,03-11-2020,245,225,275,fbcore.svg
+104,Ads set(ladies + kids + gents),12,03-12-2020,270,248,277,fbcore.svg
+105,Ads set(ladies + kids + gents),13,3/13/2020,265,244,274,fbcore.svg
+106,Ads set(ladies + kids + gents),14,3/14/2020,250,230,275,fbcore.svg
+107,Ads set(ladies + kids + gents),15,3/15/2020,235,216,276,fbcore.svg
+108,Ads set(ladies + kids + gents),16,3/16/2020,230,212,273,fbcore.svg
+109,Ads set(ladies + kids + gents),17,3/17/2020,225,207,274,fbcore.svg
+110,Ads set(ladies + kids + gents),18,3/18/2020,222,204,275,fbcore.svg
+111,Ads set(ladies + kids + gents),19,3/19/2020,210,193,275,fbcore.svg
+112,Ads set(ladies + kids + gents),20,3/20/2020,211,194,274,fbcore.svg
+113,Ads set(ladies + kids + gents),21,3/21/2020,212,195,273,fbcore.svg
+114,Ads set(ladies + kids + gents),22,3/22/2020,213,196,272,fbcore.svg
+115,Ads set(ladies + kids + gents),23,3/23/2020,215,198,271,fbcore.svg
+116,Ads set(ladies + kids + gents),24,3/24/2020,230,212,273,fbcore.svg
+117,Ads set(ladies + kids + gents),25,3/25/2020,232,213,274,fbcore.svg
+118,Ads set(ladies + kids + gents),26,3/26/2020,235,216,272,fbcore.svg
+119,Ads set(ladies + kids + gents),27,3/27/2020,195,179,273,fbcore.svg
+120,Ads set(ladies + kids + gents),28,3/28/2020,190,175,274,fbcore.svg
+121,Ads set(ladies + kids + gents),29,3/29/2020,180,166,273,fbcore.svg
+122,Ads set(ladies + kids + gents),30,3/30/2020,170,156,274,fbcore.svg
+123,Ads set(ladies + kids + gents),31,3/31/2020,160,147,272,fbcore.svg
+124,Ads set(kids),1,03-01-2020,150,138,265,fbcore.svg
+125,Ads set(kids),2,03-02-2020,160,147,266,fbcore.svg
+126,Ads set(kids),3,03-03-2020,170,156,267,fbcore.svg
+127,Ads set(kids),4,03-04-2020,180,166,268,fbcore.svg
+128,Ads set(kids),5,03-05-2020,190,175,269,fbcore.svg
+129,Ads set(kids),6,03-06-2020,200,184,270,fbcore.svg
+130,Ads set(kids),7,03-07-2020,220,202,271,fbcore.svg
+131,Ads set(kids),8,03-08-2020,225,207,272,fbcore.svg
+132,Ads set(kids),9,03-09-2020,230,212,273,fbcore.svg
+133,Ads set(kids),10,03-10-2020,240,221,274,fbcore.svg
+134,Ads set(kids),11,03-11-2020,245,225,275,fbcore.svg
+135,Ads set(kids),12,03-12-2020,270,248,277,fbcore.svg
+136,Ads set(kids),13,3/13/2020,265,244,274,fbcore.svg
+137,Ads set(kids),14,3/14/2020,250,230,275,fbcore.svg
+138,Ads set(kids),15,3/15/2020,235,216,276,fbcore.svg
+139,Ads set(kids),16,3/16/2020,230,212,273,fbcore.svg
+140,Ads set(kids),17,3/17/2020,225,207,274,fbcore.svg
+141,Ads set(kids),18,3/18/2020,222,204,275,fbcore.svg
+142,Ads set(kids),19,3/19/2020,210,193,275,fbcore.svg
+143,Ads set(kids),20,3/20/2020,211,194,274,fbcore.svg
+144,Ads set(kids),21,3/21/2020,212,195,273,fbcore.svg
+145,Ads set(kids),22,3/22/2020,213,196,272,fbcore.svg
+146,Ads set(kids),23,3/23/2020,215,198,271,fbcore.svg
+147,Ads set(kids),24,3/24/2020,230,212,273,fbcore.svg
+148,Ads set(kids),25,3/25/2020,232,213,274,fbcore.svg
+149,Ads set(kids),26,3/26/2020,235,216,272,fbcore.svg
+150,Ads set(kids),27,3/27/2020,195,179,273,fbcore.svg
+151,Ads set(kids),28,3/28/2020,190,175,274,fbcore.svg
+152,Ads set(kids),29,3/29/2020,180,166,273,fbcore.svg
+153,Ads set(kids),30,3/30/2020,170,156,274,fbcore.svg
+154,Ads set(kids),31,3/31/2020,160,147,272,fbcore.svg
+0,Ad set(ladies + kids),1,03-01-2020,150,138,265,fbcore.svg
+1,Ad set(ladies + kids),2,03-02-2020,160,147,266,fbcore.svg
+2,Ad set(ladies + kids),3,03-03-2020,170,156,267,fbcore.svg
+3,Ad set(ladies + kids),4,03-04-2020,180,166,268,fbcore.svg
+4,Ad set(ladies + kids),5,03-05-2020,190,175,269,fbcore.svg
+5,Ad set(ladies + kids),6,03-06-2020,200,184,270,fbcore.svg
+6,Ad set(ladies + kids),7,03-07-2020,220,202,271,fbcore.svg
+7,Ad set(ladies + kids),8,03-08-2020,225,207,272,fbcore.svg
+8,Ad set(ladies + kids),9,03-09-2020,230,212,273,fbcore.svg
+9,Ad set(ladies + kids),10,03-10-2020,240,221,274,fbcore.svg
+10,Ad set(ladies + kids),11,03-11-2020,245,225,275,fbcore.svg
+11,Ad set(ladies + kids),12,03-12-2020,270,248,277,fbcore.svg
+12,Ad set(ladies + kids),13,3/13/2020,265,244,274,fbcore.svg
+13,Ad set(ladies + kids),14,3/14/2020,250,230,275,fbcore.svg
+14,Ad set(ladies + kids),15,3/15/2020,235,216,276,fbcore.svg
+15,Ad set(ladies + kids),16,3/16/2020,230,212,273,fbcore.svg
+16,Ad set(ladies + kids),17,3/17/2020,225,207,274,fbcore.svg
+17,Ad set(ladies + kids),18,3/18/2020,222,204,275,fbcore.svg
+18,Ad set(ladies + kids),19,3/19/2020,210,193,275,fbcore.svg
+19,Ad set(ladies + kids),20,3/20/2020,211,194,274,fbcore.svg
+20,Ad set(ladies + kids),21,3/21/2020,212,195,273,fbcore.svg
+21,Ad set(ladies + kids),22,3/22/2020,213,196,272,fbcore.svg
+22,Ad set(ladies + kids),23,3/23/2020,215,198,271,fbcore.svg
+23,Ad set(ladies + kids),24,3/24/2020,230,212,273,fbcore.svg
+24,Ad set(ladies + kids),25,3/25/2020,232,213,274,fbcore.svg
+25,Ad set(ladies + kids),26,3/26/2020,235,216,272,fbcore.svg
+26,Ad set(ladies + kids),27,3/27/2020,195,179,273,fbcore.svg
+27,Ad set(ladies + kids),28,3/28/2020,190,175,274,fbcore.svg
+28,Ad set(ladies + kids),29,3/29/2020,180,166,273,fbcore.svg
+29,Ad set(ladies + kids),30,3/30/2020,170,156,274,fbcore.svg
+30,Ad set(ladies + kids),31,3/31/2020,160,147,287,fbcore.svg
+31,Ads set(kids + gents),1,03-01-2020,130,118,245,microsoft-excel.svg
+32,Ads set(kids + gents),2,03-02-2020,140,127,246,microsoft-excel.svg
+33,Ads set(kids + gents),3,03-03-2020,150,136,247,microsoft-excel.svg
+34,Ads set(kids + gents),4,03-04-2020,160,146,248,microsoft-excel.svg
+35,Ads set(kids + gents),5,03-05-2020,170,155,249,microsoft-excel.svg
+36,Ads set(kids + gents),6,03-06-2020,180,164,250,microsoft-excel.svg
+37,Ads set(kids + gents),7,03-07-2020,200,182,251,microsoft-excel.svg
+38,Ads set(kids + gents),8,03-08-2020,205,187,252,microsoft-excel.svg
+39,Ads set(kids + gents),9,03-09-2020,210,192,253,microsoft-excel.svg
+40,Ads set(kids + gents),10,03-10-2020,220,201,254,microsoft-excel.svg
+41,Ads set(kids + gents),11,03-11-2020,225,205,255,microsoft-excel.svg
+42,Ads set(kids + gents),12,03-12-2020,250,228,257,microsoft-excel.svg
+43,Ads set(kids + gents),13,3/13/2020,245,224,254,microsoft-excel.svg
+44,Ads set(kids + gents),14,3/14/2020,230,210,255,microsoft-excel.svg
+45,Ads set(kids + gents),15,3/15/2020,215,196,256,microsoft-excel.svg
+46,Ads set(kids + gents),16,3/16/2020,210,192,253,microsoft-excel.svg
+47,Ads set(kids + gents),17,3/17/2020,205,187,254,microsoft-excel.svg
+48,Ads set(kids + gents),18,3/18/2020,202,184,255,microsoft-excel.svg
+49,Ads set(kids + gents),19,3/19/2020,155,110,256,microsoft-excel.svg
+50,Ads set(kids + gents),20,3/20/2020,145,120,257,microsoft-excel.svg
+51,Ads set(kids + gents),21,3/21/2020,192,175,253,microsoft-excel.svg
+52,Ads set(kids + gents),22,3/22/2020,193,176,252,microsoft-excel.svg
+53,Ads set(kids + gents),23,3/23/2020,195,178,251,microsoft-excel.svg
+54,Ads set(kids + gents),24,3/24/2020,210,192,253,microsoft-excel.svg
+55,Ads set(kids + gents),25,3/25/2020,212,193,254,microsoft-excel.svg
+56,Ads set(kids + gents),26,3/26/2020,215,196,252,microsoft-excel.svg
+57,Ads set(kids + gents),27,3/27/2020,175,159,253,microsoft-excel.svg
+58,Ads set(kids + gents),28,3/28/2020,170,155,254,microsoft-excel.svg
+59,Ads set(kids + gents),29,3/29/2020,160,146,253,microsoft-excel.svg
+60,Ads set(kids + gents),30,3/30/2020,150,136,254,microsoft-excel.svg
+61,Ads set(kids + gents),31,3/31/2020,140,127,199,microsoft-excel.svg
+62,Ads set(gents),1,03-01-2020,190,178,305,mssql_shared.svg
+63,Ads set(gents),2,03-02-2020,200,187,306,mssql_shared.svg
+64,Ads set(gents),3,03-03-2020,210,196,307,mssql_shared.svg
+65,Ads set(gents),4,03-04-2020,220,206,308,mssql_shared.svg
+66,Ads set(gents),5,03-05-2020,230,215,309,mssql_shared.svg
+67,Ads set(gents),6,03-06-2020,240,224,310,mssql_shared.svg
+68,Ads set(gents),7,03-07-2020,260,242,311,mssql_shared.svg
+69,Ads set(gents),8,03-08-2020,265,247,312,mssql_shared.svg
+70,Ads set(gents),9,03-09-2020,270,252,313,mssql_shared.svg
+71,Ads set(gents),10,03-10-2020,280,261,314,mssql_shared.svg
+72,Ads set(gents),11,03-11-2020,285,265,315,mssql_shared.svg
+73,Ads set(gents),12,03-12-2020,310,288,317,mssql_shared.svg
+74,Ads set(gents),13,3/13/2020,305,284,314,mssql_shared.svg
+75,Ads set(gents),14,3/14/2020,290,270,315,mssql_shared.svg
+76,Ads set(gents),15,3/15/2020,275,256,316,mssql_shared.svg
+77,Ads set(gents),16,3/16/2020,270,252,313,mssql_shared.svg
+78,Ads set(gents),17,3/17/2020,265,247,314,mssql_shared.svg
+79,Ads set(gents),18,3/18/2020,262,244,315,mssql_shared.svg
+80,Ads set(gents),19,3/19/2020,250,233,315,mssql_shared.svg
+81,Ads set(gents),20,3/20/2020,251,234,314,mssql_shared.svg
+82,Ads set(gents),21,3/21/2020,252,235,313,mssql_shared.svg
+83,Ads set(gents),22,3/22/2020,253,236,312,mssql_shared.svg
+84,Ads set(gents),23,3/23/2020,255,238,311,mssql_shared.svg
+85,Ads set(gents),24,3/24/2020,270,252,313,mssql_shared.svg
+86,Ads set(gents),25,3/25/2020,290,273,334,mssql_shared.svg
+87,Ads set(gents),26,3/26/2020,300,270,340,mssql_shared.svg
+88,Ads set(gents),27,3/27/2020,235,219,313,mssql_shared.svg
+89,Ads set(gents),28,3/28/2020,230,215,314,mssql_shared.svg
+90,Ads set(gents),29,3/29/2020,220,206,313,mssql_shared.svg
+91,Ads set(gents),30,3/30/2020,210,196,314,mssql_shared.svg
+92,Ads set(gents),31,3/31/2020,200,187,312,mssql_shared.svg
+93,Ads set(ladies + kids + gents),1,03-01-2020,150,138,265,fbcore.svg
+94,Ads set(ladies + kids + gents),2,03-02-2020,160,147,266,fbcore.svg
+95,Ads set(ladies + kids + gents),3,03-03-2020,170,156,267,fbcore.svg
+96,Ads set(ladies + kids + gents),4,03-04-2020,180,166,268,fbcore.svg
+97,Ads set(ladies + kids + gents),5,03-05-2020,190,175,269,fbcore.svg
+98,Ads set(ladies + kids + gents),6,03-06-2020,200,184,270,fbcore.svg
+99,Ads set(ladies + kids + gents),7,03-07-2020,220,202,271,fbcore.svg
+100,Ads set(ladies + kids + gents),8,03-08-2020,225,207,272,fbcore.svg
+101,Ads set(ladies + kids + gents),9,03-09-2020,230,212,273,fbcore.svg
+102,Ads set(ladies + kids + gents),10,03-10-2020,240,221,274,fbcore.svg
+103,Ads set(ladies + kids + gents),11,03-11-2020,245,225,275,fbcore.svg
+104,Ads set(ladies + kids + gents),12,03-12-2020,270,248,277,fbcore.svg
+105,Ads set(ladies + kids + gents),13,3/13/2020,265,244,274,fbcore.svg
+106,Ads set(ladies + kids + gents),14,3/14/2020,250,230,275,fbcore.svg
+107,Ads set(ladies + kids + gents),15,3/15/2020,235,216,276,fbcore.svg
+108,Ads set(ladies + kids + gents),16,3/16/2020,230,212,273,fbcore.svg
+109,Ads set(ladies + kids + gents),17,3/17/2020,225,207,274,fbcore.svg
+110,Ads set(ladies + kids + gents),18,3/18/2020,222,204,275,fbcore.svg
+111,Ads set(ladies + kids + gents),19,3/19/2020,210,193,275,fbcore.svg
+112,Ads set(ladies + kids + gents),20,3/20/2020,211,194,274,fbcore.svg
+113,Ads set(ladies + kids + gents),21,3/21/2020,212,195,273,fbcore.svg
+114,Ads set(ladies + kids + gents),22,3/22/2020,213,196,272,fbcore.svg
+115,Ads set(ladies + kids + gents),23,3/23/2020,215,198,271,fbcore.svg
+116,Ads set(ladies + kids + gents),24,3/24/2020,230,212,273,fbcore.svg
+117,Ads set(ladies + kids + gents),25,3/25/2020,232,213,274,fbcore.svg
+118,Ads set(ladies + kids + gents),26,3/26/2020,235,216,272,fbcore.svg
+119,Ads set(ladies + kids + gents),27,3/27/2020,195,179,273,fbcore.svg
+120,Ads set(ladies + kids + gents),28,3/28/2020,190,175,274,fbcore.svg
+121,Ads set(ladies + kids + gents),29,3/29/2020,180,166,273,fbcore.svg
+122,Ads set(ladies + kids + gents),30,3/30/2020,170,156,274,fbcore.svg
+123,Ads set(ladies + kids + gents),31,3/31/2020,160,147,272,fbcore.svg
+124,Ads set(kids),1,03-01-2020,150,138,265,fbcore.svg
+125,Ads set(kids),2,03-02-2020,160,147,266,fbcore.svg
+126,Ads set(kids),3,03-03-2020,170,156,267,fbcore.svg
+127,Ads set(kids),4,03-04-2020,180,166,268,fbcore.svg
+128,Ads set(kids),5,03-05-2020,190,175,269,fbcore.svg
+129,Ads set(kids),6,03-06-2020,200,184,270,fbcore.svg
+130,Ads set(kids),7,03-07-2020,220,202,271,fbcore.svg
+131,Ads set(kids),8,03-08-2020,225,207,272,fbcore.svg
+132,Ads set(kids),9,03-09-2020,230,212,273,fbcore.svg
+133,Ads set(kids),10,03-10-2020,240,221,274,fbcore.svg
+134,Ads set(kids),11,03-11-2020,245,225,275,fbcore.svg
+135,Ads set(kids),12,03-12-2020,270,248,277,fbcore.svg
+136,Ads set(kids),13,3/13/2020,265,244,274,fbcore.svg
+137,Ads set(kids),14,3/14/2020,250,230,275,fbcore.svg
+138,Ads set(kids),15,3/15/2020,235,216,276,fbcore.svg
+139,Ads set(kids),16,3/16/2020,230,212,273,fbcore.svg
+140,Ads set(kids),17,3/17/2020,225,207,274,fbcore.svg
+141,Ads set(kids),18,3/18/2020,222,204,275,fbcore.svg
+142,Ads set(kids),19,3/19/2020,210,193,275,fbcore.svg
+143,Ads set(kids),20,3/20/2020,211,194,274,fbcore.svg
+144,Ads set(kids),21,3/21/2020,212,195,273,fbcore.svg
+145,Ads set(kids),22,3/22/2020,213,196,272,fbcore.svg
+146,Ads set(kids),23,3/23/2020,215,198,271,fbcore.svg
+147,Ads set(kids),24,3/24/2020,230,212,273,fbcore.svg
+148,Ads set(kids),25,3/25/2020,232,213,274,fbcore.svg
+149,Ads set(kids),26,3/26/2020,235,216,272,fbcore.svg
+150,Ads set(kids),27,3/27/2020,195,179,273,fbcore.svg
+151,Ads set(kids),28,3/28/2020,190,175,274,fbcore.svg
+152,Ads set(kids),29,3/29/2020,180,166,273,fbcore.svg
+153,Ads set(kids),30,3/30/2020,170,156,274,fbcore.svg
+154,Ads set(kids),31,3/31/2020,160,147,272,fbcore.svg
+0,Ad set(ladies + kids),1,03-01-2020,150,138,265,fbcore.svg
+1,Ad set(ladies + kids),2,03-02-2020,160,147,266,fbcore.svg
+2,Ad set(ladies + kids),3,03-03-2020,170,156,267,fbcore.svg
+3,Ad set(ladies + kids),4,03-04-2020,180,166,268,fbcore.svg
+4,Ad set(ladies + kids),5,03-05-2020,190,175,269,fbcore.svg
+5,Ad set(ladies + kids),6,03-06-2020,200,184,270,fbcore.svg
+6,Ad set(ladies + kids),7,03-07-2020,220,202,271,fbcore.svg
+7,Ad set(ladies + kids),8,03-08-2020,225,207,272,fbcore.svg
+8,Ad set(ladies + kids),9,03-09-2020,230,212,273,fbcore.svg
+9,Ad set(ladies + kids),10,03-10-2020,240,221,274,fbcore.svg
+10,Ad set(ladies + kids),11,03-11-2020,245,225,275,fbcore.svg
+11,Ad set(ladies + kids),12,03-12-2020,270,248,277,fbcore.svg
+12,Ad set(ladies + kids),13,3/13/2020,265,244,274,fbcore.svg
+13,Ad set(ladies + kids),14,3/14/2020,250,230,275,fbcore.svg
+14,Ad set(ladies + kids),15,3/15/2020,235,216,276,fbcore.svg
+15,Ad set(ladies + kids),16,3/16/2020,230,212,273,fbcore.svg
+16,Ad set(ladies + kids),17,3/17/2020,225,207,274,fbcore.svg
+17,Ad set(ladies + kids),18,3/18/2020,222,204,275,fbcore.svg
+18,Ad set(ladies + kids),19,3/19/2020,210,193,275,fbcore.svg
+19,Ad set(ladies + kids),20,3/20/2020,211,194,274,fbcore.svg
+20,Ad set(ladies + kids),21,3/21/2020,212,195,273,fbcore.svg
+21,Ad set(ladies + kids),22,3/22/2020,213,196,272,fbcore.svg
+22,Ad set(ladies + kids),23,3/23/2020,215,198,271,fbcore.svg
+23,Ad set(ladies + kids),24,3/24/2020,230,212,273,fbcore.svg
+24,Ad set(ladies + kids),25,3/25/2020,232,213,274,fbcore.svg
+25,Ad set(ladies + kids),26,3/26/2020,235,216,272,fbcore.svg
+26,Ad set(ladies + kids),27,3/27/2020,195,179,273,fbcore.svg
+27,Ad set(ladies + kids),28,3/28/2020,190,175,274,fbcore.svg
+28,Ad set(ladies + kids),29,3/29/2020,180,166,273,fbcore.svg
+29,Ad set(ladies + kids),30,3/30/2020,170,156,274,fbcore.svg
+30,Ad set(ladies + kids),31,3/31/2020,160,147,287,fbcore.svg
+31,Ads set(kids + gents),1,03-01-2020,130,118,245,microsoft-excel.svg
+32,Ads set(kids + gents),2,03-02-2020,140,127,246,microsoft-excel.svg
+33,Ads set(kids + gents),3,03-03-2020,150,136,247,microsoft-excel.svg
+34,Ads set(kids + gents),4,03-04-2020,160,146,248,microsoft-excel.svg
+35,Ads set(kids + gents),5,03-05-2020,170,155,249,microsoft-excel.svg
+36,Ads set(kids + gents),6,03-06-2020,180,164,250,microsoft-excel.svg
+37,Ads set(kids + gents),7,03-07-2020,200,182,251,microsoft-excel.svg
+38,Ads set(kids + gents),8,03-08-2020,205,187,252,microsoft-excel.svg
+39,Ads set(kids + gents),9,03-09-2020,210,192,253,microsoft-excel.svg
+40,Ads set(kids + gents),10,03-10-2020,220,201,254,microsoft-excel.svg
+41,Ads set(kids + gents),11,03-11-2020,225,205,255,microsoft-excel.svg
+42,Ads set(kids + gents),12,03-12-2020,250,228,257,microsoft-excel.svg
+43,Ads set(kids + gents),13,3/13/2020,245,224,254,microsoft-excel.svg
+44,Ads set(kids + gents),14,3/14/2020,230,210,255,microsoft-excel.svg
+45,Ads set(kids + gents),15,3/15/2020,215,196,256,microsoft-excel.svg
+46,Ads set(kids + gents),16,3/16/2020,210,192,253,microsoft-excel.svg
+47,Ads set(kids + gents),17,3/17/2020,205,187,254,microsoft-excel.svg
+48,Ads set(kids + gents),18,3/18/2020,202,184,255,microsoft-excel.svg
+49,Ads set(kids + gents),19,3/19/2020,155,110,256,microsoft-excel.svg
+50,Ads set(kids + gents),20,3/20/2020,145,120,257,microsoft-excel.svg
+51,Ads set(kids + gents),21,3/21/2020,192,175,253,microsoft-excel.svg
+52,Ads set(kids + gents),22,3/22/2020,193,176,252,microsoft-excel.svg
+53,Ads set(kids + gents),23,3/23/2020,195,178,251,microsoft-excel.svg
+54,Ads set(kids + gents),24,3/24/2020,210,192,253,microsoft-excel.svg
+55,Ads set(kids + gents),25,3/25/2020,212,193,254,microsoft-excel.svg
+56,Ads set(kids + gents),26,3/26/2020,215,196,252,microsoft-excel.svg
+57,Ads set(kids + gents),27,3/27/2020,175,159,253,microsoft-excel.svg
+58,Ads set(kids + gents),28,3/28/2020,170,155,254,microsoft-excel.svg
+59,Ads set(kids + gents),29,3/29/2020,160,146,253,microsoft-excel.svg
+60,Ads set(kids + gents),30,3/30/2020,150,136,254,microsoft-excel.svg
+61,Ads set(kids + gents),31,3/31/2020,140,127,199,microsoft-excel.svg
+62,Ads set(gents),1,03-01-2020,190,178,305,mssql_shared.svg
+63,Ads set(gents),2,03-02-2020,200,187,306,mssql_shared.svg
+64,Ads set(gents),3,03-03-2020,210,196,307,mssql_shared.svg
+65,Ads set(gents),4,03-04-2020,220,206,308,mssql_shared.svg
+66,Ads set(gents),5,03-05-2020,230,215,309,mssql_shared.svg
+67,Ads set(gents),6,03-06-2020,240,224,310,mssql_shared.svg
+68,Ads set(gents),7,03-07-2020,260,242,311,mssql_shared.svg
+69,Ads set(gents),8,03-08-2020,265,247,312,mssql_shared.svg
+70,Ads set(gents),9,03-09-2020,270,252,313,mssql_shared.svg
+71,Ads set(gents),10,03-10-2020,280,261,314,mssql_shared.svg
+72,Ads set(gents),11,03-11-2020,285,265,315,mssql_shared.svg
+73,Ads set(gents),12,03-12-2020,310,288,317,mssql_shared.svg
+74,Ads set(gents),13,3/13/2020,305,284,314,mssql_shared.svg
+75,Ads set(gents),14,3/14/2020,290,270,315,mssql_shared.svg
+76,Ads set(gents),15,3/15/2020,275,256,316,mssql_shared.svg
+77,Ads set(gents),16,3/16/2020,270,252,313,mssql_shared.svg
+78,Ads set(gents),17,3/17/2020,265,247,314,mssql_shared.svg
+79,Ads set(gents),18,3/18/2020,262,244,315,mssql_shared.svg
+80,Ads set(gents),19,3/19/2020,250,233,315,mssql_shared.svg
+81,Ads set(gents),20,3/20/2020,251,234,314,mssql_shared.svg
+82,Ads set(gents),21,3/21/2020,252,235,313,mssql_shared.svg
+83,Ads set(gents),22,3/22/2020,253,236,312,mssql_shared.svg
+84,Ads set(gents),23,3/23/2020,255,238,311,mssql_shared.svg
+85,Ads set(gents),24,3/24/2020,270,252,313,mssql_shared.svg
+86,Ads set(gents),25,3/25/2020,290,273,334,mssql_shared.svg
+87,Ads set(gents),26,3/26/2020,300,270,340,mssql_shared.svg
+88,Ads set(gents),27,3/27/2020,235,219,313,mssql_shared.svg
+89,Ads set(gents),28,3/28/2020,230,215,314,mssql_shared.svg
+90,Ads set(gents),29,3/29/2020,220,206,313,mssql_shared.svg
+91,Ads set(gents),30,3/30/2020,210,196,314,mssql_shared.svg
+92,Ads set(gents),31,3/31/2020,200,187,312,mssql_shared.svg
+93,Ads set(ladies + kids + gents),1,03-01-2020,150,138,265,fbcore.svg
+94,Ads set(ladies + kids + gents),2,03-02-2020,160,147,266,fbcore.svg
+95,Ads set(ladies + kids + gents),3,03-03-2020,170,156,267,fbcore.svg
+96,Ads set(ladies + kids + gents),4,03-04-2020,180,166,268,fbcore.svg
+97,Ads set(ladies + kids + gents),5,03-05-2020,190,175,269,fbcore.svg
+98,Ads set(ladies + kids + gents),6,03-06-2020,200,184,270,fbcore.svg
+99,Ads set(ladies + kids + gents),7,03-07-2020,220,202,271,fbcore.svg
+100,Ads set(ladies + kids + gents),8,03-08-2020,225,207,272,fbcore.svg
+101,Ads set(ladies + kids + gents),9,03-09-2020,230,212,273,fbcore.svg
+102,Ads set(ladies + kids + gents),10,03-10-2020,240,221,274,fbcore.svg
+103,Ads set(ladies + kids + gents),11,03-11-2020,245,225,275,fbcore.svg
+104,Ads set(ladies + kids + gents),12,03-12-2020,270,248,277,fbcore.svg
+105,Ads set(ladies + kids + gents),13,3/13/2020,265,244,274,fbcore.svg
+106,Ads set(ladies + kids + gents),14,3/14/2020,250,230,275,fbcore.svg
+107,Ads set(ladies + kids + gents),15,3/15/2020,235,216,276,fbcore.svg
+108,Ads set(ladies + kids + gents),16,3/16/2020,230,212,273,fbcore.svg
+109,Ads set(ladies + kids + gents),17,3/17/2020,225,207,274,fbcore.svg
+110,Ads set(ladies + kids + gents),18,3/18/2020,222,204,275,fbcore.svg
+111,Ads set(ladies + kids + gents),19,3/19/2020,210,193,275,fbcore.svg
+112,Ads set(ladies + kids + gents),20,3/20/2020,211,194,274,fbcore.svg
+113,Ads set(ladies + kids + gents),21,3/21/2020,212,195,273,fbcore.svg
+114,Ads set(ladies + kids + gents),22,3/22/2020,213,196,272,fbcore.svg
+115,Ads set(ladies + kids + gents),23,3/23/2020,215,198,271,fbcore.svg
+116,Ads set(ladies + kids + gents),24,3/24/2020,230,212,273,fbcore.svg
+117,Ads set(ladies + kids + gents),25,3/25/2020,232,213,274,fbcore.svg
+118,Ads set(ladies + kids + gents),26,3/26/2020,235,216,272,fbcore.svg
+119,Ads set(ladies + kids + gents),27,3/27/2020,195,179,273,fbcore.svg
+120,Ads set(ladies + kids + gents),28,3/28/2020,190,175,274,fbcore.svg
+121,Ads set(ladies + kids + gents),29,3/29/2020,180,166,273,fbcore.svg
+122,Ads set(ladies + kids + gents),30,3/30/2020,170,156,274,fbcore.svg
+123,Ads set(ladies + kids + gents),31,3/31/2020,160,147,272,fbcore.svg
+124,Ads set(kids),1,03-01-2020,150,138,265,fbcore.svg
+125,Ads set(kids),2,03-02-2020,160,147,266,fbcore.svg
+126,Ads set(kids),3,03-03-2020,170,156,267,fbcore.svg
+127,Ads set(kids),4,03-04-2020,180,166,268,fbcore.svg
+128,Ads set(kids),5,03-05-2020,190,175,269,fbcore.svg
+129,Ads set(kids),6,03-06-2020,200,184,270,fbcore.svg
+130,Ads set(kids),7,03-07-2020,220,202,271,fbcore.svg
+131,Ads set(kids),8,03-08-2020,225,207,272,fbcore.svg
+132,Ads set(kids),9,03-09-2020,230,212,273,fbcore.svg
+133,Ads set(kids),10,03-10-2020,240,221,274,fbcore.svg
+134,Ads set(kids),11,03-11-2020,245,225,275,fbcore.svg
+135,Ads set(kids),12,03-12-2020,270,248,277,fbcore.svg
+136,Ads set(kids),13,3/13/2020,265,244,274,fbcore.svg
+137,Ads set(kids),14,3/14/2020,250,230,275,fbcore.svg
+138,Ads set(kids),15,3/15/2020,235,216,276,fbcore.svg
+139,Ads set(kids),16,3/16/2020,230,212,273,fbcore.svg
+140,Ads set(kids),17,3/17/2020,225,207,274,fbcore.svg
+141,Ads set(kids),18,3/18/2020,222,204,275,fbcore.svg
+142,Ads set(kids),19,3/19/2020,210,193,275,fbcore.svg
+143,Ads set(kids),20,3/20/2020,211,194,274,fbcore.svg
+144,Ads set(kids),21,3/21/2020,212,195,273,fbcore.svg
+145,Ads set(kids),22,3/22/2020,213,196,272,fbcore.svg
+146,Ads set(kids),23,3/23/2020,215,198,271,fbcore.svg
+147,Ads set(kids),24,3/24/2020,230,212,273,fbcore.svg
+148,Ads set(kids),25,3/25/2020,232,213,274,fbcore.svg
+149,Ads set(kids),26,3/26/2020,235,216,272,fbcore.svg
+150,Ads set(kids),27,3/27/2020,195,179,273,fbcore.svg
+151,Ads set(kids),28,3/28/2020,190,175,274,fbcore.svg
+152,Ads set(kids),29,3/29/2020,180,166,273,fbcore.svg
+153,Ads set(kids),30,3/30/2020,170,156,274,fbcore.svg
+154,Ads set(kids),31,3/31/2020,160,147,272,fbcore.svg

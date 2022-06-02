@@ -1,0 +1,105 @@
+ <form #sql="ngForm"   novalidate>
+          <div class="">
+            <div class="main-section">
+             <h3> Connection credentials</h3>
+            </div>
+            <div class="tool-section">
+            </div>
+            
+           <fieldset class="module aligned " >
+
+                  <div class="col-md-3 col-md-push-9 col-sm-3 col-sm-push-9 text-center setup-connection"  >
+                     <img class="connection-logo" src="assets/images/logo.svg">
+                     <br>
+                     <span>+</span>
+                     <br>
+                     <img class="connection-logo" src="assets/images/add-stream-imgs/mssql_shared.svg">
+                  </div>
+                  <div class="col-md-5 col-md-pull-3 col-sm-5 col-sm-pull-3" style="padding: 12px 0px 0px 0px;" >
+                     <input type="hidden" name="csrfmiddlewaretoken" value="GZ57TCjJnapfiuvPZBneYMTeKSc75buq5OikcdmQXsH1X33QVmu1KUBx81Fr76Xh">
+                     <div class="form-group">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="GZ57TCjJnapfiuvPZBneYMTeKSc75buq5OikcdmQXsH1X33QVmu1KUBx81Fr76Xh"> 
+                        <div id="div_id_hostname" class="form-group">
+                           <label for="id_hostname" class="control-label  requiredField">
+                           Hostname<span class="asteriskField">*</span> </label> 
+                           <div class="controls ">
+                              <select id="hostName" style="height: 31px;" name="Hostname" [(ngModel)]="establishConnectorServic.Hostname"  class="form-control">
+                                <option *ngFor='let item of _SqlConnector.Mydropdonw' value="{{item}}">{{item}}</option>
+                               </select>
+                           </div>
+                            
+                        </div>
+                        <div class="form-row field-stack">
+                   
+                           <label class="label-text" for="id_stack"> Database *</label>
+                           <div class="related-widget-wrapper">
+                              <input type="text" name="Database" #Database="ngModel" [(ngModel)]="establishConnectorServic.Database"   id="dataBase" required="" class="form-control"  maxlength="200"> 
+                                
+                              </div>
+                           <div class="help">
+                              <span class="text-danger" style="margin-top:4px" *ngIf="establishConnectorServic.DataBase_Span">
+                                 Database Name is required
+                             </span> 
+                              
+                        </div>
+                       </div>
+                         
+                        <div class="form-row field-stack">
+                   
+                           <label class="label-text" for="id_stack">Username*</label>
+                           <div class="related-widget-wrapper">
+                              <input type="text" name="Username" #Username="ngModel" [(ngModel)]="establishConnectorServic.Username" required id="userName"  required="" class="form-control" maxlength="500">
+                                  
+                              </div>
+                           <div class="help">
+                              <span class="text-danger" style="margin-top:4px" *ngIf="establishConnectorServic.Username_Span">
+                                 Username is Required
+                             </span>
+                               
+                        </div>
+                       </div>
+                         
+                             <div class="form-row field-stack">
+                   
+                              <label class="label-text" for="id_stack">Password*</label>
+                              <div class="related-widget-wrapper">
+                                 <input type="password" name="Password" #Password="ngModel" [(ngModel)]="establishConnectorServic.Password"  id="password"  required class="form-control" maxlength="500"> 
+                                  
+                              </div>
+                              <div class="help">
+                                 <span class="text-danger" style="margin-top:4px" *ngIf="establishConnectorServic.Password_Span">
+                                    Password is required
+                                </span> 
+                                  
+                           </div>
+                          </div>
+                         
+                     </div>
+                      <div class="form-row field-stack" >
+                         <div class="related-widget-wrapper">
+                         <div class="controls " style="display: inline-flex;" >
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" value="ConnectivityStatus">
+                              <label  style="padding: 0 0 0 23px;" class="form-check-label" for="exampleCheck1">Connectivity status</label>
+                                <button class="css-xpr64j" type="button" style="margin-left: 50px;padding: 13px;">Verify Connection</button>
+
+                              </div>                     
+                       
+                       <div class="help"></div>
+                       
+                   </div>
+                     
+               </div>  
+                   
+                      
+                  </div>
+
+          
+            </fieldset>
+           </div>
+        </form>         
+         <div class="row">
+            <div class="col-md-12">
+               <hr>
+           </div>
+           </div>
+         

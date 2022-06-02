@@ -1,0 +1,61 @@
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+    <div class="panel panel-default columnGroup-3NLeh" style="border:none" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        <div class="panel-heading-explore" role="tab" id="headingOne">
+            <h3 class="panel-title-z" style="border-bottom:1px solid #ddd;padding-bottom:10px;">
+                Extract Logs
+            </h3>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapsed" aria-labelledby="headingOne" data-parent="#accordion">
+            <div style="padding: 5px;">
+                <div>
+                    <div class="connect-type-recent" *ngFor="let AllExtract of AllExtractService.extractData">
+                        <div class="col-md-3">
+                            <span class="add-box-recent">
+                           <img src="../../../assets/images/add-stream-imgs/{{AllExtract.appearanceLogo}}" height="60" width="90" alt="Oracle DBMS">
+                           <span class="box-label-recent truncate" style="white-space:wrap;">{{AllExtract.connectorDisplayName}}</span>
+                            </span>
+                        </div>
+                        <div class="col-md-9" style="padding-left: 0;">
+                            <div>
+                                <div class="css-15rwz9m">
+                                    <div class="css-52rjj8">
+                                        <div class="css-1vb8eg4">
+                                            <div class="css-f128gq"><span class="css-1x48jmz" [ngClass]="
+                                                {
+                                                'label-red': AllExtract.statusExtract === 'Deleted',
+                                                'label-raw': AllExtract.statusExtract === 'Raw',
+                                                'label-orange': AllExtract.statusExtract === 'Warning',
+                                                'label-blue': AllExtract.statusExtract === 'Collected',
+                                                'label-green': AllExtract.statusExtract === 'Imported'
+                                                }">{{AllExtract.statusExtract}}</span><span class="css-qyqq4c">{{AllExtract.serverInsertDate}}</span>
+                                            </div>
+                                            <div class="css-n0eob4">
+                                                <button class="css-1cfj1v2" type="button" aria-expanded="false" aria-controls="id-g0h4ji" aria-haspopup="menu">
+                                                    <svg class="css-1xurosb" fill="currentcolor" viewBox="0 0 24 24">
+                                                        <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
+                                                    </svg>
+                                                </button>
+                                                <div class="css-qowjcb css-m0pid7" id="id-g0h4ji" hidden="" role="menu" tabindex="-1" data-dialog="true" aria-orientation="vertical" style="display: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; transform: translate(1032px, 220px);"><a class="css-1agkww" id="id-g0h4ji-1" tabindex="0" role="menuitem" href="/utils/21/facebook-ads-pixel-stats-aggregation-on-url/facebook_ads_pixel_stats-21-20200720-b8de3b02b84841c284d6c9f08f952a4c.csv/requeue/">Requeue for Import</a>
+                                                    <a class="css-1agkww" id="id-g0h4ji-2" tabindex="-1" role="menuitem" href="/utils/21/facebook-ads-pixel-stats-aggregation-on-url/facebook_ads_pixel_stats-21-20200720-b8de3b02b84841c284d6c9f08f952a4c.csv/refetch/">Fetch again with same Time Range</a>
+                                                    <a class="css-1agkww" id="id-g0h4ji-3" tabindex="-1" role="menuitem" href="/api/extracts/57/download/">Download</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="css-178srh5">
+                                            <h1 class="css-1qck51l"><a class="css-am6n7a" href="#">{{AllExtract.connectionName}}</a></h1>
+                                            <div class="css-1m45hbv" tabindex="-1"><a class="css-db069s" href="#">{{AllExtract.fileName}}</a>
+                                            </div>
+                                            <div class="css-15rwz9m"><span class="css-1vvpe8z">{{AllExtract.rowsCountExtract}} rows, {{AllExtract.colsCountExtract}} columns ({{AllExtract.dataSizeExtract/1024 | number:'1.0-1'}} KB)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

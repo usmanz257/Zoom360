@@ -1,0 +1,139 @@
+<div id="content">
+    <div class="main-content">
+        <div class="generic-django-admin-header">
+            <div class="main-section">
+                <h3>Primary Storage</h3>
+            </div>
+            <div class="tool-section">
+            </div>
+        </div>
+        <!-- <div id="app">
+            <div class="css-1av5ke4">
+                <div class="css-1n5qwyl">
+                    <div class="css-19yeg4l"><img class="css-jniivr" src="assets/images/datastudio.svg" alt="Google Data Studio"></div>
+                    <div class="css-k1huws"><span class="css-1h33d8v">Google Data Studio</span><span class="css-12mpsfm">Follow the link to directly create a new Data Source with our Partner Connector <b>Ad Data + All Other Sources</b>.</span><a class="css-b2qa21" href="https://datastudio.google.com/datasources/create?connectorId=AKfycbwsgBcha1u7jWiMnzEFxQQxAgchWb5wYhM9TdLawMRUoxoIBpWTmo0to4bEReR7ythErg&amp;connectorConfig=%7B%22tokenurl%22%3A+%22https%3A%2F%2Fraptors.datatap.adverity.com%2Fapi%2Ftargets%2Fpassive%2F181472f2bb353ce9de1ad3b120c298409a432a208027b4ba2bd3dc814c2dd922%2F%22%7D"
+                            target="_blank">Open in Google Data Studio</a></div>
+                </div>
+                <div class="css-1n5qwyl">
+                    <div class="css-19yeg4l"><img class="css-jniivr" src="assets/images/tableau.svg" alt="Tableau"></div>
+                    <div class="css-k1huws">
+                        <span class="css-1h33d8v">Tableau</span><span class="css-12mpsfm">Copy the link and paste it into Tableau Desktop using the <b>Web Data Connector</b>.<br>Use Time Range selector below to define which files shall be considered according to their scheduled date.</span>
+                        <div class="input-group">
+                            <input class="form-control" readonly="" type="text" value="https://raptors.datatap.adverity.com/tableau/wdc/181472f2bb353ce9de1ad3b120c298409a432a208027b4ba2bd3dc814c2dd922">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                            <svg class="css-phn8md" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24">
+                               <path d="M4 8h12v12H4V8zm2 2v8h8v-8H6zm12 4V6H8V4h12v10h-2z"></path>
+                            </svg>
+                         </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="css-11tdnxu">
+                    <div class="css-19yeg4l"></div>
+                    <div class="css-f9be5g">
+                        <div class="css-160zqio">
+                            <span class="css-12mpsfm">Time Range Preset</span>
+                            <div class="css-1imxhff" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="downshift-0-label">
+                                <div class="css-1x0srhu" aria-autocomplete="list" aria-labelledby="downshift-0-label">
+                                    <input class="css-1qumlef" type="text" placeholder="Select..." readonly="" id="downshift-0-input" autocomplete="off" aria-autocomplete="list" aria-labelledby="downshift-0-label" value="Last 7 Days">
+                                    <svg class="css-1njzw4v" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24">
+                               <path d="M12 14.172l5.657-5.657 1.414 1.414L12 17 4.929 9.929l1.414-1.414z"></path>
+                            </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="results" style="margin-top: 25px;">
+            <table id="result_list" class="table table-hover">
+                <thead>
+                    <tr>
+
+                        <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                            <div class="cell-wrapper" title="Toggle sorting">
+                                <a class="toggle-link" (click)="applySort('appearanceLogo')">
+                                Fields Name
+                                <span class="sortoptions sortdirectionn">
+                                        <span class="" [ngClass]=" sourceType_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="sourceType_arrow"></span>
+                                </span>
+                                </a>
+                                <div class="sortoptions remove">
+                                    <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                            <div class="cell-wrapper" title="Toggle sorting">
+                                <a class="toggle-link" (click)="applySort('sourceName')">
+                                Fields Value
+                                <span class="sortoptions sortdirection">
+                                        <span class="" [ngClass]=" sname_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="sname_arrow"></span>
+                                </span>
+                                </a>
+                                <div class="sortoptions remove">
+                                    <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row1">
+                        <td class="field-stack nowrap">
+                            Source Type:
+                        </td>
+                        <td class="field-dashboard_link">
+
+                        </td>
+                    </tr>
+                    <tr class="row1">
+                        <td class="field-stack nowrap">
+                            Workspace:
+                        </td>
+                        <td class="field-dashboard_link">
+
+                        </td>
+                    </tr>
+                    <tr class="row1">
+                        <td class="field-stack nowrap">
+                            Source Name:
+                        </td>
+                        <td class="field-dashboard_link">
+
+                        </td>
+                    </tr>
+                    <tr class="row1">
+                        <td class="field-stack nowrap">
+                            Destination Enable:
+                        </td>
+                        <td class="field-dashboard_link">
+
+                        </td>
+                    </tr>
+                    <tr class="row1">
+                        <td class="field-stack nowrap">
+                            Access Granted:
+                        </td>
+                        <td class="field-dashboard_link">
+
+                        </td>
+                    </tr>
+                    <tr class="row1">
+                        <td class="field-stack nowrap">
+                            Next Run:
+                        </td>
+                        <td class="field-dashboard_link">
+
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>

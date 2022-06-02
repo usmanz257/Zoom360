@@ -1,0 +1,184 @@
+<div style="height:600px;">
+    <form>
+      <div>
+         <div class="main-section " >
+            <div class="header" style="cursor:pointer;" (click)="ReversClass()" > 
+               <img src='../../../../assets/arrow-left-64.png'   >
+            </div>
+            <div>
+             <h3>STEP 5 :</h3> 
+             <h3>Apply Filters (Optional)</h3>
+            </div>
+         </div>
+         <div class="tool-section">
+         </div>
+         <div class="row" style="padding: 12px 0 0 0;">
+            <div class="col-md-12">
+         <fieldset class="module aligned ">
+            <div class="row">
+               <div class="col-md-5">
+                  <div class="form-row field-stack">
+               
+                     <label class="label-text" for="id_stack">Field Name</label>
+                          <div class="related-widget-wrapper">
+                               <input type="text"  required name="SourceDisplayName"     class="form-control"  > 
+                           </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-5">
+                  <div class="form-row field-stack">
+                     <label class="label-text" for="id_stack">Field Display Name</label>
+                         <div class="related-widget-wrapper">
+                              <input type="text"  required name="SourceDisplayName"     class="form-control"  > 
+                           </div>
+                 </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-5">
+                  <div class="form-row field-stack">
+                     <label class="label-text" for="id_stack">Field Value</label>
+                         <div class="related-widget-wrapper">
+                              <input type="text"  required name="SourceDisplayName"     class="form-control"  > 
+                           </div>
+                   </div>
+               </div>
+            </div>
+            
+         </fieldset>
+      </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-md-12" >
+         <hr>
+     </div>
+   </div>
+       <div class="col-md-12" style="padding: 0px;">
+            <div class="main-section">
+          <h3 >Select fields and filters from available list against the selected object</h3>
+         </div>
+         <div class="tool-section">
+         </div>
+         <fieldset class="module aligned ">
+             <div class="row" style="padding:12px 0 0 0;">
+              <div class="col-md-12  col-sm-12 ">
+                 <div id="changelist">
+                    <form id="changelist-form" method="post" novalidate="">
+                       <input type="hidden" name="csrfmiddlewaretoken" value="BzJ7MpE5jnM2lyqnbJrbEVtNiZc8GLk8udbCXR4ixTJfrCjd1V5zy452hpZwSEiq">
+                       <input type="hidden" name="action" value="">
+                       <input name="index" value="0" type="hidden">
+                       <input class="select-across" name="select_across" value="0" type="hidden">
+                       <div class="results">
+                          <table id="result_list" class="table table-hover">
+                             <thead>
+                                <tr>
+                                   <th scope="col" class="action-checkbox-column">
+                                      <div class="cell-wrapper" title="Select all rows">
+                                         <div class="text">
+                                            <div data-id="action-toggle" toggle="adverity-checkbox[name=&quot;_selected_action&quot;]">
+                                               <div><span class="css-kpk1s7"><input class="css-10d97nj" type="checkbox"><span class="css-jlzago"></span></span></div>
+                                               <input hidden="" id="action-toggle" class="" data-type="checkbox" style="display: block;">
+                                            </div>
+                                         </div>
+                                      </div>
+                                   </th>
+                                   <th scope="col" class="sortable column-type_logo">
+                                      <div class="cell-wrapper" title="Toggle sorting">
+                                         <div class="text">
+                                            <a>Type</a>
+                                         </div>
+                                      </div>
+                                   </th>
+                                   <th scope="col" class="sortable column-stack">
+                                      <div class="cell-wrapper" title="Toggle sorting">
+                                         <div class="text">
+                                            <a>Group Name</a>
+                                         </div>
+                                      </div>
+                                   </th>
+                                   <th scope="col" class="sortable column-name sorted ascending">
+                                      <div class="cell-wrapper" title="Toggle sorting">
+                                         <a href="#" class="toggle-link"> 
+                                         Connector Name
+                                         <span class="sortoptions sortdirectionn">
+                                         <span class="toggle ascending"></span>
+                                         </span>
+                                         </a>
+                                         <div class="sortoptions remove">
+                                            <a class="sortremove" href="# title = "Remove from sorting></a>
+                                         </div>
+                                      </div>
+                                   </th>
+                                   <th scope="col" class="column-auth_status">
+                                      <div class="cell-wrapper">
+                                         <div class="text">
+                                            <span>Account Name</span>
+                                         </div>
+                                      </div>
+                                   </th>
+                                   <th scope="col" class="column-auth_status">
+                                      <div class="cell-wrapper">
+                                         <div class="text">
+                                            <span>Date</span>
+                                         </div>
+                                      </div>
+                                   </th>
+                                   <th scope="col" class="column-auth_status">
+                                      <div class="cell-wrapper">
+                                         <div class="text">
+                                            <span>Status</span>
+                                         </div>
+                                      </div>
+                                   </th>
+                                </tr>
+                             </thead>
+                             <tbody>
+                              <tr class="row1">
+                                  <td class="action-checkbox">
+                                     <div name="_selected_action" value="26">
+                                        <div><span class="css-kpk1s7"><input class="css-10d97nj" type="checkbox"><span class="css-jlzago"></span></span></div>
+                                        <input hidden="" name="_selected_action" class="action-select" data-type="checkbox" disabled="">
+                                     </div>
+                                  </td>
+                                  <td class="field-type_logo"><img src="../../../../assets/images/fbcore.svg" class="type-logo" alt="Facebook Authorization"></td>
+                                  <td class="field-stack nowrap">Default</td>
+                                  <th class="field-name"><a href="#">Facebook Authorization</a></th>
+                                  <td class="field-auth_status"><img src="../../../../assets/images/icon-yes.svg" alt="True"></td>
+                                  <th class="field-stack nowrap">May 19,2020</th>
+                                  <td class="field-auth_status"><img src="../../../../assets/images/icon-yes.svg" alt="True"></td>
+    
+                               </tr>
+                             </tbody>
+                          </table>
+                       </div>
+                       <div class="pull-left changelist-botton-row changelist-pagination">
+                          &nbsp;
+                          <span class="pagination-element-counter">1 Connections</span>
+                       </div>
+                    </form>
+                 </div>
+              </div>
+           </div>
+       </fieldset>
+      </div>
+      <div class="row">
+         <div class="col-md-12" >
+            <hr>
+        </div>
+      </div>
+         <div class="form-group pull-right" >
+           <div class="input-bar-item">
+             <!-- <button class="btn btn-info" style="background-color: rgb(33, 155, 156);color: white;" (click)="NextPageWizzardClassChange()">Save And Next</button> -->
+             <button class="css-xpr64j" type="button"  (click)="NextPageWizzardClassChange()">Save And Next</button>
+
+             <!-- (click)="_SqlConnector.SaveAllData()" -->
+           </div>
+         </div>
+        
+    </form>
+    
+    </div>
+    

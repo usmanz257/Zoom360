@@ -1,0 +1,304 @@
+[{
+    "Node_id": "1",
+    "Template": [
+{
+    "Properties": {
+      "Display_Name": "Extract",
+      "Control_Type": "checkbox",
+      "Control_Value": "",
+      "Checkbox_Control_Value": true,
+      "ToolTip": "tooltip2",
+      "Help_Icon": true,
+      "Help_Text": "this is help text",
+      "Visible": true,
+      "Background_Color": "green",
+      "Optional": "*"
+    },
+    "Data": {
+      "Input_Source": "",
+      "Source_Type": "System"
+    },
+    "Validation": {
+      "condition1": "required"
+    }
+  },
+  {
+    "Properties": {
+      "Display_Name": "Source Category",
+      "Control_Type": "textBox",
+      "Control_Value": "Database",
+      "Checkbox_Control_Value": true,
+      "ToolTip": "tooltip1",
+      "Help_Icon": false,
+      "Help_Text": "",
+      "Visible": true,
+      "Background_Color": "red",
+      "Optional": "*"
+    },
+    "Data": {
+      "Input_Source": "",
+      "Source_Type": "Custom"
+    },
+    "Validation": {
+      "condition1": "required"
+    }
+  },
+  {
+    "Properties": {
+      "Display_Name": "Source Type",
+      "Control_Type": "textBox",
+      "Control_Value": "MicrosoftSQLServer",
+      "Checkbox_Control_Value": true,
+      "ToolTip": "tooltip2",
+      "Help_Icon": false,
+      "Help_Text": "",
+      "Visible": true,
+      "Background_Color": "red",
+      "Optional": "*"
+    },
+    "Data": {
+      "Input_Source": "",
+      "Source_Type": "Custom"
+    },
+    "Validation": {
+      "condition1": "required"
+    }
+  },
+  {
+    "Properties": {
+      "Display_Name": "File Source Detail",
+      "Control_Type": "textBox",
+      "Control_Value": "",
+      "Checkbox_Control_Value": true,
+      "ToolTip": "tooltip3",
+      "Help_Icon": false,
+      "Help_Text": "",
+      "Visible": true,
+      "Background_Color": "red",
+      "Optional": "*"
+    },
+    "Data": {
+      "Input_Source": "",
+      "Source_Type": "Custom"
+    },
+    "Validation": {
+      "condition1": "required"
+    }
+  }
+]
+},
+{
+    "Node_id": "1.1.1",
+     "Template": [
+        {
+            "Properties": {
+              "Display_Name": "Host Name",
+              "Control_Type": "textBox",
+              "Control_Value": "192.168.223.111",
+              "Checkbox_Control_Value": true,
+              "ToolTip": "tooltip1",
+              "Help_Icon": false,
+              "Help_Text": "",
+              "Visible": true,
+              "Background_Color": "red",
+              "Optional": "*"
+            },
+            "Data": {
+              "Input_Source": "",
+              "Source_Type": "Custom"
+            },
+            "Validation": {
+              "condition1": "required"
+            }
+          },
+          {
+            "Properties": {
+              "Display_Name": "Port Name",
+              "Control_Type": "textBox",
+              "Control_Value": "",
+              "Checkbox_Control_Value": true,
+              "ToolTip": "test",
+              "Help_Icon": false,
+              "Help_Text": "",
+              "Visible": true,
+              "Background_Color": "red",
+              "Optional": "*"
+            },
+            "Data": {
+              "Input_Source": "",
+              "Source_Type": "Custom"
+            },
+            "Validation": {
+              "condition1": "required"
+            }
+          },
+          {
+            "Properties": {
+              "Display_Name": "Service Name",
+              "Control_Type": "textBox",
+              "Control_Value": "Microsoft SQL Server",
+              "Checkbox_Control_Value": true,
+              "ToolTip": "tooltip1",
+              "Help_Icon": false,
+              "Help_Text": "",
+              "Visible": true,
+              "Background_Color": "red",
+              "Optional": "*"
+            },
+            "Data": {
+              "Input_Source": "",
+              "Source_Type": "Custom"
+            },
+            "Validation": {
+              "condition1": "required"
+            }
+          },
+          {
+            "Properties": {
+              "Display_Name": "DataBase Name",
+              "Control_Type": "textBox",
+              "Control_Value": "zmdb",
+              "Checkbox_Control_Value": true,
+              "ToolTip": "test",
+              "Help_Icon": false,
+              "Help_Text": "",
+              "Visible": true,
+              "Background_Color": "red",
+              "Optional": "*"
+            },
+            "Data": {
+              "Input_Source": "",
+              "Source_Type": "Custom"
+            },
+            "Validation": {
+              "condition1": "required"
+            }
+          },
+          {
+            "Properties": {
+              "Display_Name": "User Name",
+              "Control_Type": "textBox",
+              "Control_Value": "sa",
+              "Checkbox_Control_Value": true,
+              "ToolTip": "tooltip1",
+              "Help_Icon": false,
+              "Help_Text": "",
+              "Visible": true,
+              "Background_Color": "red",
+              "Optional": "*"
+            },
+            "Data": {
+              "Input_Source": "",
+              "Source_Type": "Custom"
+            },
+            "Validation": {
+              "condition1": "required"
+            }
+          },
+          {
+            "Properties": {
+              "Display_Name": "Password",
+              "Control_Type": "textBox",
+              "Control_Value": "CNSE@12345",
+              "Checkbox_Control_Value": true,
+              "ToolTip": "test",
+              "Help_Icon": false,
+              "Help_Text": "",
+              "Visible": true,
+              "Background_Color": "red",
+              "Optional": "*"
+            },
+            "Data": {
+              "Input_Source": "",
+              "Source_Type": "Custom"
+            },
+            "Validation": {
+              "condition1": "required"
+            }
+          },
+          {
+            "Properties": {
+                "Display_Name": "Integrated Security",
+                "Control_Type": "checkbox",
+                "Control_Value": "",
+                "Checkbox_Control_Value": true,
+                "ToolTip": "tooltip2",
+                "Help_Icon": true,
+                "Help_Text": "this is help text",
+                "Visible": true,
+                "Background_Color": "green",
+                "Optional": "*"
+              },
+              "Data": {
+                "Input_Source": "",
+                "Source_Type": "System"
+              },
+              "Validation": {
+                "condition1": "required"
+              }
+            },
+          {
+            "Properties": {
+              "Display_Name": "Password Protected",
+              "Control_Type": "textBox",
+              "Control_Value": "",
+              "Checkbox_Control_Value": true,
+              "ToolTip": "test",
+              "Help_Icon": false,
+              "Help_Text": "",
+              "Visible": true,
+              "Background_Color": "red",
+              "Optional": "*"
+            },
+            "Data": {
+              "Input_Source": "",
+              "Source_Type": "Custom"
+            },
+            "Validation": {
+              "condition1": "required"
+            }
+          },
+          {
+            "Properties": {
+              "Display_Name": "Access DB Path",
+              "Control_Type": "textBox",
+              "Control_Value": "",
+              "Checkbox_Control_Value": true,
+              "ToolTip": "test",
+              "Help_Icon": false,
+              "Help_Text": "",
+              "Visible": true,
+              "Background_Color": "red",
+              "Optional": "*"
+            },
+            "Data": {
+              "Input_Source": "",
+              "Source_Type": "Custom"
+            },
+            "Validation": {
+              "condition1": "required"
+            }
+          },
+          {
+            "Properties": {
+              "Display_Name": "Access File Nme",
+              "Control_Type": "textBox",
+              "Control_Value": "",
+              "Checkbox_Control_Value": true,
+              "ToolTip": "test",
+              "Help_Icon": false,
+              "Help_Text": "",
+              "Visible": true,
+              "Background_Color": "red",
+              "Optional": "*"
+            },
+            "Data": {
+              "Input_Source": "",
+              "Source_Type": "Custom"
+            },
+            "Validation": {
+              "condition1": "required"
+            }
+          }
+        ]
+}]

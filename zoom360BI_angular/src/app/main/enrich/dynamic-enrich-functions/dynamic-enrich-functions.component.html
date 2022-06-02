@@ -1,0 +1,511 @@
+<div class="row">
+<div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12">
+  <div class="col-md-4 form-group-margin">
+    <label for="exampleInputEmail1">Script Name</label>
+    <input type="text" class="form-control text-box-padding" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" [(ngModel)]="scriptName">
+    <small id="emailHelp" class="form-text text-muted" style="font-size: 12px;">Write the script name here.</small>
+  </div>
+</div>
+</div>
+<div class="row" style="margin-left: 1px;">
+  <div class="col-md-4 form-group-margin">
+    <div class="switch">
+      <input type="checkbox" id="EnableScript" [(ngModel)]="scriptEnable">
+      <label style="padding:2px 0 0 12px;" class=" " for="EnableScript">Enable</label>
+  </div>
+    <small id="emailHelp" class="form-text text-muted" style="font-size: 12px;">You can enable & disable script from here</small>
+  </div>
+</div>
+<div cdkDropList (cdkDropListDropped)="drop($event)">
+<div class="row" style="margin-bottom: 10px;margin-top: 10px;" *ngFor="let item of this._dynamicEnrichTemplateValuesList;let i=index;"  cdkDrag>
+  <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+  <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <div class="card" style="border: none;">
+      <div class="card-header header-style">
+        <!-- <span>
+        Script {{i+1}}</span> -->
+        <div class="wrapper" style="display:inline-block; width: 20px; height: 15px;" (click)="editDisplayName(i)">
+          <ul class="social-links" >
+            <li>
+              <a target="_blank" data-tooltip="select column from here" data-position="top" class="top" style="font-size: 15px;"><i class="fa fa-edit" style="color:#a3a3a3"></i>
+                </a>
+            </li>               
+          </ul>
+        </div><input #test{{i}} type="text" class="scriptName" [ngClass]="this.collapseArray[i].editClass"  name="scriptName-{{i}}" [(ngModel)]="item.scriptDisplayName" placeholder="write display name here" />
+        <!-- <button type="button" class="close pull-right" aria-label="Close" (click)="deleteScript(i)">
+          <span class="close-button" aria-hidden="true">&times;</span>
+        </button> -->
+        <button class="btn btn-danger btn-sm rounded-2 pull-right" id="targetButton" (click)="onOpenDialog($event,i)" style="height: 23px;padding: 2px 8px;">Remove <i class="fa fa-times"></i></button>
+        <!-- <button class="btn btn-danger btn-sm rounded-2 pull-right" type="button" data-toggle="tooltip" data-placement="top" title="Delete" (click)="deleteScript(i)">Remove <i class="fa fa-times"></i></button> -->
+        <a class="btn btn-link pull-right" style="padding: 1px 10px 0px 10px;text-decoration: none; color: #343B40; " data-toggle="collapse" href="#collapseOne{{i}}" role="button" aria-expanded="false" aria-controls="collapseExample" (click)="collapseHandling(i)">
+          <!-- Collapse -->
+          {{this.collapseArray[i].collapseText}}
+        </a>
+      <div class="switch pull-right" style="display: flex;">
+          <input type="checkbox" id="EnableConnectoins1" [(ngModel)]="item.enableIndividualScript">
+        <label style="padding:2px 0 0 12px;" class="" for="EnableConnectoins1">Enable</label>
+      </div> 
+      </div>
+      <div id="collapseOne{{i}}" class="collapse show pull-right" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body" style="border: 1px solid rgba(0, 0, 0, .125);background-color: rgb(237, 245, 250)"><!---->
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].funcationName_toggle">
+          <label for="functionName{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label">Select function</label>
+          <div class="col-sm-8 col-md-8 col-lg-5"><!--[(value)]="item.functionName"-->
+            <div class="col-sm-10 col-md-10 control-pad-left">
+              functionName
+          <!-- <small id="emailHelp" class="form-text text-muted">write the function name here.</small> -->
+          </div>
+          <div class="col-sm-2 col-md-2">
+            <div class="wrapper">
+              <ul class="social-links" >
+                <li>
+                  <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                    </a>
+                </li>               
+              </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].cols_toggle">
+          <label for="columnName{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label">Column Name</label>
+          <div class="col-sm-8 col-md-8 col-lg-5">
+            <div class="col-sm-10 col-md-10 control-pad-left">
+          <ejs-multiselect id='columnName{{i}}' #checkbox [dataSource]="this._cols" [(value)]="item.cols" placeholder='Datasources:All' [fields]='fieldsvalues2' [allowFiltering]='true'
+          [mode]='mode' [showDropDownIcon]='true' showSelectAll='true' filterBarPlaceholder='test'></ejs-multiselect>
+          <!-- <small id="emailHelp" class="form-text text-muted">write the Column name here.</small> -->
+        </div>
+        <div class="col-sm-2">
+            <div class="wrapper">
+              <ul class="social-links" >
+                <li>
+                  <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                    </a>
+                </li>               
+              </ul>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].create_col_toggle">
+            <label class="col-sm-4 col-md-4 col-lg-2 col-form-label" for="createColumn{{i}}">Create new column</label>
+            <div class="col-sm-8 col-md-8 col-lg-5">
+              <div class="col-sm-10 col-md-10 control-pad-left">
+          <div class="switch" style="padding-top:5px;">
+              <input id="createColumn{{i}}" name="createColumn{{i}}" type="checkbox" [(ngModel)]="item.create_col" (change)="ClearColumnName(i)">
+          </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="wrapper">
+              <ul class="social-links" >
+                <li>
+                  <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                    </a>
+                </li>               
+              </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="item.create_col">
+          <label for="delimiter{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label"></label>
+          <div class="col-sm-8 col-md-8 col-lg-5">
+            <div class="col-sm-10 col-md-10 control-pad-left">
+          <input id="delimiter{{i}}" name="delimiter{{i}}" type="text" class="form-control text-box-padding" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" [(ngModel)]="item.new_column_name">
+          <!-- <small id="emailHelp" class="form-text text-muted">write Delimiter here.</small> -->
+          </div>
+          <div class="col-sm-2">
+            <div class="wrapper">
+              <ul class="social-links" >
+                <li>
+                  <a target="_blank" data-tooltip="select data frame from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                    </a>
+                </li>               
+              </ul>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].save_previous_changes_toggle">
+          <label class="col-sm-4 col-md-4 col-lg-2 col-form-label" for="savePrivious-{{i}}">Save privious changes</label>
+          <div class="col-sm-8 col-md-8 col-lg-5">
+              <div class="col-sm-10 col-md-10 control-pad-left">
+          <div class="switch" style="padding-top:5px;">
+            <input id="savePrivious{{i}}" name="savePrivious-{{i}}" type="checkbox" [(ngModel)]="item.save_previous_changes">
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="wrapper">
+            <ul class="social-links" >
+              <li>
+                <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                  </a>
+              </li>               
+            </ul>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].tablename_toggle" >
+          <label for="tablenName{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label">Table Name</label>
+          <div class="col-sm-8 col-md-8 col-lg-5">
+            <div class="col-sm-10 col-md-10 control-pad-left">
+          <ejs-dropdownlist id='tablenName{{i}}' [dataSource]='_TableName' [allowFiltering]='true' [fields]='tablename' placeholder='Select table name' [(value)]="item.save_previous_changes"></ejs-dropdownlist>
+          <!-- <small id="emailHelp" class="form-text text-muted">write the script name here.</small> -->
+            </div>
+            <div class="col-sm-2">
+              <div class="wrapper">
+                <ul class="social-links" >
+                  <li>
+                    <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                      </a>
+                  </li>               
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].currency_col_toggle">
+          <label for="currencyColumn{{i}}"  class="col-sm-4 col-md-4 col-lg-2 col-form-label">Currency Column</label>
+          <div class="col-sm-8 col-md-8 col-lg-5">
+            <div class="col-sm-10 col-md-10 control-pad-left">
+          <ejs-dropdownlist id='currencyColumn{{i}}' [dataSource]='_cols' [allowFiltering]='true'  [fields]='currencyColumn' placeholder='Select currency column'  [(value)]="item.currency_col"></ejs-dropdownlist>
+          <!-- <small id="emailHelp" class="form-text text-muted">write the Currency name here.</small> -->
+        </div>
+        <div class="col-sm-2">
+          <div class="wrapper">
+            <ul class="social-links" >
+              <li>
+                <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                  </a>
+              </li>               
+            </ul>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].mode_toggle">
+        <label for="mode{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label">Mode</label>
+        <div class="col-sm-8 col-md-8 col-lg-5">
+          <div class="col-sm-10 col-md-10 control-pad-left">
+        <ejs-dropdownlist id='mode{{i}}' [dataSource]='_ModeList' [allowFiltering]='true' [fields]='fieldsvalues' placeholder='Select mode'  [(value)]="item.mode"></ejs-dropdownlist>
+      </div>
+      <div class="col-sm-2">
+        <div class="wrapper">
+          <ul class="social-links" >
+            <li>
+              <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                </a>
+            </li>               
+          </ul>
+        </div>
+      </div>
+      </div>
+        <!-- <small id="emailHelp" class="form-text text-muted">select mode name here.</small> -->
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].rule_toggle">
+        <label for="rule{{i}}"  class="col-sm-4 col-md-4 col-lg-2 col-form-label">Rule</label>
+        <div class="col-sm-8 col-md-8 col-lg-5">
+          <div class="col-sm-10 col-md-10 control-pad-left">
+        <input id="rule{{i}}" name="rule{{i}}" type="text" class="form-control text-box-padding" aria-describedby="emailHelp" [(ngModel)]="item.rule">
+        <!-- <small id="emailHelp" class="form-text text-muted">write rule here.</small> -->
+      </div>
+      <div class="col-sm-2">
+        <div class="wrapper">
+          <ul class="social-links" >
+            <li>
+              <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                </a>
+            </li>               
+          </ul>
+        </div>
+      </div>
+      </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].ref_string_toggle">
+        <label for="ref_str{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label">Reference string</label>
+        <div class="col-sm-8 col-md-8 col-lg-5">
+          <div class="col-sm-10 col-md-10 control-pad-left">
+        <input id="ref_str{{i}}" name="ref_str{{i}}" type="text" class="form-control text-box-padding"  aria-describedby="emailHelp" placeholder="" [(ngModel)]="item.ref_string">
+        <!-- <small id="emailHelp" class="form-text text-muted">write Reference string here.</small> -->
+        </div>
+        <div class="col-sm-2">
+          <div class="wrapper">
+            <ul class="social-links" >
+              <li>
+                <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                  </a>
+              </li>               
+            </ul>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].separator_toggle">
+        <label for="separator{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label">Separator</label>
+        <div class="col-sm-8 col-md-8 col-lg-5">
+          <div class="col-sm-10 col-md-10 control-pad-left">
+        <input id="separator{{i}}" name="separator{{i}}" type="text" class="form-control text-box-padding" aria-describedby="emailHelp" placeholder="" [(ngModel)]="item.separator">
+        <!-- <small id="emailHelp" class="form-text text-muted">write separator here.</small> -->
+        </div>
+        <div class="col-sm-2">
+          <div class="wrapper">
+            <ul class="social-links" >
+              <li>
+                <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                  </a>
+              </li>               
+            </ul>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].delimiter_toggle">
+        <label for="delimiter{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label">Delimiter</label>
+        <div class="col-sm-8 col-md-8 col-lg-5">
+          <div class="col-sm-10 col-md-10 control-pad-left">
+        <input id="delimiter{{i}}" name="delimiter{{i}}" type="text" class="form-control text-box-padding" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" [(ngModel)]="item.delimiter">
+        <!-- <small id="emailHelp" class="form-text text-muted">write Delimiter here.</small> -->
+        </div>
+        <div class="col-sm-2">
+          <div class="wrapper">
+            <ul class="social-links" >
+              <li>
+                <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                  </a>
+              </li>               
+            </ul>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].source_toggle">
+        <label for="source{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label">Source</label>
+        <div class="col-sm-8 col-md-8 col-lg-5">
+          <div class="col-sm-10 col-md-10 control-pad-left">
+        <ejs-dropdownlist id='source{{i}}' [dataSource]='_cols' [allowFiltering]='true' [fields]='sourceColumn' placeholder='Select source' [(value)]="item.source"></ejs-dropdownlist>
+        <!-- <small id="emailHelp" class="form-text text-muted">select the source name from here.</small> -->
+          </div>
+          <div class="col-sm-2">
+            <div class="wrapper">
+              <ul class="social-links" >
+                <li>
+                  <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                    </a>
+                </li>               
+              </ul>
+            </div>
+          </div>
+      </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].target_toggle">
+        <label for="target{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label">Target</label>
+        <div class="col-sm-8 col-md-8 col-lg-5">
+          <div class="col-sm-10 col-md-10 control-pad-left">
+        <ejs-dropdownlist id='target{{i}}' [dataSource]='_cols' [allowFiltering]='true' [fields]='targetColumn' placeholder='Select target' [(value)]="item.target"></ejs-dropdownlist>
+        <!-- <small id="emailHelp" class="form-text text-muted">select the source name from here.</small> -->
+        </div>
+        <div class="col-sm-2">
+          <div class="wrapper">
+            <ul class="social-links" >
+              <li>
+                <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                  </a>
+              </li>               
+            </ul>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].replacement_dict_toggle">
+        <label for="replacmentDic{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label">Replacement dictionary</label>
+        <div class="col-sm-8 col-md-8 col-lg-5">
+          <div class="col-sm-10 col-md-10 control-pad-left">
+        <ejs-dropdownlist id='replacmentDic{{i}}' [dataSource]='_replacementDictionary' [fields]='repl_dic' placeholder='Select default page' [(value)]="item.replacement_dict"></ejs-dropdownlist>
+        <!-- <small id="emailHelp" class="form-text text-muted">select the Replacement dictionary from here.</small> -->
+      </div>
+      <div class="col-sm-2">
+        <div class="wrapper">
+          <ul class="social-links" >
+            <li>
+              <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                </a>
+            </li>               
+          </ul>
+        </div>
+      </div>  
+      </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].sign_toggle">
+
+          <label for="Sign{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label">Sign</label>
+          <div class="col-sm-8 col-md-8 col-lg-5">
+            <div class="col-sm-10 col-md-10 control-pad-left">
+          <ejs-dropdownlist id='Sign{{i}}'  [dataSource]='_SignList' [allowFiltering]='true' [fields]='fieldsvalues' placeholder='Select default page'  [(value)]="item.sign"></ejs-dropdownlist>
+          <!-- <small id="emailHelp" class="form-text text-muted">select Sign from here.</small> -->
+        </div>
+        <div class="col-sm-2">
+          <div class="wrapper">
+            <ul class="social-links" >
+              <li>
+                <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                  </a>
+              </li>               
+            </ul>
+          </div>
+        </div>
+          </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].value_toggle">
+          <label for="Value{{i}}"  class="col-sm-4 col-md-4 col-lg-2 col-form-label">Value</label>
+          <div class="col-sm-8 col-md-8 col-lg-5">
+            <div class="col-sm-10 col-md-10 control-pad-left">
+          <input  id="Value{{i}}" name="Value{{i}}" type="text" class="form-control text-box-padding" aria-describedby="emailHelp" placeholder=""  [(value)]="item.value">
+          <!-- <small id="emailHelp" class="form-text text-muted">write Value here.</small> -->
+        </div>
+        <div class="col-sm-2">
+          <div class="wrapper">
+            <ul class="social-links" >
+              <li>
+                <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                  </a>
+              </li>               
+            </ul>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].substring_toggle">
+          <label for="subString{{i}}"  class="col-sm-4 col-md-4 col-lg-2 col-form-label">Sub-string</label>
+          <div class="col-sm-8 col-md-8 col-lg-5">
+            <div class="col-sm-10 col-md-10 control-pad-left">
+          <input id="subString{{i}}" name="subString{{i}}" type="text" class="form-control text-box-padding"  aria-describedby="emailHelp" placeholder="" [(ngModel)]="item.substring">
+          <!-- <small id="emailHelp" class="form-text text-muted">Sub-string</small> -->
+        </div>
+        <div class="col-sm-2">
+          <div class="wrapper">
+            <ul class="social-links" >
+              <li>
+                <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                  </a>
+              </li>               
+            </ul>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].start_date_toggle">
+          <label for="startDate{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label">Start Date</label>
+          <div class="col-sm-8 col-md-8 col-lg-5">
+            <div class="col-sm-10 col-md-10 control-pad-left">
+          <input  id="startDate{{i}}" name="startDate{{i}}" type="date" class="form-control" aria-describedby="emailHelp" placeholder=""  [(ngModel)]="item.start_date">
+          <!-- <small id="emailHelp" class="form-text text-muted">Select end date from here</small> -->
+        </div>
+        <div class="col-sm-2">
+          <div class="wrapper">
+            <ul class="social-links" >
+              <li>
+                <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                  </a>
+              </li>               
+            </ul>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div  class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].end_date_toggle">
+          <label for="endDate{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label">End Date</label>
+          <div class="col-sm-8 col-md-8 col-lg-5">
+            <div class="col-sm-10 col-md-10 control-pad-left">
+          <input id="endDate{{i}}" name="endDate{{i}}" type="date" class="form-control" aria-describedby="emailHelp" placeholder="" [(ngModel)]="item.end_date">
+          <!-- <small id="emailHelp" class="form-text text-muted">Select end date from here</small> -->
+        </div>
+        <div class="col-sm-2">
+          <div class="wrapper">
+            <ul class="social-links" >
+              <li>
+                <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                  </a>
+              </li>               
+            </ul>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].dataFrame_toggle">
+          <label for="delimiter{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label">Script Frame</label>
+          <div class="col-sm-8 col-md-8 col-lg-5">
+            <div class="col-sm-10 col-md-10 control-pad-left">
+          <input id="delimiter{{i}}" name="delimiter{{i}}" type="text" class="form-control text-box-padding" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" [(ngModel)]="item.dataFrame" disabled>
+          <!-- <small id="emailHelp" class="form-text text-muted">write Delimiter here.</small> -->
+          </div>
+          <div class="col-sm-2">
+            <div class="wrapper">
+              <ul class="social-links" >
+                <li>
+                  <a target="_blank" data-tooltip="select data frame from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                    </a>
+                </li>               
+              </ul>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].scriptLanguage_toggle">
+          <label for="replacmentDic{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label">Script language</label>
+          <div class="col-sm-8 col-md-8 col-lg-5">
+            <div class="col-sm-10 col-md-10 control-pad-left">
+          <ejs-dropdownlist id='replacmentDic{{i}}' [dataSource]='_LanguageList' [fields]='language' placeholder='' [(value)]="item.scriptLanguage"></ejs-dropdownlist>
+          <!-- <small id="emailHelp" class="form-text text-muted">select the Replacement dictionary from here.</small> -->
+        </div>
+        <div class="col-sm-2">
+          <div class="wrapper">
+            <ul class="social-links" >
+              <li>
+                <a target="_blank" data-tooltip="select column from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                  </a>
+              </li>               
+            </ul>
+          </div>
+        </div>  
+        </div>
+        </div>
+        <div class="form-group row control-group-mar-pad" *ngIf="this._dynamicDefaultEnrichTemplateList[i].scriptText_toggle">
+          <label for="delimiter{{i}}" class="col-sm-4 col-md-4 col-lg-2 col-form-label">Script Text</label>
+          <div class="col-sm-8 col-md-8 col-lg-5">
+            <div class="col-sm-10 col-md-10 control-pad-left">
+          <input id="delimiter{{i}}" name="delimiter{{i}}" type="text" class="form-control text-box-padding" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" [(ngModel)]="item.scriptText">
+          <!-- <small id="emailHelp" class="form-text text-muted">write Delimiter here.</small> -->
+          </div>
+          <div class="col-sm-2">
+            <div class="wrapper">
+              <ul class="social-links" >
+                <li>
+                  <a target="_blank" data-tooltip="select data frame from here" data-position="top" class="top">	<i class="fa fa-question-circle" style="color:#e0e0e0"></i>
+                    </a>
+                </li>               
+              </ul>
+            </div>
+          </div>
+          </div>
+        </div>
+        <!-- <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      </div>
+      </div>
+  </div>
+  </div>
+</div>
+</div>
+<div class="row" style="margin-bottom: 10px;">
+  <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    
+    <button class="css-xpr64j pull-right" type="submit" name="_save" (click)="updateScript()">Save & continue</button>
+    <button ejs-dropdownbutton [items]='items' content='Add new' class="summary-show-filter css-2klymb pull-right" style="margin-right: 5px;" (select)="functionTypeSelected($event)"></button>
+    <!-- <button class="css-xpr64j pull-right" type="submit" name="_save" (click)="addnew()" style="margin-right: 5px;">Add new</button> -->
+</div>
+<div class="row">
+  <!-- {{this._dynamicEnrichTemplateValuesList |json}} -->
+</div>
+</div>

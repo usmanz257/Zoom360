@@ -1,0 +1,22 @@
+#wrapper {
+	width: 100%;
+	display: inline-block;
+	padding: 30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+#content {
+	margin: 0 auto;
+	text-align: center
+} 
+
+
+hr {
+	background-color: rgba(0, 0, 0, .2);
+	margin: 25px auto;
+	border: none;
+	height: 1px;
+	max-width: 1050px
+}

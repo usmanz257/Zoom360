@@ -1,0 +1,183 @@
+<div class="row">
+    <div class="col-md-12" style="padding: 0px;" >
+        <div class="col-md-4"  >
+          <div class="main-section">
+              <h3 style="margin-bottom: 17.5px;">
+                User List
+              </h3>
+          </div>   
+      </div>
+      <div class="col-md-2 col-md-offset-6"  >
+          <div class="main-section  pull-right" style="padding-top: 14px">
+              <div class="input-bar-item">
+                <input class="css-xpr64j" id="savebtn" type="submit" style="margin-right: 5px;" value="+ Add new user" (click)="newUser()">
+               
+                </div>
+          </div>   
+      </div>
+      
+    </div>
+    </div>
+<div class="generic-django-admin-header" style="padding-top: 20px;">
+    <div class="main-section">
+        <div id="toolbar" class="filter-toolbar" role="toolbar">
+
+        </div>
+    </div>
+
+</div>
+<div id="content-main" class="contentMain">
+    <!-- Feedback -->
+
+    <!-- Feedback -->
+    <div id="changelist">
+        <form id="changelist-form" method="post" novalidate="">
+            <input type="hidden" name="csrfmiddlewaretoken" value="1VtkpwNsgu081yE7r4uFmsvdLFuIL378UzVPAYdFu0Xl7CxXhg83gB7sK5h6XW5q">
+            <input type="hidden" name="action" value="">
+            <input name="index" value="0" type="hidden">
+            <input class="select-across" name="select_across" value="0" type="hidden">
+            <div class="results">
+                <table id="result_list" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="action-checkbox-column">
+                                <div class="cell-wrapper" title="Select all rows">
+                                    <div class="text">
+                                        <!-- <adverity-checkbox data-id="action-toggle" toggle="adverity-checkbox[name=&quot;_selected_action&quot;]">
+                                       </adverity-checkbox> -->
+                                        <!-- <div><span class="css-kpk1s7"><input class="css-10d97nj" type="checkbox"><span class="css-jlzago"></span></span>
+                                        </div>
+                                        <input hidden="" id="action-toggle" class="" data-type="checkbox" style="display: block;"> -->
+                                        <input type="checkbox" name="all" [checked]="allcheckbox" (change)="checkAll($event)" (click)="functionCount($event)" />
+                                    </div>
+                                </div>
+                            </th>
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('appearanceLogo')">
+                                    User Name
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="" [ngClass]=" sourceType_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="sourceType_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+                            <!-- <th>
+                            <div class="cell-wrapper" title="Toggle sorting">
+                                <div class="text">
+                                    <a (click)="applySort('sourceType')">Type</a>
+                                </div>
+                            </div>
+                            </th> -->
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('workspaceName')">
+                                    Workspaces
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="" [ngClass]="workSpace_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="workSpace_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+                            <!-- <th>
+                            <div class="cell-wrapper" title="Sort by Work Space">
+                                <div class="text">
+                                    <a (click)="applySort('workSpace')">Workspace</a>
+                                </div>
+                            </div>
+                            </th> -->
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending"  style="white-space: nowrap;"> 
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('sourceName')">
+                                    Last Activity
+                                    <span class="sortoptions sortdirection">
+                                            <span class="" [ngClass]=" sname_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="sname_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending" style="white-space: nowrap;">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('destinationEnabled')">
+                                    Last Status
+                                    <span class="sortoptions sortdirection">
+                                            <span class="" [ngClass]=" destination_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="destination_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('nextRun')">
+                                       Active
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="" [ngClass]=" snext_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="snext_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+
+                            <!-- <th scope="col" class="sortable column-updated" style="display: none;">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <div class="text">
+                                        <a href="?o=6.3">UserName</a>
+                                    </div>
+                                </div>
+                            </th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row1" *ngFor="let item of userList;let i = index">
+                            <td>
+                                <input id="check{{i+1}}" class="css-10d97nj" type="checkbox" [(ngModel)]="item.state" name="something{{i+1}}" (change)="findCount(i,$event)" />
+                            </td>
+                            <td class="field-type_logo">
+                                <a  (click)="UserEdit(item.subUserId)">
+                                   {{item.emailAddress}}
+                                </a>
+                            </td>
+                            <td class="field-stack ">
+                                {{item.workspaces}}</td>
+                            <td class="field-dashboard_link" nowrap>
+                                <!-- href="datastreamoverview"  -->
+                                {{item.lastActivity}}
+                            </td>
+
+                            <td class="field-local_next_run ">
+                                {{item.lastStatus}}
+                            </td>
+                            <td class="field-updated">
+                                <!-- July 13, 2020, 3:39 a.m. -->
+                                <div class="switch">
+                                    <input type="checkbox" name="toggle{{i}}" [(ngModel)]="item.userActive" (change)="findCount(i,$event)"/>
+                                </div>
+
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pull-left changelist-botton-row changelist-pagination">
+                &nbsp;
+                <span class="pagination-element-counter"> User List</span>
+            </div>
+        </form>
+    </div>
+</div>

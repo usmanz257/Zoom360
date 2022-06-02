@@ -1,0 +1,120 @@
+li > div > a {
+  text-decoration: none;
+}
+
+.main-nav-dropdown-a {
+  height: 30px !important;
+  padding: 7px 16px 7px 28px !important;
+}
+
+.main-nav-dropdown-selected {
+  color: rgb(33, 155, 156);
+  background-color: rgb(244, 250, 250);
+  /* border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: rgb(33, 155, 156); */
+}
+/* .main-nav-dropdown-selected::before {
+  position: absolute;
+  left: 1.2rem;
+  content: "✓";
+  font-weight: 600;
+  color: rgb(33, 155, 156);
+} */
+
+
+/* start temporary changes css */
+/* .main-nav-dropdown-selected::before {
+  position: absolute;
+  left: 1.2rem;
+  content: "✓";
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+.main-nav-dropdown-selected {
+  color: rgb(255, 255, 255);
+  background-color: rgb(40, 43, 51)!important; */
+  /* border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: rgb(33, 155, 156); */
+/* }
+.dropdown-nav-btn:active:not([aria-disabled="true"]) {
+  color: rgb(255, 255, 255);
+  background-color: rgb(40, 43, 51)!important;
+}
+.css-1olq135 {
+  margin-top: unset;
+  margin-right: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  padding-top: unset;
+  padding-right: unset;
+  padding-bottom: unset;
+  padding-left: unset;
+  font-family: inherit;
+  box-sizing: border-box;
+  display: flex;
+  vertical-align: top;
+  border-width: 0px 0px 1px;
+  border-color: rgb(40, 43, 51)!important;
+  
+  border-style: solid;
+}
+
+.css-1olq135:hover {
+  border-bottom: 1px solid rgb(255, 255, 255) !important;
+background-color:rgb(37, 43, 58);
+}
+
+.css-1lf83w2{
+  color: rgb(255, 255, 255) !important;
+}
+.separator{
+  color: rgb(255, 255, 255) !important;
+}
+.dropdown-nav-btn {
+  margin-top: unset;
+  margin-right: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  padding-top: unset;
+  padding-bottom: unset;
+  font-family: inherit;
+  box-sizing: border-box;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: transparent;
+  color:  rgb(255, 255, 255) !important;
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 16px;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  cursor: pointer;
+  border-width: 1px;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 2px;
+  text-decoration: none;
+}
+.nav-list-s{
+  color:  rgb(255, 255, 255) !important;
+}
+#navbar
+{
+  border-bottom: 1px solid rgb(40, 43, 51)!important;
+  background-color:rgb(40, 43, 51);
+}
+.main-menu-active {
+  border-bottom: 1px solid rgb(255, 255, 255) !important;
+} */
+/* end temporary changes css */
+/* .css-1lf83w2 {
+  background-color: rgb(231, 240, 253);
+  color: rgb(52, 59, 64);
+} */

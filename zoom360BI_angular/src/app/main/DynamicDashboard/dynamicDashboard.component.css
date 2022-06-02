@@ -1,0 +1,56 @@
+.ActiveRoute {
+  margin-top: unset;
+  margin-right: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  font-family: inherit;
+  box-sizing: border-box;
+  padding-left: 7px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  display: block;
+  vertical-align: top;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgb(33, 155, 156);
+  background-color: rgb(244, 250, 250);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: rgb(33, 155, 156);
+  text-decoration: none !important;
+}
+
+.css-1wfdhj:hover {
+  color: #343b40 !important;
+  background-color: rgb(226, 242, 242);
+}
+.publish-content-body {
+  height: 100%;
+  border-width: 0px 0px 0px 1px;
+  border-color: rgb(221, 224, 228);
+}
+.active-class {
+  margin-top: unset;
+  margin-right: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  font-family: inherit;
+  box-sizing: border-box;
+  padding-left: 7px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  display: block;
+  vertical-align: top;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 19px;
+  color: rgb(33, 155, 156);
+  background-color: rgb(244, 250, 250);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: rgb(33, 155, 156);
+  text-decoration: none !important;
+}

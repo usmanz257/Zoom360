@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-2 col-lg-2 explore-sidebar subMenu-section-padding" id="side-bar">
+            <div class="faq">
+                <div   class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+                    <div class="css-ctqjzd" *ngFor="let item of MenuService.subMenuSection">
+                        <div role="tab" class="roleDiv" id="heading">
+                            <!-- <h3 class="panel-title-z"> -->
+                                
+                                <a class="css-ucma6b collapsed" data-toggle="collapse" href="#collapse{{item.sectionId}}" aria-expanded="true" aria-controls="collapse" >{{item.sectionName}}</a>
+                            <!-- </h3> -->
+                        </div>
+                        <div id="collapse{{item.sectionId}}" class="panel-collapse collapse">
+                            <div class="submenu-item-padding">
+                                <div class="css-bk42y6">
+                                    <!-- <a class="css-1wfdhj" *ngFor="let itemsubMenu of item.submenuSectionitems"
+                                    routerLink="/manage/settings/{{itemsubMenu.url}}" routerLinkActive="ActiveRoute"
+                                        aria-expanded="false">
+                                        {{itemsubMenu.subMenuName}}
+                                </a> -->
+                                <a class="css-1wfdhj" *ngFor="let itemsubMenu of item.submenuSectionitems"
+                                    routerLink="/{{itemsubMenu.url}}" routerLinkActive="ActiveRoute"
+                                        aria-expanded="false">
+                                        {{itemsubMenu.subMenuName}}
+                                </a>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        <div Class="col-sm-12 col-md-8 col-lg-10 col-xl-10 main-body" id="grid-expand" >
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    </div>

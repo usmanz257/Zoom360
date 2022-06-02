@@ -1,0 +1,87 @@
+<div class="generic-django-admin-header">
+    <div class="main-section">
+        <span class="css-pm3q3o">{{this.labelsData[0].productionProcessHeader}}</span>
+       
+    </div>
+
+</div>
+<div id="content-main" class="contentMain">
+    <div class="col-md-6" style="padding: 0;">
+    <form autocomplete="off">
+
+        <fieldset class="module aligned col-md-12" style="padding: 0;">
+            <!-- <h2>Use Number Values</h2> -->
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">{{this.labelsData[0].productionProcessControlLabels}}</label>
+                    <div class="related-widget-wrapper">
+                        <input type="number" name="purchaseConversionValue" id="purchaseConversionValue" class="numberinput form-control" min="0" [(ngModel)]="this.saveAmountSpentModel.purchaseConversionValueUSD">
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">{{this.labelsData[1].productionProcessControlLabels}}</label>
+                    <div class="related-widget-wrapper">
+                        <input type="number" name="impression" id="impression" class="numberinput form-control" min="0" [(ngModel)]="this.saveAmountSpentModel.impressions">
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">{{this.labelsData[2].productionProcessControlLabels}}</label>
+                    <div class="related-widget-wrapper">
+                        <input type="number" name="result" id="result" class="numberinput form-control" min="0" [(ngModel)]="this.saveAmountSpentModel.results">
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">{{this.labelsData[3].productionProcessControlLabels}}</label>
+                    <div class="related-widget-wrapper">
+                        <input type="number" name="reach" id="reach" class="numberinput form-control" min="0" [(ngModel)]="this.saveAmountSpentModel.reach">
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">{{this.labelsData[4].productionProcessControlLabels}}</label>
+                    <div class="related-widget-wrapper">
+                        <input type="number" name="resultTypeCode" id="resultTypeCode" class="numberinput form-control" min="0" [(ngModel)]="this.saveAmountSpentModel.resultTypeCode">
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+            
+            
+        </fieldset>
+        <a class="css-xpr64j pull-right" style=" float: right; margin-right: 65px;" id="savebtn" type="button" value="Calculate" (click)="CalculateAndSaveAmountSpend()">
+            Calculate
+        </a>
+        <fieldset class="module aligned col-md-12" style="padding: 0;">
+            <!-- <h2>Use Number Values</h2> -->
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">{{this.labelsData[5].productionProcessControlLabels}}</label>
+                    <div class="related-widget-wrapper">
+                        <input type="text" name="PredictedAmountSpend" id="PredictedAmountSpend" class="numberinput form-control" min="0" [(ngModel)]="this.saveAmountSpentModel.PredictedResult">
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+           
+        </fieldset>
+    </form>
+</div>
+</div>

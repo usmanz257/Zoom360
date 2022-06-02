@@ -1,0 +1,179 @@
+
+<div class="row" style="min-height: 100%;" *ngIf="false" >
+    <div class="offset-md-10 col-md-2" >
+        <input class="css-xpr64j pull-right" id="savebtn" type="button" value="+ Add New" (click)="this.ShowModel()">
+    </div>
+</div>
+<div class="row" style="min-height: 100%;">
+    <div class="col-md-5" id="tree-view" style= "overflow-y: auto; height: 560px;">
+        <ejs-treeview id="test" [fields]="this.treeTemplateService.Treedropsetting" (nodeSelected)="getNodeTemplate($event)"></ejs-treeview>  
+    </div>
+    
+    <div class="col-md-7" id="ag-grid" style="border-left:1px solid rgb(221, 224, 228); ">
+       <div id="console">
+        <ul class="nav nav-tabs" style="display:block !important;" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="Controls-tab" data-toggle="tab" href="#Controls" role="tab" aria-controls="Controls" aria-selected="true">Controls</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="Json-tab" data-toggle="tab" href="#Json" role="tab" aria-controls="Json" aria-selected="false">JSON</a>
+            </li>
+            <li class="nav-item" (click)="this.getwidgetDetailData()">
+                <a class="nav-link" id="Data-tab" data-toggle="tab" href="#Data"  role="tab" aria-controls="Data" aria-selected="false">Data</a>
+            </li>
+
+            <div class="dropdown pull-right">
+                <button class="css-xpr64j dropdown-toggle " style="padding-right: 2px;"type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Actions
+                    <svg class="css-1l7xwpx" style="height:17px" fill="currentcolor" viewBox="0 0 24 24"><path _ngcontent-dqx-c1="" d="M12 14.172l5.657-5.657 1.414 1.414L12 17 4.929 9.929l1.414-1.414z"></path></svg>
+                </button>
+                <div class="dropdown-menu move-left-dd" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item css-1wfdhj" (click)="this.ShowModel()">+ Add JSON</a>
+                     <a class="dropdown-item css-1wfdhj" (click)="SaveDataByJson()">Save JSON</a>
+                    <a class="dropdown-item css-1wfdhj" (click)="SaveDataByControls()">Save Controls</a> 
+                </div>
+            </div> 
+
+           <!-- <li style="float: right;">
+                <input class="css-xpr64j pull-right" id="savebtn" type="button" value="+ Add JSON" (click)="this.ShowModel()">
+         </li> -->
+
+        </ul>    
+        </div>   
+            <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="Controls" role="tabpanel" aria-labelledby="home-tab" style="padding-top: 10px;">
+                <div>
+                        <div class="col-sm-12 col-md-8" *ngFor="let item of this.template;let i=index">
+                                <div class="form-group mb-0" *ngIf="item.Properties.Control_Type=='textBox'">
+                                <label for="exampleInputEmail1">{{item.Properties.Display_Name}}</label>
+                                <input type="text" class="form-control" name="text{{i}}" aria-describedby="emailHelp" [(ngModel)]="item.Properties.Control_Value" placeholder="{{item.Properties.ToolTip}}">
+                                <div class="help">{{item.Properties.Help_Text}}</div>
+                                </div>
+                                <div class="form-group mb-0" *ngIf="item.Properties.Control_Type=='number'">
+                                    <label for="exampleInputEmail1">{{item.Properties.Display_Name}}</label>
+                                    <input type="number" class="form-control" name="number{{i}}" aria-describedby="emailHelp" placeholder="{{item.Properties.ToolTip}}" [(ngModel)]="item.Properties.Control_Value">
+                                    <div class="help">{{item.Properties.Help_Text}}</div>
+                                    </div>
+                                <div class="form-group mb-0" *ngIf="item.Properties.Control_Type=='dropdown'">
+                                    <label for="exampleInputEmail1">{{item.Properties.Display_Name}}</label>
+                                    <div class="related-widget-wrapper">
+                                    <ejs-dropdownlist id='' [allowFiltering]="true" cssClass="edit-Dropdown" [dataSource]="findSource(item.Data.Input_Source) ? findSource(item.Data.Input_Source):[]" [fields]='this.fields' popupHeight="300px" [placeholder]='item.Properties.Display_Name' [(value)]="item.Properties.Control_Value"></ejs-dropdownlist>
+                                    <div class="help">{{item.Properties.Help_Text}}</div>
+                                </div>
+                                    <!-- <small id="emailHelp" class="form-text text-muted"></small> -->
+                                </div>
+                                <div class="form-check mb-0 pl-0"  *ngIf="item.Properties.Control_Type=='checkbox'">
+                                    <div class="switch">
+                                        <input type="checkbox" name="checkbox{{i}}" [(ngModel)]="item.Properties.Checkbox_Control_Value">
+                                        <label style="padding:2px 0 0 12px;" class="" for="EnableScript">Enable</label>
+                                    </div>
+                                    <div class="help">{{item.Properties.Help_Text}}</div>
+                                </div> 
+                        </div>
+
+                        <!-- <div class="offset-md-9 col-md-2" *ngIf="this.template.length>0">
+                            <input class="css-xpr64j pull-right" id="savebtn" type="button" value="Save" (click)="SaveDataByControls()">
+                        </div> -->
+            </div>
+        </div>
+            <div class="tab-pane fade" id="Json" style="min-height: 100%;" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="row ml-3 mt-2 mb-3" style="min-height: 100%;">
+                <json-editor [options]="editorOptions" [data]="this.template" style="width:100%; min-height: 100%;" ></json-editor>
+            </div>
+            <!-- <div class="offset-md-9 col-md-2" *ngIf="this.templatejson.length>0 || this.template.length>0">
+                <input class="css-xpr64j pull-right" id="savebtn" type="button" value="Save" (click)="SaveDataByJson()">
+            </div> -->
+            </div>
+            <div class="tab-pane fade" id="Data" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="" [ngClass]="gridDisplay" >
+                    <div class="col-sm-12 col-md-12" >
+                        <app-ag-grid-data-viewer #agGridComponent (gridClose)="this.gridclose()"></app-ag-grid-data-viewer>
+                    </div> 
+                </div>
+            </div>
+            </div>
+    </div>
+</div>
+<div id="myModal" class="modal" [ngClass]="className" style="padding-top:5%;padding-right: 10%;padding-left: 10%;">
+<div style="background-color: white;">
+    <!-- Modal content -->
+    <div class="row" >
+        <div class="offset-md-1 col-md-11" style="padding: 0 25px 0 0">
+            <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close" (click)="this.ShowModel()">
+                <span aria-hidden="true" style="font-size: 22px;">&times;</span>
+            </button>
+            <div>
+            </div>
+        </div>
+    </div>
+        <div class="offset-md-1 col-md-11">
+            <h4 class="" style="font-family: 'Open Sans';">Choose JSON</h4>
+        </div>
+    <hr>
+    <div  style="padding-left:10%;padding-bottom: 2px;">
+
+        <div class="row">
+            <div class="col-md-11" *ngIf="false">
+                <div class="form-group col-md-12 col-lg-6 mb-0">
+                    <label for="inputEmail4">Script name<sup>*</sup></label>
+                    <input type="text" class="form-control" name="scriptnName" [(ngModel)]="this.scriptName" placeholder="" (keydown)="this.applyColor(true)">
+                    <small id="emailHelp" class="form-text" [ngStyle]="scriptMessage">Write name of script</small>
+                </div>
+                
+        </div>
+        </div>
+        <div class="form-check mb-3" style="margin-left: 12px;" *ngIf="false">
+            <div class="switch" >
+                <input type="checkbox" name="checkbox"  [(ngModel)]="this.scriptEnable">
+                <label style="padding:2px 0 0 12px;" class="" for="EnableScript">Enable</label>
+            </div>
+            <small id="emailHelp" class="form-text text-muted">you can enable/disable script from here</small>
+    </div>
+        <div class="row">
+            <div class="col-md-11">
+                <div class="form-group col-md-12 col-lg-6 mb-0">
+                    <label for="inputEmail4">Choose Nodes</label>
+                    <ejs-uploader #UploadFiles id='UploadFiles'  
+                            [asyncSettings]='path'  [maxFileSize]=50000000  [buttons]="buttons" [autoUpload]='false' [dropArea]='dropElement' [allowedExtensions]='allowExtensions' sequentialUpload='true' (selected)='onSelected($event)' (removing)='onFileRemove($event)' (success)='onUploadStatus($event)' (uploading)='onUploadBegin($event)'></ejs-uploader>
+                    <!-- <input type="file" class="form-control" id="inputEmail4" placeholder="Email"> -->
+                    <small id="emailHelp" class="form-text text-muted">Select JSON file</small>
+                </div>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 15px;">
+        <div class="col-md-11">
+            <div class="col-md-12 col-lg-6 mb-0">
+         <input class="css-xpr64j fa-pull-right" id="savebtn" type="button" value="Upload" (click)="uploadFile()">
+                <button class="search-button button-secondary fa-pull-right" type="submit" style="width: 66px; margin-right: 10px; font:bold;" (click)="ClearData()">
+                    Clear All
+                  </button>
+            
+            </div>
+    </div>
+    </div>
+        <!-- <div class="row">
+            <div class="col-md-11">
+                    <div class="form-group col-md-12 col-lg-6 mb-0">
+                        <label for="inputEmail4">Choose Json</label>
+                        <input type="file" class="form-control" id="inputEmail4" placeholder="Email">
+                        <small id="emailHelp" class="form-text text-muted">Select json file for script</small>
+                    </div>
+                </div>
+        </div> -->
+        
+        <div class="row" *ngIf="false">
+            <div class="col-md-11">
+                <div class="form-group col-md-12 col-lg-6 mb-0">
+                    <input class="css-xpr64j pull-right" id="savebtn" type="button" value="Save">
+                </div>
+                
+        </div>
+       
+    </div>
+<!--  mb-0 pl-0 -->
+</div>
+</div>
+<!-- Model End -->
+<ejs-toast #defaulttoast [position]="position" >                
+</ejs-toast>
+

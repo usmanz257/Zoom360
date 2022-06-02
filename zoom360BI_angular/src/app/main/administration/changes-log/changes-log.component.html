@@ -1,0 +1,226 @@
+<div class="generic-django-admin-header">
+    <div class="main-section">
+        <h3>Change Log Summary</h3>
+    </div>
+    <div class="tool-section">
+    </div>
+</div>
+<div id="content-main" class="contentMain">
+
+    <div style="min-height: 519px;margin-top: 30px">
+        <label class="label-text" style="margin-bottom: 15px;" for="id_stack">Workspace users summary, allowed access</label>
+        <table id="result_list" class="table table-hover" style="overflow:scroll">
+            <thead>
+                <tr>
+                    <th scope="col" class="action-checkbox-column">
+                        <input type="checkbox" name="all" [checked]="allcheckbox" (change)="checkAll($event)" (click)="functionCount($event)" />
+                    </th>
+
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('clientId')">
+                                Client ID
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="clientId_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="clientId_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('accountId')">
+                                Account ID
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="accountId_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="accountId_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('AccountName')">
+                                Account Name
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="AccountName_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="AccountName_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('workspaceId')">
+                                Workspace ID
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="workspaceId_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="workspaceId_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('workspaceName')">
+                                Workspace Name
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="workspaceName_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="workspaceName_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('accessGranted')">
+                                Access granted
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="accessGranted_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="accessGranted_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('workspaceParentName')">
+                               Workspace parent name 
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="workspaceParentName_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="workspaceParentName_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('storageUrl')">
+                              Storage Url 
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="storageUrl_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="storageUrl_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('destinationPrimery')">
+                               Destination Primary
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="destinationPrimery_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="destinationPrimery_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('detinationPassive')">
+                               Destination passive
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="detinationPassive_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="detinationPassive_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('quotaSize')">
+                               Quota size
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="quotaSize_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="quotaSize_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('quotaType')">
+                               Quota Type
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="quotaType_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="quotaType_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                    <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                        <div class="cell-wrapper" title="Toggle sorting">
+                            <a class="toggle-link" (click)="applySort('quotaUsed')">
+                               Quota used
+                            <span class="sortoptions sortdirectionn">
+                                    <span class="" [ngClass]="quotaUsed_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="quotaUsed_arrow"></span>
+                            </span>
+                            </a>
+                            <div class="sortoptions remove">
+                                <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of changesLogService._ChangeLogGrid">
+                    <td>
+                        <input type="checkbox" [(ngModel)]="item.state" name="something" (change)="findCount($event)" />
+                    </td>
+                    <td class="field-type_logo">{{item.clientId}}</td>
+                    <td class="field-type_logo">{{item.accountId}}</td>
+                    <td class="field-stack nowrap">{{item.accountName}}</td>
+                    <td class="field-name">{{item.workspaceId}}</td>
+                    <td class="field-auth_status">{{item.workspaceName}}</td>
+                    <td class="field-auth_status"><img src="assets\images\icon-{{item.accessGranted}}.svg" alt="error" title="{{item.accessGranted}}"></td>
+                    <td class="field-auth_status">{{item.workspaceParentName}}</td>
+                    <td class="field-auth_status">{{item.storageUrl}}</td>
+                    <td class="field-auth_status">{{item.destinationPrimery}}</td>
+                    <td class="field-auth_status">{{item.detinationPassive}}</td>
+                    <td class="field-auth_status">{{item.quotaSize}}</td>
+                    <td class="field-auth_status">{{item.quotaType}}</td>
+                    <td class="field-auth_status">{{item.quotaUsed}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <div class="css-1qbrnrg">
+            <hr class="css-1c3fhlt" mx="zero" role="separator" aria-orientation="horizontal">
+            <div class="css-1x62jim">
+                <div class="css-p84alj">
+                    <div class="css-rvqhyx"><a class="css-ebx8b0" href="/instagram_business/instagrambusinessdatastream/27/delete/">Delete</a><a class="css-b2qa21" href="/core/apidatastream/clone?pk=27">Clone</a></div>
+                </div>
+                <div class="css-1w7dt24">
+                    <div class="css-rvqhyx"><button class="css-b2qa21" type="button" name="_continue">Save and continue editing</button><button class="css-xpr64j" type="submit" name="_save">Save</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

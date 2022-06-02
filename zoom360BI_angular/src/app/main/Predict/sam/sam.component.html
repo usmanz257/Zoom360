@@ -1,0 +1,65 @@
+<div class="generic-django-admin-header">
+    <div class="main-section">
+        <span class="css-pm3q3o">{{this.labelsData[0].productionProcessHeader}}</span>
+       
+    </div>
+
+</div>
+<div id="content-main" class="contentMain">
+    <div class="col-md-6" style="padding: 0;">
+    <form autocomplete="off">
+
+        <fieldset class="module aligned col-md-12" style="padding: 0;">
+            <!-- <h2>Use Number Values</h2> -->
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack"> {{this.labelsData[0].productionProcessControlLabels}}</label>
+                    <div class="related-widget-wrapper">
+                        <input type="number" name="amountSpentUSD" id="amountSpentUSD" class="numberinput form-control" min="0" [(ngModel)]="this.saveReachModel.AmountSpentUSD">
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">{{this.labelsData[1].productionProcessControlLabels}}</label>
+                    <div class="related-widget-wrapper">
+                        <input type="number" name="results" id="results" class="numberinput form-control" min="0" [(ngModel)]="this.saveReachModel.results">
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">{{this.labelsData[2].productionProcessControlLabels}}</label>
+                    <div class="related-widget-wrapper">
+                        <input type="number" name="impression" id="impression" class="numberinput form-control" min="0" [(ngModel)]="this.saveReachModel.impressions">
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+            
+        </fieldset>
+        <a class="css-xpr64j pull-right" style=" float: right; margin-right: 65px;" id="savebtn" type="button" value="Calculate" (click)="CalculateAndSaveReach()">
+            Calculate
+        </a>
+        <fieldset class="module aligned col-md-12" style="padding: 0;">
+            <!-- <h2>Use Number Values</h2> -->
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">{{this.labelsData[3].productionProcessControlLabels}}</label>
+                    <div class="related-widget-wrapper">
+                        <input type="text" name="pridictedReach" id="pridictedReach" class="numberinput form-control" [(ngModel)]="this.saveReachModel.PredictedResult">
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+           
+        </fieldset>
+    </form>
+</div>
+</div>

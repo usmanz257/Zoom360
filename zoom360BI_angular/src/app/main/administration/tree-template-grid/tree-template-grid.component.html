@@ -1,0 +1,173 @@
+<div class="row">
+    <div class="col-md-12" style="padding: 0px 0 17px 0;" >
+        <div class="col-md-8">
+          <div class="main-section">
+              <h3 style="margin-bottom: 17.5px;">
+               Tree Template Scripts
+              </h3>
+          </div>   
+      </div>
+      <div class="col-md-4">
+              <div class="main-section  pull-right" style="padding-top: 0px;">
+                  <div class="input-bar-item">
+                    <input class="css-xpr64j pull-right" id="savebtn" type="button" value="+ Add New" (click)="this.ShowModel()">
+                  </div>
+                 
+              </div>
+      </div>
+      </div>
+</div>
+
+<table id="result_list" class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col" class="action-checkbox-column">
+                <input type="checkbox" name="all" [checked]="allcheckbox" (change)="checkAll($event)" (click)="functionCount($event)" />
+            </th>
+
+            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                <div class="cell-wrapper" title="Toggle sorting">
+                    <a class="toggle-link" (click)="applySort('workspaceName')">
+                        Script Name
+                    <span class="sortoptions sortdirectionn">
+                            <span class="" [ngClass]="scriptName_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="scriptName_arrow"></span>
+                    </span>
+                    </a>
+                    <div class="sortoptions remove">
+                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                    </div>
+                </div>
+            </th>
+            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                <div class="cell-wrapper" title="Toggle sorting">
+                    <a class="toggle-link" (click)="applySort('displayName')">
+                        File Name
+                    <span class="sortoptions sortdirectionn">
+                            <span class="" [ngClass]="fileName_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="fileName_toggle"></span>
+                    </span>
+                    </a>
+                    <div class="sortoptions remove">
+                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                    </div>
+                </div>
+            </th>
+            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                <div class="cell-wrapper" title="Toggle sorting">
+                    <a class="toggle-link" (click)="applySort('parentWorkspace')">
+                       Active
+                    <span class="sortoptions sortdirectionn">
+                            <span class="" [ngClass]="active_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="active_arrow"></span>
+                    </span>
+                    </a>
+                    <div class="sortoptions remove">
+                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                    </div>
+                </div>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of _treeTemplateGrid;let i = index">
+            <td>
+                <input type="checkbox" [(ngModel)]="item.state" name="something" (change)="findCount($event)" />
+            </td>
+           <a (click)="TreeRollUp(item.scriptId)"> <td class="field-type_logo">{{item.scriptName}}</td></a>
+            <td class="field-type_logo">{{item.fileName}}</td>
+            <td class="field-auth_status"><div class="switch" >
+                <input type="checkbox" name="checkbox{{i}}" [(ngModel)]="item.active">
+                <!-- <label style="padding:2px 0 0 12px;" class="" for="EnableScript">Enable</label> -->
+            </div></td>
+            
+        </tr>
+
+    </tbody>
+</table>
+<div class="pull-left changelist-botton-row changelist-pagination">
+    &nbsp;
+    <span class="pagination-element-counter ">Rows: <b> {{_recordLength}}</b> </span>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal" [ngClass]="className" style="padding-top:5%;padding-right: 10%;padding-left: 10%;">
+    <div style="background-color: white;">
+        <!-- Modal content -->
+        <div class="row" >
+            <div class="offset-md-1 col-md-11" style="padding: 0 25px 0 0">
+                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close" (click)="this.ShowModel()">
+                    <span aria-hidden="true" style="font-size: 22px;">&times;</span>
+                </button>
+                <div>
+                </div>
+            </div>
+        </div>
+            <div class="offset-md-1 col-md-11">
+                <h4 class="" style="font-family: 'Open Sans';">Choose script</h4>
+            </div>
+        <hr>
+        <div  style="padding-left:10%;padding-bottom: 2px;">
+    
+            <div class="row">
+                <div class="col-md-11">
+                    <div class="form-group col-md-12 col-lg-6 mb-0">
+                        <label for="inputEmail4">Script name<sup>*</sup></label>
+                        <input type="text" class="form-control" name="scriptnName" [(ngModel)]="this.scriptName" placeholder="" (keydown)="this.applyColor(true)">
+                        <small id="emailHelp" class="form-text" [ngStyle]="scriptMessage">Write name of script</small>
+                    </div>
+                    
+            </div>
+            </div>
+            <div class="form-check mb-3" style="margin-left: 12px;">
+                <div class="switch" >
+                    <input type="checkbox" name="checkbox"  [(ngModel)]="this.scriptEnable">
+                    <label style="padding:2px 0 0 12px;" class="" for="EnableScript">Enable</label>
+                </div>
+                <small id="emailHelp" class="form-text text-muted">you can enable/disable script from here</small>
+        </div>
+            <div class="row">
+                <div class="col-md-11">
+                    <div class="form-group col-md-12 col-lg-6 mb-0">
+                        <label for="inputEmail4">Choose Nodes</label>
+                        <ejs-uploader #UploadFiles id='UploadFiles'  
+                                [asyncSettings]='path'  [maxFileSize]=50000000  [buttons]="buttons" [autoUpload]='false' [dropArea]='dropElement' [allowedExtensions]='allowExtensions' sequentialUpload='true' (selected)='onSelected($event)' (removing)='onFileRemove($event)' (success)='onUploadStatus($event)' (uploading)='onUploadBegin($event)'></ejs-uploader>
+                        <!-- <input type="file" class="form-control" id="inputEmail4" placeholder="Email"> -->
+                        <small id="emailHelp" class="form-text text-muted">Select node file</small>
+                    </div>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 15px;">
+            <div class="col-md-11">
+                <div class="col-md-12 col-lg-6 mb-0">
+             <input class="css-xpr64j fa-pull-right" id="savebtn" type="button" value="Upload" (click)="uploadFile()">
+                    <button class="search-button button-secondary fa-pull-right" type="submit" style="width: 66px; margin-right: 10px; font:bold;" (click)="ClearData()">
+                        Clear All
+                      </button>
+                
+                </div>
+        </div>
+        </div>
+            <!-- <div class="row">
+                <div class="col-md-11">
+                        <div class="form-group col-md-12 col-lg-6 mb-0">
+                            <label for="inputEmail4">Choose Json</label>
+                            <input type="file" class="form-control" id="inputEmail4" placeholder="Email">
+                            <small id="emailHelp" class="form-text text-muted">Select json file for script</small>
+                        </div>
+                    </div>
+            </div> -->
+            
+            <div class="row" *ngIf="false">
+                <div class="col-md-11">
+                    <div class="form-group col-md-12 col-lg-6 mb-0">
+                        <input class="css-xpr64j pull-right" id="savebtn" type="button" value="Save">
+                    </div>
+                    
+            </div>
+           
+        </div>
+    <!--  mb-0 pl-0 -->
+    </div>
+    </div>
+    <!-- Model End -->
+    <ejs-toast #defaulttoast [position]="position" >                
+    </ejs-toast>
+    

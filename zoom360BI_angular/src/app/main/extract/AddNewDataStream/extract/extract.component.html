@@ -1,0 +1,139 @@
+<div  style="min-height:650px;">
+<div class="main-section ">
+    <div  class="header" style="cursor:pointer;" (click)="ReversClass()" > 
+       <img src='../../../../assets/arrow-left-64.png'   >
+    </div>
+    <div>
+     <h3>STEP 8:</h3> 
+     <h3>Run extraction services and Fetch data</h3>
+    </div>
+ </div>
+      <form #Exract="ngForm" (ngSubmit)="Exract.form.valid && ExtractinfoSave(Exract.value)">
+ <div class="row"  style=" padding: 12px 0 0 0;">
+   <div class="col-md-12"> 
+      <fieldset class="module aligned">
+         <div class="row">
+          <div class="col-md-5">
+            <div class="form-row form-range_picker">
+               <div>
+                 <label for="id_range_picker">Please select a time range for an initial data fetch.</label> 
+               <div class="row">
+                 <div class="col-md-5">
+                    <input type="date" name="date_LINK" #FromDate="ngModel" [(ngModel)]="ExtarctModel.date_LINK" required >
+                        <div class="help">
+                           <span class="text-danger"
+                           *ngIf="(FromDate.touched || Exract.submitted) && FromDate.errors?.required">
+                           Date is required
+                       </span>
+                        </div>
+                  </div>
+               <div class="col-md-2">
+                    <span style="padding: 0 10px 0 10px;">To</span>
+               </div>
+               <div class="col-md-5">  
+                    <input type="date" name="date_LINK1" #Todate="ngModel" [(ngModel)]="ExtarctModel.date_LINK1" required  >
+                    <div class="help">
+                     <span class="text-danger"
+                     *ngIf="(Todate.touched || Exract.submitted) && Todate.errors?.required">
+                     Date is required
+                 </span>
+                  </div>
+                </div> 
+               </div>
+              </div>
+           </div>
+          </div>
+         </div>
+         
+     <div class="row">
+        <div class="col-md-5">
+         <div class="form-row field-stack" >
+            <div class="related-widget-wrapper">
+               <div class="controls " style="display: flex;" >
+               <input type="checkbox" name="data_RAW_STATE"  #Keepdatainrawstate="ngModel" [(ngModel)]="ExtarctModel.data_RAW_STATE" id="DataForm" value="Keep data in raw state">
+               <label style="padding:0 0 0 10px;" class="" for="customSwitch1">Keep data in raw state</label>
+               </div>
+               <div>
+                  <span>
+                    Do not push data for next stages - Preparation or Destination Insertion                      </span>
+               </div>
+               
+               </div>
+               
+      
+               </div>
+        </div>
+     </div>
+     
+          
+         
+         <div class="row">
+            <div class="col-md-5"> 
+               <div class="form-row field-stack" >
+           
+                  <label class="label-text">Extract process running options</label>
+                
+                   
+                   <div class="related-widget-wrapper" style="padding: 0px 11px 14px 19px;">
+                  <div>
+                  <input type="radio" class="form-check-input" id="Runsingleprocess"  name="extract_PROCESS_RUNNING" value="Run single process" #Runsingleprocess="ngModel" [(ngModel)]="ExtarctModel.extract_PROCESS_RUNNING" checked><label>Run single process - extract complete data in one go</label>
+                  </div>
+                  <div>
+                  <input class="form-check-input" type="radio" name="extract_PROCESS_RUNNING"  id="Multipleprocesses" value="Multiple processes" #Multipleprocesses="ngModel" [(ngModel)]="ExtarctModel.extract_PROCESS_RUNNING"><label>Multiple processes - extract data using execution plan options</label>
+                  </div>
+                </div>
+                  </div>
+            </div>
+           
+         </div>
+         
+            <div class="row">
+               <div class="col-md-5">
+                  <div class="form-row field-stack" >
+                     <div>
+                         <label class="label-text">Data collection options</label>
+                      </div>
+                         
+                          <div class="related-widget-wrapper" style="padding: 0px 11px 14px 19px;">
+                         <div style="margin: 0;">
+                         <input type="radio" class="form-check-input" id="Consolidateextracts"  #Consolidateextracts="ngModel" [(ngModel)]="ExtarctModel.data_COLLECTION" name="data_COLLECTION" value="Consolidate extracts"><label>Consolidate extracts - data collected against this process(s) will be kept as single extract</label>
+                         </div>
+                         <div>
+                         <input class="form-check-input" type="radio" name="data_COLLECTION" #Individualextracts="ngModel" [(ngModel)]="ExtarctModel.data_COLLECTION" id="Individualextracts" value="Individual extracts"><label>Individual extracts - data collected against this process(s) will be kept as individual extracts against each data range</label>
+                         </div>
+       
+                         </div>
+                         
+                         
+                      </div>
+               </div>
+            </div>
+           
+         
+      </fieldset>
+   </div> 
+</div>
+   <div class="row">
+      <div class="col-md-12">
+         <hr>
+      </div> 
+   </div>
+     
+   <div class="row">
+      <div class="css-1qbrnrg">
+                        
+         <div class="css-1x62jim">
+            <div class="css-1w7dt24">
+               <div class="css-rvqhyx" style="margin: 30px;">
+                   <button class="css-xpr64j" type="submit" style="margin-left: 500px;">Run Fetch</button>
+                </div>
+            </div>
+         </div>
+      </div>
+   </div>
+                      
+              
+      </form>
+</div>       
+     
+  

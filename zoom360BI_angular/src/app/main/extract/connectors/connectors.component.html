@@ -1,0 +1,80 @@
+<!-- Container -->
+<div id="container" class="container-fluid">
+    <div class="sidebar-border">
+        <div style="width: 224px;"></div>
+        <div class="css-1j7c4l9" style="height: 660px;">
+            <div class="css-4468y5">
+                <div class="css-1vkpoll">
+                    <div class="css-119vcg8">
+                        <div class="css-1jsno1q">
+                            <div class="css-1jsno1q">
+                                <a class="css-qym05r" href="/core/authorization/29/change/"><img class="css-1hlylix" alt="datastream" src="assets/images/{{AllConnectionsService.connectionLogo}}"></a>
+                                <div class="css-k1huws"><span claass="css-4d8m1v">{{AllConnectionsService.connectionName}}</span><span class="css-r7560m"></span></div>
+                            </div>
+                            <button class="css-i0bei4" type="button">
+                            <svg class="css-1qq0zwx"  fill="currentcolor" viewBox="0 0 24 24">
+                               <path d="M6 15.468V18h2.532L16 10.532 13.468 8 6 15.468zm13-8.083L16.611 5 15 6.615 17.389 9 19 7.385z"></path>
+                            </svg>
+                            Edit
+                         </button>
+                        </div>
+                    </div>
+                    <hr class="css-16ccpyb" mx="zero" role="separator" aria-orientation="horizontal">
+                </div>
+                <div class="css-1c6b0fv">
+                    <nav class="css-3zbf4y">
+                        <ul class="css-1ua6fjh">
+                            <li class="css-1t2l0tx">Datasource</li>
+                            <ul class="css-1ua6fjh">
+                                <li class="css-rrihw8"><a class="css-s5joy4" routerLink="/extract/source/overview" routerLinkActive="ActiveRoute">Overview</a></li>
+                                <li class="css-rrihw8"><a class="css-s5joy4" routerLink="/extract/source/allextracts" routerLinkActive="ActiveRoute">Extract Logs</a></li>
+                                <li class="css-rrihw8"><a class="css-s5joy4" routerLink="/extract/source/allissue" routerLinkActive="ActiveRoute">Issue Logs</a></li>
+                            </ul>
+                            <li class="css-1t2l0tx">Data Collections</li>
+                            <ul class="css-1ua6fjh">
+                                <li class="css-rrihw8"><a class="css-s5joy4" routerLink="/extract/source/configuration" routerLinkActive="ActiveRoute">Connection</a></li>
+                                <li class="css-rrihw8"><a class="css-s5joy4" href="youtube-analytics-as-others.html">Fields & Filters</a></li>
+                                <!-- <li class="css-rrihw8"><a class="css-s5joy4" href="youtube-analytics-as-savetemplate.html">Save as Template</a></li> -->
+                            </ul>
+                            <li class="css-1t2l0tx">Data Enrichment</li>
+                            <ul class="css-1ua6fjh">
+                                <li class="css-rrihw8"><a class="css-s5joy4" href="youtube-transfer-explore&present.html">Cleansing Jobs</a></li>
+                                <li class="css-rrihw8"><a class="css-s5joy4" routerLink="/extract/source/mappingrules" routerLinkActive="ActiveRoute">Mapping Rules</a></li>
+                            </ul>
+                            <li class="css-1t2l0tx">Data Loading</li>
+                            <ul class="css-1ua6fjh">
+                                <li class="css-rrihw8"><a class="css-s5joy4" routerLink="/extract/source/primerystorage" routerLinkActive="ActiveRoute">Primary storage</a></li>
+                                <li class="css-rrihw8"><a class="css-s5joy4" routerLink="/extract/source/seconderystorage" routerLinkActive="ActiveRoute">Secondary storage</a></li>
+
+                            </ul>
+                            <li class="css-1t2l0tx">Data Governance</li>
+                            <ul class="css-1ua6fjh">
+                                <li class="css-rrihw8"><a class="css-s5joy4" href="youtube-analytics-history.html">Execution Plan</a></li>
+                                <li class="css-rrihw8"><a class="css-s5joy4" routerLink="/extract/source/dataretention" routerLinkActive="ActiveRoute">Data Retention</a></li>
+                                <li class="css-rrihw8"><a class="css-s5joy4" href="youtube-analytics-all-issues.html">Data Rights</a></li>
+                            </ul>
+                        </ul>
+                    </nav>
+                    <hr class="css-16ccpyb" mx="zero" role="separator" aria-orientation="horizontal">
+                    <div class="css-1v9nsrz">
+                        <nav class="css-3zbf4y">
+                            <ul class="css-rrihw8">
+                                <li class="css-rrihw8"><a class="css-s5joy4" routerLink="/extract/extraction/allextracts" routerLinkActive="ActiveRoute">Datasource List</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Content -->
+    <div id="content" style="min-height: 660px;">
+        <div class="main-content">
+
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+    <!-- END Content -->
+</div>
+<!-- END Container -->

@@ -1,0 +1,154 @@
+<div class="generic-django-admin-header">
+    <div class="main-section">
+        <h3>Identity Creation</h3>
+    </div>
+    <div class="tool-section">
+    </div>
+</div>
+<div id="content-main" class="contentMain">
+    <form [formGroup]="IdentityControl" (ngSubmit)="SaveConfig(IdentityControl.value)" autocomplete="off">
+        <fieldset class="module aligned ">
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth"></label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="DefinedFormat" value="1" style="margin-top: -1px;" (click)="setLoginIdFormat(true,'1')" checked>Login ID requires defined format
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="DefinedFormat" value="2" style="margin-top: -1px;" (click)="setLoginIdFormat(false,'0')">Not required
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack" *ngIf="showonlogin">
+                <div>
+                    <label class="required" for="id_auth">Login ID available formats</label>
+                    <div class="related-widget-wrapper">
+                        <ejs-dropdownlist id='_availableFormats' cssClass="edit-Dropdown"  [dataSource]="_availableFormats" placeholder="Select Available Format " [(fields)]='field' formControlName="AvailableFormat" ></ejs-dropdownlist> 
+                        <!-- <select formControlName="AvailableFormat" class="selectpicker" style="width: 478px;">
+       a                 <option *ngFor="let item of _availableFormats" value="{{item.dropdownValue}}">{{item.dropdownText}}</option>
+                        
+                      </select> -->
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Mandatory fields required for Login ID creation</label>
+                    <div class="related-widget-wrapper">
+                        <ejs-dropdownlist id=' _mandatoryFields' cssClass="edit-Dropdown"  [dataSource]=" _mandatoryFields" placeholder="Select Mandatory Field " [(fields)]='field' formControlName="MandatoryField" ></ejs-dropdownlist> 
+                        <!-- <select formControlName="MandatoryField" class="selectpicker" style="width: 478px;">
+                        <option *ngFor="let item of _mandatoryFields" value="{{item.dropdownValue}}">{{item.dropdownText}}</option>
+                      </select> -->
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="UniqueMandatoryField" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Mandatory fields required for Login ID creation, must be unique</label>
+                </div>
+            </div>
+
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Identity Activation</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth"></label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="LogInIdActivation" value="1" style="margin-top: -1px;" >Login ID requires activation before use
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="LogInIdActivation" value="2" style="margin-top: -1px;">Not required
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="ApprovalSupervisor" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Requires Login ID activation approval by supervisor user</label>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="ApprovalEmail" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Requires Login ID activation by user through Email</label>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="ApprovalQrCode" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Requires Login ID activation by user through on-screen QR Code scan</label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Identity Verification</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth"></label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="LoginIdCaseSensitive" value="1" style="margin-top: -1px;">Login ID must be case sensitive
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio"  formControlName="LoginIdCaseSensitive" value="2" style="margin-top: -1px;">Not required
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="LoginIdAuthentication" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Login requires application provided Login ID only</label>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="SsoAuthentication" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Login requires Single Sign-on (SSO) authentication</label>
+                </div>
+                <div class="help">Contact application support to activate this option</div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth"></label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="SslCertificate" value="1" style="margin-top: -1px;" checked>SSL certificate requires always for login
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="SslCertificate" value="2" style="margin-top: -1px;">Not required
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+        </fieldset>
+        <div>
+            <div class="css-1qbrnrg">
+                <hr class="css-1c3fhlt" mx="zero" role="separator" aria-orientation="horizontal">
+                <div class="css-1x62jim">
+                    <div class="css-p84alj">
+                        <div class="css-rvqhyx"><a class="css-ebx8b0" href="/instagram_business/instagrambusinessdatastream/27/delete/">Delete</a><a class="css-b2qa21" href="/core/apidatastream/clone?pk=27">Clone</a></div>
+                    </div>
+                    <div class="css-1w7dt24">
+                        <div class="css-rvqhyx"><button class="css-b2qa21" type="button" name="_continue">Save and continue editing</button><button class="css-xpr64j" type="submit" name="_save">Save</button><span></span></div>
+                    </div>
+                </div>
+                <ejs-toast #defaulttoast [position]="position" >                
+                </ejs-toast>
+            </div>
+        </div>
+    </form>
+</div>

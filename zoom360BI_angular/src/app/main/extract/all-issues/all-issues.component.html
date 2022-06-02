@@ -1,0 +1,135 @@
+<div class="generic-django-admin-header">
+
+    <div class="main-section">
+        <h3 style="margin-bottom: 17.5px;">
+            Issues Logs
+        </h3>
+    </div>
+</div>
+<app-connect-filters></app-connect-filters>
+<div class="generic-django-admin-header" style="padding-top: 20px;">
+    <div class="main-section">
+        <div id="toolbar" class="filter-toolbar" role="toolbar">
+            <div class="actions btn-group btn-group-sm">
+                <button type="button" class="select-button-secondary" data-toggle="dropdown" style="min-width: 80px;">
+                {{_tablecounter}} of {{allissueSer._recordLength}}
+       
+            </button>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+<div id="content-main" class="contentMain">
+
+    <div id="changelist">
+        <form id="changelist-form" method="post" novalidate="">
+            <input type="hidden" name="csrfmiddlewaretoken" value="fV0eCEEoIvrk9PmTi6jkLXweG6OPPOdd8zsJN64BW1oxfTfJ8iXIF68tFwBd1Hbv">
+            <input type="hidden" name="action" value="">
+            <input name="index" value="0" type="hidden">
+            <input class="select-across" name="select_across" value="0" type="hidden">
+            <div class="results">
+                <table id="result_list" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="action-checkbox-column">
+                                <div class="cell-wrapper" title="Select all rows">
+                                    <div class="text">
+                                        <!-- <adverity-checkbox data-id="action-toggle" toggle="adverity-checkbox[name=&quot;_selected_action&quot;]"> -->
+                                        <input type="checkbox" name="all" [checked]="allcheckbox" (change)="checkAll($event)" (click)="functionCount($event)" />
+
+
+                                        <!-- </adverity-checkbox> -->
+                                    </div>
+                                </div>
+                            </th>
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('connectionName')">
+                                        Message
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="toggle" [ngClass]=" heading_toggle ? 'ascending' : 'descending'" *ngIf="heading_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+                            <!-- <th scope="col" class="column-formatted_message">
+                                <div class="cell-wrapper">
+                                    <div class="text">
+                                        <span>Message</span>
+                                    </div>
+                                </div>
+                            </th> -->
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('statusAck')">
+                                        Ack
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="toggle" [ngClass]="ack_toggle ? 'ascending' : 'descending'" *ngIf="ack_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+                            <!-- <th scope="col" class="sortable column-ack">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <div class="text">
+                                        <a href="#">Ack</a>
+                                    </div>
+                                </div>
+                            </th> -->
+                        </tr>
+                    </thead>
+                    <!--start table fields-->
+                    <tbody>
+                        <tr class="row1" *ngFor="let issue of allissueSer._issueData">
+                            <td class="action-checkbox">
+                                <!-- <adverity-checkbox name="_selected_action" value="20"> -->
+                                <!-- <div>
+                                                <input hidden="" id="action-toggle" class="" data-type="checkbox" style="display: block;">
+                                                <span class="css-jlzago"></span>
+                                            </div> -->
+                                <!-- </adverity-checkbox> -->
+                                <input type="checkbox" [(ngModel)]="issue.state" name="something" (change)="findCount($event)" />
+                            </td>
+                            <td class="field-formatted_message" id="{{issue.entryId}}">
+                                <div>
+                                    <div class="muted sm">{{issue.serverInsertDate}}
+                                        <span class="label label-sm" [ngClass]="
+                                        {
+                                        'label-red': (issue.messageType == 'Deleted' || issue.messageType == 'Error'),
+                                        'label-raw': issue.messageType === 'Raw',
+                                        'label-orange': issue.messageType === 'Warning',
+                                        'label-blue': issue.messageType === 'Collected',
+                                        'label-green': issue.messageType === 'Imported'
+                                        }">{{issue.messageType}}</span></div>
+                                    <h4 class="truncate" style="margin-top: 2px;"><a href="#">{{issue.connectionName}}</a></h4>
+                                    <div class="error error-message">{{issue.message_1}}</div>
+                                    <div class="truncate"><a href="">p{{issue.fileName}}</a></div>
+                                </div>
+                            </td>
+                            <td class="field-ack">
+                                <img src="assets\images\icon-{{issue.statusAck}}.svg" alt="False">
+                        </tr>
+
+                    </tbody>
+                    <!--start table fields-->
+                </table>
+            </div>
+            <div class="pull-left changelist-botton-row changelist-pagination">
+                &nbsp;
+                <span class="pagination-element-counter">{{allissueSer._recordLength}} Issues</span>
+            </div>
+        </form>
+    </div>
+
+    <!--end main content-->
+    <!----------------------->
+</div>

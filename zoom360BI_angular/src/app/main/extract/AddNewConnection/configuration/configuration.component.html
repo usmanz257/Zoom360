@@ -1,0 +1,366 @@
+<div>
+    <div class="main-section ">
+       <div   class="header" style="cursor:pointer;" (click)="ReversClass()"> 
+          <img src='../../../../assets/arrow-left-64.png'   >
+       </div>
+       <div>
+        <h3>STEP 4:</h3> 
+        <h3>Change DataStream Configuration</h3>
+       </div>
+    </div>
+     <div class="tool-section">
+    </div>
+     <div class="row">
+        <div class="col-md-12"> 
+          <fieldset class="module aligned " >
+             <div class="row">
+                <div class="col-md-5">
+                   <div class="form-row field-stack" style="padding: 28px 12px 12px 5px;">
+                    
+                      <label class="label-text" for="id_stack">Name</label>
+                      <div class="related-widget-wrapper">
+                           <input type="text"   name="AccountName"     class="form-control" maxlength="200" placeholder="YouTube Analytics-Basic state"   required> 
+                           <!-- <span class="error" id="AccountName_span" style="margin-top:4px;padding:5px;" *ngIf="establishConnectorServic.AccountName_span">Account Display Name is Required</span> -->
+                       </div>
+                       <div id="hint_id_email" class="help-block">
+                           A human readable name. Numbers and special characters are supported.
+                        </div>
+                  </div>
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-md-6">
+                   <div class="form-row field-stack" >
+                     <div class="col-md-12" style="padding: 0px;">
+                        <label class="label-text" for="id_stack">Workspace</label>
+
+                     </div>
+                        
+                      <div class="related-widget-wrapper col-md-10" style="padding: 0px;" >
+                           <select type="text"  required name="WorkspaceName" style="height: 31px;width: -webkit-fill-available;"     required="required" class="form-control" maxlength="200"> 
+                            <option value="">Default</option>   
+                            <option value="">Workspace2</option>  
+                            <option value="">Workspace3</option>   
+                            <option value="">Workspace4</option>   
+                            <!-- *ngFor="let SourceObjectworkspace of workspacedropdownlist" -->
+                          </select>
+                          
+                          
+                        </div> 
+                        <div class="col-md-2">
+                            <a ngcontent-nap-c76="" target="_blank" id="change_id_auth" routerLink="" class="btn btn-sm btn-default related-widget-wrapper-link change-related" style="font-size: 12px;padding: 6px 11px 5px 8px;">
+                                <span ngcontent-nap-c76="" class="glyphicon glyphicon-pencil"></span> Edit</a>
+     
+                          </div>
+                      <div id="hint_id_email" class="help-block">
+                          Which Workspace the datastream belongs to.
+                         <!-- <span class="text-danger"
+                         *ngIf="(SourceDisplayName.touched || SourceForm.submitted) && SourceDisplayName.errors?.required">
+                         Display Name for Source object
+                     </span> -->
+                      </div>
+                </div>
+               
+
+                </div>
+                
+                 
+             </div>
+             <div class="row">
+                <div class="col-md-6">
+                   <div class="form-row field-stack" >
+                     <div class="col-md-12" style="padding: 0px;">
+                        <label class="label-text" for="id_stack">Connection</label>
+
+                     </div>
+                        
+                      <div class="related-widget-wrapper col-md-10" style="padding: 0px;" >
+                           <select type="text"  required name="WorkspaceName" style="height: 31px;width: -webkit-fill-available;"     required="required" class="form-control" maxlength="200"> 
+                            <option value="">Default / YouTube Analytics</option>   
+                            <option value="">Workspace2</option>  
+                            <option value="">Workspace3</option>   
+                            <option value="">Workspace4</option>   
+                            <!-- *ngFor="let SourceObjectworkspace of workspacedropdownlist" -->
+                          </select>
+                          
+                          
+                        </div> 
+                        <div class="col-md-2">
+                            <a ngcontent-nap-c76="" target="_blank" id="change_id_auth" routerLink="" class="btn btn-sm btn-default related-widget-wrapper-link change-related" style="font-size: 12px;padding: 6px 11px 5px 8px;">
+                                <span ngcontent-nap-c76="" class="glyphicon glyphicon-pencil"></span> Edit</a>
+     
+                          </div>
+                      <!-- <div class="help">
+                          <p>Which connection the datastream uses</p>
+                          
+                      </div> -->
+                      <div id="hint_id_email" class="help-block">Which connection the datastream uses.</div>
+                </div>
+               
+
+                </div>
+                
+                 
+             </div>
+            </fieldset> 
+       </div>
+      </div>
+    </div>
+    <div class="row">
+       <div class="col-md-12">
+          <hr>
+      </div>
+    </div>
+    <div>
+        <div class="main-section">
+            <h3>Report Type</h3>
+         </div>
+         <div class="tool-section">
+         </div>
+        <div class="row">
+            <div class="col-md-12"> 
+              <fieldset class="module aligned " >
+                <div class="row">
+                    <div class="col-md-5">
+                       <div class="form-row field-stack">
+                  
+                          <label class="label-text" for="id_stack">Data Type</label>
+                          <div class="related-widget-wrapper">
+                               <select type="text"  required name="WorkspaceName" style="height: 31px;width: -webkit-fill-available;"     required="required" class="form-control" maxlength="200"> 
+                                <option value="">Chanel Report</option>   
+                                  
+                                <!-- *ngFor="let SourceObjectworkspace of workspacedropdownlist" -->
+                              </select>
+                            </div>
+                            <div id="hint_id_email" class="help-block">
+                            </div>
+                    </div>
+                    </div>
+                 </div>
+                 
+                  
+                </fieldset> 
+           </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12"> 
+              <fieldset class="module aligned " >
+                <div class="row">
+                    <div class="col-md-5">
+                       <div class="form-row field-stack">
+                  
+                          <label class="label-text" for="id_stack">Report Type</label>
+                          <div class="related-widget-wrapper">
+                               <select type="text"  required name="WorkspaceName" style="height: 31px;width: -webkit-fill-available;"     required="required" class="form-control" maxlength="200"> 
+                                <option value="">Vedio Report</option>   
+                                  
+                                <!-- *ngFor="let SourceObjectworkspace of workspacedropdownlist" -->
+                              </select>
+                            </div>
+                            <div id="hint_id_email" class="help-block">
+                           </div>
+                    </div>
+                    </div>
+                 </div>
+                 
+                  
+                </fieldset> 
+           </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12"> 
+              <fieldset class="module aligned " >
+                <div class="row">
+                    <div class="col-md-5">
+                       <div class="form-row field-stack">
+                          
+                            <label class="label-text" for="id_stack">Report</label>
+                           
+                          
+                            <div class="related-widget-wrapper">
+                                <select type="text"  required name="WorkspaceName" style="height: 31px;width: -webkit-fill-available;" required="required" class="form-control" maxlength="200"> 
+                                 <option value="">Report1</option>   
+                                 <option value="">Report2</option>  
+                                 <option value="">Report3</option>   
+                                 <option value="">Report4</option>   
+                                 <!-- *ngFor="let SourceObjectworkspace of workspacedropdownlist" -->
+                               </select>
+                             </div>
+                             <div id="hint_id_email" class="help-block">
+                           </div>
+                         
+                          
+                          
+                    </div>
+                    </div>
+                 </div>
+                 
+                  
+                </fieldset> 
+           </div>
+          </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+           <hr>
+       </div>
+     </div>
+     <div>
+          <div class="main-section">
+            <h3>Filters</h3>
+         </div>
+         <div class="tool-section">
+         </div>
+        <div class="row">
+            <div class="col-md-12"> 
+              <fieldset class="module aligned ">
+                <div class="row">
+                    <div class="col-md-5">
+                       <div class="form-row field-stack">
+                  
+                          <label class="label-text" for="id_stack">Chanel</label>
+                          <div class="related-widget-wrapper">
+                            <input type="text"   name="AccountName"  class="form-control" maxlength="200" placeholder="YouTube Analytics-Basic state"   required> 
+
+                            </div>
+                          <div id="hint_id_email" class="help-block">
+                            If left blank, data for all channels available will be retrieved.
+                          </div>
+                    </div>
+                    </div>
+                 </div>
+                 
+                  
+                </fieldset> 
+           </div>
+          </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+           <hr>
+       </div>
+     </div>
+     <div>
+        <div class="main-section">
+          <h3>Field</h3>
+       </div>
+       <div class="tool-section">
+       </div>
+       <div class="row">
+        <div class="col-md-12"> 
+          <fieldset class="module aligned ">
+            <div class="row">
+                <span class="errorlist" style="padding: 0px 0px 0px 14px;">Your dimension selection did not match this report type. This report type requires exactly 1 of the following dimension(s) : day, month</span>
+                <div class="col-md-5">
+                   <div class="form-row field-stack">
+                 <label class="label-text" for="id_stack">Dimensions</label>
+                      <div class="related-widget-wrapper">
+                        <select type="text"  required name="WorkspaceName" style="height: 31px;width: -webkit-fill-available;"     required="required" class="form-control" maxlength="200"> 
+                            <option value="">Dimensions</option>   
+                              
+                           </select>
+                        </div>
+                        <div id="hint_id_email" class="help-block">
+                        </div>
+                </div>
+                </div>
+             </div>
+             
+              
+            </fieldset> 
+       </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+         <hr>
+     </div>
+   </div>
+   <div>
+      <div class="row">
+         <div class="col-md-12"> 
+           <fieldset class="module aligned " >
+             <div class="row">
+                 <div class="col-md-5">
+                    <div class="form-row field-stack">
+                       
+                         <label class="label-text" for="id_stack">Metrics</label>
+                         <div class="related-widget-wrapper">
+                             <select type="text"  required name="Metrics" style="height: 31px;width: -webkit-fill-available;" required="required" class="form-control" maxlength="200"> 
+                              <option value="">Metrics1</option>   
+                              <option value="">Metrics2</option>  
+                              <option value="">Metrics3</option>   
+                              <option value="">Metrics4</option>   
+                              <!-- *ngFor="let SourceObjectworkspace of workspacedropdownlist" -->
+                            </select>
+                          </div>
+                          <div id="hint_id_email" class="help-block">
+                        </div>
+                      
+                       
+                       
+                 </div>
+                 </div>
+              </div>
+              
+               
+             </fieldset> 
+        </div>
+       </div>
+ </div>
+ <div class="row">
+     <div class="col-md-12">
+        <hr>
+    </div>
+  </div>
+  <div>
+   <div class="main-section">
+      <h3>Advanced Filters</h3>
+   </div>
+   <div class="tool-section">
+   </div>
+   <div class="row">
+      <div class="col-md-12"> 
+        <fieldset class="module aligned " >
+          <div class="row">
+              <div class="col-md-5">
+                 <div class="form-row field-stack">
+                    
+                      <label class="label-text" for="id_filter_expression">Filter expression</label>
+                      <div class="related-widget-wrapper">
+                        <input type="text"   name="AccountName"  class="form-control" maxlength="200"  required> 
+
+                       </div>
+                       <!-- <div id="hint_id_email" class="help-block">
+                        If left blank, data for all channels available will be retrieved.
+                      </div> -->
+                      <div id="hint_id_email" class="help-block">See 
+                         <a target="_blank" href="https://developers.google.com/youtube/analytics/reference/reports/query#filters">Filter documentation</a>
+                          for details.
+                        </div>
+                    
+                    
+              </div>
+              </div>
+           </div>
+           
+            
+          </fieldset> 
+     </div>
+    </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+     <hr>
+ </div>
+</div>
+<div _ngcontent-tts-c89="" class="css-1qbrnrg">
+   <div _ngcontent-tts-c89="" class="css-1x62jim">
+      <div _ngcontent-tts-c89="" class="css-1w7dt24">
+         <div _ngcontent-tts-c89="" class="css-rvqhyx">
+            <button _ngcontent-tts-c89="" type="submit" class="css-xpr64j">Next</button>
+</div>
+</div>
+</div>
+</div>
+

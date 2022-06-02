@@ -1,0 +1,425 @@
+<form #lookupform="ngForm" (ngSubmit)="lookupform.form.valid && LookupRecordSave(lookupform.value)" novalidate>
+    <div class="main-section ">
+         <div>
+         <h3>Lookup Setup</h3>
+        </div>
+     </div>
+      <div class="tool-section">
+     </div>
+     <div class="row">
+        <div class="col-md-12"> 
+          <fieldset class="module aligned ">
+             <div class="row">
+                <input type="hidden" [(ngModel)]="Lookupvaluemodel.lookupid" name="lookupid" #lookupid="ngModel">
+                <div class="col-md-4 " >
+                   <div class="form-row field-stack" style="padding: 28px 12px 12px 5px;">
+                    <label class="label-text" for="id_stack">Display Name *</label>
+                    <div class="related-widget-wrapper">
+                    <input type="text"   name="lookupdisplayname"  [(ngModel)]="Lookupvaluemodel.lookupdisplayname"  #lookupdisplayname="ngModel"   class="form-control" maxlength="200"     required> 
+                      </div>
+                      <div id="hint_id_email" class="help-block alert alert-danger"
+                     *ngIf="(lookupdisplayname.touched || lookupform.submitted) && lookupdisplayname.errors?.required">
+                     Display name is required
+                      
+               </div>
+                     
+                    </div>
+                    
+                </div>
+                
+             </div>
+             <div class="row">
+               <div class="col-md-4">
+                  <div class="form-row field-stack" >
+                   <label class="label-text" for="id_stack">Workspace to Apply *</label>
+                    <div class="related-widget-wrapper">
+                       <select type="text"  required name="workspacename" [(ngModel)]="Lookupvaluemodel.workspacename"  #workspacename="ngModel"  style="height: 31px;width: -webkit-fill-available;"  required="required" class="form-control" maxlength="200"> 
+                          <option *ngFor="let workspacename of workspacedropdownlist" value="{{workspacename.dropdownText}}">{{workspacename.dropdownText}}</option> 
+                           
+                         </select>                      
+                        </div>
+                      <div id="hint_id_email" class="help-block">
+                        If  workspace  not selected  then 
+                         default  workspace  applied 
+                     </div>
+               </div>
+              
+
+               </div>
+             </div>
+             <div class="row">
+              <div class="col-md-12">
+                <hr>
+              </div>
+             </div>
+             <div class="main-section">
+               <h3>Destination</h3>
+              </div>
+              <div class="tool-section">
+              </div>
+              <div class="row" style="padding: 0px 11px 14px 19px;">
+               <div class="col-md-4">
+                <div class="form-row field-stack">
+                   <label  class="label-text" for="id_stack"></label>
+                    <div class="related-widget-wrapper" style="display:flex;">
+                     <div class="col-md-6" style="padding: 0px;">
+                        <input type="radio" class="form-check-input" id="UseExistingDestination" [(ngModel)]="Lookupvaluemodel.usedestinationtableoption"  #usedestinationtableoption="ngModel" (click)="UseExistingDestination()"  name="usedestinationtableoption" value="Use Existing Destination" checked><label for="UseExistingDestination">Use Existing </label>  
+                     
+                     </div>
+                    <div class="col-md-6">
+                     <input class="form-check-input" type="radio" name="usedestinationtableoption" [(ngModel)]="Lookupvaluemodel.usedestinationtableoption"  #usedestinationtableoption="ngModel" (click)="SetCustomDestination()"   id="SetCustomDestination" value="Set Custom Destination"><label  for="SetCustomDestination">Set Custom </label>
+                  </div>
+                 </div>
+              </div>
+               </div>
+             </div>
+             <div class="row" *ngIf="DefaultDestination">
+               <div class="col-md-4"  >
+                     <div class="form-row field-stack" >
+                      <label class="label-text" for="id_stack">Existing Destination Table*</label>
+                       <div class="related-widget-wrapper">
+                          <select type="text"  required name="useexistingtable" id="existingtable" [(ngModel)]="Lookupvaluemodel.useexistingtable"  #useexistingtable="ngModel" style="height: 31px;width: -webkit-fill-available;"    required="required" class="form-control" maxlength="200"> 
+                           <option *ngFor="let exist of useexistinglist" value="{{exist.dropdownText}}">{{exist.dropdownText}}</option>      
+                          </select>  
+                         </div>
+                          <!-- <div id="hint_id_email" class="help-block">
+                          Destination Source Table To Use 
+                          </div>  -->
+                         
+                  </div>
+                 
+  
+             </div>
+              
+            </div>
+            <div class="row" *ngIf="CustomDestination">
+               <div class="col-md-4"  >
+                     <div class="form-row field-stack" >
+                      <label class="label-text" for="id_stack">Custom Table*</label>
+                       <div class="related-widget-wrapper">
+                        <input type="text"   name="usecustomtable"  style="text-transform:uppercase"  class="form-control" id="customtable"   [(ngModel)]="Lookupvaluemodel.usecustomtable" maxlength="8" #usecustomtable="ngModel"   required> 
+                     </div>
+                     <div id="hint_id_email" class="help-block">
+                       Table name length (8) characters 
+                      </div>
+                      <div class="col-md-12" style="padding: 0px;">
+                        <div class="alert alert-danger" role="alert" *ngIf="errorforcustomtable">
+                           {{message}} 
+                         </div> 
+                      </div>
+                       
+                       
+                  </div>
+                 
+  
+             </div>
+              
+            </div>
+             <div class="row" style="padding: 0px 11px 14px 19px;">
+               <div class="col-md-4">
+                <div class="form-row field-stack">
+                   <label  class="label-text" for="id_stack"></label>
+                    <div class="related-widget-wrapper" style="display: flex;">
+                     <div class="col-md-6" style="padding: 0px;">
+                        <input type="radio" class="form-check-input" id="defaultfield" (click)="SetDefaultFieldForLookup()"  name="lookupfieldvalue" value="Default Field" [(ngModel)]="Lookupvaluemodel.lookupfieldvalue"  #lookupfieldvalue="ngModel" checked><label for="defaultfield">Papulate Default Lookup Field</label>  
+                         
+                     </div>
+                    <div class="col-md-6">
+                     <input class="form-check-input" type="radio" name="lookupfieldvalue" (click)="SetCustomFieldForLookup()"  [(ngModel)]="Lookupvaluemodel.lookupfieldvalue"  #lookupfieldvalue="ngModel"  id="CustomField" value="Custom Field"><label  for="CustomField">Set Custom Lookup Field</label>
+                      
+                  </div>
+                     
+                     </div>
+              </div>
+               </div>
+             </div>
+             <div class="row" *ngIf="DefaultDestinationField">
+               <div class="col-md-4"  >
+                     <div class="form-row field-stack" >
+                      <label class="label-text" for="id_stack">Default Lookup Field*</label>
+                       <div class="related-widget-wrapper">
+                          
+                            <input type="text"   name="defaultlookupfield"  id="defaultlookfield"   class="form-control"  [(ngModel)]="Lookupvaluemodel.defaultlookupfield"   readonly #defaultlookupfield="ngModel"   required> 
+
+                          </div>
+                           
+                         
+                  </div>
+                 
+  
+             </div>
+              
+            </div>
+            <div class="row" *ngIf="CustomDestinationField">
+            <div class="col-md-4" >
+               <div class="form-row field-stack" >
+                <label class="label-text" for="id_stack">Custom Lookup Field</label>
+                 <div class="related-widget-wrapper">
+                    <select type="text"  required name="customlookupfield" id="customfield" [(ngModel)]="Lookupvaluemodel.customlookupfield"  #customlookupfield="ngModel" style="height: 31px;width: -webkit-fill-available;"    required="required" class="form-control" maxlength="200"> 
+                     <option *ngFor="let existfield of customAndexistingTable" value="{{existfield.dropdownText}}">{{existfield.dropdownText}}</option>      
+     
+                      </select>                      
+                    </div>
+                    
+                   
+            </div>
+           
+
+       </div>  
+      </div>
+             <div class="row">
+               <div class="col-md-12">
+                <hr>
+               </div>
+             </div>
+             <div class="main-section">
+               <h3>Source</h3>
+              </div>
+              <div class="tool-section">
+              </div>
+             <div class="row">
+               <div class="col-md-4"   >
+                        <div class="form-row field-stack"  style="padding: 28px 12px 12px 5px;">
+                         <label class="label-text" for="id_stack">Source Connector *</label>
+                          <div class="related-widget-wrapper">
+                             <select type="text"  required name="sourceconnectorname" id="sourceConnectorid" [(ngModel)]="Lookupvaluemodel.sourceconnectorname"  #sourceconnectorname="ngModel" style="height: 31px;width: -webkit-fill-available;" (change)="GetSelectedSourceIDAndGetAccount($event)"   required="required" class="form-control" maxlength="200"> 
+                                
+                              <option *ngFor="let sourceconnector of sourceconnectordropdownlist" value="{{sourceconnector.dropdownValue}}">{{sourceconnector.dropdownText}}</option> 
+                               </select>                      
+                             </div>
+                             <div id="hint_id_email" class="help-block">
+                              Source connector to use 
+                             </div>
+                                
+                  <div id="hint_id_email" class="help-block alert alert-danger"
+                  *ngIf="(sourceconnectorname.touched || lookupform.submitted) && sourceconnectorname.errors?.required">
+                  Source connector is required
+                   
+            </div>    
+                     </div>
+                    
+     
+                     </div>
+                  
+                 
+              </div>
+              <div class="row">
+                  <div class="col-md-4"  >
+                        <div class="form-row field-stack" >
+                         <label class="label-text" for="id_stack">Source Account *</label>
+                          <div class="related-widget-wrapper">
+                             <select type="text"  required name="sourceaccountname" style="height: 31px;width: -webkit-fill-available;" [(ngModel)]="Lookupvaluemodel.sourceaccountname"  #sourceaccountname="ngModel"  (click)="getSourceTableList($event)"  required="required" class="form-control" maxlength="200"> 
+                              <option *ngFor="let accountlist of sourceAccountList" value="{{accountlist.dropdownValue}}">{{accountlist.dropdownText}}</option>      
+                               </select>                      
+                             </div>
+                             <div id="hint_id_email" class="help-block">
+                            First select source connector for source account to use 
+                             </div> 
+                              
+                        <div id="hint_id_email" class="help-block alert alert-danger"
+                  *ngIf="(sourceaccountname.touched || lookupform.submitted) && sourceaccountname.errors?.required">
+                  Source account is required
+            </div>   
+                            
+                     </div>
+                    
+     
+                </div>
+                 
+               </div>
+               <div class="row">
+                <div class="col-md-4"  >
+                      <div class="form-row field-stack" >
+                       <label class="label-text" for="id_stack">Source Table *</label>
+                        <div class="related-widget-wrapper">
+                           <select type="text"  required name="sourcetable" id="sourcetable"  [(ngModel)]="Lookupvaluemodel.sourcetable"  #sourcetable="ngModel" style="height: 31px;width: -webkit-fill-available;" (click)="getObject($event)"      required="required" class="form-control" maxlength="200"> 
+                              <option *ngFor="let tablelist of sourceTableList" value="{{tablelist.objectName}}">{{tablelist.displayName}}</option>      
+                           </select>                      
+                           </div>
+                           <div id="hint_id_email" class="help-block">
+                              First select source account for source table to use 
+                             </div>
+                             
+                        <div id="hint_id_email" class="help-block alert alert-danger"
+                  *ngIf="(sourcetable.touched || lookupform.submitted) && sourcetable.errors?.required">
+                  Source account is required
+            </div>   
+                          
+                   </div>
+                  
+   
+              </div>
+            </div>
+               
+              
+          </fieldset> 
+        </div>
+        
+     </div>
+       
+         <fieldset class="module aligned ">
+         <div class="row">
+            <div class="col-md-12" style="padding: 0px;">
+               <div class="col-md-4">
+                  <div class="alert alert-danger" role="alert" *ngIf="ErrorMessageIfUserNotSelectAnyrow">
+                     {{ErrorMessage}} 
+                   </div>
+                  <div id="changelist">
+                     <form id="changelist-form" method="post" novalidate="">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="BzJ7MpE5jnM2lyqnbJrbEVtNiZc8GLk8udbCXR4ixTJfrCjd1V5zy452hpZwSEiq">
+                        <input type="hidden" name="action" value="">
+                        <input name="index" value="0" type="hidden">
+                        <input class="select-across" name="select_across" value="0" type="hidden">
+                        <div class="results">
+                           <table id="result_list" class="table table-hover">
+                              <thead>
+                                 <tr>
+                                    <th scope="col" class="action-checkbox-column">
+                                       <div class="cell-wrapper" title="Select all rows">
+                                          <div class="text">
+                                             <div data-id="action-toggle" toggle="adverity-checkbox[name=&quot;_selected_action&quot;]">
+                                                <div><span class="css-kpk1s7">
+                                                 </span>
+                                                </div>
+                                                <input hidden="" id="action-toggle" class="" data-type="checkbox" style="display: block;">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </th>
+                                    <th scope="col" class="sortable column-type_logo">
+                                       <div class="cell-wrapper" title="Toggle sorting">
+                                          <div class="text">
+                                             <a>Field Name</a>
+                                          </div>
+                                       </div>
+                                    </th>
+                                     
+                                    
+                                    
+                                     
+                                     
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr class="row1"  *ngFor="let object of sourcegridObjectList">
+                                    <td class="action-checkbox">
+                                       <div name="_selected_action" value="26">
+                                          <div><span class="css-kpk1s7"><input class="css-10d97nj" type="checkbox"   (click)="GetRowName($event,object.objectfieldname,object.objectfieldid)"><span class="css-jlzago"></span></span></div>
+                                          <input hidden="" name="_selected_action" class="action-select" data-type="checkbox" disabled="">
+                                       </div>
+                                    </td>
+                                    <td class="field-stack nowrap">{{object.objectfieldname}}</td>
+                                       
+                                 </tr>
+                                 
+                              </tbody>
+                           </table>
+                        </div>
+                        <div class="pull-left changelist-botton-row changelist-pagination">
+                           &nbsp;
+                           <span class="pagination-element-counter">{{numberofRecordsofTable}} Fields</span>
+                        </div>
+                     </form>
+                  </div>
+             </div>
+   
+     </div>
+   </div>
+   </fieldset>
+   <div class="row">
+      <div class="col-md-12">
+           <hr>
+      </div>
+
+   </div>
+   <div class="main-section">
+      <h3> </h3>
+     </div>
+     <div class="tool-section">
+     </div>
+     
+    <div class="row" style="padding: 28px 11px 14px 19px;">
+      <div class="col-md-4">
+       <div class="form-row field-stack">
+          <label  class="label-text" for="id_stack"></label>
+           <div class="related-widget-wrapper" style="display:flex;">
+            <div class="col-md-6" style="padding: 0px;">
+               <input type="radio" class="form-check-input" id="Preload" [(ngModel)]="Lookupvaluemodel.Loadoption"  #Loadoption="ngModel"  name="Loadoption" value="Mongo Db" checked><label for="Preload">Pre Load</label>  
+            </div>
+           <div class="col-md-6">
+            <input class="form-check-input" type="radio" name="Loadoption" [(ngModel)]="Lookupvaluemodel.Loadoption"  #Loadoption="ngModel"   id="Postload" value="Sql DB"><label  for="Postload">Post Load</label>
+         </div>
+        </div>
+     </div>
+      </div>
+    </div>
+    
+   <div class="row">
+      <div class="col-md-4">
+          <div class="form-row field-stack">
+           
+             <label class="label-text" for="id_stack"> </label>
+             <div class="related-widget-wrapper">
+                
+               <div class="switch" style="display: flex;" >
+                  <input type="checkbox"  name="enable"  [(ngModel)]="Lookupvaluemodel.enable"  #enable="ngModel"  id="EnableConnectoins">
+                  <label style="padding:2px 0 0 12px;" class=" " for="EnableConnectoins">Enabled</label>
+              </div>  
+                 </div>
+                 <div id="hint_id_email" class="help-block">
+                   
+                 </div>
+               
+         </div>
+       </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+          <div class="form-row field-stack">
+           
+             <label class="label-text" for="id_stack"> </label>
+             <div class="related-widget-wrapper">
+                
+               <div class="switch" style="display: flex;" >
+                  <input type="checkbox"  name="visibilty" [(ngModel)]="Lookupvaluemodel.visibilty"  #visibilty="ngModel"  id="visibilityMode" >
+                  <label style="padding:2px 0 0 12px;" class=" " for="visibilityMode">Visibilty</label>
+              </div>  
+                 </div>
+                 <div id="hint_id_email" class="help-block">
+                   
+                 </div>
+         </div>
+       </div>
+    </div>
+   <div class="row">
+      <div class="col-md-4"  >
+         <div class="form-row field-stack" >
+          <label class="label-text" for="id_stack">Data Insertion Options</label>
+           <div class="related-widget-wrapper">
+              <select type="text"  required name="datainsertionoption" [(ngModel)]="Lookupvaluemodel.datainsertionoption"  #datainsertionoption="ngModel" style="height: 31px;width: -webkit-fill-available;"      required="required" class="form-control" maxlength="200"> 
+                 <option value="Append">Append</option> 
+                 <option value="Truncate & Load" >Truncate & Load</option> 
+                 <option value="Insert" >Insert</option> 
+                    
+                </select>                      
+              </div>
+              
+       </div>
+  </div>
+   </div>
+   <div class="row">
+      <div class="col-md-12">
+           <hr>
+      </div>
+
+   </div> 
+     
+     <div class="form-group pull-right" style="padding: 0px;">
+      <div class="input-bar-item">
+         <!-- <input class="css-xpr64j" id="savebtn" type="submit" value="Save"> -->
+         <button class="css-xpr64j" type="submit" value="">Save</button>
+       </div>
+</div>
+      
+</form>
+

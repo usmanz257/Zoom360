@@ -1,0 +1,48 @@
+<div [ngClass]="className"  class="dashboards-column-right background-color" style="border-width: 0px 0px 0px 1px; border-color: rgb(221, 224, 228); border-style: solid;">
+   <div class="row" *ngIf="false">
+    <div class="col-md-2 col-md-offset-10">
+        <div class="main-section" style="padding-top: 14px"  >
+            <div class="input-bar-item">
+              <input class="css-xpr64j" id="savebtn" type="submit" style="margin-left:72px;" value="Full Screen"  (click)="fullScreen()">
+              </div>
+        </div>   
+    </div>
+   </div>
+    <div class="row" style="margin-right: 0px;">
+        
+        <div class="col-md-12">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div class="channels-small-box" style="height: 290px;">
+                    <app-pie-chart-wedget #pieChart></app-pie-chart-wedget>
+                </div>
+            </div>
+          
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div class="channels-small-box" style="height: 290px;">
+                    <app-area-chart-wedget #areaChart></app-area-chart-wedget>
+                    <!-- <app-pie-chart-wedget #pieChart2></app-pie-chart-wedget> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-right: 0px;">
+        <div class="col-md-12">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div class="channels-small-box" style="height: 290px;">
+                   <app-bar-chart-wedget #barChart></app-bar-chart-wedget>
+                </div>
+            </div>
+      
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div class="channels-small-box" style="height: 290px;">
+                    
+                      <app-stack-chart-wedget #stackChart></app-stack-chart-wedget> 
+                        <!-- <app-line-chart-wedget #lineChart></app-line-chart-wedget> -->
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!--</div>-->

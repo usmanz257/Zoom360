@@ -1,0 +1,236 @@
+<div class="generic-django-admin-header">
+    <div class="main-section">
+        <h3>Date Settings</h3>
+    </div>
+    <div class="tool-section">
+    </div>
+</div>
+<div id="content-main" class="contentMain">
+    <form [formGroup]="TimezoneSetup" (ngSubmit)="SaveConfig(TimezoneSetup.value)" autocomplete="off">
+        <fieldset class="module aligned ">
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Apply and enforce workspace setup </label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="dataFormatType" value="Use default date format for date type data" style="margin-top: -1px;" (click)="setdateFormatVisible(false)">Use default date format for date type data
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="dataFormatType" value="Do not use any default date format" style="margin-top: -1px;" (click)="setdateFormatVisible(true)">Do not use any default date format
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack" *ngIf="dataFormatTypeToggle">
+                <div>
+                    <label class="required" for="id_auth">Default date format to use in system</label>
+                    <div class="related-widget-wrapper">
+                        <ejs-dropdownlist id='_DateFormatDropdown' cssClass="edit-Dropdown" [dataSource]="_DateFormatDropdown" placeholder="Select DateFormate" [(fields)]='field' formControlName="dateFormat"></ejs-dropdownlist>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Default clock image to use in system</label>
+                    <div class="related-widget-wrapper">
+                        <div class="form-row field-stack">
+                            <input type="file" (change)="onFileChange($event)" accept="image/*" style="height: 28px; padding: 2px 8px; width: 478px;" />
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <ejs-checkbox id=""   label="Date field is mandatory for collecting data"   formControlName="dateCollectedData"></ejs-checkbox>
+                   
+                </div>
+                <div class="form-check" style="padding-left: 0px;">
+                    <ejs-checkbox id=""   label="Date field is mandatory for preparing data"   formControlName="datePreparingData"></ejs-checkbox>
+                    
+                </div>
+                <div class="form-check" style="padding-left: 0px;">
+                    <ejs-checkbox id=""   label="Date field is mandatory for presenting data"   formControlName="datePresentingData"></ejs-checkbox>
+                  
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <ejs-checkbox id=""   label="Date conversion is must for mandatory data processing"   formControlName="dateConversion"></ejs-checkbox>
+                   
+                </div>
+            </div>
+            <div class="form-check" style="padding-left: 0px;">
+                <ejs-checkbox id=""   label="Use Date conversion value table for date type data conversion"   formControlName="dateConversionValue"></ejs-checkbox>
+            </div>
+
+
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Time Zone Setup</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Apply and enforce workspace setup </label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="timeZone" value="Use Default time zone" style="margin-top: -1px;" (click)="setTimeZoneVisible(false)">Use Default time zone
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="timeZone" value="Do not use default time zone" style="margin-top: -1px;" (click)="setTimeZoneVisible(true)">Do not use default time zone
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack" *ngIf="timeZoneToggle">
+                <div>
+                    <label class="required" for="id_auth">Default time zone to use in system</label>
+                    <div class="related-widget-wrapper">
+                        <ejs-dropdownlist id='_TimeFormatDropdown'  [dataSource]="_TimeFormatDropdown" cssClass="edit-Dropdown" placeholder="Select TimeFormate" [(fields)]='field' formControlName="timeZoneType"></ejs-dropdownlist>
+                      
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Date Display</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Use default date formats in Reports </label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="dateFormatReports" value="Do not show date formats" style="margin-top: -1px;" (click)="setdateFormatReports(false)">Do not show date formats
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="dateFormatReports" value="Show date formats" style="margin-top: -1px;" (click)="setdateFormatReports(true)">Show date formats
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack" *ngIf="dateFormatReportsToggle">
+                <div>
+                    <label class="required" for="id_auth">Default date format to use in system</label>
+                    <div class="related-widget-wrapper">
+                        <ejs-dropdownlist id='_DateFormatDropdown'  [dataSource]="_DateFormatDropdown" cssClass="edit-Dropdown" placeholder="Select DateFormate" [(fields)]='field' formControlName="reportsDate"></ejs-dropdownlist>
+                       
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Use default date formats in Visualization and Charts </label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="dateFormatVisulization" value="Do not show date formats" style="margin-top: -1px;" (click)="setdateFormatVisulization(false)">Do not show date formats
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="dateFormatVisulization" value="Show date formats" style="margin-top: -1px;" (click)="setdateFormatVisulization(true)">Show date formats
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack" *ngIf="dateFormatVisulizationToggle">
+                <div>
+                    <label class="required" for="id_auth">Default date format to use in system</label>
+                    <div class="related-widget-wrapper">
+                        <ejs-dropdownlist id='_DateFormatDropdown'  [dataSource]="_DateFormatDropdown" cssClass="edit-Dropdown" placeholder="Select DateFormate"  [(fields)]='field' formControlName="visulizationDate"></ejs-dropdownlist>
+                        
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Time Display</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Use default time formats in Reports </label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="timeFormatReports" value="Do not show time formats" style="margin-top: -1px;" (click)="setTimeFormatReports(false)">Do not show time formats
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="timeFormatReports" value="Show time formats" style="margin-top: -1px;" (click)="setTimeFormatReports(true)">Show time formats
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack" *ngIf="timeFormatReportsToggle">
+                <div>
+                    <label class="required" for="id_auth">Default time format to use in system</label>
+                    <div class="related-widget-wrapper">
+                        <ejs-dropdownlist id='_TimeFormatDropdown'  [dataSource]="_TimeFormatDropdown" cssClass="edit-Dropdown"  placeholder="Select TimeFormate " [(fields)]='field' formControlName="reportTime"></ejs-dropdownlist>
+                       
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Use default time formats in Visualization and Charts </label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="timeFormatVisualization" value="Do not show time formats" style="margin-top: -1px;" (click)="setTimeFormatVisualization(false)">Do not show time formats
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="timeFormatVisualization" value="Show time formats" style="margin-top: -1px;" (click)="setTimeFormatVisualization(true)">Show time formats
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack" *ngIf="timeFormatVisualizationToggle">
+                <div>
+                    <label class="required" for="id_auth">Default time format to use in system</label>
+                    <div class="related-widget-wrapper">
+                        <ejs-dropdownlist id='_TimeFormatDropdown'  [dataSource]="_TimeFormatDropdown" cssClass="edit-Dropdown" placeholder="Select TimeFormate" [(fields)]='field' formControlName="visualizationTime"></ejs-dropdownlist>
+                      
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Setup Updating</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Apply and enforce date time setup  </label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="applyAndEnforceDatetime" value="All child workspaces" style="margin-top: -1px;">All child workspaces
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="applyAndEnforceDatetime" value="Selective child workspaces" style="margin-top: -1px;">Selective child workspaces
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+
+        </fieldset>
+        <div>
+            <div class="css-1qbrnrg">
+                <hr class="css-1c3fhlt" mx="zero" role="separator" aria-orientation="horizontal">
+                <div class="css-1x62jim">
+                    <div class="css-p84alj">
+                        <div class="css-rvqhyx"><a class="css-ebx8b0" href="/instagram_business/instagrambusinessdatastream/27/delete/">Delete</a><a class="css-b2qa21" href="/core/apidatastream/clone?pk=27">Clone</a></div>
+                    </div>
+                    <div class="css-1w7dt24">
+                        <ejs-toast #defaulttoast   [position]="position" >                
+                        </ejs-toast>
+                        <div class="css-rvqhyx"><button class="css-b2qa21" type="button" name="_continue">Save and continue editing</button>
+                        <button class="css-xpr64j .e-toast-container .e-toast " type="submit" name="_save">Save</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

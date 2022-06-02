@@ -1,0 +1,136 @@
+<div class="generic-django-admin-header">
+
+    <div class="main-section">
+        <h3>Adjust local data retention</h3>
+    </div>
+</div>
+<div id="content-main" class="contentMain">
+    <form method="post">
+        <input type="hidden" name="csrfmiddlewaretoken" value="ajPyd7DDhiPX034ciPJ5reLh5Rit4KsB9ypBdbzuuV92o6GRZqb6Tr5rpp18wARD">
+        <div>
+            <fieldset class="module ">
+
+                <div class="form-row form-manage_extract_names">
+                    <div id="div_id_manage_extract_names" class="form-group">
+                        <label for="id_manage_extract_names_0" class="control-label  requiredField">
+                           Extract Filenames
+                           </label>
+                        <div class="controls ">
+                            <label class="radio-inline">
+                                <input type="radio" name="optradio">Unique by fetch- Us this option to create a new extract for each fetch executed.
+                              </label>
+
+                        </div>
+                        <div class="controls ">
+                            <label class="radio-inline">
+                            <input type="radio" name="optradio">Unique by day - Use this setting to arrange extracts by the date selected with the Ket Date Column option.
+                          </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="form-row form-extract_name_keys">
+                    <div id="div_id_extract_name_keys" class="form-group">
+                        <label for="id_extract_name_keys" class="control-label ">
+                           Key Date Column
+                           </label>
+                        <div class="controls">
+                            <select class="selectpicker" style="width: 478px">
+                                <option>Mustard</option>
+                                <option>Ketchup</option>
+                                <option>Barbecue</option>
+                              </select>
+
+                        </div>
+                    </div>
+                </div> -->
+                <div class="form-row field-stack">
+                    <div>
+                        <label class="required" for="id_stack">Key Date Column</label>
+                        <div class="related-widget-wrapper">
+                            <select class="selectpicker" style="width: 478px;">
+                                <option>Default</option>
+                                <option>Test 1</option>
+                                <option>Test 2</option>
+                                <option>Test 3</option>
+                                
+                              </select>
+                        </div>
+                        <div class="help"></div>
+                    </div>
+                </div>
+                <div class="form-row field-stack">
+                    <div>
+                        <label class="required" for="id_stack"> Retention type</label>
+                        <div class="related-widget-wrapper">
+                            <select class="selectpicker" style="width: 478px;">
+                                <option>Default</option>
+                                <option>Test 1</option>
+                                <option>Test 2</option>
+                                <option>Test 3</option>
+                               ]
+                              </select>
+                        </div>
+                        <div class="help"></div>
+                    </div>
+                </div>
+                <!-- <div class="form-row form-retention_number">
+                    <div id="div_id_retention_number" class="form-group">
+                        <label for="id_retention_number" class="control-label ">
+                           Retention Number (N)
+                           </label>
+                        <div class="controls ">
+                            <input type="number" name="retention_number" id="id_retention_number" class="numberinput form-control" min="0">
+                            <div id="hint_id_retention_number" class="help-block">The amount (N) of fetches/extracts/days to retain. Must be an integer greater than zero.</div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="form-row field-stack">
+                    <div>
+                        <label class="required" for="id_stack"> Retention Number (N)</label>
+                        <div class="related-widget-wrapper">
+                            <select class="selectpicker" style="width: 478px;">
+                                <option>Default</option>
+                                <option>Test 1</option>
+                                <option>Test 2</option>
+                                <option>Test 3</option>
+                                
+                              </select>
+                        </div>
+                        <div class="help">The amount (N) of fetches/extracts/days to retain. Must be an integer greater than zero.</div>
+                    </div>
+                </div>
+                <div class="form-row field-stack">
+                    <div>
+                        <label class="required" for="id_stack"> Remove if empty</label>
+                        <div class="related-widget-wrapper">
+                            <input type="checkbox" value="">
+                        </div>
+                        <div class="help">When enabled, fetches resulting in only empty rows ("empty extracts") will be silently discarded.</div>
+                    </div>
+                </div>
+                <div class="form-row field-stack">
+                    <div>
+                        <label class="required" for="id_stack"> Prune instantly</label>
+                        <div class="related-widget-wrapper">
+                            <input type="checkbox" value="">
+                        </div>
+                        <div class="help"></div>
+                    </div>
+                </div>
+            </fieldset>
+            <!-- <zoom360-submit-row> -->
+            <div>
+                <div class="css-1qbrnrg">
+                    <hr class="css-1c3fhlt" mx="zero" role="separator" aria-orientation="horizontal">
+                    <div class="css-1x62jim">
+                        <div class="css-p84alj"></div>
+                        <div class="css-1w7dt24">
+                            <div class="css-rvqhyx"><button class="css-xpr64j" type="submit">Save</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </zoom360-submit-row> -->
+        </div>
+    </form>
+</div>

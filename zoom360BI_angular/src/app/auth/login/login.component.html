@@ -1,0 +1,76 @@
+
+    <div class="ng-star-inserted" style="height: 100%;">
+        <div class="n-custom-login-form kt-grid kt-grid--ver kt-grid--root" style="text-align: left; height: 100%;">
+            <div class="fin_login_mainWrapper kt-grid kt-grid--hor kt-grid--root kt-login kt-login--v1" id="kt_login">
+                <div class="d-flex-custom w-75 mx-auto fin_login_inner_wrapper align-items-center kt-grid__item kt-grid__item--fluid kt-grid kt-grid--desktop kt-grid--ver-desktop kt-grid--hor-tablet-and-mobile">
+                    <!---->
+                    <div class="kt-grid__item kt-grid__item--order-tablet-and-mobile-2 kt-grid kt-grid--hor kt-login__aside login-custom-left ng-star-inserted">
+                        <div class="" style=" padding: 15px 15px 5px 15px; width:100%; height:100%;display: flex; flex-direction: column; align-items: center; justify-content: center; background-size: cover;">
+                            <div class="kt-grid__item">
+                                <a href="">
+                                    <!----><img alt="logo" class="login-logo-m 0" style="width:220px;" src="assets/images/ZoomLogoLogin.png"><!---->
+                                </a>
+                            </div>
+                            <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver">
+                                <div class="kt-grid__item kt-grid__item--middle">
+                                    <h3 class="kt-login__title" style="color:#ec6a2c !important;">WELCOME TO ZOOM360</h3>
+                                    <h4 class="kt-login__subtitle d-none"></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-grid__item kt-grid__item--fluid  kt-grid__item--order-tablet-and-mobile-1  kt-login__wrapper d-block login-right-custom">
+                        <div class="right-area-login">
+                            <div class="kt-login__head d-block mt-3 mr-auto ml-auto text-right">
+                            </div>
+                            <div class="kt-login__body d-block mt-3 mr-auto ml-auto">
+                                <div _nghost-wrs-c1="" class="ng-tns-c1-0 ng-star-inserted">
+                                    <div _ngcontent-wrs-c1="" class="kt-login__form ng-trigger ng-trigger-routerTransition" style="margin-top: 0px; opacity: 1;">
+                                        <div _ngcontent-wrs-c1="" class="kt-login__title">
+                                            <h3 _ngcontent-wrs-c1="" class="m-0 login-custom-heading"> Sign In </h3>
+                                        </div>
+                                        <form _ngcontent-wrs-c1="" class="kt-form n-custom-login-form " [formGroup]="loginForm" (ngSubmit)="logIn(loginForm.value)">
+                                            <div _ngcontent-wrs-c1="" class="form-group">
+                                                <input class="form-control m-input" id="login" formControlName="Email" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" name="email" placeholder="Email"><!---->
+                                                <!-- <input type="text" style="background-color: #fff; padding: 10px;height:50px;" id="login" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" name="email"> -->
+                                                <div *ngIf="submitted && f.username.errors" class="mt-2">
+                                                    <div *ngIf="f.username.errors.required" class="text-danger">Email is required</div>
+                                                    <div *ngIf="f.username.errors.email" class="text-danger">Enter valid email</div>
+                                                    </div>
+                                            </div>
+                                            <div _ngcontent-wrs-c1="" class="form-group">
+                                                <input id="password" class="form-control m-input" autocomplete="new-password" maxlength="32" name="password" required="" type="password" placeholder="Password *" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"><!---->
+                                                <!-- <input type="password" style="background-color: #fff; padding: 10px;height:50px;" class="fadeIn third"  name="password"> -->
+                                                    <div *ngIf="submitted && f.password.errors" class="mt-2">
+                                                        <div *ngIf="f.password.errors.required" class="text-danger">Password is required</div>
+                                                    </div>
+                                                <!-- <validation-messages _ngcontent-wrs-c1="" class="ng-tns-c1-0 ng-star-inserted" style="">
+                                                    </validation-messages> -->
+                                            </div>
+                                            <!-- <div _ngcontent-wrs-c1="" class="form-group mt-4"><label _ngcontent-wrs-c1="" class="kt-checkbox" style="color:black;"><input _ngcontent-wrs-c1="" class="form-control ng-untouched ng-pristine ng-valid" name="rememberMe" type="checkbox" value="true">Remember me <span _ngcontent-wrs-c1="" class="ng-tns-c1-0"></span></label></div> -->
+                                            <div _ngcontent-wrs-c1="" class="kt-login__actions"><!--<a _ngcontent-wrs-c1="" class="kt-link kt-login__link-forgot" id="forget-password" routerlink="/account/forgot-password" style="color:black; font-weight:bold;" href="/account/forgot-password">Forgot password?</a>-->
+                                                <button _ngcontent-wrs-c1="" class="btn btn-primary btn-elevate kt-login__btn-primary login-custom-btn" type="submit">Log in</button></div>
+                                                <div class="css-1w7dt24">
+                                                    <ejs-toast #defaulttoast [position]="position" >                
+                                                    </ejs-toast>
+                                                    <!-- <div class="css-rvqhyx"><button class="css-b2qa21" type="button" name="_continue">Save and continue editing</button> -->
+                                                        <!-- <button class="css-xpr64j  .e-toast-container .e-toast" type="submit" name="_save">Save</button><span>{{valueTableDataService.Status_message}}</span> -->
+                                                    <!-- </div> -->
+                                                </div>
+                                        </form>
+                                        <!-- <div _ngcontent-wrs-c1="" class="kt-login__divider">
+                                            <div _ngcontent-wrs-c1="" class="kt-divider"><span _ngcontent-wrs-c1="" class="ng-tns-c1-0"></span><span _ngcontent-wrs-c1="" class="ng-tns-c1-0" style="color:black">Login with:</span><span _ngcontent-wrs-c1="" class="ng-tns-c1-0"></span></div>
+                                        </div> -->
+                                        <!---->
+                                    </div>
+                                    <!-- <div _ngcontent-wrs-c1="" class="kt-login__account">
+                                        <span _ngcontent-wrs-c1="" class="creant-account-text ng-tns-c1-0 ng-star-inserted"><a _ngcontent-wrs-c1="" class="ng-tns-c1-0" routerlink="/account/select-edition" href="/account/select-edition">New tenant</a><span _ngcontent-wrs-c1="" class="ng-tns-c1-0" style="color: #fff;"> | </span></span><a _ngcontent-wrs-c1="" class="acount-activation" id="email-activation-btn" routerlink="/account/email-activation" href="/account/email-activation">Email activation</a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

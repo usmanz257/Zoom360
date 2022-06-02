@@ -1,0 +1,187 @@
+.dropdown-box {
+    width: 100%;
+    /* padding: 3px; */
+    border: 1px solid transparent;
+    outline: 0;
+    min-width: 70px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* -webkit-appearance: button;
+    -moz-appearance: button; */
+}
+
+.dropdown-box:hover {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    border: 1px solid transparent;
+}
+
+
+/* .table td, .table th {
+    padding: 0rem 1px;
+    border: none;
+} */
+
+
+/* .table td {
+    padding: 12px 0 0 11px;
+} */
+
+.dropdown-box:focus {
+    border: 1px solid #818181;
+    border-radius: 4px;
+    min-width: 70px;
+    display: block;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+}
+
+.DropdownAlingment {
+    background-color: transparent;
+    color: rgb(33, 155, 156);
+    height: 24px;
+    font-size: 12px;
+    border-radius: 2px;
+    /* justify-content: center; */
+    cursor: pointer;
+}
+
+#dropdownColor {
+    padding: 2px;
+}
+
+#Btngrouphover>a:hover {
+    background-color: rgb(170, 248, 248);
+}
+
+#browsers {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.EditableCell {
+    max-width: 12px;
+    outline: none;
+    min-width: 12px;
+}
+
+.btngroupClass>a {
+    font-family: inherit;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 155, 156);
+    display: inline-flex;
+    width: auto;
+    height: 24px;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: rgb(203, 209, 214);
+    border-style: solid;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.flexrow {
+    display: flex;
+    padding-left: 15px;
+}
+
+.btngroupactive {
+    background-color: teal !important;
+    color: white !important;
+}
+
+.bgColorNo {
+    background-color: #d5eff6;
+}
+
+.bgColoryes {
+    background-color: #fad1d1;
+}
+
+.css-bgColoryes {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    margin: 0px;
+    padding: 0px 8px;
+    border-width: 1px;
+    background-color: rgb(232, 245, 237);
+    color: black;
+    font-size: 12px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: start;
+    white-space: nowrap;
+}
+
+.css-bgColorNo {
+    box-sizing: border-box;
+    vertical-align: top;
+    font-family: inherit;
+    margin: 0px;
+    padding: 0px 8px;
+    border-width: 1px;
+    background-color: rgb(231, 240, 253);
+    color: black;
+    font-size: 12px;
+    line-height: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: start;
+    white-space: nowrap;
+}
+
+.dropdown-menu-action {
+    position: absolute;
+    top: 100%;
+    left: -33px;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 12px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 2px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    background-clip: padding-box;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: pointer;
+}
+
+
+/* .isDisabled {
+    color: currentColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.isNotDisabled {
+    color: currentColor;
+    opacity: 0.5;
+    text-decoration: none;
+} */

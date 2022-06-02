@@ -1,0 +1,112 @@
+<div class="generic-django-admin-header">
+    <div class="main-section">
+        <h3>Workspace Identity</h3>
+    </div>
+    <div class="tool-section">
+    </div>
+</div>
+<div id="content-main" class="contentMain">
+    <form [formGroup]="WorkspaceSetup" (ngSubmit)="SaveConfig(WorkspaceSetup.value)" autocomplete="off">
+        <fieldset class="module aligned ">
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Workspace Name</label>
+                    <div class="related-widget-wrapper">
+                        <input type="text" value="Default" required="" class="vTextField" maxlength="60" formControlName="WorkSpace_Name" required>
+                    </div>
+                    <!--  -->
+                    <div class="help">
+                        <div *ngIf="WorkspaceSetup.controls['WorkSpace_Name'].invalid && (WorkspaceSetup.controls['WorkSpace_Name'].dirty || WorkspaceSetup.controls['WorkSpace_Name'].touched)" class="alert alert-danger validation-div">
+                            <div *ngIf="WorkspaceSetup.controls['WorkSpace_Name'].errors.required">
+                                Workspace Name is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Workspace Display Name</label>
+                    <div class="related-widget-wrapper">
+                        <input type="text" id="id_name" required="" class="vTextField" maxlength="60" formControlName="WorkSpaceDisplayName">
+                    </div>
+                    <div class="help">
+                        <div *ngIf="WorkspaceSetup.controls['WorkSpaceDisplayName'].invalid && (WorkspaceSetup.controls['WorkSpaceDisplayName'].dirty || WorkspaceSetup.controls['WorkSpaceDisplayName'].touched)" class="alert alert-danger validation-div">
+                            <div *ngIf="WorkspaceSetup.controls['WorkSpaceDisplayName'].errors.required">
+                                Workspace Display Name is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Parent Workspace</label>
+                    <div class="related-widget-wrapper">
+                        <ejs-dropdownlist id='_workSpaceParentDropdown' cssClass="edit-Dropdown"  [dataSource]="_workSpaceParentDropdown"  [(fields)]='field' formControlName="WorkSpaceParentName"></ejs-dropdownlist>
+                        <!-- <select class="selectpicker" style="width: 478px;" formControlName="WorkSpaceParentName">
+                            <option value="Select Parent Workspace">Select Parent Workspace</option>
+                        <option *ngFor="let item of WorkSpaceService._workSpaceParentDropdown" value="{{item.dropdownValue}}">{{item.dropdownText}}</option>
+                      </select> -->
+                    </div>
+                    <div class="help">
+                        <div *ngIf="WorkspaceSetup.controls['WorkSpaceParentName'].invalid && (WorkspaceSetup.controls['WorkSpaceParentName'].dirty || WorkspaceSetup.controls['WorkSpaceParentName'].touched)" class="alert alert-danger validation-div">
+                            <div *ngIf="WorkspaceSetup.controls['WorkSpaceParentName'].errors.required">
+                                Parent Workspace is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Child Workspaces</h2>
+
+
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Apply and enforce workspace setup </label>
+                    <div class="related-widget-wrapper">
+
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="ChildWorkSpaceRule" value="All child workspaces" style="margin-top: -1px;">All child workspaces
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="ChildWorkSpaceRule" value="Selective child workspaces" style="margin-top: -1px;">Selective child workspaces
+                        </div>
+
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 30px;">
+                <app-workspace-setup-grid #Grid></app-workspace-setup-grid>
+            </div>
+
+            <div class="form-group">
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="Exclude_Child_WorkSpace">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Exclude selected child workspace to apply workspace setup</label>
+                </div>
+            </div>
+
+        </fieldset>
+        <div>
+            <div class="css-1qbrnrg">
+                <hr class="css-1c3fhlt" mx="zero" role="separator" aria-orientation="horizontal">
+                <div class="css-1x62jim">
+                    <div class="css-p84alj">
+                        <div class="css-rvqhyx"><a class="css-ebx8b0" href="/instagram_business/instagrambusinessdatastream/27/delete/">Delete</a><a class="css-b2qa21" href="/core/apidatastream/clone?pk=27">Clone</a></div>
+                    </div>
+                    <div class="css-1w7dt24">
+                        <ejs-toast #defaulttoast   [position]="position" >                
+                        </ejs-toast>
+                        <div class="css-rvqhyx"><button class="css-b2qa21" type="button" name="_continue">Save and continue editing</button>
+                        <button class="css-xpr64j .e-toast-container .e-toast " type="submit" name="_save">Save</button>{{WorkSpaceService.Status_message}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

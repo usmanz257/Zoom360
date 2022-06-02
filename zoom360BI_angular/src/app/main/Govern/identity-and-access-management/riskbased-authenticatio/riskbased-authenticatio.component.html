@@ -1,0 +1,214 @@
+<div class="generic-django-admin-header">
+    <div class="main-section">
+        <h3>RBA Activation</h3>
+    </div>
+    <div class="tool-section">
+    </div>
+</div>
+<div id="content-main" class="contentMain">
+    <form [formGroup]="riskBasedAuth" (ngSubmit)="SaveConfig(riskBasedAuth.value)" autocomplete="off">
+        <fieldset class="module aligned ">
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth"></label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="RbaActivation" value="1" style="margin-top: -1px;" checked>Activate Risk-based authentication (RBA)
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="RbaActivation" value="2" style="margin-top: -1px;">Do not activate
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth"></label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="RbaAccess" value="1" style="margin-top: -1px;" checked>RBA required always to access
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="RbaAccess" value="2" style="margin-top: -1px;">Not required
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="SupervisorRiskSummarry" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Notify supervisor RISK Summary</label>
+                </div>
+
+                <div class="form-check" style="padding-left: 0px;">
+                    <input type="checkbox" formControlName="UserRiskSummary" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Notify user RISK Summary</label>
+                </div>
+
+            </div>
+
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>RBA Autentications</h2>
+            <div class="form-row field-stack">
+                <div class="" style="margin-bottom: 0px;">
+                    <div class="form-check" style="padding-left: 0px;">
+                        <input type="checkbox" formControlName="IpAccess" class="form-check-input" id="exampleCheck1" (click)="IpAccess($event)">
+                        <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">IP verification required to access</label>
+                    </div>
+                    <div style="padding-top: 10px;" *ngIf="IpAccessToggle">
+                        <label class="label-text" for="id_stack">IP number or series to verify</label>
+                        <div class="related-widget-wrapper">
+                            <input type="text" formControlName="IpVerifcation" id="id_name" required="" class="vTextField" maxlength="60">
+                        </div>
+                        <div class="help">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div class="" style="margin-bottom:0px;">
+                    <div class="form-check" style="padding-left: 0px;">
+                        <input type="checkbox" formControlName="MacAccess" class="form-check-input" id="exampleCheck1" (click)="MacAccess($event)">
+                        <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Physical (MAC) address verification required to access</label>
+                    </div>
+                    <div style="padding-top: 10px;" *ngIf="MACAccessToggle">
+                        <label class="label-text" for="id_stack">Physical (MAC) addresses to verify</label>
+                        <div class="related-widget-wrapper">
+                            <input type="text" formControlName="MacVerifcation" id="id_name" required="" class="vTextField" maxlength="60">
+                        </div>
+                        <div class="help">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div class="" style="margin-bottom:0px;">
+                    <div class="form-check" style="padding-left: 0px;">
+                        <input type="checkbox" formControlName="TimeZoneAccess" class="form-check-input" id="exampleCheck1" (click)="TimeZoneAccess($event)">
+                        <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Time zone verification required to access</label>
+                    </div>
+                    <div style="padding-top: 10px;" *ngIf="TimeZoneAccessToggle">
+                        <label class="label-text" for="id_stack">Time zone to verify</label>
+                        <div class="related-widget-wrapper">
+                            <ejs-dropdownlist id='_timezone' cssClass="edit-Dropdown"  [dataSource]="_timezone" placeholder="Select Available Format " [(fields)]='field' formControlName="TimeZoneVerifcation" ></ejs-dropdownlist> 
+                            <!-- <select formControlName="TimeZoneVerifcation" class="selectpicker" style="width: 478px;">
+                                <option *ngFor="let item of _timezone" value="{{item.dropdownValue}}">{{item.dropdownText}}</option>
+                      </select> -->
+                            
+                        </div>
+                        <div class="help">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div class="" style="margin-bottom:0px;">
+                    <div class="form-check" style="padding-left: 0px;">
+                        <input type="checkbox" formControlName="TimeSlotAccess" class="form-check-input" id="exampleCheck1" (click)="TimeSlotAccess($event)">
+                        <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Time slot verification required to access</label>
+                    </div>
+                    <div style="padding-top: 10px;" *ngIf="TimeSlotAccessToggle">
+                        <label class="required" for="id_auth">Start time to verify</label>
+                        <div class="related-widget-wrapper">
+                            <ejs-dropdownlist id='_timeSlot' cssClass="edit-Dropdown"  [dataSource]="_timeSlot" placeholder="Select Available Format " [(fields)]='field' formControlName="StartTimeVerifcation" ></ejs-dropdownlist> 
+                            <!-- <select formControlName="StartTimeVerifcation" class="selectpicker" style="width: 478px;">
+                                <option *ngFor="let item of _timeSlot" value="{{item.dropdownValue}}">{{item.dropdownText}}</option>>
+                      </select> -->
+                        </div>
+                        <div class="help">
+                        </div>
+                    </div>
+                    <div style="padding-top: 10px;" *ngIf="TimeSlotAccessToggle">
+                        <label class="required" for="id_auth">End time to verify</label>
+                        <div class="related-widget-wrapper">
+                            <ejs-dropdownlist id='_timeSlot' cssClass="edit-Dropdown"  [dataSource]="_timeSlot" placeholder="Select Available Format " [(fields)]='field' formControlName="EndTimeVerifcation" ></ejs-dropdownlist> 
+                            <!-- <select formControlName="EndTimeVerifcation" class="selectpicker" style="width: 478px;">
+                                <option *ngFor="let item of _timeSlot" value="{{item.dropdownValue}}">{{item.dropdownText}}</option>
+                      </select> -->
+                        </div>
+                        <div class="help">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div class="" style="margin-bottom:0px;">
+                    <div class="form-check" style="padding-left: 0px;">
+                        <input type="checkbox" formControlName="DeviceTypeAccess" class="form-check-input" id="exampleCheck1" (click)="DeviceTypeAccess($event)">
+                        <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Device type verification required to access</label>
+                    </div>
+                    <div style="padding-top: 10px;" *ngIf="DeviceTypeAccesToggle">
+                        <label class="required" for="id_auth">Device type to verify</label>
+                        <div class="related-widget-wrapper">
+                            <ejs-dropdownlist id='_deviceType' cssClass="edit-Dropdown"  [dataSource]="_deviceType" placeholder="Select Available Format " [(fields)]='field' formControlName="DeviceTypeVerifcation" ></ejs-dropdownlist> 
+                        </div>
+                        <div class="help">
+                            Computer, Tablet, Mobile Phone
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div class="" style="margin-bottom:0px;">
+                    <div class="form-check" style="padding-left: 0px;">
+                        <input type="checkbox" formControlName="ConnectorTypeAccess" class="form-check-input" id="exampleCheck1" (click)="ConnectionType($event)">
+                        <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Connection type verification required to access</label>
+                    </div>
+                    <div style="padding-top: 10px;" *ngIf="ConnectionTypeToggle">
+                        <label class="required" for="id_auth">Connection type verification required to access</label>
+                        <div class="related-widget-wrapper">
+                            <ejs-dropdownlist id='_connectionType' cssClass="edit-Dropdown"  [dataSource]="_connectionType" placeholder="Select Available Format " [(fields)]='field' formControlName="ConnectorTypeVerifcation" ></ejs-dropdownlist> 
+                            <!-- <select formControlName="ConnectorTypeVerifcation" class="selectpicker" style="width: 478px;">
+                                <option *ngFor="let item of _connectionType" value="{{item.dropdownValue}}">{{item.dropdownText}}</option>
+                      </select> -->
+                        </div>
+                        <div class="help">
+                            LAN, Wifi (Private), Wifi (Public), WAN
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div class="" style="margin-bottom:0px;">
+                    <div class="form-check" style="padding-left: 0px;">
+                        <input type="checkbox" formControlName="SupervisorAccess" class="form-check-input" id="exampleCheck1" (click)="SupervisorAccess($event)">
+                        <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Supervisor approval required to access</label>
+                    </div>
+                    <div style="padding-top: 10px;" *ngIf="SupervisorAccessToggle">
+                        <label class="required" for="id_auth">Supervisor name to verify</label>
+                        <div class="related-widget-wrapper">
+                            <ejs-dropdownlist id='_supervisorName' cssClass="edit-Dropdown"  [dataSource]="_supervisorName" placeholder="Select Available Format " [(fields)]='field' formControlName="SupervisorVerifcation" ></ejs-dropdownlist> 
+                            <!-- <select formControlName="SupervisorVerifcation" class="selectpicker" style="width: 478px;">
+                                <option *ngFor="let item of _supervisorName" value="{{item.dropdownValue}}">{{item.dropdownText}}</option>
+                      </select> -->
+                        </div>
+                        <div class="help">
+                            Reference from Users DIM Table
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </fieldset>
+        <div>
+            <div class="css-1qbrnrg">
+                <hr class="css-1c3fhlt" mx="zero" role="separator" aria-orientation="horizontal">
+                <div class="css-1x62jim">
+                    <div class="css-p84alj">
+                        <div class="css-rvqhyx"><a class="css-ebx8b0" href="/instagram_business/instagrambusinessdatastream/27/delete/">Delete</a><a class="css-b2qa21" href="/core/apidatastream/clone?pk=27">Clone</a></div>
+                    </div>
+                    <div class="css-1w7dt24">
+                        <div class="css-rvqhyx"><button class="css-b2qa21" type="button" name="_continue">Save and continue editing</button><button class="css-xpr64j" type="submit" name="_save">Save</button><span></span></div>
+                    </div>
+                    <ejs-toast #defaulttoast [position]="position" >                
+                    </ejs-toast>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

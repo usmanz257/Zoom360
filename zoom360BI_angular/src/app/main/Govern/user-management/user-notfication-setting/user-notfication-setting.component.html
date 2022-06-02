@@ -1,0 +1,88 @@
+<!-- <div class="generic-django-admin-header">
+    <div class="main-section">
+        <h3>Notifications</h3>
+    </div>
+    <div class="tool-section">
+    </div>
+</div> -->
+<form [formGroup]="SaveUserNotification" (ngSubmit)="SaveConfig(SaveUserNotification.value)" autocomplete="off">
+   
+<div class="row">
+    <div class="col-md-12" style="padding: 0px;" >
+        <div class="col-md-4"  >
+          <div class="main-section">
+              <h3 style="margin-bottom: 17.5px;">
+                Notifications
+              </h3>
+          </div>   
+      </div>
+      <div class="col-md-7 col-md-offset-1"  >
+          <div class="main-section  pull-right">
+              <div class="input-bar-item">
+                <input class="css-xpr64j" id="savebtn" type="submit" style="margin-right: 5px;" value="+ Add new user" (click)="this.userAccessManagementService.newUser()" />
+                <input class="css-xpr64j" id="savebtn" type="submit" style="margin-right: 5px;" value="Make a copy"/>
+                <input class="css-xpr64j" id="savebtn" type="submit" style="margin-right: 5px;" value="Save changes"/>
+                
+                <input class="css-xpr64j" id="savebtn" type="submit" style="margin-right: 5px;" value="Disable user"/>
+                <input class="css-xpr64j" id="savebtn" type="submit"  routerLink="/govern/accessmanagement/userslist" value="Goto list page"/>
+                </div>
+          </div>   
+      </div>
+      
+    </div>
+    </div>
+<div id="content-main" class="contentMain">
+        <fieldset class="module aligned ">
+            <div class="form-row field-stack">
+                <div>
+                    <!-- <label class="label-text" for="id_stack">Email Address</label> -->
+                    <div class="related-widget-wrapper">
+                        <div class="form-check" style="padding-left: 0px; margin-top: 5px;">
+                            <input type="checkbox" formControlName="NewsLetter" class="form-check-input " id="exampleCheck1 ">
+                            <label class="form-check-label " for="exampleCheck1 " style="margin-left: 20px; ">Subscribe to news letter</label>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="help ">
+                        By subscribing to news letter you will receive updates on new features, product roadmap and company news
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <!-- <label class="label-text" for="id_stack">Email Address</label> -->
+                    <div class="related-widget-wrapper">
+                        <div class="form-check" style="padding-left: 0px; margin-top: 5px;">
+                            <input type="checkbox" formControlName="SystemNotification" class="form-check-input " id="exampleCheck1 ">
+                            <label class="form-check-label " for="exampleCheck1 " style="margin-left: 20px; ">Receive system notifications</label>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="help ">
+                        Notification emails will be sent about issues with system level problems, authorizations, quota limits
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <!-- <label class="label-text" for="id_stack">Email Address</label> -->
+                    <div class="related-widget-wrapper">
+                        <div class="form-check" style="padding-left: 0px; margin-top: 5px;">
+                            <input type="checkbox" formControlName="AccessNotification" class="form-check-input " id="exampleCheck1 ">
+                            <label class="form-check-label " for="exampleCheck1 " style="margin-left: 20px; ">Receive access notifications</label>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="help ">
+                        Notification emails will be sent whenever user tries or successfully login and logout of application
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned " style="height: 205px;">
+
+        </fieldset>
+
+       
+</div>
+</form>

@@ -1,0 +1,141 @@
+<div class="col-sm-10 analyze-main-content" [ngClass]="className" style="padding-top: 24px;">
+    <div>
+      <div class="row" style="padding-bottom: 15px;">
+         <div class="col col-sm-12 col-md-3 col-lg-3">
+            <select name="Template" class="selectpicker" style="width: 300px;" [(ngModel)]="templateValue" (change)="setTemplate()">
+               <option *ngFor="let item of template" value="{{item.value}}">{{item.text}}</option>
+          </select>
+         </div>
+         <div class="col col-sm-12 col-md-7 col-lg-4">
+            <div class="dropdown css-rvqhyx" style="margin-right: 0px">
+               <button style="height: 28px; margin-left: 10px;" class="css-fw9vt9" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Save as New
+                <svg class="css-15lu7l8" fill="currentcolor" viewBox="0 0 24 24">
+                   <path d="M12 14.172l5.657-5.657 1.414 1.414L12 17 4.929 9.929l1.414-1.414z"></path>
+                </svg>
+               </button>
+      
+               <div style="width: 350px; padding: 15px;" class="dropdown-menu css-1z0bvi8 css-1v6oy02" aria-labelledby="dropdownMenuLink">
+                   <!-- <a class="css-sye81a" [ngClass]="{'clas': disableTrue === true,
+                                                           'disabled':disableTrue ===false}" (click)="saveMappingTemplate()">Save</a>
+                   <a class="css-sye81a" (click)="templeteTextbox()">Save as New Templete</a> -->
+                   <input type="text" name="templateName" [(ngModel)]="newtemplateName" style="width: 100%; margin-bottom: 10px;"/>
+                   <input class="css-xpr64j" id="savebtn" type="button" value="+ Add" style="float:right" (click)="saveTemplate()">
+                   <button class="search-button button-secondary" type="button" style="margin-right: 5px; font:bold;float:right" (click)="clearTemplateName()" >Clear</button>
+                   <div style="font-size: 12px; font-weight: 400; color:#dc3545"*ngIf="errorMessage">
+                     Please enter template name.
+                   </div>
+               </div>
+           </div>
+         </div>
+      </div>
+        <div role="tabpanel" class="tab-pane active">
+            <div>
+                <div class="css-1kl6qu0" grow="1" style="border: none;">
+                    <div class="css-1qzdmz1" style="position: relative; height: 560px;">
+                        <!--  Grid content here -->
+                        <ag-grid-angular #agGrid style="width: 100%; height: 100%;" id="myGrid" class="ag-theme-alpine"  [debug]="true" [statusBar]="statusBar" [enableRangeSelection]="true" [animateRows]="false" [rowClassRules]="rowClassRules" [columnDefs]="columnDefs" [defaultColDef]="defaultColDef"
+                            [rowData]="rowData" [rowHeight]="rowHeight" [headerHeight]="headerHeight" [sideBar]="sideBar" [rowSelection]="rowSelection" [chartThemeOverrides]="chartThemeOverrides" [enableCharts]="true" [rowGroupPanelShow]="rowGroupPanelShow"
+                            [pivotPanelShow]="pivotPanelShow" [rowDragManaged]="true" (gridReady)="onGridReady($event)"></ag-grid-angular>
+
+                    </div>
+                    <div class="css-1cwpjp9" style="width: 46px;padding: 8px;padding-top: 44px;">
+                        <div class="noSpacing-10oUM">
+                            <div class="btn-group dataTableOptions-2M9hD btn-group-vertical btn-group-xs">
+                                <button type="button" class="btn filterButton-2rXhv btn-primary active zIndex-3_KOO" title="Tree structure">
+                                     <span>
+                                        <svg width="14px" height="14px" viewBox="0 0 16 16" class="contextMenuButtonIcon-31KFW">
+                                           <g stroke="#FFFFFF" fill="#FFFFFF" stroke-linejoin="round">
+                                              <rect x="3.5" y="2" height="3" width="3"></rect>
+                                              <path d="M5,3.5 l0,4 l7,0 m-7,0 l0,5 l7,0" fill="none"></path>
+                                              <rect x="9" y="6" height="3" width="3"></rect>
+                                              <rect x="9" y="11" height="3" width="3"></rect>
+                                           </g>
+                                        </svg>
+                                     </span>
+                                  </button>
+                                <button type="button" class="btn filterButton-2rXhv btn-default zIndex-3_KOO" title="Total row" icon="zoom360-sigmaSmall"><span><span><i class="fa zoom360-sigmaSmall-2l2Ry"></i> </span></span></button>
+                                <button type="button" class="btn filterButton-2rXhv btn-default btn-xs zIndex-3_KOO" title="Limit rows (unlimited)">
+                                     <span>
+                                        <svg width="14px" height="14px" viewBox="0 0 16 16" class="contextMenuButtonIcon-31KFW">
+                                           <g stroke="#4A4A4A" fill="#4A4A4A" stroke-linejoin="round">
+                                              <g transform="translate(8, 2) scale(1.5,1.5)">
+                                                 <path d="M0,6 l2,-2 l-4,0 z"></path>
+                                                 <path d="M0.5,0 l0,4 l-1,0 l0,-4 z" stroke-width="0.5"></path>
+                                              </g>
+                                              <path d="M2,12 l12,0z"></path>
+                                              <path d="M2,14.5 l12,0z"></path>
+                                           </g>
+                                        </svg>
+                                     </span>
+                                  </button>
+                                <button type="button" class="btn filterButton-2rXhv btn-default disabled zIndex-3_KOO" title="Fill time gaps with empty rows">
+                                     <span>
+                                        <svg width="14px" height="14px" viewBox="0 0 16 16" class="contextMenuButtonIcon-31KFW">
+                                           <g>
+                                              <g stroke="#4A4A4A" fill="#4A4A4A" stroke-linejoin="round">
+                                                 <g transform="translate(8.9,7.1) rotate(225) scale(1.5,1.5)">
+                                                    <path d="M0,6 l2,-2 l-4,0 z"></path>
+                                                    <path d="M0.5,3 l0,1 l-1,0 l0,-1 z" stroke-width="0.5"></path>
+                                                 </g>
+                                                 <g transform="translate(7.1,8.9) rotate(45) scale(1.5,1.5)">
+                                                    <path d="M0,6 l2,-2 l-4,0 z"></path>
+                                                    <path d="M0.5,3 l0,1 l-1,0 l0,-1 z" stroke-width="0.5"></path>
+                                                 </g>
+                                              </g>
+                                              <g fill="none" stroke="#4A4A4A">
+                                                 <circle cx="8" cy="8" r="5" stroke-width="2"></circle>
+                                                 <path d="M8,5 L8,8 L6,8" stroke-width="1"></path>
+                                              </g>
+                                           </g>
+                                        </svg>
+                                     </span>
+                                  </button>
+                                <button type="button" class="btn filterButton-2rXhv contextMenuButton-3E0JW btn-default zIndex-3_KOO" title="Adds an Exclude filter for <undefined> rows for each projected dimension" icon="zoom360-brush">
+                                     <span>
+                                        <span>
+                                           <svg width="14px" height="14px" viewBox="0 0 16 16">
+                                              <path fill="#4A4A4A" transform="scale(0.05,0.05) translate(-14,0)" d=" m 188.80954,306.53997 c -27.63508,-5.86712 -60.35615,-18.56612 -83.81853,-32.52988 -21.401284,-12.73705 -63.808357,-51.73332 -63.803467,-58.67171 0.006,-8.51866 7.98938,-12.86178 26.521613,-14.42833 41.440214,-3.50298 80.820834,-22.58702 98.837324,-47.89705 4.69244,-6.59204 5.35874,-6.80316 12.34222,-3.9105 12.75593,5.28368 13.77593,8.4956 6.17911,19.45781 -15.73618,22.70733 -46.27689,41.07102 -84.28347,50.67847 l -21.879424,5.53075 13.88089,11.04054 c 7.634494,6.0723 15.069184,11.0485 16.521554,11.05824 1.45236,0.01 8.91335,-3.14632 16.57996,-7.01345 7.66663,-3.86712 14.28796,-6.68249 14.71408,-6.25637 0.42612,0.42612 -3.0903,5.83827 -7.81427,12.02701 -4.72396,6.18873 -8.24788,11.55376 -7.83093,11.92231 0.41696,0.36854 6.38622,3.49719 13.26504,6.95252 17.44404,8.76243 29.63782,5.18245 56.28599,-16.52498 l 13.69066,-11.15234 -7.2183,13.96006 c -3.97006,7.67805 -9.45073,17.35002 -12.17924,21.49331 -2.72851,4.14328 -4.11051,8.05795 -3.07111,8.69928 1.03941,0.64134 8.20588,2.33303 15.92551,3.75929 12.43015,2.29655 14.39189,2.11852 17.14963,-1.55645 8.73068,-11.6345 25.92334,-45.06448 34.58326,-67.24488 5.36843,-13.75 9.99572,-25.26474 10.28281,-25.5883 0.28712,-0.32356 5.47841,1.10051 11.53619,3.1646 l 11.01415,3.75289 -4.91069,13.50207 c -11.66572,32.07524 -38.15928,82.8769 -49.56934,95.04969 -6.14562,6.55643 -14.77896,6.70231 -42.93122,0.7254 z M 235.83899,153.2402 c -29.78857,-13.31624 -54.16358,-25.35018 -54.16668,-26.74208 -0.009,-3.84229 12.23135,-14.69919 19.79224,-17.55589 11.89023,-4.49244 20.637,-2.76529 48.89879,9.6556 30.20657,13.27563 37.35959,18.34532 42.32449,29.99741 4.63329,10.87387 3.88412,29.68657 -1.15683,29.04972 -0.84202,-0.10638 -25.90345,-11.08852 -55.69201,-24.40476 z m 22.6428,-47.72139 c -9.47788,-4.09328 -17.24575,-8.270467 -17.2619,-9.282627 -0.0669,-4.18902 46.13954,-87.9520602 49.15568,-89.1094662 4.79488,-1.83996 17.11134,3.8894762 18.62705,8.6650262 1.00343,3.16154 -29.74705,94.168247 -32.65002,96.628457 -0.35105,0.29752 -8.39293,-2.80811 -17.87081,-6.90139 z"></path>
+                                           </svg>
+                                        </span>
+                                     </span>
+                                  </button>
+                                <button type="button" class="btn filterButton-2rXhv btn-default btn-xs disabled zIndex-3_KOO" title="Additional workspaces (0 available)" icon="users"><span><span><span class="fa fa-users"></span> </span></span></button>
+                            </div>
+                            <div class="btn-group dataTableOptions-2M9hD btn-group-vertical btn-group-xs">
+                                <button type="button" class="btn filterButton-2rXhv contextMenuButton-3E0JW btn-default zIndex-3_KOO" title="Data table settings" icon="zoom360-sliders">
+                                     <span>
+                                        <span>
+                                           <svg width="14px" height="14px" viewBox="0 0 16 16">
+                                              <path fill="#4A4A4A" d="M3.25,7.15 L3.25,5.5 L5,5.5 L5,10.5 L3.25,10.5 L3.25,8.9 L0,8.9 L0,7.15 L3.25,7.15 Z M10.75,12.65 L16,12.65 L16,14.4 L10.75,14.4 L10.75,16 L9,16 L9,11 L10.75,11 L10.75,12.65 Z M12.75,1.65 L16,1.65 L16,3.4 L12.75,3.4 L12.75,5 L11,5 L11,0 L12.75,0 L12.75,1.65 Z M0,1.65 L9,1.65 L9,3.4 L0,3.4 L0,1.65 Z M7,7.15 L16,7.15 L16,8.9 L7,8.9 L7,7.15 Z M0,12.65 L7,12.65 L7,14.4 L0,14.4 L0,12.65 Z"></path>
+                                           </svg>
+                                        </span>
+                                     </span>
+                                  </button>
+                            </div>
+                            <div class="btn-group btn-group-vertical btn-group-xs">
+                                <div class="btn-group dropdown">
+                                    <button type="button" class="btn dropdown-toggle filterButton-2rXhv btn-default btn-xs zIndex-3_KOO" title="Export" (click)="redrawAllRows()">
+                                        <span>
+                                           <svg width="11px" height="11px" viewBox="0 0 16 16">
+                                              <path fill="#4A4A4A" d="M16,14 L16,16 L0,16 L0,14 L0,10 L2,10 L2,14 L14,14 L14,10 L16,10 L16,14 Z M13,7 L8,12 L3,7 L4.42,5.58 L7,8.17 L7,1 L9,1 L9,8.17 L11.59,5.59 L13,7 Z"></path>
+                                           </svg>
+                                           <!-- <span> <span class="caret"></span></span> -->
+                                        </span>
+                                     </button>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a>CSV</a></li>
+                                        <li><a>Excel</a></li>
+                                        <li><a>ODS</a></li>
+                                        <li><a>PDF</a></li>
+                                    </ul>
+                                </div>
+                                <button type="button" class="btn filterButton-2rXhv btn-default zIndex-3_KOO" title="FullScreen" icon="plus-circle" (click)="fullScreen()"><span><span><span class="fa fa-plus-circle"></span> </span></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

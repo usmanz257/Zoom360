@@ -1,0 +1,56 @@
+<div class="css-7eznv6" style="z-index: 0;">
+    <div class="css-8pd3g8" style="z-index: 0;">
+        <div class="css-19eq8b8"> <span class="css-1v8nodn">Extract Logs  <span class="css-1x48jmz" style="margin-top: 4px;">{{AllExtractService._recordLength}}</span><span></span></span>
+            <div class="css-f128gq"><span class="css-79bu3q"><a class="css-db069s" role="tab" id="heading3" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3" (click)="buttonText()">{{widgetAccorButtonText}}</a></span>
+            </div>
+        </div>
+        <hr class="css-rni0qy" mx="zero" role="separator" aria-orientation="horizontal">
+    </div>
+    <div id="collapse3" class="panel-collapse collapse" aria-labelledby="heading3" data-parent="#accordion3">
+        <div class="css-15rwz9m" *ngFor="let AllExtract of AllExtractService.extractData">
+            <div style="display: flex;">
+
+                <div class="css-52rjj8" style="width: 80%;">
+                    <div class="css-1vb8eg4">
+                        <div class="css-f128gq"><span class="css-1x48jmz" [ngClass]="
+                    {
+                    'label-red': AllExtract.statusExtract === 'Deleted',
+                    'label-raw': AllExtract.statusExtract === 'Raw',
+                    'label-orange': AllExtract.statusExtract === 'Warning',
+                    'label-blue': AllExtract.statusExtract === 'Collected',
+                    'label-green': AllExtract.statusExtract === 'Imported'
+                    }">{{AllExtract.statusExtract}}</span><span class="css-qyqq4c">{{AllExtract.serverInsertDate}}</span>
+                        </div>
+
+                        <div class="css-n0eob4">
+
+                            <!-- <button class="css-1cfj1v2" type="button" aria-expanded="false" aria-controls="id-g0h4ji" aria-haspopup="menu">
+                        <svg class="css-1xurosb" fill="currentcolor" viewBox="0 0 24 24">
+                            <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
+                        </svg>
+                    </button>
+                    <div class="css-qowjcb css-m0pid7" id="id-g0h4ji" hidden="" role="menu" tabindex="-1" data-dialog="true" aria-orientation="vertical" style="display: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; transform: translate(1032px, 220px);"><a class="css-1agkww" id="id-g0h4ji-1" tabindex="0" role="menuitem" href="/utils/21/facebook-ads-pixel-stats-aggregation-on-url/facebook_ads_pixel_stats-21-20200720-b8de3b02b84841c284d6c9f08f952a4c.csv/requeue/">Requeue for Import</a>
+                        <a class="css-1agkww" id="id-g0h4ji-2" tabindex="-1" role="menuitem" href="/utils/21/facebook-ads-pixel-stats-aggregation-on-url/facebook_ads_pixel_stats-21-20200720-b8de3b02b84841c284d6c9f08f952a4c.csv/refetch/">Fetch again with same Time Range</a>
+                        <a class="css-1agkww" id="id-g0h4ji-3" tabindex="-1" role="menuitem" href="/api/extracts/57/download/">Download</a>
+                    </div> -->
+                        </div>
+                    </div>
+                    <div class="css-178srh5">
+                        <h1 class="css-1qck51l"><a class="css-am6n7a" href="#">{{AllExtract.sourceName}}</a></h1>
+                        <div class="css-1m45hbv" tabindex="-1"><a class="css-db069s" href="#">{{AllExtract.fileName}}</a>
+                        </div>
+                        <div class="css-15rwz9m"><span class="css-1vvpe8z">{{AllExtract.rowsCountExtract}} rows, {{AllExtract.colsCountExtract}} columns ({{AllExtract.dataSizeExtract/1024 | number:'1.0-1'}} KB)</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="../../../assets/images/{{AllExtract.appearanceLogo}}" width="95" height="70" style="padding: 15px;" />
+                </div>
+            </div>
+            <hr class="css-1mn79hm" mx="zero" role="separator" aria-orientation="horizontal" style="margin-top: 5px;">
+        </div>
+
+        <hr class="css-1mn79hm" mx="zero" role="separator" aria-orientation="horizontal">
+
+    </div>
+</div>

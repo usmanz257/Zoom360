@@ -1,0 +1,44 @@
+.switch input[type=checkbox]{
+    height: 16px;
+    width: 32px;
+    background-color: rgb(221, 224, 228);
+    -webkit-appearance:none;
+    border-radius: 30px;
+    outline: none;
+    position: relative;
+    font-weight: bolder;
+    /*  */
+  }
+  .switch input[type=checkbox]:before {
+    content:url(../../../../../assets/images/cross-move.svg) ;
+     position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: rgb(147, 155, 163);
+   left: -1px;
+   top: 0px;
+   border-radius: 50%;
+   transition-duration: .3s;
+   color: #555;
+  }
+  .switch input:checked[type=checkbox]{
+    background-color:rgb(221, 224, 228);
+  }
+  .switch input:checked[type=checkbox]:before{
+    content: url(../../../../../assets/images/tick-move.svg);
+  
+     position: absolute;
+    height: 16px;
+    width: 16px;
+    line-height: -8px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgb(27, 132, 133);
+    left: 15px;
+    top: 0px;
+    transition-duration: .3s;
+  }
+  .image-padding{
+    padding: 30px;
+  }
+   

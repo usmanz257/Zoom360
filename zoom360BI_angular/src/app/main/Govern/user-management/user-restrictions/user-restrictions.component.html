@@ -1,0 +1,93 @@
+<form [formGroup]="SaveUserRestriction" (ngSubmit)="SaveConfig(SaveUserRestriction.value)" autocomplete="off">
+   
+<div class="row">
+    <div class="col-md-12" style="padding: 0px;" >
+        <div class="col-md-4"  >
+          <div class="main-section">
+              <h3 style="margin-bottom: 17.5px;">
+                Restrictions
+              </h3>
+          </div>   
+      </div>
+      <div class="col-md-7 col-md-offset-1"  >
+          <div class="main-section  pull-right">
+              <div class="input-bar-item">
+                <input class="css-xpr64j" id="savebtn" type="submit" style="margin-right: 5px;" value="+ Add new user" (click)="this.userAccessManagementService.newUser()">
+                <input class="css-xpr64j" id="savebtn" type="submit" style="margin-right: 5px;" value="Make a copy">
+                <input class="css-xpr64j" id="savebtn" type="submit" style="margin-right: 5px;" value="Save changes">
+                
+                <input class="css-xpr64j" id="savebtn" type="submit" style="margin-right: 5px;" value="Disable user">
+                <input class="css-xpr64j" id="savebtn" type="submit"  routerLink="/govern/accessmanagement/userslist" value="Goto list page"/>
+                  </div>
+          </div>   
+      </div>
+      
+    </div>
+    </div>
+<div id="content-main" class="contentMain">
+        <fieldset class="module aligned ">
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth"></label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="RegistarionAccessMode" value="Restricted access" style="margin-top: -1px;">Restricted access (to own created components only)
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="RegistarionAccessMode" value="2" style="margin-top: -1px;">Open access
+                        </div>
+                    </div>
+                    <div class="help">
+                        User shall be allowed to view only those data and components which are created by its own login.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <!-- <label class="required" for="id_auth"></label> -->
+                    <div class="related-widget-wrapper">
+                    </div>
+                    <div class="help">
+                        This restriction is applied on allowed workspaces, modes, modules and access rights defined in the permissions section
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <!-- <label class="label-text" for="id_stack">Email Address</label> -->
+                    <div class="related-widget-wrapper">
+                        <div class="form-check" style="padding-left: 0px; margin-top: 5px;">
+                            
+                            <input type="checkbox" formControlName="SupervisorMode" class="form-check-input" id="exampleCheck1" (click)="showSupervisor($event)">
+                            <label class="form-check-label" for="exampleCheck1" style="margin-left: 20px;">Supervisor</label>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="help ">
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack" *ngIf="shown">
+                <div>
+                    <label class="label-text" for="id_stack">Supervisor name</label>
+                    <div class="related-widget-wrapper">
+                        <!-- <input id="timeZone" #checkbox ej-dropdownlist [dataSource]="_superVisor" [fields]="fieldsvalues" showCheckbox="true" watermarkText="Select a skill" width="100%" multiSelectMode="visualmode" width="480px" /> -->
+                        <!-- <ejs-dropdownlist id='defaultPage' [dataSource]='_superVisor' [(value)]='SupervisorName' [fields]='fieldsvalues' placeholder='select default Page' ></ejs-dropdownlist> -->
+                        <input id="SupervisorName" #checkbox ej-dropdownlist [dataSource]="_superVisor" [fields]="fieldsvalues" showCheckbox="true" watermarkText="Select supervisor" width="100%" multiSelectMode="visualmode" width="480px" />
+                    </div>
+                    <!--  -->
+                    <div class="help">
+
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned " style="height:286px;">
+
+        </fieldset>
+
+       
+    
+</div>
+</form>

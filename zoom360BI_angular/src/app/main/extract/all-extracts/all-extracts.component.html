@@ -1,0 +1,234 @@
+<div class="generic-django-admin-header">
+
+    <div class="main-section">
+        <h3 style="margin-bottom: 17.5px;">
+            Extract Logs
+        </h3>
+    </div>
+</div>
+<app-connect-filters></app-connect-filters>
+<div class="generic-django-admin-header" style="padding-top: 20px;">
+    <div class="main-section">
+        <div id="toolbar" class="filter-toolbar" role="toolbar">
+            <div class="actions btn-group btn-group-sm">
+                <button type="button" class="select-button-secondary" data-toggle="dropdown" style="min-width: 80px;">
+                {{_tablecounter}} of {{AllExtractService._recordLength}}
+       
+            </button>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+<div id="content-main" class="contentMain">
+    <div id="feedback-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Submit Error Classification Feedback</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="feedback-modal-form" class="form-horizontal">
+                        <div class="form-group"><label for="feedback-text" class="col-sm-2 control-label">Your Feedback Message </label><textarea rows="10" cols="50" id="feedback-text" required="">Please review this classification.</textarea></div>
+                    </form>
+                </div>
+                <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close </button><button id="feedback-modal-submit" class="btn btn-primary">Submit </button></div>
+            </div>
+        </div>
+    </div>
+    <!-- Feedback -->
+    <div id="changelist">
+        <form id="changelist-form" method="post" novalidate="">
+            <input type="hidden" name="csrfmiddlewaretoken" value="p3OrdA7jO7tDXpzy14vnw0bpP8cPLhQ0db5UojzDeDATR4Pdhh8Sm0jRhwWPXRRi"><input type="hidden" name="action" value=""><input name="index" value="0" type="hidden"><input class="select-across" name="select_across"
+                value="0" type="hidden">
+            <!--
+    <div class="xfull">
+    <ul class="toplinks">
+    <li class="date-back"><a href="#">‹ All dates</a></li>
+    <li><a href="#">June 2020</a></li>
+    <li><a href="#">July 2020</a></li>
+    </ul>
+    <br class="clear">
+    </div>
+    -->
+            <div class="results">
+                <table id="result_list" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="action-checkbox-column">
+                                <div class="cell-wrapper" title="Select all rows">
+                                    <div class="text">
+                                        <input type="checkbox" name="all" [checked]="allcheckbox" (change)="checkAll($event)" (click)="functionCount($event)" />
+
+                                    </div>
+                                </div>
+
+                            </th>
+
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('statusExtract')">
+                                        Status
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="" [ngClass]="status_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="status_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('fileName')">
+                                        Name
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="" [ngClass]="name_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="name_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('serverInsertDate')">
+                                        Created
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="" [ngClass]="Created_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="Created_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('connectionName')">
+                                        Datastream
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="" [ngClass]="datastream_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="datastream_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('userNameInsert')">
+                                        Client Name/ID
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="" [ngClass]="clientName_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="clientName_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('rowsCountExtract')">
+                                        Rows
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="" [ngClass]="datarow_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="datarow_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('colsCountExtract')">
+                                        Columns
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="" [ngClass]="datacolumn_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="datacolumn_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+
+                            <th scope="col" class="sortable column-dashboard_link sorted ascending">
+                                <div class="cell-wrapper" title="Toggle sorting">
+                                    <a class="toggle-link" (click)="applySort('dataSizeExtract')">
+                                        Filesize
+                                    <span class="sortoptions sortdirectionn">
+                                            <span class="" [ngClass]="filesize_toggle ? 'toggle ascending' : 'toggle descending'" *ngIf="filesize_arrow"></span>
+                                    </span>
+                                    </a>
+                                    <div class="sortoptions remove">
+                                        <a class="sortremove" title="Remove from sorting" (click)="reloadPage()"></a>
+                                    </div>
+                                </div>
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let AllExtract of AllExtractService.extractData ">
+                            <td class="action-checkbox">
+                                <input type="checkbox" [(ngModel)]="AllExtract.state" name="something" (change)="findCount($event)" />
+                            </td>
+                            <td class="field-status_label">
+                                <a href="">
+                                    <span style="font-weight: 400;" class="label" [ngClass]="
+                                    {
+                                    'label-red': AllExtract.statusExtract === 'Deleted',
+                                    'label-raw': AllExtract.statusExtract === 'Raw',
+                                    'label-orange': AllExtract.statusExtract === 'Warning',
+                                    'label-blue': AllExtract.statusExtract === 'Collected',
+                                    'label-green':  (AllExtract.statusExtract === 'Imported' || AllExtract.statusExtract === 'Done')                                    
+                                    }">{{AllExtract.statusExtract}}</span>
+                                    <!-- <span class="label label-blue" [ngStyle]="{'message': {{AllExtract.status}} = 'Deleted',
+                                    'warn': info.priority > 10 && info.priority < 20, 
+                                    'error fa fa-exclamation-triangle': info.priority>30}">{{AllExtract.status}}</span> -->
+                                </a>
+                            </td>
+                            <td class="field-name">
+                                <a id="{{AllExtract.sourceAccountid}}">{{AllExtract.fileName}}</a>
+                            </td>
+                            <td class="field-created nowrap"><a href="#">{{AllExtract.serverInsertDate}}</a>
+                            </td>
+                            <td class="field-datastream nowrap" style="min-width: 190px;">{{AllExtract.connectionName}}</td>
+                            <td class="field-adverity_metadata">{{AllExtract.userNameInsert}}</td>
+                            <td class="field-nrows">{{AllExtract.rowsCountExtract}}</td>
+                            <td class="field-ncols">{{AllExtract.colsCountExtract}}</td>
+                            <td class="field-filesize">{{AllExtract.dataSizeExtract}}</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pull-left">
+                <!-- <ul class="pagination">
+                    <button class="pagination-button" type="button"><a >1</a> </button>
+                    <button class="pagination-button active-page" type="button"><span class="this-page">2</span> </button>
+                    <button class="pagination-button" type="button"><a >1</a> </button>
+                    <button class="pagination-button active-page" type="button"><span class="this-page">2</span> </button>
+                </ul>
+            </div>
+            <div class="pull-left changelist-botton-row changelist-pagination">
+                &nbsp;&nbsp;
+                <a href="?all=" class="pagination-button-all">Show all</a> &nbsp; -->
+                <span class="pagination-element-counter">{{AllExtractService._recordLength}} Datastream extract</span>
+            </div>
+        </form>
+    </div>
+</div>

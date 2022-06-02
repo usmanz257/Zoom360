@@ -1,0 +1,18 @@
+<div class="dashboards-column-right" style="border-width: 0px 0px 0px 1px; border-color: rgb(221, 224, 228); border-style: solid;">
+    <div class="row" style="margin-right: 0px;">
+        <div class="col-md-12" style="height:600px">
+            <gridster [options]="options">
+                <gridster-item [item]="item" *ngFor="let item of dashboard">
+                    <div class="gridster-item-content" 
+                (mousedown)="$event.stopPropagation()" 
+                (touchstart)="$event.stopPropagation()">
+                        <button (click)="removeItem(item)">remove</button>
+                    </div>
+                </gridster-item>
+            </gridster>
+        </div>
+    </div>
+   
+</div>
+
+<button (click)="addItem()">Add</button>

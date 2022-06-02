@@ -1,0 +1,48 @@
+<div style="height: 300px">
+   <div class="css-1qm07br">
+       <span class="css-12l7gva">Add New Connection</span>
+       <div class="css-1vkpoll">
+        <div class="css-1vkpoll">
+           <a [ngClass]="addNewConnectoinWizardStyle.ConnectionTypeWizardClass"  >Connector Type</a>
+          <hr class="css-1higl9s" mx="zero" role="separator" aria-orientation="vertical"></div>
+          <!-- <div class="css-1vkpoll">
+             <a [ngClass]="WizardControlsService.ConnectionTypeWizardClass"  >Connector Type</a>
+            <hr class="css-1higl9s" mx="zero" role="separator" aria-orientation="vertical"></div> -->
+            <div class="css-1vkpoll" *ngIf="addNewConnectoinWizardStyle.TempleteAccountWizard">
+               <button class="AddNewConnectionTemplatewizardDisabled"  disabled>Description</button>
+              <hr class="css-iq3ejn" mx="zero" role="separator" aria-orientation="vertical">
+           </div>
+           <div class="css-1vkpoll" *ngIf="!addNewConnectoinWizardStyle.TempleteAccountWizard">
+            <a [ngClass]="addNewConnectoinWizardStyle.TempleteWizardClass">Description</a>
+           <hr class="css-1higl9s" mx="zero" role="separator" aria-orientation="vertical">
+         </div> 
+          <div class="css-1vkpoll" *ngIf="addNewConnectoinWizardStyle.SourceAccountDisable">
+             <button class="AddNewConnectionSourcewizardDisabled" disabled>Template</button>
+            <hr class="css-iq3ejn" mx="zero" role="separator" aria-orientation="vertical">
+         </div>
+         <div class="css-1vkpoll" *ngIf="!addNewConnectoinWizardStyle.SourceAccountDisable">
+            <a [ngClass]="addNewConnectoinWizardStyle.SourceAccountClass" >Template</a>
+            <hr class="css-iq3ejn" mx="zero" role="separator" aria-orientation="vertical">
+            </div>
+            <div class="css-1vkpoll" *ngIf="addNewConnectoinWizardStyle.ConfiguureWizard">
+              <button class="css-192os43" disabled>Configuration</button>
+           </div>
+          <div class="css-1vkpoll" *ngIf="!addNewConnectoinWizardStyle.ConfiguureWizard">
+             <a [ngClass]="addNewConnectoinWizardStyle.ConfiguureWizardClass" >Configuration</a>
+              </div>
+          
+         
+     
+     
+     
+   
+   
+   
+    
+    
+      
+   
+    
+       </div>
+    </div>
+   </div>

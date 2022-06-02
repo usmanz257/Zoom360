@@ -1,0 +1,98 @@
+<div class="generic-django-admin-header">
+    <div class="main-section">
+        <h3>Quota Allowed</h3>
+    </div>
+    <div class="tool-section">
+    </div>
+</div>
+<div id="content-main" class="contentMain">
+    <form [formGroup]="QuotaSettings" (ngSubmit)="SaveConfig(QuotaSettings.value)" autocomplete="off">
+        <fieldset class="module aligned ">
+            <div class="form-row field-stack">
+                <div>
+                    <label class="label-text" for="id_stack">Quota Limit</label>
+                    <div class="related-widget-wrapper">
+                        <input type="text" value="Default" required="" class="vTextField" maxlength="60" formControlName="quotaLimit" required>
+                    </div>
+                    <!--  -->
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Quota Type </label>
+                    <div class="related-widget-wrapper">
+
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="quotaType" value="Source Rows Count" style="margin-top: -1px;">Source Rows Count
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="quotaType" value="Source Data Size" style="margin-top: -1px;">Source Data Size
+                        </div>
+
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Quota Usage Cycle </label>
+                    <div class="related-widget-wrapper">
+
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="quotaUsageCycle" value="Daily Usage" style="margin-top: -1px;">Daily Usage
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="quotaUsageCycle" value="Monthly Usage" style="margin-top: -1px;">Monthly Usage
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="quotaUsageCycle" value="Quarterly Usage" style="margin-top: -1px;">Quarterly Usage
+                        </div>
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="quotaUsageCycle" value="Yearly Usage" style="margin-top: -1px;">Yearly Usage
+                        </div>
+                    </div>
+                    <div class="help">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Quota Start Date </label>
+                    <div class="related-widget-wrapper">
+                        <input type="date" formControlName="quotaStartDate" class="control-width" />
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Quota End Date</label>
+                    <div class="related-widget-wrapper">
+                        <input type="date" formControlName="quotaEndDate" class="control-width" />
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+        </fieldset>
+        <div>
+            <div class="css-1qbrnrg">
+                <hr class="css-1c3fhlt" mx="zero" role="separator" aria-orientation="horizontal">
+                <div class="css-1x62jim">
+                    <div class="css-p84alj">
+                        <div class="css-rvqhyx"><a class="css-ebx8b0" href="/instagram_business/instagrambusinessdatastream/27/delete/">Delete</a><a class="css-b2qa21" href="/core/apidatastream/clone?pk=27">Clone</a></div>
+                    </div>
+                    <div class="css-1w7dt24">
+                        <ejs-toast #defaulttoast   [position]="position" >                
+                        </ejs-toast>
+                        <div class="css-rvqhyx"><button class="css-b2qa21" type="button" name="_continue">Save and continue editing</button>
+                            <button class="css-xpr64j .e-toast-container .e-toast " type="submit" name="_save" [ngClass]="{'diabled-color': !QuotaSettings.valid}" [disabled]="!QuotaSettings.valid">Save</button> <span>{{quotaService.Status_message}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

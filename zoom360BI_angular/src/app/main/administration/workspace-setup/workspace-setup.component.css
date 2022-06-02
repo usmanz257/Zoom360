@@ -1,0 +1,26 @@
+.label-text {
+    color: #343B40 !important;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.validation-div {
+    padding: 5px !important;
+    margin-bottom: 0px !important;
+}
+
+.diabled-color {
+    background-color: rgb(102, 202, 203) !important;
+    cursor: not-allowed !important;
+}
+
+.alert-mysuccess {
+    background-color: #f4fafa;
+    border-color: #e8f5ed;
+    color: #219b9c;
+    padding: 2px 8px;
+    margin-bottom: 0px !important;
+}
+/* .e-ddl.e-input-group, .e-ddl.e-input-group.e-input-focus:focus {
+    border-radius: 2px;
+} */

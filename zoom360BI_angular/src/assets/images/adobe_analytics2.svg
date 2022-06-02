@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 210 210" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g>
+        <g transform="matrix(1.01646,0,0,1.01695,-17.5847,-13.4237)">
+            <path d="M27.9,116.4C27.9,65.2 69.4,23.7 120.5,23.7C171.6,23.7 213.1,65.2 213.1,116.4C213.1,167.6 171.6,209.1 120.5,209.1C69.4,209.1 27.9,167.6 27.9,116.4Z" style="fill:url(#_Radial1);"/>
+        </g>
+        <g transform="matrix(1.01646,0,0,1.01695,-17.5847,-13.4237)">
+            <path d="M17.3,116.4C17.3,173.4 63.5,219.7 120.6,219.7C177.7,219.7 223.9,173.5 223.9,116.4C223.9,59.3 177.6,13.2 120.5,13.2C63.4,13.2 17.3,59.4 17.3,116.4ZM27.9,116.4C27.9,65.2 69.4,23.7 120.5,23.7C171.6,23.7 213.1,65.2 213.1,116.4C213.1,167.6 171.6,209.1 120.5,209.1C69.4,209.1 27.9,167.6 27.9,116.4Z" style="fill:rgb(139,126,186);"/>
+        </g>
+        <g transform="matrix(1.01646,0,0,1.01695,-17.5847,-13.4237)">
+            <path d="M97.5,117.4L88,117.4L88,179.8C90.9,181.3 94.4,182.5 97.5,183.6L97.5,117.4ZM115,113.4L115,187C116.3,187.1 118.3,187.7 119.6,187.7C121.3,187.7 122.8,187.7 124.5,187.6L124.5,113.4L115,113.4L115,113.4ZM169.5,165.6C172.9,162 176.4,157.7 179,153.5L179,105.9L169.5,105.9L169.5,165.6ZM65.4,121.4L87.3,96.1L108.1,103.9L152.7,72L175.1,93.2L186.4,84.2L184.7,80.5L175.3,88.4L153.2,67.8L108,100L87,91.9L63.6,118.3L49,121.8L49,125.2L65.4,121.4ZM70,136.4L60.5,136.4L60.5,154.8C63.1,158.8 66.6,162.6 70,166L70,136.4ZM152,94.4L142.5,94.4L142.5,183.3C145.6,182.2 149.1,180.9 152,179.3L152,94.4Z" style="fill:rgb(224,214,233);fill-rule:nonzero;"/>
+        </g>
+    </g>
+    <defs>
+        <radialGradient id="_Radial1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(156.61,0,0,156.911,95.7103,77.9295)"><stop offset="0%" style="stop-color:rgb(60,50,86);stop-opacity:1"/><stop offset="76%" style="stop-color:rgb(23,15,49);stop-opacity:1"/><stop offset="100%" style="stop-color:rgb(23,15,49);stop-opacity:1"/></radialGradient>
+    </defs>
+</svg>

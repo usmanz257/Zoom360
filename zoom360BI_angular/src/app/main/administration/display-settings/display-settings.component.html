@@ -1,0 +1,90 @@
+<div class="generic-django-admin-header">
+    <div class="main-section">
+        <h3>Numbering System Settings</h3>
+    </div>
+    <div class="tool-section">
+    </div>
+</div>
+<div id="content-main" class="contentMain">
+    <form [formGroup]="DisplaySettings" (ngSubmit)="SaveConfig(DisplaySettings.value)" autocomplete="off">
+        <fieldset class="module aligned ">
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Workspace display mode</label>
+                    <div class="related-widget-wrapper">
+                        <div style="display: block; margin-left: 20px; margin-top: 5px;">
+                            <input type="radio" formControlName="workspaceDisplayMode" value="Browser based" style="margin-top: -1px;">Browser based
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="workspaceDisplayMode" value="Responsive" style="margin-top: -1px;">Responsive
+                        </div>
+                        <div style="display: block; margin-left: 20px;">
+                            <input type="radio" formControlName="workspaceDisplayMode" value="TV mode" style="margin-top: -1px;">TV mode
+                        </div>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Workspace Logo</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Workspace Logo</label>
+                    <div class="related-widget-wrapper">
+                        <img src="../../../assets/images/fbcore.svg" height="50px" width="50px" style="border: 1px solid ;" />
+                        <!-- <input type="color" formControlName="PositiveNumbeColorCode" id="favcolor" name="favcolor" style="height: 28px; padding: 2px;"> -->
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Log background color</label>
+                    <div class="related-widget-wrapper">
+                        <input type="color" formControlName="logoBackgroundColor" id="favcolor" name="favcolor" style="height: 28px; padding: 2px;">
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="module aligned ">
+            <h2>Theme & Color</h2>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Workspace Theme/Color</label>
+                    <div class="related-widget-wrapper">
+                        <ejs-dropdownlist id='workspaceThemeColor'  [dataSource]="workspaceThemeColor" cssClass="edit-Dropdown" placeholder="Select Workspace Theme/Color" [(fields)]='field' formControlName="workspaceTheme"></ejs-dropdownlist>
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+            <div class="form-row field-stack">
+                <div>
+                    <label class="required" for="id_auth">Log background color</label>
+                    <div class="related-widget-wrapper">
+                        <input type="color" formControlName="colorPallete" id="favcolor" name="favcolor" style="height: 28px; padding: 2px;">
+                    </div>
+                    <div class="help"></div>
+                </div>
+            </div>
+        </fieldset>
+        <div>
+            <div class="css-1qbrnrg ">
+                <hr class="css-1c3fhlt " mx="zero " role="separator " aria-orientation="horizontal ">
+                <div class="css-1x62jim ">
+                    <div class="css-p84alj ">
+                        <div class="css-rvqhyx "><a class="css-ebx8b0 " href="/instagram_business/instagrambusinessdatastream/27/delete/ ">Delete</a><a class="css-b2qa21 " href="/core/apidatastream/clone?pk=27 ">Clone</a></div>
+                    </div>
+                    <div class="css-1w7dt24 ">
+                        <ejs-toast #defaulttoast   [position]="position" >                
+                        </ejs-toast>
+                        <div class="css-rvqhyx "><button class="css-b2qa21 " type="button " name="_continue ">Save and continue editing</button>
+                            <button class="css-xpr64j .e-toast-container .e-toast " type="submit " name="_save ">Save</button><span>{{displaySettingService.Status_message}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

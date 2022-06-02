@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #002050;
+      }
+    </style>
+  </defs>
+  <title>logo_dynamics</title>
+  <g id="Names">
+    <g>
+      <polygon class="cls-1" points="13 63.48 25.33 28.08 13 20 13 63.48"/>
+      <polygon class="cls-1" points="52 42.09 52 22 13 63.98 52 42.09"/>
+      <polygon class="cls-1" points="13 0.04 13 17 38.45 29.48 50.28 19.86 13 0.04"/>
+    </g>
+  </g>
+</svg>

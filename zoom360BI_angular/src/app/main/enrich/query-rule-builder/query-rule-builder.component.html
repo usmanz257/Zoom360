@@ -1,0 +1,43 @@
+
+  <div id="action-description">
+    <p>This sample demonstrates the default functionalities of the Query Builder component. Click the plus button to
+      add group or conditions.</p>
+      <div class="row">
+      <div class="col-sm-12 col-md-4" style="margin-bottom: 10px;">
+        <label for="exampleInputEmail1" class="form-label">Enter Rule Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">Write rule name here.</div>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-sm-12 col-md-4" style="margin-bottom: 10px;">
+        <label for="exampleInputEmail1" class="form-label">Select table</label>
+        <ejs-dropdownlist id='_tableNames' Name="workspaceDropDown" [dataSource]="tableNameList" [(fields)]='fieldsvalues' placeholder='Select table' (change)='getobjectfield($event.value)'></ejs-dropdownlist>
+        <div id="emailHelp" class="form-text">Select table from here.</div>
+      </div>
+    </div>
+  </div>
+  <!-- (ruleChange)="updateRule($event)" -->
+  <div class="row">
+    <div class="col-md-12">
+        <ejs-querybuilder #querybuilder class="row" width="70%" [dataSource]="columnNames" (created)="createdControl()">
+          <e-columns>
+            <e-column *ngFor="let item of columnNames" [field]="item.objecT_FIELD_NAME" [label]="item.objecT_FIELD_NAME" [type]="item.objecT_FIELD_TYPE==null?'string':item.objecT_FIELD_TYPE"></e-column>
+            <!-- <e-column field="Name" label="Name" type="string"></e-column>
+            <e-column field="Category" label="Category" type="string"></e-column>
+            <e-column field="SerialNo" label="SerialNo" type="string"></e-column>
+            <e-column field="InvoiceNo" label="InvoiceNo" type="string"></e-column>
+            <e-column field="Status" label="Status" type="string"></e-column>
+            <e-column field="Status" label="Status" type="string"></e-column> -->
+          </e-columns>
+        </ejs-querybuilder>
+    </div>
+  </div>
+  <div style="margin-top: 10px;">
+  <button class="e-btn e-primary e-qb-button" style="padding-top: 5px;padding-bottom: 5px;margin-right: 5px;" (click)="setRules()" >Set Rules</button>
+  <button class="e-btn e-primary e-qb-button"  style="padding-top: 5px;padding-bottom: 5px;margin-right: 5px;" (click)="getSql()" >Get Sql</button>
+  <button class="e-btn e-primary e-qbr-button"  style="padding-top: 5px;padding-bottom: 5px;margin-right: 5px;" (click)="getJson()" >Get Json</button>
+</div>
+<div style="margin-top: 5px;">
+
+</div>

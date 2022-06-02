@@ -1,0 +1,95 @@
+<div style="height: 300px">
+<div class="css-1qm07br">
+    <span class="css-12l7gva">Add new Datastream</span>
+    <div class="css-1vkpoll">
+       <!-- <div class="css-1vkpoll">
+
+
+        
+
+
+          <a class="color"  routerLinkActive="css-1w5p645"  routerLink="/AddnewDataStream/SelectType">Type</a>
+          <hr class="css-iq3ejn" mx="zero" role="separator" aria-orientation="vertical">
+       </div> -->
+       <div class="css-1vkpoll">
+          <a [ngClass]="WizardControlsService.ConnectionTypeWizardClass"  >Connector Type</a>
+         <hr class="css-1higl9s" mx="zero" role="separator" aria-orientation="vertical"></div>
+         <!-- (click)="onclickTypeDisableBelowWizard()" -->
+
+       <!-- <div class="css-1vkpoll">
+          <button class="css-107z33x"  routerLinkActive="color" routerLink="/AddnewDataStream/NewConnections" disabled>Connection</button>
+          <hr class="css-iq3ejn" mx="zero" role="separator" aria-orientation="vertical">
+       </div> -->
+       <div class="css-1vkpoll" *ngIf="WizardControlsService.SourceAccountDisable">
+          <button class="css-107z33x" disabled>Source Account</button>
+         <hr class="css-iq3ejn" mx="zero" role="separator" aria-orientation="vertical">
+      </div>
+      <div class="css-1vkpoll" *ngIf="!WizardControlsService.SourceAccountDisable">
+         <a [ngClass]="WizardControlsService.SourceAccountClass" >Source Account</a>
+        <hr class="css-1higl9s" mx="zero" role="separator" aria-orientation="vertical"></div>
+        <!-- (click)="ReversSourceAccountClass()" -->
+      <!-- <div class="css-1vkpoll"  >
+         <a  class="Connectoin" routerLinkActive="ConnectoinColorOnSelect"  routerLink="/extract/AddnewDataStream/Micr">Connection</a>
+         <hr class="css-iq3ejn" mx="zero" role="separator" aria-orientation="vertical"></div> -->
+       <!-- <div class="css-1vkpoll">
+          <button class="css-11p48i9">Template</button>
+          <hr class="css-iq3ejn" mx="zero" role="separator" aria-orientation="vertical">
+       </div> -->
+       <div class="css-1vkpoll" *ngIf="WizardControlsService.TempleteAccountWizard">
+         <button class="css-11p48i9"  disabled>Template</button>
+        <hr class="css-iq3ejn" mx="zero" role="separator" aria-orientation="vertical">
+     </div>
+     <div class="css-1vkpoll" *ngIf="!WizardControlsService.TempleteAccountWizard">
+      <a [ngClass]="WizardControlsService.TempleteWizardClass">Template</a>
+     <hr class="css-1higl9s" mx="zero" role="separator" aria-orientation="vertical">
+   </div>
+     <div class="css-1vkpoll"  *ngIf="WizardControlsService.SourceObjectWizard">
+      <button class="css-192os43" disabled >Source Object(s)</button>
+     <hr class="css-iq3ejn" mx="zero" role="separator" aria-orientation="vertical">
+  </div>
+  <div class="css-1vkpoll" *ngIf="!WizardControlsService.SourceObjectWizard">
+   <a [ngClass]="WizardControlsService.SourceObjectWizardClass">Source Object(s)</a>
+  <hr class="css-1higl9s" mx="zero" role="separator" aria-orientation="vertical"></div>
+  
+  
+  <div class="css-1vkpoll"  *ngIf="WizardControlsService.FilterWizzard">
+   <button class="css-11p48i9filter" disabled>Filters</button>
+  <hr class="css-iq3ejn" mx="zero" role="separator" aria-orientation="vertical">
+</div>
+<div class="css-1vkpoll" *ngIf="!WizardControlsService.FilterWizzard">
+<a [ngClass]="WizardControlsService.FilterWizzardClass">Filters</a>
+<hr class="css-1higl9s" mx="zero" role="separator" aria-orientation="vertical"></div>
+
+
+
+
+
+<div class="css-1vkpoll"  *ngIf="WizardControlsService.FilterSelectionWizard">
+   <button class="css-FilterSelection" disabled>Fields Selection</button>
+  <hr class="css-iq3ejn" mx="zero" role="separator" aria-orientation="vertical">
+</div>
+<div class="css-1vkpoll" *ngIf="!WizardControlsService.FilterSelectionWizard">
+<a [ngClass]="WizardControlsService.FilterSelectionClass">Fields Selection</a>
+<hr class="css-1higl9s" mx="zero" role="separator" aria-orientation="vertical">
+</div>
+
+<div class="css-1vkpoll"  *ngIf="WizardControlsService.ExecitionPlanWizard">
+   <button class="css-ExecutionPlanWizardDisabled" disabled>Execution Plan</button>
+  <hr class="css-iq3ejn" mx="zero" role="separator" aria-orientation="vertical">
+</div>
+<div class="css-1vkpoll" *ngIf="!WizardControlsService.ExecitionPlanWizard">
+<a [ngClass]="WizardControlsService.ExecitionPlanWizardClass">Execution Plan</a>
+<hr class="css-1higl9s" mx="zero" role="separator" aria-orientation="vertical"></div>
+   
+
+<div class="css-1vkpoll"  *ngIf="WizardControlsService.ExtractWizard">
+   <button class="css-ExractWizardDisabled" disabled>Extract</button>
+  <!-- <hr class="css-iq3ejn" mx="zero" role="separator" aria-orientation="vertical"> -->
+</div>
+<div class="css-1vkpoll" *ngIf="!WizardControlsService.ExtractWizard">
+<a [ngClass]="WizardControlsService.ExtractWizardClass">Extract</a>
+<!-- <hr class="css-1higl9s" mx="zero" role="separator" aria-orientation="vertical"> -->
+</div>
+    </div>
+ </div>
+</div>

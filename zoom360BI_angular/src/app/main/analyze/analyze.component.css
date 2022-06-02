@@ -1,0 +1,149 @@
+/* .e-list-item.e-level-2.e-active.e-node-focus >.e-list-text { */
+/* background-color: #219b9c !important;
+    border-color: #219b9c !important; */
+
+/* } */
+
+/* .e-treeview .e-list-item.e-active > .e-text-content .e-list-text { */
+/* color: #fff; */
+/* color: rgb(33, 155, 156) !important;
+    font-size: 12px !important;
+    font-weight: 400 !;
+  } */
+/* .e-treeview .e-list-text {
+   
+} */
+
+/* e-icons interaction e-icon-collapsible */
+/* .e-treeview .e-list-item div.e-icons::before{
+    float: left !important;
+  font-family: FontAwesome;
+  content:"\f067";
+  padding-right: 5px;
+  color: #515961;
+  rotate: none !important;
+} */
+/* .e-treeview .e-list-item div.e-icons.interaction.e-icon-expandable::before{
+    float: left !important;
+  font-family: FontAwesome;
+  content:"\f067";
+  padding-right: 5px;
+  color: #515961;
+  rotate: none !important;
+}
+.e-treeview .e-list-item div.e-icons.interaction.e-icon-collapsible::before {
+    float: left !important;
+  font-family: FontAwesome;
+  content:"\f068" !important;
+  padding-right: 5px;
+  color: #515961;
+  rotate: none !important;
+} */
+.e-treeview .e-list-item.e-level-2.e-active > .e-text-content {
+  padding-left: 0 !important;
+}
+.e-treeview.e-fullrow-wrap .e-text-content {
+  border-color: transparent;
+  padding-left: 0px;
+}
+.tree-item-padding {
+  padding: 24px 0px 5px 24px !important;
+}
+.e-treeview .e-list-item.e-level-2.e-active > .e-fullrow {
+  padding-left: 7px !important;
+  padding-right: 8px !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  display: block !important;
+  cursor: pointer !important;
+  font-size: 12px !important;
+  line-height: 19px !important;
+  color: rgb(33, 155, 156) !important;
+  background-color: rgb(244, 250, 250) !important;
+  border-left-style: solid !important;
+  border-left-width: 1px !important;
+  border-left-color: rgb(33, 155, 156) !important;
+  text-decoration: none !important;
+  border-top-color: transparent !important;
+  border-bottom-color: transparent !important;
+  border-right-color: transparent !important;
+  border-radius: 0px !important;
+}
+.e-treeview .e-list-item.e-level-2.e-active > .e-fullrow:hover {
+  background-color: rgb(226, 242, 242) !important;
+  border-radius: 0px !important ;
+  box-shadow: none !important;
+}
+.e-treeview .e-list-text {
+  color: rgb(122, 131, 140);
+  font-size: 13px !important;
+  font-weight: bold;
+}
+.e-fullrow-wrap .e-fullrow {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  -webkit-user-select: none;
+  margin-top: -31px;
+  height: 25px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.e-list-item.e-level-2 .e-list-text {
+  color: #515961;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  line-height: 25px !important;
+  min-height: 25px !important;
+}
+
+.e-list-item.e-level-2 > .e-fullrow:hover {
+  color: #343b40 !important;
+  background-color: rgb(226, 242, 242) !important;
+  border-radius: 0px !important ;
+}
+.e-treeview .e-list-item {
+  list-style: none;
+  padding: 0px 0 !important;
+}
+.e-treeview .e-list-item .e-ul {
+  margin: 2px 0 -2px !important;
+  padding: 0px 0 0 10px !important;
+}
+.e-treeview .e-list-item.e-active > .e-text-content .e-list-text {
+  background-color: transparent !important;
+  color: #515961 !important;
+}
+.e-treeview .e-list-item.e-active > .e-fullrow {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #515961 !important;
+}
+.e-treeview .e-list-item.e-active > .e-text-content .e-icon-collapsible,
+.e-treeview .e-list-item.e-active > .e-text-content .e-icon-expandable {
+  color: #515961 !important;
+}
+.e-treeview .e-list-item.e-active > .e-text-content .e-icon-collapsible:hover,
+.e-treeview .e-list-item.e-active > .e-text-content .e-icon-expandable:hover {
+  box-shadow: none !important;
+}
+/* .e-treeview .e-list-item.e-active > .e-fullrow {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #515961 !important;
+} */
+
+/* .e-treeview .e-list-item.e-active > .e-fullrow {
+   
+  } */
+
+.overlay {
+  position: fixed;
+  width: 100% !important;
+  height: 668px !important;
+  left: 0;
+  top: 85px;
+  background: rgba(51, 51, 51, 0.8);
+  z-index: 10;
+  padding-right: 0px;
+}

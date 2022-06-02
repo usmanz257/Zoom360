@@ -1,0 +1,37 @@
+    <div class="dashboards-column-right" style="height: 100%; border-width: 0px 0px 0px 1px; border-color: rgb(221, 224, 228); border-style: solid; background-color: #f8f8f8;">
+        <div class="row" style="margin-right: 0px;">
+            <div class="col-md-12">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div class="channels-small-box" style="height: 270px;">
+                        <app-pie-chart-wedget #pieChart></app-pie-chart-wedget>
+                    </div>
+                </div>
+              
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div class="channels-small-box" style="height: 270px;">
+                        <app-area-chart-wedget #areaChart></app-area-chart-wedget>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-right: 0px;">
+            <div class="col-md-12">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div class="channels-small-box" style="height: 270px;">
+                        <app-bar-chart-wedget #barChart></app-bar-chart-wedget>
+                    </div>
+                </div>
+          
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div class="channels-small-box" style="height: 270px;">
+                       
+                            <app-stack-chart-wedget #stackChart></app-stack-chart-wedget>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    {{this.test | json}}
+    <!--</div>-->

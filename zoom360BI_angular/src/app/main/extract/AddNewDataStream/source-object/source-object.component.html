@@ -1,0 +1,244 @@
+<div style="height:600px;">
+    <form #SourceForm="ngForm" (ngSubmit)="SourceForm.form.valid && SaveAllDataofSource(SourceForm.value)">
+         <div>
+         <div class="main-section " >
+            <div class="header" style="cursor:pointer;" (click)="ReversClass()" > 
+               <img src='../../../../assets/arrow-left-64.png'   >
+            </div>
+            <div>
+             <h3>STEP 4 :</h3> 
+             <h3>Select Source Object(s)</h3>
+            </div>
+         </div>
+         <div class="tool-section">
+         </div>
+         <div class="row" style="padding: 12px 0 0 0;">
+            <div class="col-md-12">
+            <fieldset class="module aligned ">
+               <div class="row">
+                  <div class="col-md-5">
+                     <div class="form-row field-stack">
+                    
+                        <label class="label-text" for="id_stack">Display Name for Source object *</label>
+                        <div class="related-widget-wrapper">
+                             <input type="text"  required name="SourceDisplayName" #SourceDisplayName="ngModel" [(ngModel)]="sourceobjectModel.SourceDisplayName"   required="required" class="form-control " maxlength="200"> 
+                             <!-- <span class="error" id="AccountName_span" style="margin-top:4px;padding:5px;">Account Display Name is Required</span> -->
+                         </div>
+                         <div class="help">
+                           <span class="text-danger"
+                           *ngIf="(SourceDisplayName.touched || SourceForm.submitted) && SourceDisplayName.errors?.required">
+                           Display Name required
+                       </span>
+                         </div>
+                       </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-5">
+                     <div class="form-row field-stack">
+                
+                        <label class="label-text" for="id_stack">Workspace to use *</label>
+                        <div class="related-widget-wrapper">
+                              <select type="text"  required name="WorkspaceName" style="height: 31px;width: -webkit-fill-available;"  [(ngModel)]="sourceobjectModel.WorkspaceName"  required="required" class="form-control" maxlength="200"> 
+                               <option *ngFor="let SourceObjectworkspace of workspacedropdownlist" value={{SourceObjectworkspace.dropdownText}}>{{SourceObjectworkspace.dropdownText}}</option>  
+                              </select>
+                          </div>
+                        <div class="help">
+                           <!-- <span class="text-danger"
+                           *ngIf="(SourceDisplayName.touched || SourceForm.submitted) && SourceDisplayName.errors?.required">
+                           Display Name for Source object
+                       </span> -->
+                        </div>
+                  </div>
+                  </div>
+               </div>
+              <div class="row">
+                 <div class="col-md-5">
+                  <div class="form-row field-stack">
+         
+                     <label class="label-text" for="id_stack"></label>
+                     <div class="related-widget-wrapper">
+                       <div class="controls " style="display: inline-flex;" >
+                          <input type="checkbox"  id="Authorization" [(ngModel)]="sourceobjectModel.Authorizationgranted" name="Authorizationgranted" value="Status" >
+                          <label style="padding:0 0 0 10px;" class="" for="Authorization">Authorization granted successfully to access objects</label>
+         
+                      </div>                     
+                     </div>
+                </div>  
+                 </div>
+              </div>
+   </fieldset> 
+         </div>
+          </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12" >
+               <hr>
+           </div>
+         </div>
+          
+        <div class="col-md-12" style="padding: 0px;">
+        <div class="main-section">
+            <h3>Select object(s) from below list, available against the selected account</h3>
+           </div>
+           <div class="tool-section">
+           </div>
+           <fieldset class="module aligned" style="padding: 28px 0 0 0;">
+               <div class="row" >
+                <div class="col-md-12  col-sm-12 " >
+                  <div class="css-gpglrx">
+                     <div class="css-rvqhyx" >
+                        <button _ngcontent-dem-c65="" type="button" data-toggle="dropdown" class="select-button-secondary">
+                           <span _ngcontent-dem-c65="" data-actions-icnt="13" class="action-counter">{{countervalue}} of {{Length}} selected</span><span _ngcontent-dem-c65="" class="all" style="display: none;">All 13 selected</span>
+                           <span _ngcontent-dem-c65="" class="marginLeft desing-chevron-down"></span></button>
+                        <div class="css-ha9xgj" role="group">
+                     <button class="css-xpr64j ads_GROUP_ITEM" type="button" value="all">All</button>
+                     <button class="css-b2qa21 ads_GROUP_ITEM" type="button" value="used">Mapped</button>
+                     <button class="css-b2qa21 ads_GROUP_ITEM" type="button" value="unused">Unmapped</button>
+                  </div>
+               </div>
+                  <div class="css-rvqhyx">
+                      
+                  <a class="css-fw9vt9" (click)="UpdateSourceObjectList()"  style="color: white;cursor: pointer;">Update Fields</a>
+               </div>
+            </div>
+             
+                 
+           </div> 
+                   <div id="changelist" >
+                      <form id="changelist-form" method="post" novalidate="" style="margin: 10px;">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="BzJ7MpE5jnM2lyqnbJrbEVtNiZc8GLk8udbCXR4ixTJfrCjd1V5zy452hpZwSEiq">
+                         <input type="hidden" name="action" value="">
+                         <input name="index" value="0" type="hidden">
+                         <input class="select-across" name="select_across" value="0" type="hidden">
+                         <div class="results">
+                            <table id="result_list" class="table table-hover">
+                               <thead>
+                                  <tr>
+                                     <th scope="col" class="action-checkbox-column">
+                                        <div class="cell-wrapper" title="Select all rows">
+                                           <div class="text">
+                                              <div data-id="action-toggle" toggle="adverity-checkbox[name=&quot;_selected_action&quot;]">
+                                                 <div><span class="css-kpk1s7"><input class="css-10d97nj" type="checkbox" [checked]="allcheckbox" (change)="checkAll($event)" (click)="functionCount($event)"><span class="css-jlzago"></span></span></div>
+                                                 <input hidden="" id="action-toggle" class="" data-type="checkbox" style="display: block;">
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </th>
+                                     <th scope="col" class="sortable column-type_logo">
+                                        <div class="cell-wrapper" title="Toggle sorting">
+                                           <div class="text">
+                                              <a>Sr#</a>
+                                           </div>
+                                        </div>
+                                     </th>
+                                     <th scope="col" class="sortable column-stack">
+                                        <div class="cell-wrapper" title="Toggle sorting">
+                                           <div class="text">
+                                              <a>Entity Name</a>
+                                           </div>
+                                        </div>
+                                     </th>
+                                     <th scope="col" class="sortable column-name sorted ascending">
+                                        <div class="cell-wrapper" title="Toggle sorting">
+                                           <a href="#" class="toggle-link"> 
+                                             Entity Type
+                                           <span class="sortoptions sortdirectionn">
+                                           <span class="toggle ascending"></span>
+                                           </span>
+                                           </a>
+                                           <div class="sortoptions remove">
+                                              <a class="sortremove" href="# title = "Remove from sorting></a>
+                                           </div>
+                                        </div>
+                                     </th>
+                                     <th scope="col" class="column-auth_status">
+                                        <div class="cell-wrapper">
+                                           <div class="text">
+                                              <span>Display Name</span>
+                                           </div>
+                                        </div>
+                                     </th>
+                                     <th scope="col" class="column-auth_status">
+                                        <div class="cell-wrapper">
+                                           <div class="text">
+                                              <span>Last Accessed</span>
+                                           </div>
+                                        </div>
+                                     </th>
+                                     
+                                     <th scope="col" class="column-auth_status">
+                                       <div class="cell-wrapper">
+                                          <div class="text">
+                                             <span>Visible</span>
+                                          </div>
+                                       </div>
+                                    </th>
+                                    <th scope="col" class="column-auth_status">
+                                       <div class="cell-wrapper">
+                                          <div class="text">
+                                             <span>Image</span>
+                                          </div>
+                                       </div>
+                                    </th>
+                                  </tr>
+                               </thead>
+                               
+                                <tr class="row1" *ngFor="let SourceObject of SourceObjectList">
+                                 <td class="action-checkbox">
+                                    <div name="_selected_action" value="26">
+                                       <div><span class="css-kpk1s7"><input class="css-10d97nj" type="checkbox" [(ngModel)]="SourceObject.state" name="something" (change)="findCount($event,SourceObject.objecT_ID)" value="{{SourceObject.objecT_ID}}"><span class="css-jlzago"></span></span></div>
+                                       <input hidden="" name="_selected_action" class="action-select" data-type="checkbox" disabled="">
+                                    </div>
+                                 </td>
+                                 <td class="field-type_logo" id="1C{{SourceObject.objecT_ID}}">{{SourceObject.objecT_ID}}</td>
+                                 <td class="field-stack nowrap">
+                                    <div style="padding:5px;" id="2C{{SourceObject.objecT_ID}}" ngClass="css-bgColorNo">
+                                    {{SourceObject.objecT_NAME}}
+
+                                 </div>
+                              </td>
+                                 <td class="field-stack nowrap" id="3C{{SourceObject.objecT_ID}}">{{SourceObject.objecT_TYPE}}</td>
+                                 <td class="field-stack nowrap EditableCell" contenteditable="true" id="4C{{SourceObject.objecT_ID}}">{{SourceObject.displaY_NAME}}</td>
+                                 <td class="field-auth_status" id="5C{{SourceObject.objecT_ID}}">{{SourceObject.serveR_INSERT_DATE}}</td>
+                                 <td class="field-stack nowrap">  
+                                    <select class="dropdown-box" id="6C{{SourceObject.objecT_ID}}" name="6C{{SourceObject.objecT_ID}}" (click)="ChangeColor($event.target.value,this.SourceObject.objecT_ID)" [(ngModel)]="SourceObject.objecT_VISIBILITY" >
+                                       <option value="No" selected>No</option>
+                                       <option value="yes">yes</option>
+                                       
+                                    </select> 
+                                 </td> 
+                                 <td class="field-type_logo" id="7C{{SourceObject.objecT_ID}}">
+                                    <img src="../../../../assets/images/icon-ye.svg" alt="True">
+                                 </td>
+   
+                              </tr>
+                            </table>
+                         </div>
+                         <div class="pull-left changelist-botton-row changelist-pagination">
+                            &nbsp;
+                            <span class="pagination-element-counter">{{Length}} Connections</span>
+                         </div>
+                      </form>
+                   </div>
+                </div>
+              
+         </fieldset>
+      </div>
+      <div class="row">
+         <div class="col-md-12">
+            <hr>
+         </div>
+      </div>
+     
+         <div class="form-group pull-right">
+           <div class="input-bar-item">
+        
+             <button type="submit" class="btn btn-info" style="background-color: rgb(33, 155, 156);color: white;">Save And Next</button>
+             <!-- (click)="_SqlConnector.SaveAllData()" -->
+             <!-- routerLink="/AddnewDataStream/Templet"  [disabled]="Myform.invalid" -->
+           </div>
+         </div>
+     
+        </form>
+        </div>    
