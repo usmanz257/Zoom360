@@ -1,7 +1,7 @@
 
 <div class="dashboards-column-right" style="background: linear-gradient(to right, #2c9b9d, #5294db );height: 100%; border-width: 0px 0px 0px 1px; border-color: rgb(221, 224, 228); border-style: solid;">
-   <!-- Bar Chart -->
-    <div class="row" style="margin-right: 0px;">
+  
+    <!-- <div class="row" style="margin-right: 0px;">
         <div class="col-md-12">
             <div class="col-sm-12 col-md-4 col-lg-4 col-xl-2">
                 <div class="channels-small-box" style="height: 250px;">
@@ -26,13 +26,308 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                <div class="channels-small-box"  style="height: 250px;">
-                    <app-bar-chart-wedget #barChart></app-bar-chart-wedget>
-                    
+                <div style=" padding:8px; background: #fff; margin: 15px 0;box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 #5294db ;">
+    
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div style="display: flex;">
+                                <div>
+                                    <span style="padding-right: 5px;">Outlier for Invoice Data</span>
+                                </div>
+                                <div>
+                                    <span style="padding-right: 5px;" class="red-label">High</span>
+                                </div>
+                                <div>
+                                    <span class="green-label">Session</span>
+                                </div>
+                            </div>
+                            <div style=" ">
+                                <p style="font-weight: 600;font-size: 12px; margin-top: 0;margin-bottom: 4px;"></p>
+                            </div>
+                           
+                            <div><span>Home Accessory</span></div>
+                        </div>
+                        <div class="col-md-3" style="display: inline-block; text-align: center;">
+                            <div>
+                                <img src="../../../../assets/images/g-drive.svg" style="width:36%" alt="Google Drive">
+                            </div>
+                            <div>
+                                <span>
+                        </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding-top: 24px;">
+                        <p style="font-weight: 600; font-size:16px;">
+                            Response Rate (+ve)
+                            </p>
+                            <p>System detected an anomaly. A sudden increase is observed in your response rate for Ads set on Tuesday during March 31,2020</p>
+                    </div>
+                    <div style="height: 220px;">
+
+                      
+                        
+                    </div>
+                    <div style="display: flex; justify-content: space-between;margin-top: 10px;">
+                        <div>
+                            <span > 
+                            <svg height="14px" width="14px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="thumbs-up" class="svg-inline--fa fa-thumbs-up fa-w-16"  style="margin-right: 10px;" role="img" xmlns="" viewBox="0 0 512 512"><path fill="currentColor" d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"></path></svg>
+                        </span><label style="margin-right: 10px;"></label>
+                            
+                        <span > 
+                          <svg height="14px" width="14px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="thumbs-down" class="svg-inline--fa fa-thumbs-down fa-w-16"  style="margin-right: 10px;" role="img" xmlns="" viewBox="0 0 512 512"><path fill="currentColor" d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"></path></svg>
+                        </span><label></label>
+                        <span>
+                            <svg style="margin-left:10px;" height="14px" width="14px" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                            <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                          </svg>
+                        </span>
+                        <span>
+                            <svg style="margin-left:20px;" width="14" height="14" fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+                              </svg>
+                        </span>
+                        
+                        </div>
+                        <div>
+                        <div>
+                            <button class="btn-light-green">Details</button>
+                        </div>
+                        
+                    </div>
                 </div>
+                
+                </div>
+
             </div>
         </div>
+    </div> -->
+ <!-- Bar Chart -->
+    <div class="row" style="margin-right: 0px;">
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8" style="padding: 0;">
+<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding-right: 0;">
+       <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4" style="">
+          <div class="channels-small-box-AI">
+             <div style="">
+                <app-bar-chart-wedget #barChart2></app-bar-chart-wedget>
+             </div>
+          </div>
+       </div>
+       <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4" style="">
+          <div class="channels-small-box-AI">
+             <div style="">
+                <app-bar-chart-wedget #barChart3></app-bar-chart-wedget>
+             </div>
+          </div>
+       </div>
+       <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4" style="">
+          <div class="channels-small-box-AI">
+             <div style="height:195px; margin-bottom: 10px;box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 #5294db ;" >
+                <app-basic-column-chart-widget #basicColumnChart7></app-basic-column-chart-widget>
+                      
+             </div>
+            
+             <div style="height:195px; margin-top: 10px;box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 #5294db ;">
+                <app-basic-column-chart-widget #basicColumnChart8></app-basic-column-chart-widget>
+            </div>
+          </div>
+       </div>
+       
     </div>
+</div>
+       <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+
+        <div style=" padding:8px; background: #fff; margin: 15px 0;box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 #5294db ;">
+    
+            <div class="row">
+                <div class="col-md-9">
+                    <div style="display: flex;">
+                        <div>
+                            <span style="padding-right: 5px;">Outlier for Invoice Data</span>
+                        </div>
+                        <div>
+                            <span style="padding-right: 5px;" class="red-label">High</span>
+                        </div>
+                        <div>
+                            <span class="green-label">Session</span>
+                        </div>
+                    </div>
+                    <div style=" ">
+                        <p style="font-weight: 600;font-size: 12px; margin-top: 0;margin-bottom: 4px;"></p>
+                    </div>
+                   
+                    <div><span>Home Accessory</span></div>
+                </div>
+                <div class="col-md-3" style="display: inline-block; text-align: center;">
+                    <div>
+                        <img src="../../../../assets/images/g-drive.svg" style="width:36%" alt="Google Drive">
+                    </div>
+                    <div>
+                        <span>
+                </span>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top: 24px;">
+                <p style="font-weight: 600; font-size:16px;">
+                    Response Rate (+ve)
+                    </p>
+                    <p>System detected an anomaly. A sudden increase is observed in your response rate for Ads set on Tuesday during March 31,2020</p>
+            </div>
+            <div style="height: 212px;">
+
+                <!-- chart here -->
+
+                <app-bar-chart-wedget #barChart></app-bar-chart-wedget>
+                
+            </div>
+            <div style="display: flex; justify-content: space-between;margin-top: 10px;">
+                <div>
+                    <span > 
+                    <svg height="14px" width="14px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="thumbs-up" class="svg-inline--fa fa-thumbs-up fa-w-16"  style="margin-right: 10px;" role="img" xmlns="" viewBox="0 0 512 512"><path fill="currentColor" d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"></path></svg>
+                </span><label style="margin-right: 10px;"></label>
+                    
+                <span > 
+                    <!-- <svg  aria-hidden="true" focusable="false" data-prefix="fas" data-icon="thumbs-up" class="svg-inline--fa fa-thumbs-up fa-w-16" [style.color]="this.like? '#515961':'blue'" style="margin-right: 10px;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"></path></svg> -->
+                    <svg height="14px" width="14px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="thumbs-down" class="svg-inline--fa fa-thumbs-down fa-w-16"  style="margin-right: 10px;" role="img" xmlns="" viewBox="0 0 512 512"><path fill="currentColor" d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"></path></svg>
+                </span><label></label>
+                <span>
+                    <svg style="margin-left:10px;" height="14px" width="14px" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                    <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                  </svg>
+                </span>
+                <span>
+                    <svg style="margin-left:20px;" width="14" height="14" fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+                      </svg>
+                </span>
+                
+                </div>
+                <div>
+                <div>
+                    <a  type="button" aria-expanded="false" aria-controls="id-to0r5h" aria-haspopup="menu" routerLink="/aiinsights/insights" routerLinkActive="css-1lf83w2">
+                    <button class="btn-light-green">Details</button>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        
+        </div>
+            
+       </div>
+    </div>
+         <!-- Area Chart -->
+         <div class="row" style="margin-right: 0px;">
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8" style="padding: 0;">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding-right: 0;">
+               <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4" style="">
+                  <div class="channels-small-box-AI" >
+                     <div>
+                        <app-area-chart-wedget #areaChart1></app-area-chart-wedget>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4" style="">
+                  <div class="channels-small-box-AI">
+                     <div>
+                        <app-area-chart-wedget #areaChart2></app-area-chart-wedget>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4" style="">
+                  <div class="channels-small-box-AI">
+                     <div style="height:195px; margin-bottom: 10px;box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 #5294db ;">
+                        <app-area-chart-wedget #areaChart3></app-area-chart-wedget>
+                     </div>
+                     <div style="height:195px; margin-top: 10px;box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 #5294db ;">
+                        <app-area-chart-wedget #areaChart4></app-area-chart-wedget>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+        </div>
+               <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <div style=" padding:8px; background: #fff; margin: 15px 0;box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 #5294db ;">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div style="display: flex;">
+                                    <div>
+                                        <span style="padding-right: 5px;">Outlier for Invoice Data</span>
+                                    </div>
+                                    <div>
+                                        <span style="padding-right: 5px;" class="red-label">Medium</span>
+                                    </div>
+                                    <div>
+                                        <span class="green-label">Floor 2</span>
+                                    </div>
+                                </div>
+                                <div style=" ">
+                                    <p style="font-weight: 600;font-size: 12px; margin-top: 0;margin-bottom: 4px;"></p>
+                                </div>
+                               
+                                <div><span>Gift Item</span></div>
+                            </div>
+                            <div class="col-md-3" style="display: inline-block; text-align: center;">
+                                <div>
+                                    <img src="../../../../assets/images/Microsoft_Excel-file.png" style="width:36%" alt="Google Drive">
+                                </div>
+                                <div>
+                                    <span>
+                            </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding-top: 24px;">
+                            <p style="font-weight: 600; font-size:16px;">
+                                Response Rate (+ve)
+                                </p>
+                                <p>
+                                    System detected an anomaly. A sudden increase is observed in your response rate for Ads set on Tuesday during March 31,2022
+                                </p>
+                        </div>
+                        <div style="height: 212px;">
+                            <app-area-chart-wedget #areaChart5></app-area-chart-wedget>
+                            <!-- chart here -->
+                        </div>
+                        <div style="display: flex; justify-content: space-between;margin-top: 10px;">
+                            <div>
+                                <span > 
+                                <svg height="14px" width="14px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="thumbs-up" class="svg-inline--fa fa-thumbs-up fa-w-16"  style="margin-right: 10px;" role="img" xmlns="" viewBox="0 0 512 512"><path fill="currentColor" d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"></path></svg>
+                            </span><label style="margin-right: 10px;"></label>
+                                
+                            <span > 
+                                <!-- <svg  aria-hidden="true" focusable="false" data-prefix="fas" data-icon="thumbs-up" class="svg-inline--fa fa-thumbs-up fa-w-16" [style.color]="this.like? '#515961':'blue'" style="margin-right: 10px;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"></path></svg> -->
+                                <svg height="14px" width="14px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="thumbs-down" class="svg-inline--fa fa-thumbs-down fa-w-16"  style="margin-right: 10px;" role="img" xmlns="" viewBox="0 0 512 512"><path fill="currentColor" d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"></path></svg>
+                            </span><label></label>
+                            <span>
+                                <svg style="margin-left:10px;" height="14px" width="14px" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                                <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                              </svg>
+                            </span>
+                            <span>
+                                <svg style="margin-left:20px;" width="14" height="14" fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+                                  </svg>
+                            </span>
+                            
+                            </div>
+                            <div>
+                            <div>
+                                <a  type="button" aria-expanded="false" aria-controls="id-to0r5h" aria-haspopup="menu" routerLink="/aiinsights/insights" routerLinkActive="css-1lf83w2">
+                                <button class="btn-light-green">Details</button>
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    </div>
+                      <!-- <app-area-chart-wedget #areaChart5></app-area-chart-wedget> -->
+                    
+               </div>
+            </div>
     <!-- column Stack Chart -->
     <div class="row" style="margin-right: 0px;">
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -129,43 +424,7 @@
            </div>
         </div>
      </div>
-     <!-- Area Chart -->
-     <div class="row" style="margin-right: 0px;">
-        <div class="col-md-12">
-           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-2">
-              <div class="channels-small-box" >
-                 <div style="height:250px;">
-                    <app-area-chart-wedget #areaChart1></app-area-chart-wedget>
-                 </div>
-              </div>
-           </div>
-           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-2">
-              <div class="channels-small-box">
-                 <div style="height:250px;">
-                    <app-area-chart-wedget #areaChart2></app-area-chart-wedget>
-                 </div>
-              </div>
-           </div>
-           <div class="col-sm-12 col-md-4 col-lg-4 col-xl-2">
-              <div class="channels-small-box">
-                 <div style="height:110px;">
-                    <app-area-chart-wedget #areaChart3></app-area-chart-wedget>
-                 </div>
-                 <hr>
-                 <div style="height:110px;">
-                    <app-area-chart-wedget #areaChart4></app-area-chart-wedget>
-                 </div>
-              </div>
-           </div>
-           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div class="channels-small-box" style="height:250px;">
-                
-                  <app-area-chart-wedget #areaChart5></app-area-chart-wedget>
-                
-              </div>
-           </div>
-        </div>
-     </div>
+
      <!-- Pie Chart -->
      <div class="row" style="margin-right: 0px;">
         <div class="col-md-12">

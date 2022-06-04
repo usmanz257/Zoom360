@@ -104,6 +104,11 @@ namespace CNS.ZOOM360.Services.StoreProcedures.AIinsights
                     item.Chart = InsighGuageChartData(chartdata1, Convert.ToString(item.WidgetID));
                     item.Data = chartdata;
                 }
+                else if (item.chartType == "Area Chart")
+                {
+                    item.Chart = InsighAreaChartData(chartdata1, Convert.ToString(item.WidgetID));
+                    item.Data = chartdata;
+                }
             }
             return AiInsight;
 
@@ -733,7 +738,188 @@ namespace CNS.ZOOM360.Services.StoreProcedures.AIinsights
 
             };
          }
-            
+
+        private AreaChart InsighAreaChartData(GetAIWidgetGraphDataModel[] data, string ChartID)
+        {
+
+            //string[] clr = new string[4];
+
+            dynamic[,] Stops = new dynamic[2, 2];
+            Stops[0, 0] = 0;
+            Stops[0, 1] = "#fbf9fc";
+            Stops[1, 0] = 1;
+            Stops[1, 1] = "#fbf9fc";
+            int[] LinearGradient = new int[4];
+            LinearGradient[0] = 100;
+            LinearGradient[1] = 100;
+            LinearGradient[2] = 500;
+            LinearGradient[3] = 500;
+            List<AreaSeries> areaData = new List<AreaSeries>();
+            var cat = data.Select(x => x.Date).Distinct();
+            List<string> names = data.Select(x => x.DimensionName).Distinct().ToList();
+            var length = names.Count;
+            // Trend line dimension alwayes set to the end to show on top in the View
+            for (int ele = 0; ele < length; ele++)
+            {
+                string[] trend = names[ele].Split("_");
+                trend[0] = trend[0].ToLower();
+                if (trend[0] == "trend")
+                {
+                    string trendValue = names[ele];
+                    names.RemoveAt(ele);
+                    names.Add(trendValue);
+                }
+            }
+            string[] colorsList = { "#219B9C", "#C0C8CD",  "#CF9C0F", "#E8533E" };
+            foreach (var item in names)
+            {
+                string[] trend = item.ToString().Split("_");
+                trend[0] = trend[0].ToLower();
+                if (trend[0] == "trend")
+                { // Trend line Visibility Set 
+                    areaData.Add(new AreaSeries
+                    {
+                        name = item,
+                        data = builddataInsightLine(data, item)
+                    });
+                }
+                else
+                {
+                    areaData.Add(new AreaSeries
+                    {
+                        name = item,
+                        data = builddataInsightLine(data, item)
+                    });
+                }
+
+            }
+
+            return new AreaChart
+            {
+                Colors = colorsList,
+                chart = new AreaCharts
+                {
+                    Type = "area",
+                    MarginLeft = null,
+                    MarginBottom = null,
+                    MarginRight = "-35",
+                    MarginTop = null,
+                    backgroundColor = new PlotBackgroundColorArea
+                    {
+                        linearGradient = LinearGradient,
+                        Stops = Stops
+                    },
+                },
+                Accessibility =
+                new AreaAccessibility
+                {
+                    Description = ""
+                },
+                Exporting =
+                new AreaExporting
+                {
+                    Enabled = false
+                },
+                Title =
+                new AreaTitle
+                {
+                    Text = null
+                },
+                Subtitle =
+                new AreaSubtitle
+                {
+                    text = null
+                },
+                XAxis =
+                new AreaXAxis
+                {
+                    Visible = false,
+                    allowDecimals = false,
+                    labels =
+                    new AreaLabels
+                    {
+                        formatter = ""
+                    },
+                    accessibility =
+                    new AreaAccessibility
+                    {
+                        //RangeDescription = "Range= 1940 to 2017."
+                    }
+                },
+                YAxis =
+                new AreaYAxis
+                {
+                    Visible = true,
+                    title =
+                    new AreaTitle
+                    {
+                        Text = ""
+                    },
+                    labels =
+                    new AreaLabels
+                    {
+                        formatter = ""
+                    }
+                },
+                Tooltip =
+                new AreaTooltip
+                {
+                    Enabled = true,
+                    HeaderFormat = "<b>{series.name}</b>",
+                    PointFormat = " {point.y:,.0f}"
+                },
+                PlotOptions = new AreaPlotOptions
+                {
+                    Area = new Area()
+                    {
+                        PointStart = 0,
+                         size = "100%",
+                        LineWidth = 1,
+                        stickyTracking= true,
+                        Marker = new AreaMarker
+                        {
+                            Enabled = true,
+                            Symbol = "circle",
+
+                            Radius = 2,
+                            States = new AreaState()
+                            {
+                                Hover = new AreaHover()
+                                {
+                                    enabled = true
+                                }
+                            }
+                        },
+                       
+                    },
+                    series = new AreaSeriesPlot()
+                    {
+                         strokeWidth= 1,
+                        plotAreaWidth= "100%",
+                        enableMouseTracking = false
+                    }
+
+                },
+                Legend = new AreaLegend
+                {
+                    Enabled = false
+
+                },
+                Credits = new Areacredits
+                {
+                    Enabled = false
+                },
+                Series = areaData
+
+                //new List<AreaSeries>
+                //{
+                //    new AreaSeries { name = "Impressions", data = results.Select(x=>(object)x.measures.Imperssions).ToList()  },
+                //    new AreaSeries { name = "Clicks", data = results.Select(x=>(object)x.measures.Imperssions).ToList() },
+                //    new AreaSeries { name = "CTR(%)", data = results.Select(x=>(object)x.measures.Imperssions).ToList() }
+                //}
+
+            };
+        }
 
         private List<double> builddataInsightLine(GetAIWidgetGraphDataModel[] graphData, string plateformName)
         {

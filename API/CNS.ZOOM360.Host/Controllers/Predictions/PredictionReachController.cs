@@ -62,5 +62,20 @@ namespace CNS.ZOOM360.Host.Controllers.Predictions
 
             return Ok(productionprocess);
         }
+
+        [Route(ServiceConstants.Predictions.GetMarketingStrategyData)]
+        [HttpGet]
+        public async Task<IActionResult> GetMarketingWidgetData([FromQuery] MarketingInputDTOModel marketingInput)
+        {
+            var worksapceData = _PredictionReachServices.GetMarketingWidgetData(marketingInput);
+            if (worksapceData == null)
+            {
+
+                _logger.LogInfo($"Workspace data doesn't exist in the database.");
+                return NotFound();
+            }
+
+            return Ok(worksapceData.Result);
+        }
     }
 }

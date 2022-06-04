@@ -144,11 +144,21 @@ namespace ZOOM360.Charts.HighCharts
     public class LineSeriesPGenaric
     {
         public int LineWidth { get; set; }
+        public Linestates states { get; set; }
         public LineLabelsSeriesGenaric Label { get; set; }
 
         public LineMarkerGenaric Marker { get; set; }
         public int PointStart { get; set; }
 
+    }
+    public class Linestates
+    {
+        public LineHover hover { get; set; }
+
+    }
+    public class LineHover
+    {
+        public bool enabled { get; set; }
     }
 
 
@@ -168,7 +178,7 @@ namespace ZOOM360.Charts.HighCharts
         public int Radius { get; set; }
         public LineStateGenaric States { get; set; }
     }
-    public class LineHoverGenaric
+    public class LineHoverGenaric 
     {
         public bool Enabled { get; set; }
     }

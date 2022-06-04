@@ -6,6 +6,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>D:\BIDeployment</_PublishTargetUrl>
-    <History>True|2022-02-10T14:18:26.6927418Z;True|2022-01-13T18:37:40.2365456+05:00;True|2022-01-10T18:52:39.8105450+05:00;True|2022-01-06T17:03:43.5147309+05:00;True|2022-01-06T12:21:59.6114605+05:00;</History>
+    <History>True|2022-06-03T17:09:00.8639590Z;True|2022-02-10T19:18:26.6927418+05:00;True|2022-01-13T18:37:40.2365456+05:00;True|2022-01-10T18:52:39.8105450+05:00;True|2022-01-06T17:03:43.5147309+05:00;True|2022-01-06T12:21:59.6114605+05:00;</History>
   </PropertyGroup>
 </Project>

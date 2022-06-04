@@ -93,6 +93,7 @@ namespace CNS.ZOOM360.Shared.Const
         #region // Prediction
         public const string Sp_GETPREDICTIONREACH = "GETPREDICTIONREACH";
         public const string Sp_GETPRODUCTIONPROCESS = "GETPRODUCTIONPROCESSPREDICT";
+        public const string Sp_GETMARKETINGSTRATEGY = "GETAIWIDGETDATAMARKETING";
         #endregion
         #region //DynamicMenu
         public const string Sp_GetMainMenuList = "GETMAINMENULIST";

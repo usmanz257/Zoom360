@@ -13,6 +13,7 @@ import { predictionImpressionsComponent } from './PredictionImpressions/predicti
 import { predictionResultsComponent } from './PredictionResults/predictionResults.component';
 import { QulaityComponent } from './qulaity/qulaity.component';
 import { SAMComponent } from './sam/sam.component';
+import { MarketingStartegyComponent } from './marketing-startegy/marketing-startegy.component';
  
 
 const routes: Routes = [
@@ -31,6 +32,8 @@ const routes: Routes = [
         { path:'predictionResults', component:predictionResultsComponent},
         { path:'productionSAM', component:SAMComponent},
         { path:'productionQulaity', component:QulaityComponent},
+        { path:'marketStrategy', component:MarketingStartegyComponent},
+        
 
         // { path:'TreeTemplateGrid',component:TreeTemplateGridComponent,canActivate:[UserRightsGuardService]},
         

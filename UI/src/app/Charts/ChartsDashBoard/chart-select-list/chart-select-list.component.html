@@ -1,6 +1,4 @@
 <div id="container" class="container-fluid">
-
-
     <!-- Content -->
     <div id="content">
         <div class="main-section">
@@ -8,36 +6,56 @@
                 <h3>Select Chart</h3>
                 <br>
             </div>
-
             <div class="row kpi-section chartList-bg-clr" *ngFor="let item of chartList">
                 <div class="col-md-6">
                     <h3>
-                       {{item.ChartTitle}}
+                        {{item.ChartTitle}}
                     </h3>
                     <p>
-                      {{item.ChartDescription}}
+                        {{item.ChartDescription}}
                     </p>
                     <div>
-
                         <button class="css-xpr64j" type="submit" style="margin-right:5px;">Add this chart</button>
                         <!-- <button class="css-1v028ab" type="submit">Verify dependency</button> -->
-
                     </div>
                 </div>
                 <div class="col-md-6" style="padding-left: 0px; min-height: 250px;">
-                   
-                   
-                   
-                    <!-- <app-area-chart-wedget #areaChart1></app-area-chart-wedget> -->
                     <highcharts-chart [Highcharts]="Highcharts" [options]="item.Chart"
                     style="width: 100%; height: 100%; display: block;"></highcharts-chart>
-                
-                
-                
+                    <!-- <app-area-chart-wedget #areaChart1></app-area-chart-wedget> -->
                 </div>
             </div>
-
             <!-- end content-->
+            <div class="row kpi-section " style=" padding:8px;border: 1px solid rgb(221, 224, 228);">
+                <div class="col-md-6">
+                    <div class="col-md-1" style="padding:0 ;" >
+                        <img src="../../../../assets/images/facebook-icon.svg" alt="" width="" height="" style="padding:6px 12px 0 0;">
+                    </div>
+                    <div class="col-md-11" style="">
+                        <div class="row" style="margin: 0;">
+                            <p style=" font-size: 12px; font-weight: 700;padding:0;margin: 0;">
+                                Compaign:
+                            </p>
+                            <p style="padding:0 4px; margin: 0;">
+                                UK_BR_TROAS_Sunglasses
+                            </p>
+                            <span style="padding:0 8px; font-weight: 600;" class="gray-label">Medium Impact</span>
+                        </div>
+                        <p>Facebook Ads</p>
+                        <br>
+                        <h2 style="font-weight:700; font-size: 18px;">
+                            Get a higher result Investment by realocating your budget to better performing Compaign. 
+                        </h2>
+                        <hr>
+                        <div>
+                            <button class="btn-light-green" type="submit">Show Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="padding-left: 0px;">
+                    <img style="width: 600px;" src="../../../../assets/images/kpi-dm-imgs/click-though-rate-blog.png" alt="">
+                </div>
+            </div>
         </div>
     </div>
     <!-- END Content -->

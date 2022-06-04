@@ -1,6 +1,7 @@
 import { Component, Injector, OnInit, ViewChild } from '@angular/core';
 import { Value } from '@syncfusion/ej2-angular-querybuilder';
 import { ChartType } from 'ag-grid-community';
+import { HighChartColorScheme } from 'src/app/Charts/ChartsThemes/HighChartsColors';
 import { AiInsightDto, AIinsightWidgetDataModel, ChartTypeModel } from 'src/app/models/AIinsight/AIinsghtscardModel';
 import { SavePredictionModel } from 'src/app/models/Predict/predict.model';
 import { AIinsightsService } from 'src/app/services/AIinsights/aiinsights.service';
@@ -15,6 +16,7 @@ import { AgGridDataViewerComponent } from './ag-grid-data-viewer/ag-grid-data-vi
   styleUrls: ['./aiinsights.component.css']
 })
 export class AIinsightsComponent extends AppComponentBase implements OnInit {
+
   @ViewChild('agGridComponent',{static:true})
   public AgGridComponent:AgGridDataViewerComponent;
   mainmenuID:number=6;

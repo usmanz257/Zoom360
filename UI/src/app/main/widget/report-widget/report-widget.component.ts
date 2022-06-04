@@ -8,6 +8,7 @@ import { items } from 'fusioncharts';
 import { Item } from '@syncfusion/ej2-angular-navigations';
 import { not } from '@angular/compiler/src/output/output_ast';
 import { AppComponentBase } from 'src/app/Services/AppComponentBase';
+import { AppMenuService } from 'src/app/Services/common/app-menu.service';
 
 @Component({
   selector: 'app-report-widget',
@@ -16,7 +17,7 @@ import { AppComponentBase } from 'src/app/Services/AppComponentBase';
 })
 export class ReportWidgetComponent extends AppComponentBase implements OnInit {
 @Input()  notification:TimelineModel;
-
+mainmenuID:number=6;
 @Output() gridData = new EventEmitter;
 public AgGridComponent:AgGridDataViewerComponent;
 @ViewChild('agGrid',{static:true}) agGrid: AgGridAngular;
@@ -30,12 +31,15 @@ client_id:'';
 widget_Id:'';
 widgetDetailData:WidgetDetailDataModel;
 
-constructor(private _timelineService:TimelineService,injector:Injector){
+constructor(private _timelineService:TimelineService,public MenuService: AppMenuService,injector:Injector){
   super(injector)
 
 }
 ngOnInit(){
   console.log(this.notification)
+  // this.MenuService.getsubMenuSection(this.mainmenuID);
+  //   setTimeout(()=>{
+  //   this.getColumnName(this.widgetCategory,'6001'),100})
 }
 //   notification:TimelineModel[];
 //   constructor(private _timelineService:TimelineService) { }

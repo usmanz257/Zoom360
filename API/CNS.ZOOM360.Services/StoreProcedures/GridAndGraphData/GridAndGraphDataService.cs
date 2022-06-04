@@ -647,34 +647,33 @@ namespace CNS.ZOOM360.Services.StoreProcedures.GridAndGraphData
                 {
                     Enabled = true,
                     HeaderFormat = "<b>{series.name}</b>",
-                    pointFormat = " {point.y:,.0f}"
+                    PointFormat = " {point.y:,.0f}"
                 },
-                PlotOptions =
-                new AreaPlotOptions
+                PlotOptions = new AreaPlotOptions
                 {
-                    area =
-                    new Area
+                    Area = new Area()
                     {
-                        pointStart = 0,
-                        marker =
-                        new AreaMarker
+                        PointStart = 0,
+                        size = "100%",
+                        LineWidth = 1,
+                        stickyTracking = false,
+                        Marker = new AreaMarker
                         {
-                            enabled = false,
-                            symbol = "circle",
-                            radius = 2,
-                            states =
-                            new AreaStates
+                            Enabled = false,
+                            Symbol = "circle",
+                            Radius = 2,
+                            States = new AreaState()
                             {
-                                hover =
-                                new AreaHover
+                                Hover = new AreaHover()
                                 {
                                     enabled = true
                                 }
                             }
-                        }
+                        },
+
                     }
                 },
-                Legend = new AreaLegend
+                    Legend = new AreaLegend
                 {
                     Enabled = chartSettingsInputModel.LegendsEnabled
 
@@ -1094,6 +1093,10 @@ namespace CNS.ZOOM360.Services.StoreProcedures.GridAndGraphData
             {
                 return await GetDualAxisChartData(widget);
             }
+            else if (widget.Type == "dualColumnArea")
+            {
+                return await GetDualAxisColumnAreaChartData(widget);
+            }
             else if (widget.Type == "DefaultScoreCard")
             {
                 return await GetScorecardChartData(widget);
@@ -1113,6 +1116,10 @@ namespace CNS.ZOOM360.Services.StoreProcedures.GridAndGraphData
             else if (widget.Type == "imgScoreCard")
             {
                 return await GetScorecardChartData(widget);
+            }
+            else if (widget.Type == "headercard")
+            {
+                return await GetHeaderCardData(widget);
             }
             else if (widget.Type == "ScoreCardColorLPurple")
             {
@@ -1166,8 +1173,11 @@ namespace CNS.ZOOM360.Services.StoreProcedures.GridAndGraphData
             {
                 return await GetAIWidgetStyleCardData(widget);
             }
+            else if (widget.Type == "TimelineWidgetStyleCard")
+            {
+                return await TimelineWidgetStyleCardData(widget);
+            }
             else
-
             {
                 return obj;
             }
@@ -1303,6 +1313,11 @@ namespace CNS.ZOOM360.Services.StoreProcedures.GridAndGraphData
             });
             return model;
         }
+        private async Task<ScoreCardChart> GetHeaderCardData(WidgetDto widget)
+        {
+            ScoreCardChart model = GetScorecardChart(widget);
+            return model;
+        }
         private async Task<ScoreCardChart> GetScorecardChartData(WidgetDto widget)
         {
             string spQuery = widget.Query.Sql;
@@ -1316,6 +1331,7 @@ namespace CNS.ZOOM360.Services.StoreProcedures.GridAndGraphData
             });
             return model;
         }
+
         private async Task<ScoreCardChart> GetScorecardImgValueChartData(WidgetDto widget)
         {
             string spQuery = widget.Query.Sql;
@@ -1376,6 +1392,35 @@ namespace CNS.ZOOM360.Services.StoreProcedures.GridAndGraphData
                 return new AIWidgetStyleCard() { Type= "AIWidgetStyleCard" };
             }
         }
+
+        private async Task<TimelineWidgetStyleCard> TimelineWidgetStyleCardData(WidgetDto widget)
+        {
+            string spQuery = widget.Query.Sql;
+            var data = _dynamicGridRepository.getDynamicgrid(spQuery);
+            TimelineWidgetStyleCard model = GetTimelineWidgetStyleCard(widget);
+            model.data = JsonConvert.SerializeObject(data, Formatting.None);
+            widget.Dimension.ToList().ForEach(x =>
+            {
+                model.Dimensions.Add(GetDimensionData(data, x.Name));
+            });
+            //widget.Measure.ToList().ForEach(x =>
+            //{
+            //    model.Measures.Add(GetMeasureData(data, x.Name));
+            //});
+            return model;
+        }
+        private TimelineWidgetStyleCard GetTimelineWidgetStyleCard(WidgetDto widget)
+        {
+            if (!string.IsNullOrWhiteSpace(widget.PropertiesJson))
+            {
+                var data = JsonConvert.DeserializeObject<TimelineWidgetStyleCard>(widget.PropertiesJson);
+                return data;
+            }
+            else
+            {
+                return new TimelineWidgetStyleCard() { Type = "TimelineWidgetStyleCard" };
+            }
+        }
         private async Task<DualAxisColumnLineChart> GetDualAxisChartData(WidgetDto widget)
         {
             string spQuery = widget.Query.Sql;
@@ -1419,6 +1464,54 @@ namespace CNS.ZOOM360.Services.StoreProcedures.GridAndGraphData
             });
             return ch;
         }
+        private async Task<DualAxisColumnAreaChart> GetDualAxisColumnAreaChartData(WidgetDto widget)
+        {
+            string spQuery = widget.Query.Sql;
+            var data = _dynamicGridRepository.getDynamicgrid(spQuery);
+            var ch = GetDualAxisColumnAreaChart(widget);
+            ch.XAxis = new List<DualColumnAreaXAxis>() {
+        new DualColumnAreaXAxis {
+          Categories = GetDimensionData(data, widget.Dimension.FirstOrDefault().Name),
+            Crosshair = true,
+          labels= new DualColumnAreaXAxislabels
+          {
+              style=new DualColumnAreaXAxislabelsStyle
+              {
+                  fontSize="6px"
+              }
+          }
+        }
+      };
+            int measureCount = 0;
+            widget.Measure.ToList().ForEach(x => {
+                measureCount++;
+                if (measureCount < widget.Measure.Count)
+                {
+                    ch.Series.Add(new DualAxisColumnAreaSeries()
+                    {
+                        Name = x.Name,
+                        Data = GetMeasureData(data, x.Name),
+                        Type = "areaspline",
+                        yAxis = 1
+
+                    });
+                   
+                }
+               
+                else if (measureCount == widget.Measure.Count)
+                {
+                    ch.Series.Add(new DualAxisColumnAreaSeries()
+                    {
+                        Name = x.Name,
+                        Data = GetMeasureData(data, x.Name),
+                        Type = "column"
+                    });
+                }
+            });
+            return ch;
+        }
+
+
         private async Task<ColumnChartGenaric> GetColumnChartData(WidgetDto widget)
         {
             string spQuery = widget.Query.Sql;
@@ -1620,6 +1713,61 @@ namespace CNS.ZOOM360.Services.StoreProcedures.GridAndGraphData
                         Shadow = true
                     },
                     Credits = new DualColumnLineCredits
+                    {
+                        Enabled = false
+                    },
+                };
+
+                return ch;
+            }
+        }
+        private DualAxisColumnAreaChart GetDualAxisColumnAreaChart(WidgetDto widget)
+        {
+            if (!string.IsNullOrWhiteSpace(widget.PropertiesJson))
+            {
+                return JsonConvert.DeserializeObject<DualAxisColumnAreaChart>(widget.PropertiesJson);
+            }
+            else
+            {
+                var ch = new DualAxisColumnAreaChart
+                {
+                    Chart = new DualColumnAreaChart
+                    {
+                        ZoomType = "xy"
+                    },
+                    Title = new DualColumnAreaTitle
+                    {
+                        Text = ""
+                    },
+                    Subtitle = new DualColumnAreaSubtitle
+                    {
+                        Text = ""
+                    },
+                    YAxis = new List<DualColumnAreaYAxis>() {
+              new DualColumnAreaYAxis {
+                Title = new DualColumnAreaYAxisTitle {
+                    Text = "",
+                      Align = "high"
+                  },
+              }
+            },
+                    Tooltip = new DualColumnAreaTooltip
+                    {
+                        ValueSuffix = " millions"
+                    },
+                    Legend = new DualColumnAreaLegend
+                    {
+                        Layout = "vertical",
+                        Align = "right",
+                        VerticalAlign = "top",
+                        X = -40,
+                        Y = 80,
+                        Floating = true,
+                        BorderWidth = 1,
+                        BackgroundColor = "#FFFFFF",
+                        Shadow = true
+                    },
+                    Credits = new DualColumnAreaCredits
                     {
                         Enabled = false
                     },

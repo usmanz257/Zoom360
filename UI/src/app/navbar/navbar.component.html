@@ -2,8 +2,7 @@
     <div id="navbar" style="margin-bottom: 1px;">
         <nav class="navbar navbar-expand-lg navbar-light">
             <!-- <a class="navbar-brand" href="#">
-            </a> -->
-
+                </a> -->
             <div class="css-18qe4ku">
                 <div class="separator-p">
                     <div class="css-u41myu">
@@ -15,32 +14,29 @@
                     </div>
                     <hr class="separator" mx="zero" role="separator" aria-orientation="vertical">
                     <!-- <div class="css-1mnuzev"> -->
-                   <!-- <span style=" padding: 0 12px 0 6px; font-family: 'Open Sans'; font-size: 16px;">Marketing dept.</span> -->
-                   <!-- <span style=" padding: 0 12px 0 6px; font-family: 'Open Sans'; font-size: 17px;">{{userName}}</span> -->
-                   <span style=" padding: 0 12px 0 6px; font-family: 'Open Sans'; font-size: 17px;" >{{this.companyName}}</span>
+                    <!-- <span style=" padding: 0 12px 0 6px; font-family: 'Open Sans'; font-size: 16px;">Marketing dept.</span> -->
+                    <!-- <span style=" padding: 0 12px 0 6px; font-family: 'Open Sans'; font-size: 17px;">{{userName}}</span> -->
+                    <span style=" padding: 0 12px 0 6px; font-family: 'Open Sans'; font-size: 17px;" >{{this.companyName}}</span>
                     <!-- <span style="padding: 0 6px 0 12px;font-size: 16px; cursor: pointer;">Marketing dept.</span> -->
                     <!-- 
-                  </div> -->
-
+                        </div> -->
                     <hr class="separator" style="margin: 0% !important;" mx="zero" role="separator" aria-orientation="vertical">
                 </div>
             </div>
             <button class="css-1u2frpk navbar-toggler" type="button" data-target="#MyMenubar" data-toggle="collapse" aria-expanded="false" aria-controls="navbarSupportedContent" aria-haspopup="dialog" aria-label="Toggle navigation">
                 <svg class="css-1l7xwpx" fill="currentcolor" viewBox="0 0 24 24">
-                   <path d="M4 16h16v2H4v-2zm12-5v2H4v-2h12zm4-5v2H4V6h16z"></path>
+                    <path d="M4 16h16v2H4v-2zm12-5v2H4v-2h12zm4-5v2H4V6h16z"></path>
                 </svg>
-             </button>
+            </button>
             <div class="collapse navbar-collapse" id="MyMenubar">
                 <div class="navbar-nav mr-auto ml-right" id="TopnavbarMenuLink">
                     <div class="nav-list">
                         <ul class="navbar-nav mr-auto ml-auto" id="TopnavbarMenuLink">
-
                             <li class="nav-item" *ngFor="let item of this.MenuService._mainMenu">
                                 <div class=""><a id="{{item.mainManuId}}" class="css-1olq135 nav-list-s main-menu" [routerLink]="'/'+item.url" routerLinkActive="main-menu-active" (click)="setMainMenuId(item.mainManuId)">{{item.mainMenuName}}</a></div>
                             </li>
                         </ul>
                     </div>
-
                 </div>
                 <div>
                     <ul class="navbar-nav">
@@ -51,27 +47,46 @@
                                         <div class="css-18qe4ku">
                                             <div class="css-u41myu" tabindex="0" aria-describedby="id-9jv11u">
                                                 <a class="css-1lf83w2" type="button" aria-expanded="false" aria-controls="id-to0r5h" aria-haspopup="menu" routerLink="/help/helpHome" routerLinkActive="css-1lf83w2">
-                                                <svg class="css-1l7xwpx"  fill="currentcolor" viewBox="0 0 24 24">
-                                                    <path d="M13 14.328v-.666c0-1.076.369-1.65 1.67-2.418 1.312-.79 2.141-1.926 2.141-3.535C16.811 5.599 15.05 4 12.467 4 9.588 4 8.113 5.773 8 7.975h1.752c.113-1.465 1.096-2.377 2.643-2.377 1.527 0 2.51.933 2.51 2.203 0 1.097-.46 1.742-1.649 2.47-1.404.84-2.06 1.762-2.049 3.114v.943H13zM12.109 19c.666 0 1.168-.512 1.168-1.168 0-.666-.502-1.168-1.168-1.168-.656 0-1.168.502-1.168 1.168 0 .656.512 1.168 1.168 1.168z"></path>
-                                                </svg>
-                                            </a>
+                                                    <svg class="css-1l7xwpx"  fill="currentcolor" viewBox="0 0 24 24">
+                                                        <path d="M13 14.328v-.666c0-1.076.369-1.65 1.67-2.418 1.312-.79 2.141-1.926 2.141-3.535C16.811 5.599 15.05 4 12.467 4 9.588 4 8.113 5.773 8 7.975h1.752c.113-1.465 1.096-2.377 2.643-2.377 1.527 0 2.51.933 2.51 2.203 0 1.097-.46 1.742-1.649 2.47-1.404.84-2.06 1.762-2.049 3.114v.943H13zM12.109 19c.666 0 1.168-.512 1.168-1.168 0-.666-.502-1.168-1.168-1.168-.656 0-1.168.502-1.168 1.168 0 .656.512 1.168 1.168 1.168z"></path>
+                                                    </svg>
+                                                </a>
                                             </div>
                                             <div class="css-qowjcb css-m0pid7" id="id-to0r5h" hidden="" role="menu" tabindex="-1" data-dialog="true" aria-orientation="vertical" style="display: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; transform: translate(1160px, 46px);">
                                                 <div class="css-1i6yrak"><a class="css-1m7bmg5" id="id-to0r5h-1" tabindex="0" role="menuitem" target="_blank" style="text-decoration: none;">Documentation</a></div>
                                                 <div class="css-1i6yrak"><button class="css-1m7bmg5" id="id-to0r5h-2" tabindex="-1" role="menuitem">Contact support</button></div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <!-- <img class="css-1uqv71b css-176l2l7" src="assets/images/profilelogo.png" alt="Insights"> -->
-                                    <img class="css-1uqv71b css-176l2l7" style="border-radius: 50%;" src="{{this.userProfileImage!=null? '../../assets/images/Profileimages/ClientImages/UserImage/'+this.userProfileImage:'../../assets/images/profilelogo.png'}}" title="{{this.userName}}" alt="Insights"/>
+                                    <div class="css-18qe4ku">
+                                        <div class="css-u41myu" tabindex="0" aria-describedby="id-9jv11u" title="{{this.userName}}" alt="Insights">
+                                            <a class="css-1lf83w2" type="button" aria-expanded="false" aria-controls="id-to0r5h" aria-haspopup="" routerLink="" routerLinkActive="">
+                                                <svg xmlns="" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- <img class="css-1uqv71b css-176l2l7" style="border-radius: 50%;" src="{{this.userProfileImage!=null? '../../assets/images/Profileimages/ClientImages/UserImage/'+this.userProfileImage:'../../assets/images/profilelogo.png'}}" title="{{this.userName}}" alt="Insights"/> -->
+                                    <div class="css-18qe4ku">
+                                        <div class="css-u41myu" tabindex="0" aria-describedby="id-9jv11u">
+                                            <a class="css-1lf83w2" type="button" aria-expanded="false" aria-controls="id-to0r5h" aria-haspopup="menu" routerLink="/timeline/main" routerLinkActive="css-1lf83w2">
+                                                <svg xmlns="" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                                                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
                                     <div class="dropdown">
-                                        <button class="dropdown-nav-btn dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <svg class="css-1l7xwpx" fill="currentcolor" viewBox="0 0 24 24">
-                                    <path d="M12 14.172l5.657-5.657 1.414 1.414L12 17 4.929 9.929l1.414-1.414z"></path>
-                                    </svg></button>
+                                        <button class="dropdown-nav-btn dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <svg class="css-1l7xwpx" fill="currentcolor" viewBox="0 0 24 24">
+                                                <path d="M12 14.172l5.657-5.657 1.414 1.414L12 17 4.929 9.929l1.414-1.414z"></path>
+                                            </svg>
+                                        </button>
                                         <div id="myDropdown2" class="dropdown-menu dropdown-content" style="left: -124px;" aria-labelledby="dropdownMenuButton">
                                             <ul class="css-ctqjzd" style="list-style-type: none; margin-bottom: 0px;">
-                                                    <li *ngFor="let item of this.MenuService._modelist">
+                                                <li *ngFor="let item of this.MenuService._modelist">
                                                     <a id="Menu{{item.dropdownValue}}" class="css-1wfdhj main-nav-dropdown-a" [ngClass]="{'main-nav-dropdown-selected' : item.selected}" (click)="changeMode(item.dropdownValue)">
                                                     {{item.dropdownText}}
                                                     </a>
@@ -80,22 +95,22 @@
                                                     <a id="1" routerLink="/extract/extraction/summary" routerLinkActive="ActiveRoute" class="css-1wfdhj main-nav-dropdown-a" [ngClass]="{'main-nav-dropdown-selected' : applicationMode}" (click)="changeMode(1)">
                                                     Application Mode
                                                     </a>
-                                                </li>
-                                                <li>
+                                                    </li>
+                                                    <li>
                                                     <a id="2" routerLink="/presentationMode/PresentMain/kpi/achivements/digitalsalesdashboard" routerLinkActive="ActiveRoute" class="css-1wfdhj main-nav-dropdown-a" [ngClass]="{'main-nav-dropdown-selected' : presentationMode}" (click)="changeMode(2)">
                                                     Presentation Mode
-                                                </a>
-                                                </li>
-                                                <li>
+                                                    </a>
+                                                    </li>
+                                                    <li>
                                                     <a id="3" routerLink="/timeline/main" routerLinkActive="ActiveRoute" class="css-1wfdhj main-nav-dropdown-a">
                                                     My page
-                                                </a>
-                                                </li>
-                                                <li>
+                                                    </a>
+                                                    </li>
+                                                    <li>
                                                     <a id="4" routerLink="/kpiachivements/achivements" routerLinkActive="ActiveRoute" class="css-1wfdhj main-nav-dropdown-a" (click)="logout()">
                                                     Log out
-                                                </a>
-                                                </li> -->
+                                                    </a>
+                                                    </li> -->
                                             </ul>
                                         </div>
                                     </div>

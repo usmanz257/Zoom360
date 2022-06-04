@@ -119,7 +119,7 @@ namespace ZOOM360.Charts.DashBoardServices.dashBoard
                 .Include(x => x.Layout)
                 .Include(x => x.Query)
                 .Where(x => x.PageId == Page.Id);
-            //working area
+
             var result = await (from o in WidgetResult
                           select new WidgetDto
                           {

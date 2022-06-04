@@ -134,6 +134,7 @@ namespace CNS.ZOOM360.Shared.Const
             public const string GetPredictionReach = "GetPredictionReach";
             public const string SavePrediction = "SavePrediction";
             public const string GetProductionProcessData = "GetProductionProcessData";
+            public const string GetMarketingStrategyData = "GetMarketingStrategyData";
         }
         public class DynamicMenuItem
         {

@@ -177,6 +177,9 @@ ngOnChanges():void{
          else if(this.Widgets[i].type=="AIWidgetStyleCard"){
           this.Widgets[i].chart.data=JSON.parse(this.Widgets[i].chart.data);
          }
+         else if(this.Widgets[i].type=="TimelineWidgetStyleCard"){
+          this.Widgets[i].chart.data=JSON.parse(this.Widgets[i].chart.data);
+         }
          
        }
        

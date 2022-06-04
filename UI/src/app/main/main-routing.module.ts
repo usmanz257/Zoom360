@@ -52,6 +52,10 @@ const routes: Routes = [
     path: 'timeline',
     loadChildren: () => import('./time-line/time-line.module').then(m => m.TimeLineModule),canActivate: [AuthGuard]
   },
+  {
+    path: 'reveals',
+    loadChildren: () => import('./reveal/reveal.module').then(m => m.RevealModule),canActivate: [AuthGuard]
+  },
 ]
 },
 ]

@@ -8,6 +8,8 @@ import { PerformancedashboardComponent } from 'src/app/main/publish/performanced
 import { MarketingDashboardComponent } from 'src/app/Charts/ChartsDashBoard/marketing-dashboard/marketing-dashboard.component';
 import { PublishModule } from 'src/app/main/publish/publish.module';
 import { DarkthemeDashboardComponent } from 'src/app/Charts/ChartsDashBoard/darktheme-dashboard/darktheme-dashboard.component';
+import { RevealDashboardComponent } from 'src/app/main/reveal/reveal-dashboard/reveal-dashboard.component';
+import { RevealModule } from 'src/app/main/reveal/reveal.module';
 
 const routes: Routes = [
   { path: 'achivements', component:KPIAchivementsComponent,
@@ -19,6 +21,8 @@ const routes: Routes = [
   { path: 'marketingdashboard', component:MarketingDashboardComponent,
 },
 { path: 'darkthemedashboard', component:DarkthemeDashboardComponent,
+},
+{path:'revealDasboard',component:RevealDashboardComponent,
 }
   ]
   }
@@ -31,6 +35,6 @@ const routes: Routes = [
      CommonModule,
     RouterModule.forChild(routes),
   ],
-  exports:[RouterModule,PublishModule]
+  exports:[RouterModule,PublishModule,RevealModule]
 })
 export class KPIAchivementsRoutingModule { }

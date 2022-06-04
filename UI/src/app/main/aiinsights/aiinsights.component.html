@@ -28,17 +28,17 @@
                             </div>
                     </div>
                 </div>
-                <div Class="col-sm-12 col-md-8 col-lg-8 col-xl-8" style="height: 100%;margin-top: 20px;" >
+                <div Class= "col-sm-12 col-md-8 col-lg-8 col-xl-8" style="height: 100%;margin-top: 20px;" >
                     <div *ngFor="let item of AiinsightList">
                         <div class="col-sm-6 col-md-6"  style="margin-bottom:20px;" *ngIf="item.widgetType=='Standard'">
                             <app-aiinsight-widget [widgetData]="item" (gridData)="griddataReceiver($event)" ></app-aiinsight-widget> 
                         </div>
                 </div>
-                    <div *ngFor="let item of AiinsightList">
+                    <!-- <div *ngFor="let item of AiinsightList">
                         <div class="col-sm-12 col-md-12" style="margin-bottom:20px;" *ngIf="item.widgetType=='Expanded'"> 
                             <app-aiinsights-expand-widget [widgetData]="item" (gridData)="griddataReceiver($event)" ></app-aiinsights-expand-widget>
                         </div>
-                        </div>
+                        </div> -->
             </div>
                 <div class="col-sm-12 col-md-2 col-lg-2 explore-sidebar" style="border-left:1px solid rgb(221, 224, 228);">
                         <div class="faq">
@@ -312,3 +312,4 @@
             <app-ag-grid-data-viewer #agGridComponent (gridClose)="this.gridclose()"></app-ag-grid-data-viewer>
         </div>
     </div>
+   

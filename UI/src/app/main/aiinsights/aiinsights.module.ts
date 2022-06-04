@@ -18,6 +18,9 @@ HighchartsMore(Highcharts);
 HighchartsSolidGauge(Highcharts);
 import { MultiSelectAllModule, MultiSelectModule } from '@syncfusion/ej2-angular-dropdowns';
 import { AiinsightsExpandWidgetComponent } from './aiinsights-expand-widget/aiinsights-expand-widget.component';
+import HC_more from 'highcharts/highcharts-more';
+HC_more(Highcharts);
+
 
 
 
@@ -27,7 +30,6 @@ import { AiinsightsExpandWidgetComponent } from './aiinsights-expand-widget/aiin
     KpiGraphComponent,
     AIinsightWidgetComponent,
     AiinsightsExpandWidgetComponent,
-  
   ],
   imports: [
     SharedModule,

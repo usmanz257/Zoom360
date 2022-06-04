@@ -17,6 +17,7 @@ FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
 @NgModule({
   declarations: [
     KPIAchivementsComponent,
+    
   ],
   imports: [
     SharedModule,

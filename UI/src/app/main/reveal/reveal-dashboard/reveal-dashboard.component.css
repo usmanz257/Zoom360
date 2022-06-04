@@ -1,0 +1,13 @@
+.reveal-score-card{
+    padding: 8px;
+    min-height: 115px;
+    background: #EDF5FA;
+
+}
+.score-card-bold-text{
+    font-weight: 600;
+    font-family: 'Open Sans';
+}
+.purple-color{
+    color:#4a1f7d;
+}

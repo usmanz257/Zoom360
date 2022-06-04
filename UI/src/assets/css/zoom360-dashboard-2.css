@@ -434,8 +434,8 @@
 }
 
 .draftDashboardContainer-17jWv {
-	height: 210px;
-	overflow-y: scroll;
+	height: 212px;
+	overflow-y: auto;
 	overflow-x: hidden
 }
 

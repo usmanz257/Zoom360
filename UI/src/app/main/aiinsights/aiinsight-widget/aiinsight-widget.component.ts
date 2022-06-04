@@ -6,7 +6,6 @@ import { AIinsightWidgetDataModel, SaveLikeDislikeDtO } from 'src/app/models/AIi
 import { AIinsightsService } from 'src/app/services/AIinsights/aiinsights.service';
 import { AppComponentBase } from 'src/app/services/AppComponentBase';
 import { AgGridDataViewerComponent } from '../ag-grid-data-viewer/ag-grid-data-viewer.component';
-import { Chart } from 'highcharts';
 
 @Component({
   selector: 'app-aiinsight-widget',
@@ -34,7 +33,7 @@ constructor(private _AIinsightsService:AIinsightsService,injector:Injector)
     this.buildChart();
   }
   buildChart(){
-  console.log(this.widgetData);
+  console.log("this.widgetData ==>",this.widgetData);
     this.chartId+=this.widgetData.widgetID;
     this.like=this.widgetData.isLike;
     this.attributeId=this.widgetData.attributeID;

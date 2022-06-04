@@ -12,6 +12,7 @@ import { FusionChartsModule } from 'angular-fusioncharts';
 import { PrensentationModeRoutingModule } from './Presentation-mode-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { PrensentationModeComponent } from './prensentation-mode.component';
+import { RevealComponent } from '../main/reveal/reveal.component';
 
 // Pass the fusioncharts library and chart modules
 FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);

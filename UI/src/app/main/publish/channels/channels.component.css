@@ -14,7 +14,15 @@
     max-height: 250px;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 #5294db ;
     }
-    
+    .channels-small-box-AI {
+        /* min-height: 250px; */
+        display: block;
+        text-align: center;
+        /* border: rgb(221, 224, 228) 1px solid; */
+        margin: 15px 0;
+        max-height: 250px;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 #5294db ;
+        }
     @media (max-width:680px) {
     .masthead {
     display: none

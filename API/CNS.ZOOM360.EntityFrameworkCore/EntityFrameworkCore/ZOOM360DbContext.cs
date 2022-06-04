@@ -187,6 +187,9 @@ namespace CNS.ZOOM360.EntityFrameworkCore
             modelBuilder.Entity<TreeDropDownParentModel>(
         ex => { ex.HasNoKey(); }
         );
+            modelBuilder.Entity<MarketingStrategyModel>(
+    ex => { ex.HasNoKey(); }
+    );
             modelBuilder.Entity<TreeDropDownChildModel>(
         ex => { ex.HasNoKey(); }
         );

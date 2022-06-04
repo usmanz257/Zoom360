@@ -69,24 +69,30 @@ hr:last-child {
 .bgCounterStyleDefault
 {
   padding: unset;
-  color:#515961;
-  background: transparent ;
+  color:unset;
+  background: unset;
   border-radius: unset;
 }
-.bgClrCounterStyle
+.bgCounterStyleGreen
 {
   padding: 6px;
   color: #ffffff;
+  background: #4b915f;
   border-radius: 50px; 
 } 
-/* .bgCounterStyleLightPurple
+.bgCounterStyleLightPurple
 {
   padding: 6px;
   color: #ffffff;
   background: #6B62C4;
   border-radius: 50px; 
-}  */
-
+} 
+.bgClrCounterStyle
+{
+  padding: 6px;
+  color: #ffffff;
+  border-radius: 50px; 
+}
 
 /* h4 .bgSecondValueCounter:nth-of-type(2)
 {
@@ -121,10 +127,3 @@ overflow: auto;
 /* .counterSuffix:nth-child(5) {
   suffix:"%"
 } */
-
-.AI-widget-Style-Border{
-  border-bottom: 1px solid rgb(221, 224, 228);
-}
-.AI-widget-Style-Border:last-child {
-  border-bottom: none;
-}

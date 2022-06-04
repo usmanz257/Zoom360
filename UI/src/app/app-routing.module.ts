@@ -30,6 +30,9 @@ const routes: Routes = [
     path: 'help',
     loadChildren: () => import('./help-doc/HelpDoc.module').then(m => m.HelpDocModule),canActivate: [AuthGuard]
   },
+  
+  // { path: 'reveal', 
+  // loadChildren: () => import('./main/reveal/reveal.module').then(m => m.RevealModule) },
  // {path:'status', component:StatusErrorComponent},
  // { path: '**', redirectTo: 'auth/login' }  
 ];

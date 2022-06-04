@@ -7,9 +7,9 @@ export const environment = {
  assetUrl: 'http://localhost:4200/assets',
  apiUrl: 'http://localhost:51070',
   //old deploment
-  //assetUrl: 'http://192.168.223.111:82/assets',
-  //apiUrl: 'http://192.168.223.111:81',
-  //test envirnoment
+  // assetUrl: 'http://192.168.223.111:82/assets',
+  // apiUrl: 'http://192.168.223.111:81',
+  // //test envirnoment
   //  assetUrl: 'http://192.168.223.111:80/assets',
   //  apiUrl: 'http://192.168.223.111:85',
   staffRole: 2,

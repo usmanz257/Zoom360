@@ -6,8 +6,13 @@ namespace ZOOM360.Charts.HighCharts
 {
     public class AreaChart
     {
+        public AreaChart()
+        {
+            Series = new List<AreaSeries>();
+        }
         public AreaCharts chart { get; set; }
         public AreaAccessibility Accessibility { get; set; }
+        public AreaExporting Exporting { get; set; }
         public AreaTitle Title { get; set; }
         public AreaSubtitle Subtitle { get; set; }
         public AreaXAxis XAxis { get; set; }
@@ -40,7 +45,10 @@ namespace ZOOM360.Charts.HighCharts
         public string Description { get; set; }
         public string RangeDescription { get; set; }
     }
-
+    public class AreaExporting
+    {
+        public bool Enabled { get; set; }
+    }
     public class AreaTitle
     {
         public string Text { get; set; }
@@ -75,36 +83,44 @@ namespace ZOOM360.Charts.HighCharts
     {
         public bool Enabled { get; set; }
         public string HeaderFormat { get; set; }
-        public string pointFormat { get; set; }
+        public string PointFormat { get; set; }
     }
-
+    public class AreaPlotOptions
+    {
+        public Area Area { get; set; }
+        public AreaSeriesPlot series { get; set; }
+    }
+    public class AreaSeriesPlot
+    {
+        public string plotAreaWidth { get; set; }
+        public int strokeWidth { get; set; }
+        public bool enableMouseTracking { get; set; }
+    }
+    public class Area
+    {
+        public  string Stacking { get; set; }
+        public string  LineColor { get; set; }
+        public string size { get; set; }
+        public bool stickyTracking { get; set; }
+        public int LineWidth { get; set; }
+        public AreaMarker Marker { get; set; }
+        public int PointStart { get; set; }
+    }
+    public class AreaMarker
+    {
+        public bool Enabled { get; set; }
+        public string Symbol { get; set; }
+        public int Radius { get; set; }
+        public AreaState States { get; set; }
+    }
+    public class AreaState
+    {
+        public bool Enabled { get; set; }
+        public AreaHover Hover { get; set; }
+    }
     public class AreaHover
     {
         public bool enabled { get; set; }
-    }
-
-    public class AreaStates
-    {
-        public AreaHover hover { get; set; }
-    }
-
-    public class AreaMarker
-    {
-        public bool enabled { get; set; }
-        public string symbol { get; set; }
-        public int radius { get; set; }
-        public AreaStates states { get; set; }
-    }
-
-    public class Area
-    {
-        public int pointStart { get; set; }
-        public AreaMarker marker { get; set; }
-    }
-
-    public class AreaPlotOptions
-    {
-        public Area area { get; set; }
     }
     public class AreaLegend
     {
@@ -114,11 +130,9 @@ namespace ZOOM360.Charts.HighCharts
     }
     public class AreaSeries
     {
-        public string name { get; set; }
-        public List<double> data { get; set; }
+        public virtual string name { get; set; }
+        public virtual List<double> data { get; set; }
     }
-
-
     public class Areacredits
     {
         public bool Enabled { get; set; }

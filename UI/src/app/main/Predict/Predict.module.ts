@@ -19,6 +19,12 @@ import { predictionImpressionsComponent } from './PredictionImpressions/predicti
 import { predictionResultsComponent } from './PredictionResults/predictionResults.component';
 import { SAMComponent } from './sam/sam.component';
 import { QulaityComponent } from './qulaity/qulaity.component';
+import { MarketingStartegyComponent } from './marketing-startegy/marketing-startegy.component';
+import * as Highcharts from 'highcharts/highcharts';
+import HighchartsMore from 'highcharts/highcharts-more.src';
+import HighchartsSolidGauge from 'highcharts/modules/solid-gauge';
+HighchartsMore(Highcharts);
+HighchartsSolidGauge(Highcharts);
 
  
 
@@ -33,7 +39,8 @@ import { QulaityComponent } from './qulaity/qulaity.component';
     predictionImpressionsComponent,
     predictionResultsComponent,
     SAMComponent,
-    QulaityComponent
+    QulaityComponent,
+    MarketingStartegyComponent
    
   ],
   imports: [

@@ -292,7 +292,32 @@ textarea {
   border-style: solid;
   border-radius: 8px;
 }
-
+.gray-label{
+  margin-top: unset;
+  margin-right: unset;
+  margin-bottom: unset;
+  margin-left: unset;
+  padding-top: unset;
+  padding-bottom: unset;
+  font-family: inherit;
+  box-sizing: border-box;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #dbdada;
+  color: #333;
+  display: inline-flex;
+  height: 16px;
+  vertical-align: top;
+  font-size: 10px;
+  line-height: 16px;
+  align-items: center;
+  justify-content: start;
+  white-space: nowrap;
+  border-width: 1px;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 8px;
+}
 .btn-light-green {
   box-sizing: border-box;
   vertical-align: top;

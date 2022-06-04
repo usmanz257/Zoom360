@@ -18,6 +18,7 @@ export class DynamicDashboardComponent extends AppComponentBase implements OnIni
   userId="";  
   workSpaceId=""; 
   client_id=""; 
+  test1="";
   constructor(public MenuService: AppMenuService,injector:Injector) { super(injector)}
 
   ngOnInit(): void {
@@ -25,26 +26,27 @@ export class DynamicDashboardComponent extends AppComponentBase implements OnIni
     this.workSpaceId=this.storageService.getItem(environment.storage.workspaceId);
     this.client_id=this.storageService.getItem(environment.storage.clientId);
     if(this.storageService.getItem('page')){
-      this.getpagewidgets(this.storageService.getItem('page'));
+    this.getpagewidgets(this.storageService.getItem('page'));
     }
-    
     this.MenuService.getsubMenuSection(this.mainmenuID);
     this.MenuService.getWorkbooks(this.userId,this.workSpaceId,this.client_id).subscribe(res => {
       debugger
-      this.Getworkbookdtos = res
+      this.Getworkbookdtos = res;
+      
       
     })
   }
 
-
   getpagewidgets(test1){
-    debugger
-        this.test.page = test1;
+        this.test.page = test1
         this.test.getWidgets(test1);
+      //   setTimeout (() => {
+      //     this.MenuService.setActiveClass("link"+test1.id);
+      //  }, 500);
   }
+
   setActive(id:number){
     this.MenuService.setActiveClass("link"+id);
   }
-  
 }
 

@@ -16,9 +16,13 @@ namespace ZOOM360.Charts.HighCharts
         public string Suffix { get; set; }
         public string CardImg { get; set; }
         public string CardImgText { get; set; }
+        public string textwidget { get; set; }
         public string ColorForeground { get; set; }
         public string ColorBackground { get; set; }
         public string display { get; set; }
+
+        public string counterAlign { get; set; }
+        
         public string justifyContent { get; set; }
         public string flexDirection { get; set; }
         public string alignItems { get; set; }
@@ -27,7 +31,6 @@ namespace ZOOM360.Charts.HighCharts
         public string fontWeight { get; set; }
         public string labelfontSize { get; set; }
         public string labelfontWeight { get; set; }
-        public string counterAlign { get; set; }
         public string data { get; set; }
         public bool scoreCardHr { get; set; }
         public string bgCounterColor { get; set; }

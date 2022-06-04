@@ -119,7 +119,7 @@ export class ChannelsComponent implements OnInit {
     this.barChartSetting={
       Chartid:'barChart',
       ChartType:'bar',
-      MainTitle:'Digital Sale Bar Chart',
+      MainTitle:'',
       Colors:this.Colors.ColorScheme1,
       GradientBGColor1:"#fff",
       GradientBGColor2:"#fff",
@@ -140,7 +140,7 @@ export class ChannelsComponent implements OnInit {
       Chartid:'barChart2',
       ChartType:'bar',
       MainTitle:'',
-      Colors:this.Colors.ColorScheme2,
+      Colors:this.Colors.ColorScheme1,
       GradientBGColor1:"#fff",
       GradientBGColor2:"#fff",
       LegendsEnabled:false,
@@ -230,7 +230,7 @@ export class ChannelsComponent implements OnInit {
     this.basicColumnChartSetting3={
       Chartid:'basicColumnChart3',
       ChartType:'column',
-      MainTitle:'Coloumn Chart',
+      MainTitle:'',
       SubTitle:'',
       XAxisallowDecimals:false,
       Colors:this.Colors.ColorScheme1,
@@ -343,7 +343,7 @@ export class ChannelsComponent implements OnInit {
     this.stackChartSetting={
       Chartid:'columnStack',
       ChartType:'columnStack',
-      MainTitle:'Digital Sale Stack Chart',
+      MainTitle:'',
       Colors:this.Colors.ColorSchemeM,
       GradientBGColor1:"#fff",
       GradientBGColor2:"#fff",
@@ -387,7 +387,7 @@ export class ChannelsComponent implements OnInit {
     this.stackChart3Setting={
       Chartid:'columnStack3',
       ChartType:'columnStack',
-      MainTitle:'Clicks',
+      MainTitle:'',
       Colors:this.Colors.ColorScheme2,
       GradientBGColor1:"#fff",
       GradientBGColor2:"#fff",
@@ -612,7 +612,7 @@ export class ChannelsComponent implements OnInit {
     this.areaChartSetting5={
       Chartid:'areaChart5',
       ChartType:'area',
-      MainTitle:"Area Chart",
+      MainTitle:"",
       SubTitle:'',
       Colors:this.Colors.ColorSchemeM,
       GradientBGColor1:"#fff",
@@ -632,7 +632,7 @@ export class ChannelsComponent implements OnInit {
 this.pieChartSetting={
       Chartid:'pieChart',
       ChartType:'pie',
-      MainTitle:'Performance Pie Chart',
+      MainTitle:'',
       SubTitle:"",
       Colors:this.Colors.ColorSchemeM,
       GradientBGColor1:"#fff",
@@ -675,7 +675,7 @@ this.pieChartSetting={
     this.pieChart3Setting={
       Chartid:'pieChart3',
       ChartType:'pie',
-      MainTitle:'Pie Chart',
+      MainTitle:'',
       SubTitle:"",
       Colors:this.Colors.ColorScheme2,
       GradientBGColor1:"#fff",
