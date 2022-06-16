@@ -11,6 +11,12 @@ import * as FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 import { FusionChartsModule } from 'angular-fusioncharts';
 import { KPIAchivementsComponent } from './KPIAchivements.component';
 import { KPIAchivementsRoutingModule } from './KPIAchivements-routing.module';
+import { DynamicDashboardRoutingModule } from 'src/app/main/dynamicDashboard/dynamicDashboard-routing.module';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { GridsterModule } from 'angular-gridster2';
+import { CountUpModule } from 'ngx-countup';
+import { WidgetModule } from 'src/app/main/widget/widget.module';
+import { DynamicDashboardModule } from 'src/app/main/dynamicDashboard/dynamicDashboard.module';
 
 // Pass the fusioncharts library and chart modules
 FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
@@ -25,6 +31,13 @@ FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
     KPIAchivementsRoutingModule,
     FusionChartsModule,
     AgGridModule.withComponents([]),
+    HighchartsChartModule,
+    DynamicDashboardModule,
+    //HighchartsChartComponent,
+    GridsterModule,
+    // DynamicModule,
+    CountUpModule,
+    WidgetModule
   ]
 })
 export class KPIAchivementsModule { }

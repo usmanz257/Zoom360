@@ -21,10 +21,7 @@ import { NewComponentComponent } from './moduleName/new-component/new-component.
   declarations: [
     AppComponent,
     ApplicationStartupComponent,
-    NewComponentComponent,
-    
-
-    
+    NewComponentComponent
   ],
   imports: [
     BrowserModule,

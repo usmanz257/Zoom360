@@ -13,18 +13,18 @@ import { RevealModule } from 'src/app/main/reveal/reveal.module';
 
 const routes: Routes = [
   { path: 'achivements', component:KPIAchivementsComponent,
-  children:[
-    { path: 'digitalsalesdashboard', component:ChannelsComponent,
-  },
-  { path: 'performancedashboard', component:PerformancedashboardComponent,
-  },
-  { path: 'marketingdashboard', component:MarketingDashboardComponent,
-},
-{ path: 'darkthemedashboard', component:DarkthemeDashboardComponent,
-},
-{path:'revealDasboard',component:RevealDashboardComponent,
-}
-  ]
+//   children:[
+//     { path: 'digitalsalesdashboard', component:ChannelsComponent,
+//   },
+//   { path: 'performancedashboard', component:PerformancedashboardComponent,
+//   },
+//   { path: 'marketingdashboard', component:MarketingDashboardComponent,
+// },
+// { path: 'darkthemedashboard', component:DarkthemeDashboardComponent,
+// },
+// {path:'revealDasboard',component:RevealDashboardComponent,
+// }
+//   ]
   }
 
 ]

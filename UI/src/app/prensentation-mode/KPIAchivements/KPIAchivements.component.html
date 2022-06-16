@@ -1,4 +1,42 @@
 <app-navbar></app-navbar>
 <div style="padding-top: 46px;padding-bottom: 30px;">
-<router-outlet></router-outlet>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- <div class="col-sm-12 col-md-2 col-lg-2 explore-sidebar subMenu-section-padding">
+                <div class="faq">
+                    <div   class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+                        <div class="css-ctqjzd" *ngFor="let item of Getworkbookdtos">
+                            <div role="tab" class="roleDiv" id="heading">
+                                <h3 class="panel-title-z">
+                                    
+                                    <a class="css-ucma6b collapsed" data-toggle="collapse" href="#collapse{{item.id}}" aria-expanded="true" aria-controls="collapse" >{{item.name}}</a>
+                                 </h3>
+                            </div>
+                            <div id="collapse{{item.id}}" class="panel-collapse collapse">
+                                <div class="submenu-item-padding">
+                                
+                                    <div class="css-bk42y6">
+                                        <a id="link{{page.id}}" class="css-1wfdhj" *ngFor="let page of item.pages" routerLinkActive="ActiveRoute" aria-expanded="false"  (click)="getpagewidgets(page);setActive(page.id)">
+                                            {{page.name}}
+                                    </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+            </div> -->
+            <div Class="col-sm-12 col-md-12 col-lg-12 col-lg-12 publish-content-body">
+                <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0; padding:0px 5px 0px 5px" id="rightMenu" >
+                    <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large" style="margin-bottom: 10px;">Close &times;</button>
+                    <app-dashboard-filters></app-dashboard-filters>
+                  </div>
+               
+                <!-- <app-dashboard-filters></app-dashboard-filters> -->
+                <app-workbookpages #test></app-workbookpages>
+    
+            </div>
+        </div>
+        </div>
 </div>

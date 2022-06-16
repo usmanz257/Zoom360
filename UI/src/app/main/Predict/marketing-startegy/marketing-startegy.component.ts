@@ -50,46 +50,25 @@ export class MarketingStartegyComponent extends AppComponentBase implements OnIn
   //   this. buildChart(this.AiinsightList);   
   }
   getData(widgetCategory){
-    debugger
-    
-    // this.widgetCategory=widgetCategory;
     this._PredictServicesService.getAIinsightData2(this.inputDto).subscribe((data:any)=>{
-      // this.AiinsightList=[];
-    
-      this.AiinsightList=data;
-      console.log("this.AiinsightList=>",this.AiinsightList);
-      debugger
-      
-      // for(int i=0;i<this.AiinsightList.length;i++;){}
-      this.chartId+=this.AiinsightList[0].widgetID;
-      this.attributeId=this.AiinsightList[0].attributeID;
-      setTimeout(()=>{
-        Highcharts.chart('con'+this.AiinsightList[0].widgetID,this.AiinsightList[0].chart);
-      },100);
-   
+    this.AiinsightList=[];
+    this.AiinsightList=data;
+    setTimeout(() => {
+      this.test();
+    }, 100);
     });
   }
-  // buildChart(AiinsightList:MArketingStrategy){
-  //   console.log("this.widgetData ==>",this.AiinsightList);
-  //     this.chartId+=this.AiinsightList.widgetID;
-  //     this.like=this.AiinsightList.isLike;
-  //     this.attributeId=this.AiinsightList.attributeID;
-  //     setTimeout(()=>{
-  //       Highcharts.chart('con'+this.AiinsightList.widgetID,this.AiinsightList.chart);
-  //     },100);
-  //   }
-
-  showdetail(){
+test(){
+  for(var i=0;i<this.AiinsightList.length;i++){
+    Highcharts.chart('con'+i,this.AiinsightList[i].chart);
+  }
+}
+  showdetail(id:string){
     debugger
-    this.alpha= !this.alpha
-    if(this.alpha){
-      this.hideshow="Hide Detail";
-    }
-    else{
-      this.hideshow="Show Detail";
-    }
-
-    
-
+    if(document.getElementById(id).style.display=='none'){
+      document.getElementById(id).style.display='Block'
+    }else{
+      document.getElementById(id).style.display='none';
+    }   
   }
 }

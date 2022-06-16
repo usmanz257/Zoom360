@@ -48,6 +48,7 @@ import { DMAverageLeadScoreComponent } from './WidgetLibrary/dm-average-lead-sco
 import { DefaultScoreCardComponent } from './WidgetLibrary/default-score-card/default-score-card.component';
 import { WidgetLibraryComponent } from './widget-library/widget-library.component';
 import { ScoreCardsComponent } from './widget-library/score-cards/score-cards.component';
+import { WidgetModule } from '../widget/widget.module';
 // import { DynamicModule } from 'ng-dynamic-component';
 
 // Pass the fusioncharts library and chart modules
@@ -75,8 +76,10 @@ const dashboardWidgets = [
     //HighchartsChartComponent,
     GridsterModule,
     // DynamicModule,
-    CountUpModule
+    CountUpModule,
+    WidgetModule
     
-  ]
+  ],
+  exports:[WorkbookpagesComponent]
 })
 export class DynamicDashboardModule { }

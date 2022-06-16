@@ -1,4 +1,7 @@
-<button type="button" class="btn btn-info btn-sm pull-right " style="margin-bottom: 5px; margin-top:5px;" (click)="updateLayout()">Update layout</button>
+<div class="w3-teal">
+    <button class="w3-button w3-teal w3-xlarge w3-right" style="margin-top: 5px;" onclick="openRightMenu()">&#9776;</button>
+  </div>
+<button type="button" class="btn btn-info btn-sm pull-right " style="margin-bottom: 5px; margin-top:5px;margin-right:5px;" (click)="updateLayout()">Update layout</button>
 <gridster [options]="options" [ngStyle]="{'background':this.options.backgroundColor}">
 <ng-container *ngFor="let item of Widgets;let i=index">
     <gridster-item [item]="item.layout">

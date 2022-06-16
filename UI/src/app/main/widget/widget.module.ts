@@ -36,6 +36,8 @@ import { StatusErrorComponent } from './status-error/status-error.component';
 import { AgGridDataViewerComponent } from '../aiinsights/ag-grid-data-viewer/ag-grid-data-viewer.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { GridsterModule } from 'angular-gridster2';
+import { DashboardFiltersComponent } from './dashboard-filters/dashboard-filters.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
@@ -68,6 +70,7 @@ FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
     // TreetemplateComponent,
     StatusErrorComponent,
     AgGridDataViewerComponent,
+    DashboardFiltersComponent
     
   ],
   imports: [
@@ -78,6 +81,7 @@ FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
     AgGridModule.withComponents([]),
     HighchartsChartModule,
     GridsterModule,
+    NgSelectModule
   ],
   exports:[
     AllExtractLogWidgetComponent,
@@ -107,6 +111,7 @@ FusionChartsModule.fcRoot(FusionCharts, charts, FusionTheme);
     // TreetemplateComponent,
     StatusErrorComponent,
     AgGridDataViewerComponent,
+    DashboardFiltersComponent
   ]
 })
 export class WidgetModule { }

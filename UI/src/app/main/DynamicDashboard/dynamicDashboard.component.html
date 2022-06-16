@@ -26,6 +26,12 @@
             </div>
         </div>
         <div Class="col-sm-12 col-md-8 col-lg-10 col-lg-10 publish-content-body">
+            <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0; padding:0px 5px 0px 5px" id="rightMenu" >
+                <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large" style="margin-bottom: 10px;">Close &times;</button>
+                <app-dashboard-filters></app-dashboard-filters>
+              </div>
+           
+            <!-- <app-dashboard-filters></app-dashboard-filters> -->
             <app-workbookpages #test></app-workbookpages>
 
         </div>

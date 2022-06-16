@@ -1,4 +1,4 @@
-<div class="row kpi-section " *ngFor="let item of AiinsightList" style="padding: 15px 0 15px 0;margin:0px; border: 1px solid rgb(221, 224, 228);">
+<div class="row kpi-section " *ngFor="let item of AiinsightList;let i=index" style="padding: 15px 0 15px 0;margin:0px; border: 1px solid rgb(221, 224, 228);">
 
     <div class="col-md-6" >
         <div class="col-md-1" style="padding:0; text-align: center;" >
@@ -29,21 +29,21 @@
         <p>{{item.detailDescription}}</p>
         <hr>
         <div>
-            <button class="btn-light-green" type="submit" (click)="showdetail()">{{hideshow}}</button>
+            <button class="btn-light-green" type="submit" (click)="showdetail('detail'+i)">{{hideshow}}</button>
         </div>
 
     </div>
    
     </div>
-    <div class="col-md-6" style="" >
+    <div class="col-md-6">
         <div style="height: 220px;">
-            <div [id]="chartId"  style="height:100%;width:100%;"> </div>
+            <div id="con{{i}}"  style="height:100%;width:100%;"> </div>
             <!-- <app-line-chart-wedget #lineChart3></app-line-chart-wedget> -->
             <!-- <fusioncharts [width]="width" [height]="height" [type]="type" [dataFormat]="dataFormat" [dataSource]="dataSource3">
             </fusioncharts> -->
         </div>
     </div>
-    <div style="height: 100px;" *ngIf="this.alpha">
+    <div id="detail{{i}}" style="height: 100px; display: none;">
         <p style="margin: top 50px;">
             System detected an anomaly. An increase in the number of incomplete sales detected. Browser response needs to be investigated,
             System detected an anomaly. An increase in the number of incomplete sales detected. Browser response needs to be investigated

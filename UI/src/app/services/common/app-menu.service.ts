@@ -3,10 +3,11 @@ import { HttpClient , HttpHeaders, HttpParams} from '@angular/common/http';
 import { MianMenuModel, SubMenusectionModel, TblSubMenu } from 'src/app/Models/mainmenu.model';
 import { environment } from 'src/environments/environment';
 import { debounce } from '@fullcalendar/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { GetWorkbookdto, GetWorkbookPagedto, Layoutdto } from 'src/app/models/DynamicDashboard/Workbookdto';
 import { UAMDropdownModel } from 'src/app/models/common/dropdownmodel';
 import { AppComponentBase } from '../AppComponentBase';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -35,6 +36,7 @@ export class AppMenuService extends AppComponentBase {
   subMenu : TblSubMenu[]=[];
   _modelist:UAMDropdownModel[]=[];
   dropdownname:string='Mode List';
+  page$=new Subject();
   constructor(private _http: HttpClient,injector:Injector) {
     super(injector);
    }

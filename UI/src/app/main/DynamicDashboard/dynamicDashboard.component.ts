@@ -30,10 +30,7 @@ export class DynamicDashboardComponent extends AppComponentBase implements OnIni
     }
     this.MenuService.getsubMenuSection(this.mainmenuID);
     this.MenuService.getWorkbooks(this.userId,this.workSpaceId,this.client_id).subscribe(res => {
-      debugger
       this.Getworkbookdtos = res;
-      
-      
     })
   }
 

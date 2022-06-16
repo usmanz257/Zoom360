@@ -147,7 +147,10 @@ ngOnChanges():void{
  
 }
   ngOnInit(): void {
-  
+    if(this.MenuService.page$){
+      this.MenuService.page$.subscribe(page=> this.getWidgets(page));
+    }
+    
     // this.getWidgets();
   
   }
