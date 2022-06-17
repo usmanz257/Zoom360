@@ -126,6 +126,21 @@ $('.panel-group').on('shown.bs.collapse', toggleIcon);
         $('.tree').treed();
     </script>
     <script>
+        $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+  if (!$(this).next().hasClass('show')) {
+    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+  }
+  var $subMenu = $(this).next(".dropdown-menu");
+  $subMenu.toggleClass('show');
+
+
+  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+    $('.dropdown-submenu .show').removeClass("show");
+  });
+
+
+  return false;
+});
         function hideshowbtn() {
             var x = document.getElementById("show-pw");
             if (x.style.display === "none") {
@@ -147,6 +162,7 @@ $('.panel-group').on('shown.bs.collapse', toggleIcon);
         function closeRightMenu() {
         document.getElementById("rightMenu").style.display = "none";
         }
+        
     </script>
 
 </body>

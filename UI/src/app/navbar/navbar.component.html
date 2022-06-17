@@ -41,12 +41,31 @@
                 <!-- The navigation menu -->
                <!-- The dashboard navigation menu -->
                 <div class="navbar dashboard-navbar" *ngIf="this.mode_id==2">
-                    <div class="subnav" *ngFor="let item of Getworkbookdtos">
-                    <button class="subnavbtn">{{item.name}} <i class="fa fa-caret-down"></i></button>
-                    <div class="subnav-content">
-                        <a *ngFor="let page of item.pages" (click)="getpagewidgets(page)">{{page.name}}</a>
-                    </div>
-                    </div>
+                    <ng-container  *ngFor="let item of Getworkbookdtos;let i=index">
+                        <ng-container  *ngIf="i<5">
+                            <div class="subnav">
+                            <button class="subnavbtn">{{item.name}} <i class="fa fa-caret-down"></i></button>
+                                <div class="subnav-content">
+                                    <a *ngFor="let page of item.pages" (click)="getpagewidgets(page)">{{page.name}}</a>
+                                </div>
+                            </div>
+                    </ng-container>
+                    <ng-container *ngIf="i==6">
+                        <div class="subnav">
+                            <button class="subnavbtn">More<i class="fa fa-caret-down"></i></button>
+                                <div class="subnav-content">
+                                    <ng-container *ngFor="let item of Getworkbookdtos;let i=index">
+                                    <div class="subnav2">
+                                        <button class="subnavbtn2">{{item.name}} <i class="fa fa-caret-right"></i></button>
+                                            <div class="subnav-content2">
+                                                <a *ngFor="let page of item.pages" (click)="getpagewidgets(page)">{{page.name}}</a>
+                                            </div>
+                                    </div>
+                                    </ng-container>
+                                </div>
+                            </div>
+                    </ng-container>
+                </ng-container>
                 </div>
                 <div>
                     <ul class="navbar-nav">
