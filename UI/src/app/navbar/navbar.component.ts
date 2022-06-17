@@ -99,11 +99,7 @@ export class NavbarComponent extends AppComponentBase  implements OnInit {
   
 }
 getpagewidgets(page:any){
-  debugger
   this.MenuService.page$.next(page);
-  //   setTimeout (() => {
-  //     this.MenuService.setActiveClass("link"+test1.id);
-  //  }, 500);
 }
 logout(){
   // var Allkeys= Object.keys(environment.storage)
@@ -143,5 +139,9 @@ setMainMenuId(id){
 this.MenuService.setMainMenuId(id);
 this.storageService.setItem(environment.storage.mainMenu,id);
 }
-
+smile(index) {  
+  var obj =document.getElementById("submenu"+index) as HTMLElement;  
+  obj.style.display = "block";
+  obj.style.position= ""  
+ } 
 }
