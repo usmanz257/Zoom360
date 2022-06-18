@@ -59,8 +59,9 @@ export class NavbarComponent extends AppComponentBase  implements OnInit {
     let subMenuName = path.substring(path.lastIndexOf("/") + 1);
     if(this.mode_id==2){
       this.MenuService.getWorkbooks(this.userId,this.workSpaceId,this.client_id).subscribe(res => {
-        this.Getworkbookdtos = res;
-     this.MenuService.page$.next(this.Getworkbookdtos[0].pages[0]);
+      this.Getworkbookdtos = res;
+      this.MenuService.page$.next(this.Getworkbookdtos[0].pages[0]);
+      this.MenuService.workbook$.next(this.Getworkbookdtos[0].name);
       });
     }
    
@@ -84,7 +85,6 @@ export class NavbarComponent extends AppComponentBase  implements OnInit {
     this.storageService.setItem(environment.storage.ModeId,value);
     //this.MenuService.getsubMenuSection('7');
     this.MenuService.getWorkbooks(this.userId,this.workSpaceId,this.client_id).subscribe(res => {
-      debugger
       this.Getworkbookdtos = res;
       this.router.navigate(['presentationMode/PresentMain/kpi/achivements']);
     })
@@ -98,8 +98,9 @@ export class NavbarComponent extends AppComponentBase  implements OnInit {
   }
   
 }
-getpagewidgets(page:any){
+getpagewidgets(workbookName,page:any){
   this.MenuService.page$.next(page);
+  this.MenuService.workbook$.next(workbookName);
 }
 logout(){
   // var Allkeys= Object.keys(environment.storage)
@@ -139,9 +140,5 @@ setMainMenuId(id){
 this.MenuService.setMainMenuId(id);
 this.storageService.setItem(environment.storage.mainMenu,id);
 }
-smile(index) {  
-  var obj =document.getElementById("submenu"+index) as HTMLElement;  
-  obj.style.display = "block";
-  obj.style.position= ""  
- } 
+
 }

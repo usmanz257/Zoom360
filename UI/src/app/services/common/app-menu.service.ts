@@ -36,7 +36,8 @@ export class AppMenuService extends AppComponentBase {
   subMenu : TblSubMenu[]=[];
   _modelist:UAMDropdownModel[]=[];
   dropdownname:string='Mode List';
-  page$=new Subject();
+  page$=new Subject<any>();
+  workbook$=new Subject<any>();
   constructor(private _http: HttpClient,injector:Injector) {
     super(injector);
    }
@@ -68,10 +69,8 @@ getsubMenuSection(value){
         .set("treeNode", ''+this.treeNode);
         this._http.get(`${this._subMenuSectionitemsUrl}`,{params:params}).subscribe((data: SubMenusectionModel[]) => {
           if(data.length  > 0){
-            debugger
             this.subMenuSection = data;
             }
-            
             if(value==7){
               if(this.storageService.getItem('page')){
                 this.setActiveClass("link"+this.storageService.getItem('page').id);

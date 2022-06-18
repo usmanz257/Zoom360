@@ -23,17 +23,7 @@ export class KPIAchivementsComponent extends AppComponentBase implements OnInit 
   constructor(public MenuService: AppMenuService,injector:Injector) { super(injector)}
 
   ngOnInit(): void {
-    // this.userId=this.storageService.getItem(environment.storage.userId);
-    // this.workSpaceId=this.storageService.getItem(environment.storage.workspaceId);
-    // this.client_id=this.storageService.getItem(environment.storage.clientId);
-    // if(this.storageService.getItem('page')){
-    // this.getpagewidgets(this.storageService.getItem('page'));
-    // }
-    // this.MenuService.getsubMenuSection(this.mainmenuID);
-    // this.MenuService.getWorkbooks(this.userId,this.workSpaceId,this.client_id).subscribe(res => {
-    //   debugger
-    //   this.Getworkbookdtos = res;
-    // })
+    
   }
 
   getpagewidgets(test1){

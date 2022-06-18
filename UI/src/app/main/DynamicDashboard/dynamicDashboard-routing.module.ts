@@ -6,7 +6,7 @@ import { DynamicDashboardComponent } from './dynamicDashboard.component';
 
 
 const routes: Routes = [
-  { path: 'customdashboard', component:DynamicDashboardComponent,
+  { path: 'analytics', component:DynamicDashboardComponent,
   children:[
   
   ]

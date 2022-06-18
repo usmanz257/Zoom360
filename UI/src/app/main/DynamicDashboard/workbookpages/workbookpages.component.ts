@@ -7,6 +7,8 @@ import { DashboardService } from 'src/app/services/extract/dashboard/Dashboard.s
 import { Chart } from 'highcharts';
 import { GetWidgetsdto, GetWorkbookPagedto, Layoutdto } from 'src/app/models/DynamicDashboard/Workbookdto';
 import HC_stock from "highcharts/modules/stock";
+import { ToastMessage } from '../../administration/MessageTypes/toast-message';
+import { ToastComponent } from '@syncfusion/ej2-angular-notifications';
 HC_stock(Highcharts);
 
 @Component({
@@ -33,6 +35,12 @@ export class WorkbookpagesComponent implements OnInit,OnChanges {
   scorecardRowData:any[]=[];
   scorecardColumnDefs:any[]=[];
   BRdata:any[]=[];
+  workbookName:string="";
+  public testToast=new ToastMessage();
+	@ViewChild('defaulttoast',{static:true})
+	public toastObj: ToastComponent;
+	@ViewChild('toastBtnShow',{static:true})
+	public position;
   // DMScoreCardRef:string;
   // @Output() modalSave: EventEmitter<any> = new EventEmitter<any>();
   // DMScoreCard($event) {
@@ -147,14 +155,18 @@ ngOnChanges():void{
  
 }
   ngOnInit(): void {
+    this.position={ X: 'Left', Y: 'Top' };
     if(this.MenuService.page$){
-      this.MenuService.page$.subscribe(page=> this.getWidgets(page));
+      this.MenuService.page$.subscribe(res=> this.getWidgets(res));
+      this.MenuService.workbook$.subscribe((res)=>{
+        this.workbookName = res 
+      } );
     }
     
     // this.getWidgets();
   
   }
-  getWidgets(page) {
+  getWidgets(page:any) {
     this.page = page;
         this.MenuService.getPageProperties(this.page.id).subscribe(res => {
       debugger
@@ -237,8 +249,8 @@ ngOnChanges():void{
 
   updateLayout(): void {
     this.MenuService.updateLayout(this.currentLayoutSettings).subscribe(res => {
-      alert("Record Saved")
-      console.log(res)
+      this.testToast.toast[1].content='Layout updated successfully';
+      this.toastObj.show(this.testToast.toast[1]);
     })
   }
   multiBRScorecard(){

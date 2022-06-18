@@ -14,8 +14,6 @@ export class PrensentationModeComponent implements OnInit {
   constructor(private storageService: StorageService,private MenuService:AppMenuService){
     this.storageService.setItem(environment.storage.ModeId,2);
     this.MenuService.getNavModedropdown(this.storageService.getItem(environment.storage.userId),this.storageService.getItem(environment.storage.ModeId));
-    // this.storageService.setItem(environment.storage.presentMode,true);
-    // this.storageService.setItem(environment.storage.appMode,false);
   }
 
   ngOnInit() {
