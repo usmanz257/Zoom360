@@ -27,13 +27,17 @@ namespace ZOOM360.Charts.DashBoardServices.dashBoard
         private readonly IGridAndGraphDataService _gridAndGraphDataService;
         private readonly IRepositoryBase<Layout> _LayoutRepository;
         private readonly IRepositoryBase<Query> _QueryRepository;
+        private readonly IRepositoryBase<Filters> _FiltersRepository;
+        private readonly IRepositoryBase<FiltersSource> _FilterQueryRepositry;
         public WorkbookService(IRepositoryBase<Workbook> WorkbookRepository,
             IRepositoryBase<Page> PageRepository,
             IRepositoryBase<Widget> WidgetRepository,
             IGridAndGraphDataService gridAndGraphDataService,
             IRepositoryBase<PageProperties> PagePropertiesRepository,
             IRepositoryBase<Layout> LayoutRepository,
-            IRepositoryBase<Query> QuerytRepository
+            IRepositoryBase<Query> QuerytRepository,
+            IRepositoryBase<Filters> FiltersRepository,
+            IRepositoryBase<FiltersSource> FilterQueryRepositry
             )
         {
            
@@ -44,6 +48,8 @@ namespace ZOOM360.Charts.DashBoardServices.dashBoard
             _LayoutRepository = LayoutRepository;
             _QueryRepository = QuerytRepository;
             _WorkbookRepository = WorkbookRepository;
+            _FiltersRepository = FiltersRepository;
+            _FilterQueryRepositry = FilterQueryRepositry;
         }
 
 
@@ -169,6 +175,109 @@ namespace ZOOM360.Charts.DashBoardServices.dashBoard
             }
 
             return  result;
+        }
+        public async Task<IList<WidgetDto>> GetAllFilteredWidgets(FilterQueryDto Page)
+        {
+            var WidgetResult = _WidgetRepository.GetAll()
+                .Include(x => x.Dimension)
+                .Include(x => x.Measure)
+                .Include(x => x.Layout)
+                .Include(x => x.Query)
+                .Where(x => x.PageId == Page.pageId);
+
+            var result = await (from o in WidgetResult
+                                select new WidgetDto
+                                {
+                                    Id = o.Id,
+                                    Name = o.Name,
+                                    Description = o.Description,
+                                    Type = o.Type,
+                                    PropertiesJson = o.Properties,
+                                    Layout = new LayoutDto
+                                    {
+                                        Id = o.Layout.Id,
+                                        Rows = o.Layout.Rows,
+                                        Cols = o.Layout.Columns,
+                                        X = o.Layout.SizeX,
+                                        Y = o.Layout.SizeY
+                                    },
+                                    Dimension = o.Dimension.Select(d => new DimensionDto
+                                    {
+                                        Id = d.Id,
+                                        Name = d.Name,
+                                        Description = d.Description,
+                                        Type = d.Type,
+                                        IsEnabled = d.IsEnabled
+                                    }).ToList(),
+                                    Measure = o.Measure.Select(m => new MeasureDto
+                                    {
+                                        Id = m.Id,
+                                        Description = m.Description,
+                                        Name = m.Name,
+                                        Type = m.Type,
+                                        //value = m.value,
+                                        //dashStyle = m.dashStyle,
+                                        IsEnabled = m.IsEnabled,
+                                        Color = m.Color
+
+
+                                    }).ToList(),
+                                    Query = new QueryDto()
+                                    {
+                                        Id = o.Query.Id,
+                                        Sql = o.Query.Sql,
+                                    }
+                                }).ToListAsync();
+            string whereCluse = " HAVING ";
+            if (Page.filterValues.Count > 0)
+            {
+                for (int i = 0; i < Page.filterValues.Count; i++)
+                {
+                    if (Page.filterValues.Count == 1)
+                    {
+                        whereCluse += Page.filterValues[i].columnName + " = '" + Page.filterValues[i].filterValue + "'";
+                    }
+                    else if (Page.filterValues.Count > 1)
+                    {
+                        if (i < Page.filterValues.Count - 1)
+                        {
+                            whereCluse += Page.filterValues[i].columnName + " = '" + Page.filterValues[i].filterValue + "' AND ";
+                        }
+                        else if (i == Page.filterValues.Count - 1)
+                        {
+                            whereCluse += Page.filterValues[i].columnName + " = '" + Page.filterValues[i].filterValue + "'";
+                        }
+
+                    }
+
+                }
+            }
+            
+            foreach (var item in result)
+            {
+                if (Page.filterValues.Count > 0)
+                {
+                    item.Query.Sql = item.Query.Sql + whereCluse;
+                    item.Chart = await _gridAndGraphDataService.GetCharts(item);
+                }
+                else
+                {
+                    item.Chart = await _gridAndGraphDataService.GetCharts(item);
+                }                    
+               
+            }
+
+            return result;
+        }
+        public async Task<IList<Filters>> GetAllFilters(PageDto Page)
+        {
+            var filters = _FiltersRepository.GetAll().Where(x => x.pageId == Page.Id).ToList();
+            foreach(var item in filters)
+            {
+                var filterValues = _FilterQueryRepositry.ExecutePlainQuery(item.query).ToList();
+                item.filterValues = filterValues;
+            }
+            return filters;
         }
         public async Task UpdateLayout(IList<LayoutDto> layout)
         {

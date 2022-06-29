@@ -230,7 +230,7 @@ div.dashboard-navbar::-webkit-scrollbar-thumb {
 .subnav:hover .subnav-content {
   display: block;
   width: -webkit-min-content;
-  min-width: 180px;
+  min-width: 200px;
 
 }
 
@@ -308,7 +308,7 @@ div.dashboard-navbar::-webkit-scrollbar-thumb {
   width: -webkit-min-content;
   min-width: 180px;
   top: 0;
-  left: 172px;
+  left: 192px;
 }
 
 

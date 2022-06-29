@@ -85,6 +85,34 @@ namespace CNS.ZOOM360.Host.Controllers
                 return Ok(workbooks.Result);
             }
         }
+        [Route("GetFilteredWidgets")]
+        [HttpPost]
+        public IActionResult GetFilteredWidgets(FilterQueryDto Page)
+        {
+            var workbooks = _WorkBookService.GetAllFilteredWidgets(Page);
+            if (workbooks.Result is null)
+            {
+                return NotFound("Item not found!");
+            }
+            else
+            {
+                return Ok(workbooks.Result);
+            }
+        }
+        [Route("GetFilters")]
+        [HttpPost]
+        public IActionResult GetFilters(PageDto Page)
+        {
+            var workbooks = _WorkBookService.GetAllFilters(Page);
+            if (workbooks.Result is null)
+            {
+                return NotFound("Item not found!");
+            }
+            else
+            {
+                return Ok(workbooks.Result);
+            }
+        }
         [Route("UpdateLayout")]
         [HttpPost]
         public IActionResult UpdateLayout(IList<LayoutDto> layout)

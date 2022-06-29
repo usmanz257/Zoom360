@@ -193,6 +193,16 @@ namespace CNS.ZOOM360.Services.DashBoardServices.dashBoard
             _LayoutRepository.SaveChanges();
         }
 
+        public Task<IList<Filters>> GetAllFilters(PageDto Page)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IList<WidgetDto>> GetAllFilteredWidgets(FilterQueryDto Page)
+        {
+            throw new NotImplementedException();
+        }
+
         //public static List<Report> GetReportWithData(Worksheet worksheetObj)
         //{
         //    var listXml = DeserializeXml();

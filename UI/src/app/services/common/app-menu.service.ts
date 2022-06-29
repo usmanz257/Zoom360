@@ -20,6 +20,8 @@ export class AppMenuService extends AppComponentBase {
    _workbookurl=environment.apiUrl+'/api/Workbook/GetWorkbooks';
    _workbookpageurl=environment.apiUrl+'/api/Workbook/GetWorkbookpages';
    _getDropDownUrl= environment.apiUrl+'/api/CommonDropdownList/GetMultiSelectDropDown';
+   _pageFiltersurl=environment.apiUrl+'/api/Workbook/GetFilters';
+   _getFilteredWidgeturl=environment.apiUrl+'/api/Workbook/GetFilteredWidgets';
   userId:string='admin';
   workSpaceId:string=''+1;
   client_id:string='1002';
@@ -38,6 +40,7 @@ export class AppMenuService extends AppComponentBase {
   dropdownname:string='Mode List';
   page$=new Subject<any>();
   workbook$=new Subject<any>();
+  widgets$=new Subject<any>();
   constructor(private _http: HttpClient,injector:Injector) {
     super(injector);
    }
@@ -164,6 +167,15 @@ getWorkbooks(userId:string,workspaceId:string,clientId:string):Observable<any>{
               url_ = url_.replace(/[?&]$/, "");
     
               return this._http.request("get", url_)
+  }
+  getFilters(page: GetWorkbookPagedto):Observable<any>{
+
+    return this._http.post(`${this._pageFiltersurl}`,page);
+             
+  }
+  getFilteredWidgets(page:any):Observable<any>{
+
+    return this._http.post(`${this._getFilteredWidgeturl}`,page);
   }
   updateLayout(input:Layoutdto[]):Observable<any>{
     let url_ =  environment.apiUrl + '/api/Workbook/UpdateLayout';  

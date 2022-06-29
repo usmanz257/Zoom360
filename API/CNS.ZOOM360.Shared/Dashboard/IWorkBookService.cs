@@ -15,6 +15,8 @@ namespace CNS.ZOOM360.Shared.DashBoard
         Task<IList<PageDto>> GetAllPages(WorkbookDto workbook);
         Task<PagePropertiesDto> GetPageProperties(int PageID);
         Task<IList<WidgetDto>> GetAllWidgets(PageDto Page);
+        Task<IList<Filters>> GetAllFilters(PageDto Page);
+        Task<IList<WidgetDto>> GetAllFilteredWidgets(FilterQueryDto Page);
         Task UpdateLayout(IList<LayoutDto> layout);
     }
 }

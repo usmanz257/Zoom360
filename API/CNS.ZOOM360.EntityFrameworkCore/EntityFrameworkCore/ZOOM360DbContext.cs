@@ -34,6 +34,7 @@ using Microsoft.EntityFrameworkCore;
 using ZOOM360.Charts.Model;
 using System.Data;
 using CNS.ZOOM360.Entities.StoreProcedures.Predictions;
+using System;
 
 namespace CNS.ZOOM360.EntityFrameworkCore
 {
@@ -49,7 +50,7 @@ namespace CNS.ZOOM360.EntityFrameworkCore
         public virtual DbSet<Layout> Layouts { get; set; }
         public virtual DbSet<PageProperties> PageProperties { get; set; }
         public virtual DbSet<Query> Queries { get; set; }
-
+        public virtual DbSet<Filters> Filters { get; set; }
         public virtual DbSet<Employee> emplyee { get; set; }
 
         public virtual DbSet<WorkspaceSetup> workspaceSpModal { get; set; }
@@ -68,6 +69,9 @@ namespace CNS.ZOOM360.EntityFrameworkCore
             //modelBuilder.Entity<ChildWorkspaces>(
             //    ex => { ex.HasNoKey(); }
             //    )  ;
+            modelBuilder.Entity<FiltersSource>(
+                ex => { ex.HasNoKey(); }
+                );
             modelBuilder.Entity<ChildWorkspacesModel>(
                 ex => { ex.HasNoKey(); }
                 );

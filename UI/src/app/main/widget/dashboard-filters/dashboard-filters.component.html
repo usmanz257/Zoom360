@@ -1,22 +1,31 @@
-<div class="row div-mb">
-    <div class="col-sm-12 col-md-12">
-        <ng-select [items]="_filterList" bindLabel="dropdownText" placeholder="Select filter" bindValue="dropdownValue" [(ngModel)]="_filtervalue">
-        </ng-select>
-    </div>
-    </div>
-<div>
-    <div class="div-mb">
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1" style="margin-left: 18px;">
-          Default radio
-        </label>
+<div class="faq">
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+      <div class="panel panel-default columnGroup-3NLeh">
+          <div class="panel-heading-explore" role="tab" id="headingfour" style="padding: 3px 8px;">
+              <h3 class="panel-title-z" style="display: flex; justify-content: space-between; padding-top: 3px;" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <a >Filters</a>
+                  <i class="fa fa-filter" aria-hidden="true"></i>
+              </h3>     
+          </div> 
+          <div id="collapseOne" class="panel-collapse collapse" aria-labelledby="collapseOne" data-parent="#accordion">
+              <div style="padding: 5px;" *ngFor="let item of _filterList;let i=index">
+                    <label>{{item.displayName}}</label>
+                    <div role="navigation" class="list-group">
+                        <ng-select [items]="item.filterValues" bindLabel="filterText" placeholder="Select filter" bindValue="filterValue" (change)="selectedFilterValues(item.columnName,$event)" (clear)="remove(item.columnName)">
+                        </ng-select>
+            
+                    </div>
+                  <!-- <div class="related-widget-wrapper">
+                      <ejs-dropdownlist id='_ChartTypeDropdown' [allowFiltering]="true" cssClass="edit-Dropdown"  [dataSource]="_ChartTypeDropdown" placeholder="Select Chart Type" [(fields)]='field'></ejs-dropdownlist>
+                  </div>  -->
+                
+                  </div>  
+                </div>
+
+              <br>
+              <div class="css-1w7dt24">
+              <div class="css-rvqhyx"> <button class="css-xpr64j" type="submit" name="_save" (click)="applyFilters()">Apply</button></div>
+          </div> 
+          </div>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-        <label class="form-check-label" for="flexRadioDefault2" style="margin-left: 18px;">
-          Default checked radio
-        </label>
-      </div>
-    </div>
-</div>
+  </div>

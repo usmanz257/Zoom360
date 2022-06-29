@@ -35,3 +35,34 @@ export class Layoutdto{
     x:number;
     y:number;
 }
+export class FiltersDto
+{
+    filterId :number;
+    pageId :number;
+    query :string;
+    displayName :string;
+    columnName :string;
+    isActive :boolean;
+    filterValues:FiltersSource[];
+    constructor(){
+        this.filterValues=[];
+    }
+}
+export class FiltersSource
+    {
+        filterText:string;
+        filterValue:string;
+    }
+export class ColumnValue
+{
+    columnName:string;
+    filterValue:string;
+}
+export class FilterQueryDto
+{
+    pageId:number;
+    filterValues:ColumnValue[];
+    constructor(){
+        this.filterValues=[];
+    }
+}

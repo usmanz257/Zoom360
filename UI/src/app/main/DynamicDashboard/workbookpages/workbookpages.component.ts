@@ -161,6 +161,7 @@ ngOnChanges():void{
       this.MenuService.workbook$.subscribe((res)=>{
         this.workbookName = res 
       } );
+      this.MenuService.widgets$.subscribe((res)=> this.setWidgets(res));
     }
     
     // this.getWidgets();
@@ -168,8 +169,7 @@ ngOnChanges():void{
   }
   getWidgets(page:any) {
     this.page = page;
-        this.MenuService.getPageProperties(this.page.id).subscribe(res => {
-      debugger
+      this.MenuService.getPageProperties(this.page.id).subscribe(res => {
       this.options = JSON.parse(res.defualtProperties);
 
       this.options.gridType = GridType.Fixed;
@@ -179,30 +179,31 @@ ngOnChanges():void{
       this.options.itemResizeCallback = this.itemResize.bind(this),
         this.options.draggable.stop = this.ItemDrage.bind(this)
       this.MenuService.getWidgets(this.page).subscribe(res => {
-        this.Widgets = res;
-        debugger
-       // this.BRdata = JSON.parse(this.Widgets[0].chart.data);
-       for(var i=0;i<this.Widgets.length;i++){
-         if(this.Widgets[i].type=="MultiBRScoreCardimg"){
-          this.Widgets[i].chart.data=JSON.parse(this.Widgets[i].chart.data);
-         }
-        else if(this.Widgets[i].type=="MultiBRScoreCardimgTwo"){
-          this.Widgets[i].chart.data=JSON.parse(this.Widgets[i].chart.data);
-         }
-         else if(this.Widgets[i].type=="AIWidgetStyleCard"){
-          this.Widgets[i].chart.data=JSON.parse(this.Widgets[i].chart.data);
-         }
-         else if(this.Widgets[i].type=="TimelineWidgetStyleCard"){
-          this.Widgets[i].chart.data=JSON.parse(this.Widgets[i].chart.data);
-         }
-         
-       }
-       
-       console.log('wedget res layout',this.Widgets)
+        this.setWidgets(res);
       })
-    })
+    });
   }
-
+  setWidgets(res){
+    debugger
+    this.Widgets=[];
+    this.Widgets = res;
+    // this.BRdata = JSON.parse(this.Widgets[0].chart.data);
+    for(var i=0;i<this.Widgets.length;i++){
+      if(this.Widgets[i].type=="MultiBRScoreCardimg"){
+       this.Widgets[i].chart.data=JSON.parse(this.Widgets[i].chart.data);
+      }
+     else if(this.Widgets[i].type=="MultiBRScoreCardimgTwo"){
+       this.Widgets[i].chart.data=JSON.parse(this.Widgets[i].chart.data);
+      }
+      else if(this.Widgets[i].type=="AIWidgetStyleCard"){
+       this.Widgets[i].chart.data=JSON.parse(this.Widgets[i].chart.data);
+      }
+      else if(this.Widgets[i].type=="TimelineWidgetStyleCard"){
+       this.Widgets[i].chart.data=JSON.parse(this.Widgets[i].chart.data);
+      }
+      
+    }
+  }
   public itemResize(item: GridsterItem, itemComponent: GridsterItemComponentInterface): void {
 
 

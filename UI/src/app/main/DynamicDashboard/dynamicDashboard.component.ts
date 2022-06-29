@@ -27,9 +27,9 @@ export class DynamicDashboardComponent extends AppComponentBase implements OnIni
     this.userId=this.storageService.getItem(environment.storage.userId);
     this.workSpaceId=this.storageService.getItem(environment.storage.workspaceId);
     this.client_id=this.storageService.getItem(environment.storage.clientId);
-    if(this.storageService.getItem('page')){
-    this.getpagewidgets('',this.storageService.getItem('page'));
-    }
+    // if(this.storageService.getItem('page')){
+    // this.getpagewidgets('',this.storageService.getItem('page'));
+    // }
     this.MenuService.getsubMenuSection(this.mainmenuID);
     this.MenuService.getWorkbooks(this.userId,this.workSpaceId,this.client_id).subscribe(res => {
       this.Getworkbookdtos = res;
@@ -40,6 +40,7 @@ export class DynamicDashboardComponent extends AppComponentBase implements OnIni
   }
 
   getpagewidgets(workbookName,test1){
+    this.MenuService.page$.next(test1);
     this.MenuService.workbook$.next(workbookName);
         this.test.page = test1
         this.test.getWidgets(test1);
