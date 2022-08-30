@@ -1,31 +1,67 @@
 <div class="faq">
   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
-      <div class="panel panel-default columnGroup-3NLeh">
-          <div class="panel-heading-explore" role="tab" id="headingfour" style="padding: 3px 8px;">
+        <div class="panel panel-default columnGroup-3NLeh">
+            <div class="panel-heading-explore" role="tab" id="headingfour" style="padding: 3px 8px;">
               <h3 class="panel-title-z" style="display: flex; justify-content: space-between; padding-top: 3px;" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                   <a >Filters</a>
                   <i class="fa fa-filter" aria-hidden="true"></i>
               </h3>     
-          </div> 
-          <div id="collapseOne" class="panel-collapse collapse" aria-labelledby="collapseOne" data-parent="#accordion">
-              <div style="padding: 5px;" *ngFor="let item of _filterList;let i=index">
-                    <label>{{item.displayName}}</label>
-                    <div role="navigation" class="list-group">
-                        <ng-select [items]="item.filterValues" bindLabel="filterText" placeholder="Select filter" bindValue="filterValue" (change)="selectedFilterValues(item.columnName,$event)" (clear)="remove(item.columnName)">
-                        </ng-select>
-            
-                    </div>
-                  <!-- <div class="related-widget-wrapper">
-                      <ejs-dropdownlist id='_ChartTypeDropdown' [allowFiltering]="true" cssClass="edit-Dropdown"  [dataSource]="_ChartTypeDropdown" placeholder="Select Chart Type" [(fields)]='field'></ejs-dropdownlist>
-                  </div>  -->
-                
-                  </div>  
+            </div> 
+            <div id="collapseOne" class="panel-collapse collapse" aria-labelledby="collapseOne" data-parent="#accordion">
+            <div style="padding: 5px;" *ngFor="let item of _filterList;let i=index">
+                <label>{{item.displayName}}</label>
+                <div role="navigation" class="list-group">
+                    <ng-select [items]="item.filterValues" bindLabel="filterText" placeholder="Select filter" bindValue="filterValue" (change)="selectedFilterValues(item.columnName,$event)" (clear)="remove(item.columnName)">
+                    </ng-select>
+        
                 </div>
+                <!-- <div class="related-widget-wrapper">
+                    <ejs-dropdownlist id='_ChartTypeDropdown' [allowFiltering]="true" cssClass="edit-Dropdown"  [dataSource]="_ChartTypeDropdown" placeholder="Select Chart Type" [(fields)]='field'></ejs-dropdownlist>
+                </div>  -->
+            
+                </div>
+                <div class="form-group controls-settings" style="margin-bottom: 25px;">
+                <div class="css-1w7dt24" style="float: right;" *ngIf="_filterList.length>0">
+                    <div class="css-rvqhyx">
+                        <button class="css-xpr64j" type="button"  name="_save" (click)="applyFilters()">Apply</button>
+                    </div>
+                </div>
+            </div>  
+            </div>
+        </div>
+ </div>
+ <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="false">
+    <div class="panel panel-default columnGroup-3NLeh">
+        <div class="panel-heading-explore" role="tab" id="headingFive">
+            <h3 class="panel-title-z" style="display: flex; justify-content: space-between; padding-top: 3px;" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapsefour">
+                <a>Dashboard settings</a>
+                <i class="fa fa-cog" aria-hidden="true"></i>
+            </h3>
+        </div>
+        <div id="collapseFive" class="panel-collapse collapse" aria-labelledby="collapseFive" data-parent="#accordion2">
+            <div style="padding: 5px;">
+                <div role="navigation" class="list-group">
+                <div class="form-group controls-settings">
+                    <label for="resultsReach" title="How much web purchases you expect to finalize">Workbook name</label>
+                    <input type="text" name="resultsReach" id="resultsReach" class="numberinput form-control" min="0" [(ngModel)]="this.workbookName">
+                </div>
+                <div class="form-group controls-settings">
+                    <label for="impressionReach" title="Page name">Page name</label>
+                    <input type="text" name="impressionReach" id="impressionReach" class="numberinput form-control" min="0" [(ngModel)]="this.pageName">
+                </div>
+                <div class="form-group controls-settings">
+                    <div class="css-1w7dt24" style="float: right;">
+                    <div class="css-rvqhyx">
+                        <button class="css-xpr64j" type="button"  name="_save" (click)="updateDashboard()" >Save</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-              <br>
-              <div class="css-1w7dt24">
-              <div class="css-rvqhyx"> <button class="css-xpr64j" type="submit" name="_save" (click)="applyFilters()">Apply</button></div>
-          </div> 
-          </div>
-      </div>
+</div>
+</div>
+<ejs-toast #defaulttoast [position]="position" >                
+</ejs-toast>
   </div>

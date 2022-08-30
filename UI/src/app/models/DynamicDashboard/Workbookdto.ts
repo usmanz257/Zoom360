@@ -8,7 +8,8 @@ export class GetWorkbookdto{
 export class GetWorkbookPagedto{
     id:number;  
     name:string;  
-    description:string; 
+    description:string;
+    BSTATUS:string;
 }
 export class GetWidgetsdto{
     rowData
@@ -38,7 +39,7 @@ export class Layoutdto{
 export class FiltersDto
 {
     filterId :number;
-    pageId :number;
+    id :number;
     query :string;
     displayName :string;
     columnName :string;
@@ -60,7 +61,7 @@ export class ColumnValue
 }
 export class FilterQueryDto
 {
-    pageId:number;
+    id:number;
     filterValues:ColumnValue[];
     constructor(){
         this.filterValues=[];

@@ -115,13 +115,11 @@ export class LoginComponent extends AppComponentBase implements OnInit {
     this.clientLoginDetails.userActivity='1';
     this.userLogService.UserLoggedin(this.clientLoginDetails).subscribe(
       (data:any) => {
-        debugger
         console.log(data);
         // this.testToast.toast[1].content=data.result;
         // this.toastObj.show(this.testToast.toast[1]);
       },
       (err:any) => {
-        debugger
         this.testToast.toast[2].content='user log error';
         this.toastObj.show(this.testToast.toast[2]);
         console.log(err.statusText);

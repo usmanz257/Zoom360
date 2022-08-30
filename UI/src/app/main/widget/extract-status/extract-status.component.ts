@@ -18,7 +18,6 @@ export class ExtractStatusComponent implements OnInit {
     this.GetResendModule();
   }
   GetResendModule(){
-    debugger
    var UserId="admin";
    var Workspaceid="1";
    var Clientid="1002";

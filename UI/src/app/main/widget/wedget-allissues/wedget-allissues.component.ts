@@ -26,7 +26,6 @@ export class WedgetAllissuesComponent implements OnInit {
     this.allissueSer._tablecounter=0;
   }
   getAllIssues(){
-    debugger
     this.filterService.setFilter(this.screenName);
     this.allissueSer.getAllissues(this.workspaceName,this.connectionName,this.sourceName,this.accessGranted
       ,this.createdBy,this.isActive,this.lastAccessed,this.destinationEnabled,5);

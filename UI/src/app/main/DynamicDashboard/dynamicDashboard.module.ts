@@ -49,6 +49,8 @@ import { DefaultScoreCardComponent } from './WidgetLibrary/default-score-card/de
 import { WidgetLibraryComponent } from './widget-library/widget-library.component';
 import { ScoreCardsComponent } from './widget-library/score-cards/score-cards.component';
 import { WidgetModule } from '../widget/widget.module';
+import { DialogModule } from '@syncfusion/ej2-angular-popups';
+import { ButtonModule } from '@syncfusion/ej2-angular-buttons';
 // import { DynamicModule } from 'ng-dynamic-component';
 
 // Pass the fusioncharts library and chart modules
@@ -77,7 +79,9 @@ const dashboardWidgets = [
     GridsterModule,
     // DynamicModule,
     CountUpModule,
-    WidgetModule
+    WidgetModule,
+    ButtonModule,
+    DialogModule
     
   ],
   exports:[WorkbookpagesComponent]

@@ -22,6 +22,8 @@ export class AppMenuService extends AppComponentBase {
    _getDropDownUrl= environment.apiUrl+'/api/CommonDropdownList/GetMultiSelectDropDown';
    _pageFiltersurl=environment.apiUrl+'/api/Workbook/GetFilters';
    _getFilteredWidgeturl=environment.apiUrl+'/api/Workbook/GetFilteredWidgets';
+   _updateDashboardurl=environment.apiUrl+'/api/Workbook/UpdateDashboardProperties';
+   _deleteDashboardurl=environment.apiUrl+'/api/Workbook/DeleteDashboardProperties';
   userId:string='admin';
   workSpaceId:string=''+1;
   client_id:string='1002';
@@ -41,6 +43,7 @@ export class AppMenuService extends AppComponentBase {
   page$=new Subject<any>();
   workbook$=new Subject<any>();
   widgets$=new Subject<any>();
+  deletedpage$=new Subject<any>();
   constructor(private _http: HttpClient,injector:Injector) {
     super(injector);
    }
@@ -61,7 +64,6 @@ getMenuItems(mode_id,userId:string,workSpaceId:string,client_id:string){
     } 
     
 getsubMenuSection(value){
-  debugger
         let params = new HttpParams()
         .set("userId", this.userId)
         .set("SubUserId", ""+this.SubUserId)
@@ -106,7 +108,6 @@ setMainMenuId(id){
     .set("subUserID", null)
     .set("dropdownName", this.dropdownname)
     this._http.get(`${this._getDropDownUrl}`,{params:params}).subscribe((data:any)=>{
-      debugger
         var modelist=data;
         this.storageService.setItem(environment.storage.modeList,modelist);
         this.setMode(modeId);
@@ -120,7 +121,6 @@ setMainMenuId(id){
       });
   }
   setMode(value){
-    debugger
     this._modelist = this.storageService.getItem(environment.storage.modeList);
     this._modelist.forEach(e=> e.selected=false);
     var index=this._modelist.findIndex(e=> e.dropdownValue==value);
@@ -158,23 +158,21 @@ getWorkbooks(userId:string,workspaceId:string,clientId:string):Observable<any>{
     
               return this._http.request("get", url_)
   }
-  getWidgets(page: GetWorkbookPagedto):Observable<any>{
-
-    let url_ = environment.apiUrl + "/api/Workbook/GetWidgets?";
-              url_ += "Id=" + encodeURIComponent("" + page.id) + "&"; 
-              url_ += "Name=" + encodeURIComponent("" + page.name) + "&"; 
+  // getWidgets(page: GetWorkbookPagedto):Observable<any>{
+  //   let url_ = environment.apiUrl + "/api/Workbook/GetWidgets?";
+  //             url_ += "Id=" + encodeURIComponent("" + page.id) + "&"; 
+  //             url_ += "Name=" + encodeURIComponent("" + page.name) + "&"; 
               
-              url_ = url_.replace(/[?&]$/, "");
+  //             url_ = url_.replace(/[?&]$/, "");
     
-              return this._http.request("get", url_)
-  }
+  //             return this._http.request("get", url_)
+  // }
   getFilters(page: GetWorkbookPagedto):Observable<any>{
 
     return this._http.post(`${this._pageFiltersurl}`,page);
              
   }
-  getFilteredWidgets(page:any):Observable<any>{
-
+  getFilteredWidgets(page:any):Observable<any>{ 
     return this._http.post(`${this._getFilteredWidgeturl}`,page);
   }
   updateLayout(input:Layoutdto[]):Observable<any>{
@@ -193,4 +191,11 @@ getWorkbooks(userId:string,workspaceId:string,clientId:string):Observable<any>{
           };
           return this._http.request("post", url_, options_)
   }
+  updateDashboard(dashboard:any):Observable<any>{
+    return this._http.post(`${this._updateDashboardurl}`,dashboard);          
+  }
+  DeleteDashboard(page:any):Observable<any>{
+    return this._http.post(`${this._deleteDashboardurl}`,page);          
+  }
+  
 }

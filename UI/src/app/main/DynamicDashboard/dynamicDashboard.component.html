@@ -14,7 +14,7 @@
                             <div class="submenu-item-padding">
                             
                                 <div class="css-bk42y6">
-                                    <a id="link{{page.id}}" class="css-1wfdhj" *ngFor="let page of item.pages" routerLinkActive="ActiveRoute" aria-expanded="false"  (click)="getpagewidgets(item.name,page);setActive(page.id)">
+                                    <a id="link{{page.id}}" class="css-1wfdhj" *ngFor="let page of item.pages" routerLinkActive="ActiveRoute" aria-expanded="false"  (click)="getpagewidgets(item,page);setActive(page.id)">
                                         {{page.name}}
                                 </a>
                                 </div>

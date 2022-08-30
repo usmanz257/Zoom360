@@ -46,7 +46,7 @@
                             <div class="subnav">
                             <button class="subnavbtn">{{item.name}} <i class="fa fa-caret-down"></i></button>
                                 <div class="subnav-content">
-                                    <a *ngFor="let page of item.pages" (click)="getpagewidgets(item.name,page)">{{page.name}}</a>
+                                    <a *ngFor="let page of item.pages" (click)="getpagewidgets(item,page)">{{page.name}}</a>
                                 </div>
                             </div>
                     </ng-container>
@@ -58,7 +58,7 @@
                                     <div class="subnav2">
                                         <button class="subnavbtn2">{{item.name}} <i class="fa fa-caret-right"></i></button>
                                             <div class="subnav-content2">
-                                                <a *ngFor="let page of item.pages" (click)="getpagewidgets(item.name,page)">{{page.name}}</a>
+                                                <a *ngFor="let page of item.pages" (click)="getpagewidgets(item,page)">{{page.name}}</a>
                                             </div>
                                     </div>
                                     </ng-container>

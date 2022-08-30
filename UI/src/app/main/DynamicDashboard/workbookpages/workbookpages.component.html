@@ -1,13 +1,15 @@
 <div class="row" style="height:33px;">
     <div class="col-md-9">
         <nav class="breadcrumbs1">
-            <a class="breadcrumbs__item pull-left">{{this.workbookName}}</a>
+            <a class="breadcrumbs__item pull-left">{{this.workbook.name}}</a>
             <a class="breadcrumbs__item pull-left">{{this.page.name}}</a> 
         </nav>
     </div>
     <div class="col-md-3">
         <!-- <button class="w3-button w3-teal w3-xlarge w3-right pull-right" style="margin-top: 5px;" onclick="openRightMenu()">&#9776;</button> -->
-        <button type="button" class="btn btn-info btn-sm pull-right" style="margin-top:5px;" onclick="openRightMenu()"><i class="fa fa-cog" aria-hidden="true"></i></button>
+        <button type="button" class="btn btn-info btn-sm pull-right" style="margin-top:5px;" title="Refresh" (click)="Refresh()"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+        <button type="button" class="btn btn-info btn-sm pull-right" style="margin-top:5px;;margin-right:5px;" title="Delete" (click)="onOpenDialog($event)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+        <button type="button" class="btn btn-info btn-sm pull-right" style="margin-top:5px;margin-right:5px;"  onclick="openRightMenu()"><i class="fa fa-cog" aria-hidden="true"></i></button>
         <button type="button" class="btn btn-info btn-sm pull-right" style="margin-bottom: 5px; margin-top:5px;margin-right:5px;" (click)="updateLayout()">Update Layout</button>
     </div>
 </div>
@@ -668,6 +670,7 @@
         </ag-grid-angular>
     </gridster-item>
 </ng-container>
+
 <ejs-toast #defaulttoast [position]="position" >                
 </ejs-toast>
 </gridster>

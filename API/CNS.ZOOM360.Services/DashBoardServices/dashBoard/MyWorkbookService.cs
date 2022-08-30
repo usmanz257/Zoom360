@@ -203,6 +203,21 @@ namespace CNS.ZOOM360.Services.DashBoardServices.dashBoard
             throw new NotImplementedException();
         }
 
+        public Task UpdatePage(Page page)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateWorkbook(Workbook workbook)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteDashboard(PageDto page)
+        {
+            throw new NotImplementedException();
+        }
+
         //public static List<Report> GetReportWithData(Worksheet worksheetObj)
         //{
         //    var listXml = DeserializeXml();

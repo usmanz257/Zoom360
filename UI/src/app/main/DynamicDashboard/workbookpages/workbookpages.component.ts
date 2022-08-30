@@ -9,6 +9,7 @@ import { GetWidgetsdto, GetWorkbookPagedto, Layoutdto } from 'src/app/models/Dyn
 import HC_stock from "highcharts/modules/stock";
 import { ToastMessage } from '../../administration/MessageTypes/toast-message';
 import { ToastComponent } from '@syncfusion/ej2-angular-notifications';
+import { DialogUtility } from '@syncfusion/ej2-popups';
 HC_stock(Highcharts);
 
 @Component({
@@ -35,31 +36,12 @@ export class WorkbookpagesComponent implements OnInit,OnChanges {
   scorecardRowData:any[]=[];
   scorecardColumnDefs:any[]=[];
   BRdata:any[]=[];
-  workbookName:string="";
+  workbook:any;
   public testToast=new ToastMessage();
 	@ViewChild('defaulttoast',{static:true})
 	public toastObj: ToastComponent;
 	@ViewChild('toastBtnShow',{static:true})
 	public position;
-  // DMScoreCardRef:string;
-  // @Output() modalSave: EventEmitter<any> = new EventEmitter<any>();
-  // DMScoreCard($event) {
-  //   this.DMScoreCardRef = $event
-  // }
-  // bgCounterColorStyle:any
-
-
-  //******
- //emitter code
-
-//   somethingChanged(event) {
-//     console.log(event);
-//  }
-
-
-
-
-
   constructor(public MenuService: AppMenuService, private dashboardService: DashboardService) {
 
     this.options = {};
@@ -86,7 +68,23 @@ export class WorkbookpagesComponent implements OnInit,OnChanges {
     //   disablePushOnResize: false
     // };
   }
-
+  ngOnInit(): void {
+    this.position={ X: 'Left', Y: 'Top' };
+    if(this.MenuService.page$){
+      this.MenuService.page$.subscribe(res=> this.getWidgets(res));
+      this.MenuService.workbook$.subscribe((res)=>{
+        this.workbook = res 
+      } );
+      this.MenuService.widgets$.subscribe((res)=> this.setWidgets(res));
+    }
+    
+    // this.getWidgets();
+  
+  }
+  
+ngOnChanges():void{
+ 
+}
   onGridReady(evvent, item) {
     this.setColumnData(item);
     this.setRowData(item);
@@ -149,24 +147,7 @@ export class WorkbookpagesComponent implements OnInit,OnChanges {
       this.scorecardColumnDefs.push({ field: item.measure[i].name });
     }
     console.log("score column",this.scorecardColumnDefs);
-  }
-
-ngOnChanges():void{
- 
-}
-  ngOnInit(): void {
-    this.position={ X: 'Left', Y: 'Top' };
-    if(this.MenuService.page$){
-      this.MenuService.page$.subscribe(res=> this.getWidgets(res));
-      this.MenuService.workbook$.subscribe((res)=>{
-        this.workbookName = res 
-      } );
-      this.MenuService.widgets$.subscribe((res)=> this.setWidgets(res));
-    }
-    
-    // this.getWidgets();
-  
-  }
+  }  
   getWidgets(page:any) {
     this.page = page;
       this.MenuService.getPageProperties(this.page.id).subscribe(res => {
@@ -178,13 +159,12 @@ ngOnChanges():void{
       this.options.defaultItemCols = 10;
       this.options.itemResizeCallback = this.itemResize.bind(this),
         this.options.draggable.stop = this.ItemDrage.bind(this)
-      this.MenuService.getWidgets(this.page).subscribe(res => {
+      this.MenuService.getFilteredWidgets(this.page).subscribe(res => {
         this.setWidgets(res);
       })
     });
   }
   setWidgets(res){
-    debugger
     this.Widgets=[];
     this.Widgets = res;
     // this.BRdata = JSON.parse(this.Widgets[0].chart.data);
@@ -255,13 +235,41 @@ ngOnChanges():void{
     })
   }
   multiBRScorecard(){
-    debugger
     this.Widgets.forEach(element => {
       if(element.chart=="MultiBRScoreCardimg"){
-        debugger
         this.setScoreCardColumnData(element);
         this.setScoreCardRowData(element);
       }
      });
   }
+  Refresh(){
+    this.MenuService.page$.next(this.page);
+     this.MenuService.workbook$.next(this.workbook);
+  }
+  DeleteDashboard(){
+    this.page.BSTATUS = "0"
+    this.MenuService.DeleteDashboard(this.page).subscribe((data)=>{
+      debugger
+      if(data.status==1){
+        this.testToast.toast[1].content=data.message;
+        this.toastObj.show(this.testToast.toast[1]);
+        this.MenuService.deletedpage$.next(this.page);
+      }else{
+      this.testToast.toast[2].content=data.message;;
+      this.toastObj.show(this.testToast.toast[2]);
+      }
+      
+    });
+  }
+  public onOpenDialog = function(event: any): void {
+    DialogUtility.confirm({
+    title: 'Delete',
+    content: "Do you realy want to delete dashboard",
+    okButton: {  text: 'Yes', click: this.DeleteDashboard.bind(this) },
+    cancelButton: {text: 'No'},
+    showCloseIcon: false,
+    closeOnEscape: true,
+    animationSettings: { effect: 'Zoom' }
+});
+}
 }

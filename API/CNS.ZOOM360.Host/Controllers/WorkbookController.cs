@@ -7,7 +7,7 @@ using CNS.ZOOM360.Shared.DashBoard;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ZOOM360.Charts.DashBoardServices.dashBoard;
-
+using ZOOM360.Charts.Model;
 
 namespace CNS.ZOOM360.Host.Controllers
 {
@@ -127,6 +127,37 @@ namespace CNS.ZOOM360.Host.Controllers
             else
             {
                 return BadRequest();
+            }
+        }
+        [Route("UpdateDashboardProperties")]
+        [HttpPost]
+        public IActionResult UpdateDashboardProperties(DashboardProperties dashboardProperties)
+        {
+
+            var workbooks = _WorkBookService.UpdateWorkbook(dashboardProperties.workbook);
+            var page = _WorkBookService.UpdatePage(dashboardProperties.page);
+            if (workbooks.IsCompleted && page.IsCompleted)
+            {
+                return Ok(new {status=1,message="Dasboard updated"});
+            }
+            else
+            {
+                return BadRequest(new { status = 0, message = "Error occurred" });
+            }
+        }
+        [Route("DeleteDashboardProperties")]
+        [HttpPost]
+        public IActionResult DeleteDashboardProperties(PageDto page)
+        {
+
+            var result = _WorkBookService.DeleteDashboard(page);
+            if (result.IsCompleted)
+            {
+                return Ok(new { status = 1, message = "page deleted" });
+            }
+            else
+            {
+                return BadRequest(new { status = 0, message = "Error occurred" });
             }
         }
     }

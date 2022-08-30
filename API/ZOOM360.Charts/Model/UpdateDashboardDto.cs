@@ -5,9 +5,9 @@ using ZOOM360.Charts.Model;
 
 namespace CNS.ZOOM360.Shared.Dashboard.Dto
 {
-    public class FilterQueryDto
+    public class DashboardProperties
     {
-        public int id { get; set; }
-        public List<ColumnValue> filterValues { get; set; }
+        public Workbook workbook { get; set; }
+        public Page page { get; set; }
     }
 }

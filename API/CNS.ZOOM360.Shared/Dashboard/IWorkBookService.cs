@@ -18,5 +18,8 @@ namespace CNS.ZOOM360.Shared.DashBoard
         Task<IList<Filters>> GetAllFilters(PageDto Page);
         Task<IList<WidgetDto>> GetAllFilteredWidgets(FilterQueryDto Page);
         Task UpdateLayout(IList<LayoutDto> layout);
+        Task UpdatePage(Page page);
+        Task UpdateWorkbook(Workbook workbook);
+        Task DeleteDashboard(PageDto page);
     }
 }

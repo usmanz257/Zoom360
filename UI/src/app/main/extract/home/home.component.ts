@@ -30,8 +30,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   this.AllExtractService.accountId='all';
   this.getAllExtract();
-  debugger
-  let searchParams = new URLSearchParams(window.location.search);
+   let searchParams = new URLSearchParams(window.location.search);
     if (searchParams.has('code')) {
         var code = searchParams.get('code');
          

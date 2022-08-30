@@ -33,21 +33,35 @@ export class DynamicDashboardComponent extends AppComponentBase implements OnIni
     this.MenuService.getsubMenuSection(this.mainmenuID);
     this.MenuService.getWorkbooks(this.userId,this.workSpaceId,this.client_id).subscribe(res => {
       this.Getworkbookdtos = res;
-      this.MenuService.page$.next(this.Getworkbookdtos[0].pages[0]);
-     this.MenuService.workbook$.next(this.Getworkbookdtos[0].name);
+      this.SetDefault();
     });
-
+    this.MenuService.deletedpage$.subscribe((res)=> this.loadNextDashboard(res));
   }
 
-  getpagewidgets(workbookName,test1){
-    this.MenuService.page$.next(test1);
-    this.MenuService.workbook$.next(workbookName);
-        this.test.page = test1
-        this.test.getWidgets(test1);
+  getpagewidgets(workbook,page){
+    this.MenuService.page$.next(...page);
+    this.MenuService.workbook$.next(...workbook);
+        this.test.page = page
+        this.test.getWidgets(page);
   }
 
   setActive(id:number){
     this.MenuService.setActiveClass("link"+id);
+  }
+  loadNextDashboard(page){
+    this.Getworkbookdtos.forEach(function(o) {
+      o.pages = o.pages.filter(s => s.id != page.id);
+    });
+    this.SetDefault()
+  }
+  SetDefault(){
+    for(var i=0;i<this.Getworkbookdtos.length;i++){
+      if(this.Getworkbookdtos[i].pages.length>=1){
+        this.MenuService.workbook$.next(this.Getworkbookdtos[i]);
+        this.MenuService.page$.next(this.Getworkbookdtos[i].pages[0]);
+        break;
+      }
+    }
   }
 }
 

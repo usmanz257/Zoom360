@@ -55,7 +55,7 @@ namespace ZOOM360.Charts.DashBoardServices.dashBoard
 
         public async Task<IList<WorkbookDto>> GetAllWorkbooks(string userId, string workSpaceId, string clientId) 
         {
-                var workbookresult = _WorkbookRepository.GetAll().Include(x => x.Pages.Where(x => x.USER_ID == userId && x.WORKSPACE_ID == workSpaceId && x.CLIENT_ID == clientId && x.BSTATUS == "1")).Where(x => x.USER_ID == userId && x.WORKSPACE_ID == workSpaceId && x.CLIENT_ID == clientId && x.BSTATUS == "1");
+                var workbookresult = _WorkbookRepository.GetAll().Include(x => x.Pages);
 
             //var workbookresult = _WorkbookRepository.GetAll().Where
             //    (x => x.userId == userCommonModel.userId &&
@@ -68,11 +68,12 @@ namespace ZOOM360.Charts.DashBoardServices.dashBoard
                              Id = o.Id,
                              Name = o.Name,
                              Description = o.Description,
-                             Pages = o.Pages.Select(d => new PageDto
+                             Pages = o.Pages.Where(x => x.BSTATUS == "1").Select(d => new PageDto
                              {
                                  Id = d.Id,
                                  Name = d.Name,
-                                 Description = d.Description
+                                 Description = d.Description,
+                                 BSTATUS = d.BSTATUS
                              }).ToList()
                          };
 
@@ -183,7 +184,7 @@ namespace ZOOM360.Charts.DashBoardServices.dashBoard
                 .Include(x => x.Measure)
                 .Include(x => x.Layout)
                 .Include(x => x.Query)
-                .Where(x => x.PageId == Page.pageId);
+                .Where(x => x.PageId == Page.id);
 
             var result = await (from o in WidgetResult
                                 select new WidgetDto
@@ -229,7 +230,7 @@ namespace ZOOM360.Charts.DashBoardServices.dashBoard
                                     }
                                 }).ToListAsync();
             string whereCluse = " HAVING ";
-            if (Page.filterValues.Count > 0)
+            if (Page.filterValues?.Count > 0)
             {
                 for (int i = 0; i < Page.filterValues.Count; i++)
                 {
@@ -255,7 +256,7 @@ namespace ZOOM360.Charts.DashBoardServices.dashBoard
             
             foreach (var item in result)
             {
-                if (Page.filterValues.Count > 0)
+                if (Page.filterValues?.Count > 0)
                 {
                     item.Query.Sql = item.Query.Sql + whereCluse;
                     item.Chart = await _gridAndGraphDataService.GetCharts(item);
@@ -271,7 +272,7 @@ namespace ZOOM360.Charts.DashBoardServices.dashBoard
         }
         public async Task<IList<Filters>> GetAllFilters(PageDto Page)
         {
-            var filters = _FiltersRepository.GetAll().Where(x => x.pageId == Page.Id).ToList();
+            var filters = _FiltersRepository.GetAll().Where(x => x.pageId == Page.Id).Take(2).ToList();
             foreach(var item in filters)
             {
                 var filterValues = _FilterQueryRepositry.ExecutePlainQuery(item.query).ToList();
@@ -305,7 +306,28 @@ namespace ZOOM360.Charts.DashBoardServices.dashBoard
             }
             _LayoutRepository.SaveChanges();
         }
+        public async Task UpdatePage(Page page)
+        {
+                Page entityresult = _PageRepository.GetAll().Where(x => x.Id == page.Id).FirstOrDefault();
+                entityresult.Name = page.Name;
+                await _PageRepository.UpdateAsync(entityresult);
+                _PageRepository.SaveChanges();
+        }
+        public async Task UpdateWorkbook(Workbook workbook)
+        {
+            Workbook entityresult = _WorkbookRepository.GetAll().Where(x => x.Id == workbook.Id).FirstOrDefault();
+            entityresult.Name = workbook.Name;
+            await _WorkbookRepository.UpdateAsync(entityresult);
+            _WorkbookRepository.SaveChanges();
+        }
+        public async Task DeleteDashboard(PageDto page)
+        {
+            Page entityresult = _PageRepository.GetAll().Where(x => x.Id == page.Id).FirstOrDefault();
+            entityresult.BSTATUS = page.BSTATUS;
+            await _PageRepository.UpdateAsync(entityresult);
+            _PageRepository.SaveChanges();
 
+        }
         //public static List<Report> GetReportWithData(Worksheet worksheetObj)
         //{
         //    var listXml = DeserializeXml();
